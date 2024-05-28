@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+/* 새글 스킨 (latest) */
+.bo_lst_casel { width:100%; height:300px; overflow: hidden;}
+
+/* 리스트 카우셀 { */
+.bo_lst_casel_hd { border-bottom:1px solid #eee; margin: 0px; padding: 0px; width: auto; height: auto; position: relative; z-index: 10; box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5); background-color: rgb(17, 17, 17); -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, .5); -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, .5); }
+
+.bo_lst_casel_hd::after { clear: both; float: none; display: block; content: ""; }
+.bo_lst_casel_hd .bo_lst_casel_tit { margin: 0px; padding: 0px; width: 500px; height: 40px; float: left; position: relative; }
+
+.bo_lst_casel_hd .bo_lst_casel_tit h3 { font: bold 16px/45px Nanum Gothic; padding: 0px; color:#fff;letter-spacing: -1px; margin-left: 20px; display: inline-block; font-size-adjust: none; font-stretch: normal; }
+.bo_lst_casel_hd .bo_lst_casel_tit h3 a { color: rgb(255, 255, 255); }
+.bo_lst_casel_hd .bo_lst_casel_tit h4 { font: 12px/45px "Open Sans"; padding: 0px; color: rgb(255, 255, 255); letter-spacing: -1.5px; margin-right: 15px; float: right; display: inline-block; font-size-adjust: none; font-stretch: normal; }
+.bo_lst_casel_hd .bo_lst_casel_tit .count { top: 26px; right: 20px; color: rgb(255, 255, 255); font-weight: bold; position: absolute; z-index: 100; }
+.bo_lst_casel_hd .casel_control { margin: 0px; padding: 0px; width: 138px; height: 100%; border-left-color: rgb(213, 0, 75); border-left-width: 1px; border-left-style: solid; float: left; }
+.bo_lst_casel_hd .casel_control span { background: url("./img/casel_control_arr.png") no-repeat; margin: 0px; padding: 0px; width: 68px; height: 40px; float: left; cursor: pointer; }
+.bo_lst_casel_hd .casel_control .prev { background-position: 0px 0px; border-right-color: rgb(121, 16, 60); border-right-style: solid; }
+.bo_lst_casel_hd .casel_control .next { background-position: 0px -68px; border-left-color: rgb(213, 0, 75); border-left-width: 1px; border-left-style: solid; }
+
+.bo_lst_casel_in { margin: 0px; padding: 0px; width: auto; height: auto; z-index: 5; }
+.bo_lst_casel_in ul { position:relative; margin: 0px; padding: 0px; width: auto; height: 60px; overflow: hidden;border-bottom:1px solid #eee; }
+.bo_lst_casel_in ul::after { clear: both; float: none; display: block; content: ""; }
+.bo_lst_casel_in ul:last-child { border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none; }
+.bo_lst_casel_in li { margin: 0px; padding: 0px; height:50px; text-align: center; letter-spacing: -0.5px; font-size:26px; float: left; display: table; }
+.bo_lst_casel_in li a {}
+.bo_lst_casel_in li a:hover { text-decoration: underline; }
+.bo_lst_casel_in li.casel_img { width:20%; background:#b91d2d; color:#ffffff; margin-top:5px; font-weight:bold;height:40px; border:1px solid #b91d2d; border-radius:20px; padding:5px 10px;}
+.bo_lst_casel_in li.casel_img span {}
+.bo_lst_casel_in li.casel_name { width:20%; line-height:50px;  }
+.bo_lst_casel_in li.casel_name span { padding: 0px 10px 0px 10px;text-align: center; color:#000;}
+.bo_lst_casel_in li.casel_date { width:30%; line-height:50px; }
+.bo_lst_casel_in li.casel_date span { border-right-color: currentColor; color:#a3a3a3; border-right-width: medium; border-right-style: none; }/* } 리스트 카우셀 */
+.bo_lst_casel_in li.casel_pd { width:50%;  line-height:50px; }
+.bo_lst_casel_in li.casel_pd span { padding: 0px 10px 0px 10px; text-align: center; color:#000;}
+
+
+
+@media (max-width:620px){
+.bo_lst_casel_in li { margin: 0px; padding: 0px; height:50px; text-align: center; letter-spacing: -0.5px; font-size:16px; float: left; display: table; }
+.bo_lst_casel_in li a {}
+.bo_lst_casel_in li a:hover { text-decoration: underline; }
+.bo_lst_casel_in li.casel_img { width:20%; background:#b91d2d; color:#ffffff; margin-top:5px; font-weight:bold;height:40px; border:1px solid #b91d2d; border-radius:20px; padding:5px 10px;}
+.bo_lst_casel_in li.casel_img span {}
+.bo_lst_casel_in li.casel_name { width:20%; line-height:50px;  }
+.bo_lst_casel_in li.casel_name span { padding: 0px 10px 0px 10px;text-align: center; color:#000;}
+.bo_lst_casel_in li.casel_date { width:30%; line-height:50px; }
+.bo_lst_casel_in li.casel_date span { border-right-color: currentColor; color:#a3a3a3; border-right-width: medium; border-right-style: none; }/* } 리스트 카우셀 */
+.bo_lst_casel_in li.casel_pd { width:50%;  line-height:50px; }
+.bo_lst_casel_in li.casel_pd span { padding: 0px 10px 0px 10px; text-align: center; color:#000;}
+}
