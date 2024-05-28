@@ -1,3 +1,7 @@
+function closePopup(e) {
+  $(".popup_" + e).fadeOut();
+}
+
 function phoneNumberCheck(phone) {
   let result = /^(01[016789]{1})?[1-9]{1}[0-9]{2,3}[0-9]{4}$/;
   return result.test(phone);
