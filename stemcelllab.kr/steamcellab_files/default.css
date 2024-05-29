@@ -72,7 +72,7 @@ a {color:#000;text-decoration:none}
 input[type=text],input[type=password], textarea {
 -webkit-transition:all 0.30s ease-in-out;
 -moz-transition:all 0.30s ease-in-out;
--ms-transition:all 0.30s ease-in-`out;
+-ms-transition:all 0.30s ease-in-out;
 -o-transition:all 0.30s ease-in-out;
 outline:none;
 }
@@ -684,4 +684,20 @@ box-sizing:content-box;
 
 @media screen and (max-width:640px){
 .mobile_size1{width:100px;}
+}
+
+.ui-dialog {
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+.con_t02_btn {
+  height: min-content !important;
+}
+.dialogWithDropShadow
+{
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 15, 0.8);  
+    -moz-box-shadow: 0px 0px 10px rgba(0, 0, 15, 0.8); 
 }

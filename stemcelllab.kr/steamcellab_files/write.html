@@ -398,7 +398,7 @@ url=(0061)http://stemcelllab.kr/stemcelllab/bbs/write.php?bo_table=free -->
                                 placeholder="나이를 입력하세요">
                         </div>
 
-                        <div class="con_t02">
+                        <div class="con_t02 con_t02_btn">
 
                             <input
                                 type="checkbox"
@@ -433,7 +433,8 @@ url=(0061)http://stemcelllab.kr/stemcelllab/bbs/write.php?bo_table=free -->
                         title: "개인정보취급방침",
                         autoOpen: false,
                         width: 300,
-                        height: 300,
+                        height: "auto",
+                        dialogClass: 'dialogWithDropShadow',
                         modal: true,
                         button: [
                             {
@@ -557,16 +558,10 @@ url=(0061)http://stemcelllab.kr/stemcelllab/bbs/write.php?bo_table=free -->
             role="dialog"
             aria-describedby="dialogLayout"
             aria-labelledby="ui-id-1"
-            style="display: none; position: relative;">
+            style="display: none; position: relative; border: 3px solid red;">
             <div
                 class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix ui-draggable-handle">
-                <span id="ui-id-1" class="ui-dialog-title">개인정보취급방침</span>
-                <button
-                    type="button"
-                    class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close"
-                    role="button"
-                    title="Close">
-                    <span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span><span class="ui-button-text">Close</span></button>
+                <span id="ui-id-1" class="ui-dialog-title popup">개인정보취급방침</span>
             </div>
             <div
                 id="dialogLayout"
@@ -581,6 +576,14 @@ url=(0061)http://stemcelllab.kr/stemcelllab/bbs/write.php?bo_table=free -->
 3. 보유 및 이용기간
 수집이용 동의일로부터 수집이용 목적을 달성할 때까지
 	</pre>
+  <!-- <button
+    type="button"
+    class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close close_btn"
+    role="button"
+    title="Close">
+  <span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span>
+  <span class="ui-button-text" onclick="close()">Close</span>
+</button> -->
             </div>
             <div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div>
             <div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div>
