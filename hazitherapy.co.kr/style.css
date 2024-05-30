@@ -1,7 +1,112 @@
+* {
+  box-sizing: border-box;
+  font-family: "Do Hyeon", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+html,
+body {
+	scroll-behavior: smooth;
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 0.75em;
+}
+@media screen and (max-width: 640px) {
+	body {
+		font-size: 15px;
+		font-weight: 400;
+	}
+}
+.layout {
+	min-width: 1200px;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+.wrap {
+	margin: 0 auto;
+	overflow: hidden;
+}
+.wrap,
+.wrap img {
+  width: 100%;
+}
+/* 타블렛 */
+@media (max-width: 1200px) and (min-width: 620px) {
+	.layout {
+		min-width: 1200px;
+		width: 100%;
+		overflow: hidden;
+		position: relative;
+	}
+	.wrap {
+		width: auto;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	.wraptop {
+		width: 90%;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	.wrap02 {
+		width: 90%;
+		margin: 0 auto;
+	}
+	.wrap03 {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.wraptail {
+		width: 90%;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+}
+/* 모바일 */
+@media (max-width: 620px) {
+	.layout {
+		min-width: 0;
+	}
+	.wrap {
+		width: auto;
+		margin: 0;
+	}
+	.wraptop {
+		width: auto;
+		margin: 0;
+	}
+	.wrap02 {
+		width: auto;
+		margin: 0;
+	}
+	.wrap03 {
+		width: auto;
+		margin: 0;
+	}
+	.wraptail {
+		width: auto;
+		margin: 0;
+	}
+}
+@media screen and (max-width: 640px) {
+	.fbmo {
+		display: block;
+	}
+	.fbpc {
+		display: none;
+	}
+}
 .popup {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
   background: rgba(0,0,0,0.7);
-  /* display: none; */
+  display: none;
 }
