@@ -1,1 +1,11 @@
 /ssl/
+/.idea/deployment.xml
+/.idea/jsLibraryMappings.xml
+/.idea/landingPages.iml
+/.idea/modules.xml
+/package.json
+/package-lock.json
+/.idea/sshConfigs.xml
+/.idea/vcs.xml
+/.idea/webServers.xml
+/.idea/workspace.xml
