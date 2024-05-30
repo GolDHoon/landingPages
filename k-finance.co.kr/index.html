@@ -37,6 +37,7 @@
         <meta
             name="twitter:description"
             content="CCL은 정식 인증을 받은 해외선물거래소입니다. 이벤트 혜택 받고 해외선물투자 시작하세요.">
+        <script src="../inc/jquery-1.12.4.min.js" type="text/javascript"></script>
         <script>
             (function (w, d, s, l, i) {
                 w[l] = w[l] || [];
@@ -348,17 +349,22 @@
                                     value=""
                                     id="name"
                                     required=""
-                                    placeholder="성함을 입력하세요">
+                                    placeholder="성함을 입력하세요"
+                                    onkeydown="checkSpace(this)">
                             </div>
 
-                            <div class="textbox">
+                            <div class="textbox phone_textBox">
+                              <div>010</div>
                                 <input
-                                    type="text"
+                                    type="number"
                                     name="phone"
                                     value=""
                                     id="phone"
                                     required=""
-                                    placeholder="연락처를 입력하세요">
+                                    class="phon_box"
+                                    placeholder="010을 제외한 연락처를 입력하세요"
+                                    onkeydown="checkLength(this)"
+                                    >
                             </div>
 
                             <div class="textbox02">
@@ -459,6 +465,7 @@
                         return;
                     }
                 }
+
                 if (!checkbox.checked) {
                     alert('개인정보처리방침에 동의해주세요')
                     return;
@@ -531,6 +538,7 @@
 
             });
 
+            // reg start
             function serialize(obj) {
                 return Object
                     .keys(obj)
@@ -541,7 +549,7 @@
             }
 
             function phoneNumberCheck(phone) {
-                let result = /^(01[016789]{1})?[1-9]{1}[0-9]{2,3}[0-9]{4}$/;
+                let result =  /^[0-9]{8}$/;
                 return result.test(phone);
             }
 
@@ -550,12 +558,31 @@
                 return chosungRegExp.test(char);
             }
 
+            function checkSpace(e) {
+              var getValue = $(e).val();
+              getValue = getValue.replace(/ /gi,"");
+              $(e).val(getValue);
+            }
+            
+            function checkLength(e) {
+              var getLength = $(e).val().length+1,
+                  getValue = $(e).val(),
+                  maxLength = 8;
+            
+              $(e).val(getValue);
+              if(getLength > maxLength) {
+                getValue = getValue.substr(0, maxLength-1);
+                $(e).val(getValue);
+              }
+            }
+
             function validateKoreanInput(input) {
                 // 정규식: 2~4글자의 한글만 허용
                 const koreanRegex = /^[가-힣]{2,4}$/;
                 // 검증
                 return koreanRegex.test(input);
             }
+            // reg end
 
             const privacy_modal = document.querySelector('.privacy_modal')
             privacy_modal.addEventListener('click', function () {

@@ -1,5 +1,5 @@
 @charset "utf-8";
-
+* {box-sizing: border-box;}
 /* 초기화 */
 html,
 body {
@@ -759,4 +759,29 @@ body {
 		padding: 10px 0px;
 		font-size: 10px;
 	}
+}
+/* Chrome, Safari, Edge, Opera */
+.phon_box::-webkit-outer-spin-button,
+.phon_box::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox  */
+.phon_box[type='number'] {
+  -moz-appearance: textfield;
+}
+.phone_textBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#name {
+  width: 100%;
+}
+.phone_textBox > div {
+  padding: 5%;
+}
+.phon_box {
+  width: 80%;
 }

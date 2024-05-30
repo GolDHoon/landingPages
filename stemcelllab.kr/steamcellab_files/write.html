@@ -368,7 +368,8 @@ url=(0061)http://stemcelllab.kr/stemcelllab/bbs/write.php?bo_table=free -->
                                 class="required"
                                 id="wr_name"
                                 required=""
-                                placeholder="성함을 입력하세요">
+                                placeholder="성함을 입력하세요"
+                                onkeydown="checkSpace(this)">
                         </div>
 
                         <div class="con_t">
@@ -380,13 +381,14 @@ url=(0061)http://stemcelllab.kr/stemcelllab/bbs/write.php?bo_table=free -->
                                 class="required"
                                 id="wr_1"
                                 required=""
-                                placeholder="숫자만 입력하세요"
-                                onkeydown="this.value=this.value.replace(/[^0-9]/g,&#39;&#39;)"
+                                placeholder="010을 제외한 숫자만 입력하세요"
+                                onkeydown="this.value=this.value.replace(/[^0-9]/g,&#39;&#39;), checkLength(this)"
                                 onkeyup="this.value=this.value.replace(/[^0-9]/g,&#39;&#39;)"
                                 onblur="this.value=this.value.replace(/[^0-9]/g,&#39;&#39;)">
                         </div>
 
-                        <div class="con_t">
+                        <!-- 나이 정보 보류 -->
+                        <!-- <div class="con_t">
                             <label for="wr_2">나이</label>
                             <input
                                 type="text"
@@ -396,7 +398,7 @@ url=(0061)http://stemcelllab.kr/stemcelllab/bbs/write.php?bo_table=free -->
                                 id="wr_2"
                                 required=""
                                 placeholder="나이를 입력하세요">
-                        </div>
+                        </div> -->
 
                         <div class="con_t02 con_t02_btn">
 
@@ -428,7 +430,7 @@ url=(0061)http://stemcelllab.kr/stemcelllab/bbs/write.php?bo_table=free -->
             </form>
 
             <script>
-                $(document).ready(function () {
+              $(document).ready(function () {
                     $("#dialogLayout").dialog({
                         title: "개인정보취급방침",
                         autoOpen: false,
@@ -456,6 +458,94 @@ url=(0061)http://stemcelllab.kr/stemcelllab/bbs/write.php?bo_table=free -->
                         e.preventDefault();
                     })
                 });
+                // reg start
+                function serialize(obj) {
+                return Object
+                    .keys(obj)
+                    .map(function (key) {
+                        return encodeURIComponent(key) + '=' + encodeURIComponent(obj[key]);
+                    })
+                    .join('&');
+                }
+
+                function phoneNumberCheck(phone) {
+                    let result =  /^[0-9]{8}$/;
+                    return result.test(phone);
+                }
+
+                function isChosung(char) {
+                    const chosungRegExp = /^[ㄱ-ㅎ]/;
+                    return chosungRegExp.test(char);
+                }
+
+                function checkSpace(e) {
+                  var getValue = $(e).val();
+                  getValue = getValue.replace(/ /gi,"");
+                  $(e).val(getValue);
+                }
+                
+                function checkLength(e) {
+                  var getLength = $(e).val().length+1,
+                      getValue = $(e).val(),
+                      maxLength = 8;
+                
+                  $(e).val(getValue);
+                  if(getLength > maxLength) {
+                    getValue = getValue.substr(0, maxLength-1);
+                    $(e).val(getValue);
+                  }
+                }
+
+                function validateKoreanInput(input) {
+                    // 정규식: 2~4글자의 한글만 허용
+                    const koreanRegex = /^[가-힣]{2,4}$/;
+                    // 검증
+                    return koreanRegex.test(input);
+                }
+               // reg end
+               $('#btn1').click(function(){
+                var name = $('#wr_name').val(),
+                    phone = $('#wr_1').val(),
+                    checkbox = $('#wr_9'),
+                    mode = 1;
+
+
+                if (name === '' || name === 'undefined') {
+                    alert('이름을 입력해주세요.');
+                    return false;
+                } else {
+                    var cho_sung_result = isChosung(name);
+                    if (!cho_sung_result) {
+                        // 한글 2-4글자 제한
+                        if (!validateKoreanInput(name)) {
+                            alert('초성을 제외한 한글 2~4글자를 입력해주세요.');
+                            return false;
+                        }
+                    } else {
+                        alert('초성을 제거해주세요.');
+                        return false;
+                    }
+                }
+
+                if (phone === '' || phone === 'undefined') {
+                    alert('휴대폰 번호를 입력해주세요.');
+                    return false;
+                } else {
+                    phone = phone.replace(/-/g, "");
+                    var result = phoneNumberCheck(phone);
+                    if (!result) {
+                        alert('정확한 휴대폰 번호를 입력해주세요.');
+                        return false;
+                    }
+                }
+
+                var getCheckd = checkbox.prop('checked');
+                if (!getCheckd) {
+                    alert('개인정보처리방침에 동의해주세요');
+                    return false;
+                }
+              });
+              // reg end
             </script>
             <style>
                 .ui-dialog-title {
@@ -466,7 +556,8 @@ url=(0061)http://stemcelllab.kr/stemcelllab/bbs/write.php?bo_table=free -->
                 };
             </style>
 
-            <script>
+            <!-- 게시글 작성/수정 시작 -->
+            <!-- <script>
                 function html_auto_br(obj) {
                     if (obj.checked) {
                         result = confirm(
@@ -548,7 +639,7 @@ url=(0061)http://stemcelllab.kr/stemcelllab/bbs/write.php?bo_table=free -->
 
                     return true;
                 }
-            </script>
+            </script> -->
         </section>
         <!-- } 게시물 작성/수정 끝 -->
 
