@@ -1,7 +1,6 @@
 window.onload = function() {
     window.blockedKeyword = {};
     window.lpgeCode = {};
-    console.log('페이지 로드가 완료되었습니다!');
     /*
     상수 사용
     window.lpgeCode : 랜딩페이지 코드
@@ -19,11 +18,9 @@ window.onload = function() {
     if(scComponent.domain.includes('local')){
         url = 'http://localhost:8080';
         scComponent.mode = "local";
-        console.log("로컬환경");
     } else{
         url = 'https://datamonserver-001.xyz'
         scComponent.mode = "prod";
-        console.log("운영환경");
     }
 
     async function getInitialData(url) {
@@ -87,18 +84,24 @@ window.onload = function() {
             headers: {
                 'Content-Type': 'application/json' // 보낼 내용의 종류를 지정합니다.
             },
-            body: JSON.stringify({"createId":createId, "password" : password, "userId": companyId, "mode": scComponent.mode,"inputMode": mode, "pageDescription": pageDescription})
+            body: JSON.stringify({
+                "createId":createId,
+                "password" : password,
+                "userId": companyId,
+                "mode": scComponent.mode,
+                "inputMode": mode,
+                "domain": window.location.hostname,
+                "pageDescription": pageDescription})
         })
-        .then(response => {XMLDocument
-            result.status = response.status
-            return response.json()
-        })
-        .then(response => {
-            result.data = response.result;
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-        });
+            .then(response => {XMLDocument
+                result.status = response.status
+                return response.json()
+            })
+            .then(response => {
+                result.data = response.result;
+            })
+            .catch((error) => {
+            });
 
         return result;
     }
@@ -129,7 +132,6 @@ window.onload = function() {
                 result.data = response.result;
             })
             .catch((error) => {
-                console.error('Error:', error);
             });
 
         return result;
