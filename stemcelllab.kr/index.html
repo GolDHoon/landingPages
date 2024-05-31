@@ -30,150 +30,26 @@
         <link rel="stylesheet" href="./steamcellab_files/font-awesome.min.css">
 
         <link rel="stylesheet" href="./steamcellab_files/default.css">
-        <!-- <script> // 자바스크립트에서 사용하는 전역변수 선언 var g5_url =
-        "http://stemcelllab.kr/stemcelllab"; var g5_bbs_url =
-        "http://stemcelllab.kr/stemcelllab/bbs"; var g5_is_member = ""; var g5_is_admin
-        = ""; var g5_is_mobile = ""; var g5_bo_table = ""; var g5_sca = ""; var
-        g5_editor = ""; var g5_cookie_domain = ""; </script> -->
-        <script src="./steamcellab_files/landing-server-comunication.js" defer="defer"></script>
+        <!-- <script>
+            // 자바스크립트에서 사용하는 전역변수 선언
+            var g5_url = "http://stemcelllab.kr/stemcelllab";
+            var g5_bbs_url = "http://stemcelllab.kr/stemcelllab/bbs";
+            var g5_is_member = "";
+            var g5_is_admin = "";
+            var g5_is_mobile = "";
+            var g5_bo_table = "";
+            var g5_sca = "";
+            var g5_editor = "";
+            var g5_cookie_domain = "";
+        </script> -->
+        <script src="https://alisolution-devmanagement.xyz/js/landing-server-comunication/0.0.1/landing-server-comunication.min.js" defer></script>
         <script src="./steamcellab_files/jquery-1.12.4.min.js"></script>
-        <!-- <script src="../inc/jquery-1.12.4.min.js"
-        type="text/javascript"></script>-->
+<!--        <script src="../inc/jquery-1.12.4.min.js" type="text/javascript"></script>-->
         <script src="./steamcellab_files/jquery-migrate-1.4.1.min.js"></script>
         <script src="./steamcellab_files/jquery.menu.js"></script>
         <script src="./steamcellab_files/common.js"></script>
         <script src="./steamcellab_files/wrest.js"></script>
         <script src="./steamcellab_files/placeholders.min.js"></script>
-        <script src="./steamcellab_files/landing-server-comunication.js"></script>
-
-        <script>
-          function showPopup(){
-            $('.pop_up').show();
-          };
-          function closePopup(){
-            $('.pop_up').hide();
-          };
-
-            $(document).ready(function () {
-                $("#dialogLayout").dialog({
-
-                    title: "개인정보취급방침",
-                    autoOpen: false,
-                    width: 300,
-                    height: "auto",
-                    dialogClass: 'dialogWithDropShadow',
-                    modal: true,
-                    button: [
-                        {
-                            text: "확인",
-                            click: function () {
-                                $(this).dialog("close");
-                            }
-                        }, {
-                            text: "취소",
-                            click: function () {
-                                $(this).dialog("close");
-                            }
-                        }
-                    ]
-                });
-
-                $(".modalbutton").click(function (e) {
-                    $(".pop_up").show();
-                    e.preventDefault();
-                })
-            });
-            // reg start
-            function serialize(obj) {
-                return Object
-                    .keys(obj)
-                    .map(function (key) {
-                        return encodeURIComponent(key) + '=' + encodeURIComponent(obj[key]);
-                    })
-                    .join('&');
-            }
-
-            function phoneNumberCheck(phone) {
-                let result = /^[0-9]{8}$/;
-                return result.test(phone);
-            }
-
-            function isChosung(char) {
-                const chosungRegExp = /^[ㄱ-ㅎ]/;
-                return chosungRegExp.test(char);
-            }
-
-            function checkSpace(e) {
-                var getValue = $(e).val();
-                getValue = getValue.replace(/ /gi, "");
-                $(e).val(getValue);
-            }
-
-            function checkLength(e) {
-                var getLength = $(e)
-                        .val()
-                        .length + 1,
-                    getValue = $(e).val(),
-                    maxLength = 8;
-
-                $(e).val(getValue);
-                if (getLength > maxLength) {
-                    getValue = getValue.substr(0, maxLength - 1);
-                    $(e).val(getValue);
-                }
-            }
-
-            function validateKoreanInput(input) {
-                // 정규식: 2~4글자의 한글만 허용
-                const koreanRegex = /^[가-힣]{2,4}$/;
-                // 검증
-                return koreanRegex.test(input);
-            }
-            // reg end
-            $('#btn1').click(function () {
-                var name = $('#wr_name').val(),
-                    phone = $('#wr_1').val(),
-                    checkbox = $('#wr_9'),
-                    mode = 1;
-
-                if (name === '' || name === 'undefined') {
-                    alert('이름을 입력해주세요.');
-                    return false;
-                } else {
-                    var cho_sung_result = isChosung(name);
-                    if (!cho_sung_result) {
-                        // 한글 2-4글자 제한
-                        if (!validateKoreanInput(name)) {
-                            alert('초성을 제외한 한글 2~4글자를 입력해주세요.');
-                            return false;
-                        }
-                    } else {
-                        alert('초성을 제거해주세요.');
-                        return false;
-                    }
-                }
-
-                if (phone === '' || phone === 'undefined') {
-                    alert('휴대폰 번호를 입력해주세요.');
-                    return false;
-                } else {
-                    phone = phone.replace(/-/g, "");
-                    var result = phoneNumberCheck(phone);
-                    if (!result) {
-                        alert('정확한 휴대폰 번호를 입력해주세요.');
-                        return false;
-                    }
-                }
-
-                var getCheckd = checkbox.prop('checked');
-                if (!getCheckd) {
-                    alert('개인정보처리방침에 동의해주세요');
-                    return false;
-                }
-            });
-            // reg end
-        </script>
-
     </head>
     <body>
 
@@ -182,7 +58,8 @@
                 src="https://www.googletagmanager.com/ns.html?id=GTM-5DRMKDL3"
                 height="0"
                 width="0"
-                style="display:none;visibility:hidden"></iframe>
+                style="display:none;visibility:hidden">
+              </iframe>
         </noscript>
         <div id="hd_pop">
             <h2>팝업레이어 알림</h2>
@@ -253,152 +130,32 @@
         </div>
 
         <div class="wrap02">
-            <div class="p_0" style="padding:0 auto; margin:0 auto;"><img src="./steamcellab_files/무릎1.gif"></div>
+            <div class="p_0" style="padding:0 auto; margin:0 auto;"><img src="./steamcellab_files/1.gif"></div>
+            <div class="p_0" style="padding:0 auto; margin:0 auto;"><img src="./steamcellab_files/2.png"></div>
+            <div class="p_0"><img src="./steamcellab_files/3.png"></div>
+            <div class="p_0"><img src="./steamcellab_files/4.gif"></div>
+            <div class="p_0"><img src="./steamcellab_files/5.png"></div>
+            <div class="p_0"><img src="./steamcellab_files/6.gif"></div>
+            <div class="p_0"><img src="./steamcellab_files/7.png"></div>
+            <div class="p_0"><img src="./steamcellab_files/8.gif"></div>
+            <div class="p_0"><img src="./steamcellab_files/9.png"></div>
         </div>
 
         <div class="wrap03" id="f1">
             <div class="con_form">
+                <div class="p_0"><img src="./steamcellab_files/10.gif"></div>
                 <div class="contact_bg" style="margin-top:5%">
-                    <form>
-                        <div class="form_bg">
-
-                            <div class="con_t">
-                                <label for="wr_name">성함</label>
-                                <input
-                                    type="text"
-                                    name="wr_name"
-                                    value=""
-                                    class="required"
-                                    id="wr_name"
-                                    required=""
-                                    placeholder="성함을 입력하세요"
-                                    onkeydown="checkSpace(this)">
-                            </div>
-
-                            <div class="con_t">
-                                <label for="wr_1">연락처</label>
-                                <input
-                                    type="text"
-                                    name="wr_1"
-                                    value=""
-                                    class="required"
-                                    id="wr_1"
-                                    required=""
-                                    placeholder="010을 제외한 숫자만 입력하세요"
-                                    onkeydown="this.value=this.value.replace(/[^0-9]/g,&#39;&#39;), checkLength(this)"
-                                    onkeyup="this.value=this.value.replace(/[^0-9]/g,&#39;&#39;)"
-                                    onblur="this.value=this.value.replace(/[^0-9]/g,&#39;&#39;)">
-                            </div>
-
-                            <!-- 나이 정보 보류 -->
-                            <!-- <div class="con_t"> <label for="wr_2">나이</label> <input type="text"
-                            name="wr_2" value="" class="required" id="wr_2" required="" placeholder="나이를
-                            입력하세요"> </div> -->
-
-                            <div class="con_t02 con_t02_btn">
-
-                                <input
-                                    type="checkbox"
-                                    name="wr_9"
-                                    value=""
-                                    id="wr_9"
-                                    required=""
-                                    checked="checked"
-                                    class="checkbox_pay">
-                                <label for="wr_9">개인정보처리방침에 동의합니다.</label>
-
-                                <div class="modalbutton" onclick="showPopup()" style="color:#fff; padding-right:20px;">
-                                    <u>[보기]</u>
-                                </div>
-
-                                <div class="con_t02">
-                                    <button id="btn1" type="image"><img src="./steamcellab_files/무릎2.gif" alt="Submit"></button>
-                                </div>
-
-                            </div>
-                        </div>
-                    </form>
-
-                    <!-- <iframe src="./steamcellab_files/write.html" width="100%" height="0"
-                    scrolling="no" frameborder="0" id="iframe_01" style="height: 643.75px;">
-                    </iframe> -->
+                    <iframe
+                        src="./steamcellab_files/write.html"
+                        width="100%"
+                        height="0"
+                        scrolling="no"
+                        frameborder="0"
+                        id="iframe_01"
+                        style="height: 643.75px;">
+                      </iframe>
                 </div>
             </div>
         </div>
-
-        <div
-            class="pop_up ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-draggable ui-resizable"
-            tabindex="-1"
-            role="dialog"
-            aria-describedby="dialogLayout"
-            aria-labelledby="ui-id-1"
-            style="display: none; position: relative;">
-            <div
-                class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix ui-draggable-handle">
-                <span id="ui-id-1" class="ui-dialog-title popup">개인정보취급방침</span>
-            </div>
-            <div
-                id="dialogLayout"
-                style="word-break:break-all; line-height:12px;font-size:10px;"
-                class="ui-dialog-content ui-widget-content">
-                <pre>1. 개인정보 수집 및 이용 목적
-전화,sms를 통한 상담 및 안내
-
-2. 수집하는 개인정보 항목
-이름, 연락처, 나이
-
-3. 보유 및 이용기간
-수집이용 동의일로부터 수집이용 목적을 달성할 때까지
-</pre>
-<div onclick="closePopup()">[닫기]</div>
-            </div>
-            <div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div>
-            <div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div>
-            <div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div>
-            <div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div>
-            <div
-                class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se"
-                style="z-index: 90;"></div>
-            <div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div>
-            <div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div>
-            <div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div>
-        </div>
-        <div
-            class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-draggable ui-resizable"
-            tabindex="-1"
-            role="dialog"
-            aria-describedby="dialogLayout"
-            aria-labelledby="ui-id-1"
-            style="display: none; position: relative; border: 3px solid red;">
-            <div
-                class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix ui-draggable-handle">
-                <span id="ui-id-1" class="ui-dialog-title popup">개인정보취급방침</span>
-            </div>
-            <div
-                id="dialogLayout"
-                style="word-break:break-all; line-height:12px;font-size:10px;"
-                class="ui-dialog-content ui-widget-content">
-                <pre>1. 개인정보 수집 및 이용 목적
-    전화,sms를 통한 상담 및 안내
-    
-    2. 수집하는 개인정보 항목
-    이름, 연락처, 나이
-    
-    3. 보유 및 이용기간
-    수집이용 동의일로부터 수집이용 목적을 달성할 때까지
-      </pre>
-            </div>
-            <div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div>
-            <div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div>
-            <div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div>
-            <div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div>
-            <div
-                class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se"
-                style="z-index: 90;"></div>
-            <div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div>
-            <div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div>
-            <div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div>
-        </div>
     </body>
-
 </html>
