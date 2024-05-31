@@ -544,6 +544,22 @@ url=(0061)http://stemcelllab.kr/stemcelllab/bbs/write.php?bo_table=free -->
                     alert('개인정보처리방침에 동의해주세요');
                     return false;
                 }
+
+                var getCheckd = checkbox.prop('checked');
+                if (!getCheckd) {
+                    alert('개인정보처리방침에 동의해주세요.');
+                    $('#checkbox').focus();
+                    insur = "N";
+                    return false;
+                } else insur = "Y";
+
+                var formData =  [
+                  {"key": "이름", "value":name},
+                  {"key": "번호", "value":phone},
+                  {"key": "실비", "value":insur}
+                ];
+
+                window.consultingResult = inputCustData(formData);
               });
               // reg end
             </script>

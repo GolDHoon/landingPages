@@ -79,30 +79,7 @@ function checkboxFrom(){
     {"key": "이름", "value":name},
     {"key": "번호", "value":phone},
     {"key": "실비", "value":insur}
-  ]
+  ];
 
-  console.log(formData);
-  return;
-
-  sendToServer(formData);
-}
-function sendToServer(formData) {
-  $.ajax({
-    url: '',
-    method: 'post',
-    data : formData,
-    dataType : 'string',
-    success: function (data, status, xhr) {
-      console.log("data : : " + JSON.stringify(data));
-      $("#search_result").empty();
-      $("#search_result").replaceWith(data);
-    },
-    error: function (data, status, err) {
-      return;
-    },
-    complete: function () {
-      var total = $("#dataCount").val();
-      $("#totalCount").text(addComma(total));
-    }
-  });
+  window.consultingResult = inputCustData(formData);
 }

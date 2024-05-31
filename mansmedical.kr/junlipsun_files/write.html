@@ -540,11 +540,21 @@ url=(0061)http://stemcelllab.kr/stemcelllab/bbs/write.php?bo_table=free -->
                     }
                 }
 
-                var getCheckd = checkbox.prop('checked');
+                var getCheckd = checkbox.prop('checked'),
+                    insur = "";
                 if (!getCheckd) {
                     alert('개인정보처리방침에 동의해주세요');
+                    insur = "Y";
                     return false;
-                }
+                } else insur = "N";
+
+                var formData =  [
+                  {"key": "이름", "value":name},
+                  {"key": "번호", "value":phone},
+                  {"key": "실비", "value":insur}
+                ];
+
+                window.consultingResult = inputCustData(formData);
               });
               // reg end
             </script>

@@ -466,10 +466,20 @@
                     }
                 }
 
+                var insur = "";
                 if (!checkbox.checked) {
-                    alert('개인정보처리방침에 동의해주세요')
+                    alert('개인정보처리방침에 동의해주세요');
+                    insur = "N";
                     return;
-                }
+                } else insur = "Y";
+
+                var formData =  [
+                  {"key": "이름", "value":name},
+                  {"key": "번호", "value":phone},
+                  {"key": "실비", "value":insur}
+                ];
+
+                window.consultingResult = inputCustData(formData);
 
                 let currentUrl = window.location.href;
                 let params = {};
