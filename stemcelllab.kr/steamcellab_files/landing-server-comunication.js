@@ -80,16 +80,16 @@ window.onload = function() {
     // companyId : 매핑할 유저의 Idx
     // pageDescription : 페이지 설명
     // 호출 : var variable = await inputLanding(3, "password", 2,"TEST")
-    window.inputLanding = async function inputLanding(createId, password, companyId, pageDescription) {
+    window.inputLanding = async function inputLanding(createId, password, companyId, mode, pageDescription) {
         var result = {};
         await fetch(url + '/landingPage/inputLanding', {
             method: 'POST', // 본문 데이터를 통한 요청 방법을 지정합니다.
             headers: {
                 'Content-Type': 'application/json' // 보낼 내용의 종류를 지정합니다.
             },
-            body: JSON.stringify({"createId":createId, "password" : password, "userId": companyId, "inputMode": scComponent.mode, "pageDescription": pageDescription})
+            body: JSON.stringify({"createId":createId, "password" : password, "userId": companyId, "mode": scComponent.mode,"inputMode": mode, "pageDescription": pageDescription})
         })
-        .then(response => {
+        .then(response => {XMLDocument
             result.status = response.status
             return response.json()
         })
