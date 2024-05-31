@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+  font-family: "Do Hyeon", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+html,
+body {
+	scroll-behavior: smooth;
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	margin: 0;
+	padding: 0;
+  font-size: 0.75em;
+  font-family: "Malgun Gothic", dotum, sans-serif;
+}
+@media screen and (max-width: 640px) {
+	body {
+		font-size: 15px;
+		font-weight: 400;
+	}
+}
+.layout {
+	min-width: 1200px;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+.wrap {
+	margin: 0 auto;
+	overflow: hidden;
+}
+.wrap,
+.wrap img:first-child {
+  width: 100%;
+}
+/* 타블렛 */
+@media (max-width: 1200px) and (min-width: 620px) {
+	.layout {
+		min-width: 1200px;
+		width: 100%;
+		overflow: hidden;
+		position: relative;
+	}
+	.wrap {
+		width: auto;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+}
+/* 모바일 */
+@media (max-width: 620px) {
+	.layout {
+		min-width: 0;
+	}
+	.wrap {
+		width: auto;
+		margin: 0;
+	}
+}
+@media screen and (max-width: 640px) {
+	.fbmo {
+		display: block;
+	}
+	.fbpc {
+		display: none;
+	}
+}
+.p_0 > img{
+  display: block;
+}
+.sec1,
+.sec3 {
+  position: relative;
+}
+.main_title, 
+.direct_btn,
+.info_desc {
+  position: absolute;
+  transform: translateX(-50%);
+}
+.main_title {
+  top: 10%;  left: 50%;
+  width: 90%;
+  animation: wink 1.5s infinite;
+}
+.direct_btn {
+  width: 86%;
+  bottom: 0; left: 50%;
+  transform: translateX(-41%);
+}
+.info_desc {
+  bottom: 13%; left: 50%;
+  width: 70%;
+}
+.info_desc div:not(.privacy, .privacy > div) {
+  border: 2px solid #171717;
+  border-radius: 50px;
+  padding: 2px 10px;
+}
+.info_desc > div:nth-child(2) {
+  margin: 5px 0 0;
+}
+.info_desc div:not(.privacy) input {
+  border: none;
+}
+.privacy {
+  font-size: 8px;
+  color: dimgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.privacy div:last-child {
+  color: lightgray;
+  margin: 0 0 0 3px;
+}
+#checkbox {
+  width: 8px;
+}
+input::placeholder {
+  font-weight: 300;
+  font-size: 10px;
+  color: lightgray;
+}
+@keyframes wink {
+  0% {opacity: 100%;}
+  50% {opacity: 0}
+  100% {opacity: 100%}
+}
