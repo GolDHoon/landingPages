@@ -21,8 +21,8 @@ body {margin:0;padding:0;font-size:0.75em;font-family:'Malgun Gothic', dotum, sa
 
 .layout{min-width:1200px;width:100%;overflow:hidden;position:relative;}
 .wrap{width:auto; margin:0 auto; overflow:hidden; }
-.wraptop{width:90%; margin:0 auto; overflow:hidden; }
-.wrap02{width:90%; margin:0 auto;  }
+.wraptop{width:100%; margin:0 auto; overflow:hidden; }
+.wrap02{width:100%; margin:0 auto;  }
 .wrap03{width:90%; margin:0 auto;  }
 
 .wraptail{width:90%; margin:0 auto; overflow:hidden; }
@@ -180,13 +180,13 @@ border:1px solid #558ab7 !important;
 /* 배경 */
 
 
-.con_form {height:100%; position:relative; background-color:#003f46; background-size:100%; text-align:center; padding:10% 0%;}
+.con_form {height:100%; position:relative; background-color:#101063; background-size:100%; text-align:center; padding:1% 0% 60%;}
 
 
 
 /* 테블렛 */
 @media (max-width:1200px) and (min-width:620px){
-.con_form{width:100%; height:auto; padding:15% 0% 30%; background-size:100%;}
+.con_form{width:100%; height:auto; padding:1% 0% 60%; background-size:100%;}
 
 }
 
@@ -197,7 +197,7 @@ border:1px solid #558ab7 !important;
 /* 모바일 */
 @media (max-width:620px){
 
-.con_form{width:100%; height:auto; padding:15% 0% 30%; background-size:100%;}
+.con_form{width:100%; height:auto; padding:1% 0% 60%; background-size:100%;}
 }
 
 
@@ -217,7 +217,7 @@ border:1px solid #558ab7 !important;
 
 .con_bt{position:relative; top:0px; padding-top:5%; text-align:center;display:flex; }
 .con_bt .con_bt01{flex:1;}
-.con_bt .con_bt01 img{width:100%; max-height:375px;}
+.con_bt .con_bt01 img{width:100%; max-height:700px;}
 
 
 
@@ -254,7 +254,7 @@ border:1px solid #558ab7 !important;
 
 .con_bt{position:relative; top:0px; padding-top:5%; text-align:center; display:flex; }
 .con_bt .con_bt01{flex:1;}
-.con_bt .con_bt01 img{width:100%; max-height:200px;}
+.con_bt .con_bt01 img{width:100%; }
 
 
 }
@@ -282,7 +282,7 @@ border:1px solid #558ab7 !important;
 
 .con_bt{position:relative; top:0px; padding-top:8%; text-align:center; display:flex; width:90%; margin-left:5%;}
 .con_bt .con_bt01{flex:1;}
-.con_bt .con_bt01 img{width:100%; max-height:120px;}
+.con_bt .con_bt01 img{width:100%; max-height:700px;}
 
 
 
@@ -700,4 +700,255 @@ box-sizing:content-box;
 {
     -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 15, 0.8);  
     -moz-box-shadow: 0px 0px 10px rgba(0, 0, 15, 0.8); 
+}
+
+/* 폼 */ 
+.form_bg {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: #101063;
+}
+
+.form_bg .con_t {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  margin-bottom: 10px;
+}
+.form_bg .con_t label {
+  font-size: 20px;
+  text-align: left;
+  width: 20%;
+  line-height: 70px;
+  color: #fff;
+}
+
+.form_bg .con_t input {
+  font-size: 20px;
+  color: #000;
+  float: right;
+  width: 80%;
+  margin-left: 20px;
+  border: 1px solid #fff;
+  background: #fff;
+  height: 80px;
+  border-radius: 10px;
+}
+.form_bg .con_t input::placeholder {
+  font-size: 20px;
+  color: #000;
+  height: 80px;
+}
+.form_bg .con_t select {
+  font-size: 20px;
+  color: #000;
+  float: right;
+  width: 80%;
+  margin-left: 20px;
+  border: 1px solid #fff;
+  background: #fff;
+  height: 80px;
+  border-radius: 10px;
+}
+
+.form_bg .con_t02 {
+  position: relative;
+  text-align: left;
+  margin-bottom: 10px;
+  height: 30px;
+  color: #fff;
+}
+.form_bg .con_t02 label {
+  color: #fff;
+  font-size: 12px;
+  height: 30px;
+}
+.form_bg .con_t02 a {
+  color: #fff;
+  font-size: 12px;
+  height: 30px;
+}
+.form_bg .con_t02 input {}
+.form_bg .con_t02 button {
+  width: 100%;
+  margin-top: 20px;
+  border: none;
+}
+.form_bg .con_t02 button img {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* 테블렛 */
+@media (max-width:1200px) and (min-width:620px) {
+  .form_bg {
+      position: relative;
+      width: 100%;
+      height: auto;
+  }
+
+  .form_bg .con_t {
+      position: relative;
+      width: 100%;
+      height: 80px;
+      margin-bottom: 10px;
+  }
+  .form_bg .con_t label {
+      font-size: 20px;
+      text-align: left;
+      width: 20%;
+      line-height: 70px;
+      color: #fff;
+  }
+
+  .form_bg .con_t input {
+      font-size: 20px;
+      color: #000;
+      float: right;
+      width: 80%;
+      margin-left: 20px;
+      border: 1px solid #fff;
+      background: #fff;
+      height: 80px;
+      border-radius: 10px;
+  }
+  .form_bg .con_t input::placeholder {
+      font-size: 20px;
+      color: #000;
+      height: 80px;
+  }
+  .form_bg .con_t select {
+      font-size: 20px;
+      color: #000;
+      float: right;
+      width: 80%;
+      margin-left: 20px;
+      border: 1px solid #fff;
+      background: #fff;
+      height: 80px;
+      border-radius: 10px;
+  }
+
+  .form_bg .con_t02 {
+      position: relative;
+      text-align: left;
+      margin-bottom: 10px;
+      height: 30px;
+      color: #ffffff;
+  }
+  .form_bg .con_t02 label {
+      color: #fff;
+      font-size: 12px;
+      height: 30px;
+  }
+  .form_bg .con_t02 a {
+      color: #fff;
+      font-size: 12px;
+      height: 30px;
+  }
+  .form_bg .con_t02 input {}
+  .form_bg .con_t02 button {
+      width: 100%;
+      margin-top: 20px;
+      border: none;
+  }
+  .form_bg .con_t02 button img {
+      width: 100%;
+      border: none;
+  }
+
+}
+
+/* 모바일 */
+@media (max-width:620px) {
+  .form_bg {
+      position: relative;
+      width: 100%;
+      height: 100%;
+  }
+
+  .form_bg .con_t {
+      position: relative;
+      width: 100%;
+      height: 130px;
+      margin-bottom: 0;
+  }
+  .form_bg .con_t label {
+      font-size: 20px;
+      text-align: left;
+      width: 100%;
+      line-height: 0;
+      color: #fff;
+      height: 10px;
+  }
+
+  .form_bg .con_t input {
+      font-size: 20px;
+      color: #000;
+      float: left;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      width: 100%;
+      margin-left: 0;
+      background: #fff;
+      height: 80px;
+      border-radius: 10px;
+  }
+  .form_bg .con_t input::placeholder {
+      font-size: 20px;
+      color: #000;
+      height: 80px;
+  }
+  .form_bg .con_t select {
+      font-size: 20px;
+      color: #000;
+      float: right;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      width: 100%;
+      margin-left: 0;
+      border: 1px solid #fff;
+      background: #fff;
+      height: 80px;
+      border-radius: 10px;
+  }
+
+  .form_bg .con_t option {
+      border: 1px solid #000;
+  }
+
+  .form_bg .con_t02 {
+      position: relative;
+      text-align: left;
+      width: 100%;
+      margin-bottom: 0;
+      height: 10px;
+      color: #fff;
+  }
+  .form_bg .con_t02 label {
+      color: #fff;
+      font-size: 12px;
+      height: 30px;
+      padding: 10px 0;
+  }
+  .form_bg .con_t02 a {
+      color: #fff;
+      font-size: 12px;
+      height: 30px;
+  }
+  .form_bg .con_t02 input {}
+  .form_bg .con_t02 button {
+      width: 100%;
+      margin-top: 20px;
+      border: none;
+  }
+  .form_bg .con_t02 button img {
+      width: 100%; 
+
+      height: 100%;
+      border: none;
+  }
+
 }
