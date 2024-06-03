@@ -4,6 +4,7 @@
 html,
 body {
 	scroll-behavior: smooth;
+  position: relative;
 }
 html {
 	overflow-y: scroll;

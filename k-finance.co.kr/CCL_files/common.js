@@ -753,3 +753,13 @@ $(function() {
         return true;
     });
 });
+
+function showPopup() {
+  $('.privacy_modal_container').show();
+  $('html').addClass('active');
+}
+
+function closePopup02() {
+  $('.privacy_modal_container').hide();
+  $('html').removeClass('active');
+}
