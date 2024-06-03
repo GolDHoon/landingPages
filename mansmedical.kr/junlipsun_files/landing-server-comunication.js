@@ -68,7 +68,6 @@ window.onload = function() {
 
     window.inputCustData = async  function inputCustData(data){
         var result = {};
-        debugger;
         await fetch(url + '/landingPage/inputCustData', {
             method: 'POST', // 본문 데이터를 통한 요청 방법을 지정합니다.
             headers: {
