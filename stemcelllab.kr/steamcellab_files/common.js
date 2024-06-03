@@ -802,7 +802,7 @@ function serialize(obj) {
   }
 
 
-function checkFormData() {
+async function checkFormData() {
   var name = $('#wr_name').val(),
       phone = $('#wr_1').val(),
       checkbox = $('#wr_9'),
@@ -854,9 +854,13 @@ function checkFormData() {
     {"key": "이름", "value":name},
     {"key": "번호", "value":"010"+phone}
   ];
+
+  var variable = window.consultingResult = await inputCustData(formData),
+      getStatus = variable.status;
   
-  window.consultingResult = inputCustData(formData);
-  alert('상담신청이 완료되었습니다.');
+  if(getStatus == '200') alert('상담신청이 완료되었습니다.');
+  else if (getStatus == '403') alert('비정상적인 접근입니다. 다시 시도해 주세요.'); 
+  else if (getStatus == '500') alert('서버 내부 오류입니다. 다시 시도해 주세요.');
 }
 
 function showPopup() {

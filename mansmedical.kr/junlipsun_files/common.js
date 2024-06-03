@@ -799,7 +799,7 @@ function validateKoreanInput(input) {
   return koreanRegex.test(input);
 }
 // reg end
-function checkForm() {
+async function checkForm() {
   var name = $('#name').val(),
     phone = $('#phone').val(),
     checkbox = $('#checkbox');
@@ -844,8 +844,12 @@ function checkForm() {
     {"key": "번호", "value":"010"+phone}
   ];
 
-  window.consultingResult = inputCustData(formData);
-  alert('상담신청이 완료되었습니다.');
+  var variable = window.consultingResult = await inputCustData(formData),
+      getStatus = variable.status;
+  
+  if(getStatus == '200') alert('상담신청이 완료되었습니다.');
+  else if (getStatus == '403') alert('비정상적인 접근입니다. 다시 시도해 주세요.'); 
+  else if (getStatus == '500') alert('서버 내부 오류입니다. 다시 시도해 주세요.');
 }
 
 function showPopup() {
