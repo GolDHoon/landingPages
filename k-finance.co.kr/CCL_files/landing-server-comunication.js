@@ -1,4 +1,5 @@
 window.onload = function() {
+    debugger;
     window.blockedKeyword = {};
     window.lpgeCode = {};
     /*
@@ -37,9 +38,9 @@ window.onload = function() {
 
     window.utm = Object.freeze(getUTMParameters());
 
-    window.inputLanding = async function inputLanding(createId, password, companyId, mode, pageDescription) {
+    window.inputLanding = function inputLanding(createId, password, companyId, mode, pageDescription) {
         var result = {};
-        await fetch(url + '/landingPage/inputLanding', {
+        fetch(url + '/landingPage/inputLanding', {
             method: 'POST', // 본문 데이터를 통한 요청 방법을 지정합니다.
             headers: {
                 'Content-Type': 'application/json' // 보낼 내용의 종류를 지정합니다.
@@ -66,9 +67,9 @@ window.onload = function() {
         return result;
     }
 
-    window.inputCustData = async  function inputCustData(data){
+    window.inputCustData = function inputCustData(data){
         var result = {};
-        await fetch(url + '/landingPage/inputCustData', {
+        fetch(url + '/landingPage/inputCustData', {
             method: 'POST', // 본문 데이터를 통한 요청 방법을 지정합니다.
             headers: {
                 'Content-Type': 'application/json' // 보낼 내용의 종류를 지정합니다.
