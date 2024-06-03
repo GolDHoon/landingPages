@@ -23,41 +23,6 @@ window.onload = function() {
         scComponent.mode = "prod";
     }
 
-    async function getInitialData(url) {
-        fetch(url +'/landingPage/getInitialData?domain='+window.location.hostname, {
-            method: 'GET',
-            headers: {'Content-Type': 'application/json'},
-        })
-            .then(response => {
-                window.lpgeCode.status = response.status;
-                return response.json()
-            })
-            .then(result => {
-                window.lpgeCode.data = result.lpgeCode;
-
-                fetch(url + '/landingPage/getBlockedKeyword?lpgeCode='+window.lpgeCode.data, {
-                    method: 'GET',
-                    headers: {'Content-Type': 'application/json'},
-                })
-                    .then(response => {
-                        window.blockedKeyword.status = response.status;
-                        return response.json()
-                    })
-                    .then(result2 => {
-                        window.blockedKeyword.data = result2;
-                    })
-                    .then(() =>{
-                        window.lpgeCode = Object.freeze(window.lpgeCode);
-                        window.blockedKeyword = Object.freeze(window.blockedKeyword);
-                    })
-            })
-            .catch(error => {
-                return error;
-            });
-    }
-
-    getInitialData(url);
-
     function getUTMParameters() {
         let urlParams = new URLSearchParams(window.location.search);
         let parameters = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
@@ -131,4 +96,39 @@ window.onload = function() {
 
         return result;
     }
+
+    async function getInitialData(url) {
+        fetch(url +'/landingPage/getInitialData?domain='+window.location.hostname, {
+            method: 'GET',
+            headers: {'Content-Type': 'application/json'},
+        })
+            .then(response => {
+                window.lpgeCode.status = response.status;
+                return response.json()
+            })
+            .then(result => {
+                window.lpgeCode.data = result.lpgeCode;
+
+                fetch(url + '/landingPage/getBlockedKeyword?lpgeCode='+window.lpgeCode.data, {
+                    method: 'GET',
+                    headers: {'Content-Type': 'application/json'},
+                })
+                    .then(response => {
+                        window.blockedKeyword.status = response.status;
+                        return response.json()
+                    })
+                    .then(result2 => {
+                        window.blockedKeyword.data = result2;
+                    })
+                    .then(() =>{
+                        window.lpgeCode = Object.freeze(window.lpgeCode);
+                        window.blockedKeyword = Object.freeze(window.blockedKeyword);
+                    })
+            })
+            .catch(error => {
+                return error;
+            });
+    }
+
+    getInitialData(url).then(r => {}).catch();
 };
