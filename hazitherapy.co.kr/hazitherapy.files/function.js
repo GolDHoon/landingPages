@@ -1,5 +1,15 @@
 console.log('js is load👍');
 
+$(document).ready(function(){
+  $('.popup_silby, html').addClass('active');
+})
+
+$(window).scroll(function(){
+  var h = $(document).scrollTop();
+  if(h > 900) $('.navi_btn').fadeOut();
+  else $('.navi_btn').fadeIn();
+});
+
 function phoneNumberCheck(phone) {
   var result =  /^[0-9]{8}$/;
   return result.test(phone);
@@ -31,8 +41,7 @@ function validateKoreanInput(input) {
 function checkboxFrom(){
   var name = $('#name').val(),
       phone = $('#phone').val(),
-      checkbox = $('#checkbox'),
-      insur = "";
+      checkbox = $('#checkbox');
 
   if (name === '' || name === 'undefined') {
     alert('이름을 입력해주세요.');
@@ -71,15 +80,30 @@ function checkboxFrom(){
   if (!getCheckd) {
       alert('개인정보처리방침에 동의해주세요.');
       $('#checkbox').focus();
-      insur = "N";
       return false;
-  } else insur = "Y";
+  }
 
   var formData =  [
     {"key": "이름", "value":name},
-    {"key": "번호", "value":phone},
-    {"key": "실비", "value":insur}
+    {"key": "번호", "value":"010"+phone},
+    {"key": "실비", "value":silby}
   ];
 
   window.consultingResult = inputCustData(formData);
+  alert('상담신청이 완료되었습니다.');
+}
+
+function showPopup(e) {
+  if(e=="private") $('.popup_privacy, html').addClass('active');
+  else $('.popup_silby, html').addClass('active');
+}
+
+var silby = "";
+function closePopup01(e) {
+  $('.popup_silby, html').removeClass('active');
+  silby = e;
+}
+
+function closePopup02() {
+  $('.popup_privacy, html').removeClass('active');
 }
