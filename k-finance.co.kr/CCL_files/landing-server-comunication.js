@@ -1,5 +1,4 @@
 window.onload = function() {
-    debugger;
     window.blockedKeyword = {};
     window.lpgeCode = {};
     /*
@@ -38,7 +37,7 @@ window.onload = function() {
 
     window.utm = Object.freeze(getUTMParameters());
 
-    window.inputLanding = function inputLanding(createId, password, companyId, mode, pageDescription) {
+    window.inputLanding = async function inputLanding(createId, password, companyId, mode, pageDescription) {
         var result = {};
         fetch(url + '/landingPage/inputLanding', {
             method: 'POST', // 본문 데이터를 통한 요청 방법을 지정합니다.
@@ -67,7 +66,7 @@ window.onload = function() {
         return result;
     }
 
-    window.inputCustData = function inputCustData(data){
+    window.inputCustData = async function inputCustData(data){
         var result = {};
         fetch(url + '/landingPage/inputCustData', {
             method: 'POST', // 본문 데이터를 통한 요청 방법을 지정합니다.
