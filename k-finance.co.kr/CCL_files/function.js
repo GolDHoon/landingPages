@@ -1,9 +1,5 @@
 console.log('js is load👍');
 
-$(document).ready(function(){
-  $('.popup_silby, html').addClass('active');
-})
-
 $(window).scroll(function(){
   var h = $(document).scrollTop();
   if(h > 900) $('.navi_btn').fadeOut();
@@ -41,7 +37,8 @@ function validateKoreanInput(input) {
 async function checkboxFrom(){
   var name = $('#name').val(),
       phone = $('#phone').val(),
-      checkbox = $('#checkbox');
+      checkbox = $('#privacy_agreement');
+      
 
   if (name === '' || name === 'undefined') {
     alert('이름을 입력해주세요.');
@@ -61,6 +58,7 @@ async function checkboxFrom(){
         return false;
       }
   }
+  
 
   if (phone === '' || phone === 'undefined') {
     alert('휴대폰 번호를 입력해주세요.');
@@ -79,35 +77,33 @@ async function checkboxFrom(){
   var getCheckd = checkbox.prop('checked');
   if (!getCheckd) {
       alert('개인정보처리방침에 동의해주세요.');
-      $('#checkbox').focus();
+      $('#privacy_agreement').focus();
       return false;
   }
 
   var formData =  [
     {"key": "이름", "value":name},
-    {"key": "번호", "value":"010"+phone},
-    {"key": "실비", "value":silby}
+    {"key": "번호", "value":"010"+phone}
   ];
+
 
   var variable = window.consultingResult = await inputCustData(formData),
       getStatus = variable.status;
+      
+
   
   if(getStatus == '200') alert('상담신청이 완료되었습니다.');
-  else if (getStatus == '403') alert('비정상적인 접근입니다. 다시 시도해 주세요.');
+  else if (getStatus == '403') alert('비정상적인 접근입니다. 다시 시도해 주세요.'); 
   else if (getStatus == '500') alert('서버 내부 오류입니다. 다시 시도해 주세요.');
+  
 }
 
-function showPopup(e) {
-  if(e=="private") $('.popup_privacy, html').addClass('active');
-  else $('.popup_silby, html').addClass('active');
+function showPopup() {
+  $('#privacy_modal_container').show();
+  $('html').addClass('active');
 }
 
-var silby = "";
-function closePopup01(e) {
-  $('.popup_silby, html').removeClass('active');
-  silby = e;
-}
-
-function closePopup02() {
-  $('.popup_privacy, html').removeClass('active');
+function closePopup() {
+  $('#privacy_modal_container').hide();
+  $('html').removeClass('active');
 }

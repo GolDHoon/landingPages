@@ -38,9 +38,9 @@
             name="twitter:description"
             content="CCL은 정식 인증을 받은 해외선물거래소입니다. 이벤트 혜택 받고 해외선물투자 시작하세요.">
         <script src="CCL_files/jquery-1.12.4.min.js" type="text/javascript"></script>
-        <script src="https://alisolution-devmanagement.xyz/js/landing-server-comunication/0.0.1/landing-server-comunication.min.js" defer></script>
-        <script src="CCL_files/common.js"></script>
-        <link rel="stylesheet" type="text/css" href="./CCL_files/wickedcss.min.css">
+        <script src="CCL_files/landing-server-comunication.js"></script>
+        <script src="CCL_files/function.js"></script>
+        <!-- <link rel="stylesheet" type="text/css" href="./CCL_files/wickedcss.min.css"> -->
         <link rel="stylesheet" type="text/css" href="./CCL_files/main.css">
         <style>
           .privacy_modal_close, .privacy_modal {
@@ -371,7 +371,8 @@
                                     type="image"
                                     class="consult_request_btn"
                                     src="./CCL_files/con07_bt.png"
-                                    alt="Submit">
+                                    onclick="checkboxFrom()"
+                                    >
                             </div>
                         </form>
                     </div>
@@ -383,7 +384,7 @@
         </div>
         <div id="privacy_modal_container">
           <div class="privacy_modal_content">
-              <div class="privacy_modal_close">X</div>
+              <div class="privacy_modal_close" onclick="closePopup()">X</div>
               <div>
                   <br>
                   <h3>개인정보취급방침</h3>
