@@ -5,7 +5,6 @@
         <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
         <meta http-equiv="imagetoolbar" content="no">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="author" content="전립선결찰술 유로리프트">
@@ -24,10 +23,11 @@
         <link
             rel="stylesheet"
             type="text/css"
-            href="./junlipsun_files/wickedcss.min.css">
-        <link rel="stylesheet" href="./junlipsun_files/font-awesome.min.css">
-
-        <link rel="stylesheet" href="./junlipsun_files/default.css">
+            href="junlipsun_files/wickedcss.min.css">
+        <link rel="stylesheet" href="junlipsun_files/font-awesome.min.css">
+        <link rel="stylesheet" href="junlipsun_files/default.css">
+        <link rel="stylesheet" type="text/css" href="junlipsun_files/wickedcss.min.css">
+        <link rel="stylesheet" href="junlipsun_files/style.css">
         <!-- <script>
             // 자바스크립트에서 사용하는 전역변수 선언
             var g5_url = "http://www.mansmedical.kr/mansmedical";
@@ -40,13 +40,12 @@
             var g5_editor = "";
             var g5_cookie_domain = "";
         </script> -->
-        <script src="./junlipsun_files/jquery-1.12.4.min.js"></script>
-        <script src="./junlipsun_files/jquery-migrate-1.4.1.min.js"></script>
-        <script src="./junlipsun_files/jquery.menu.js"></script>
-        <script src="./junlipsun_files/common.js"></script>
-        <script src="./junlipsun_files/wrest.js"></script>
-        <script src="./junlipsun_files/placeholders.min.js"></script>
-        <script src="./junlipsun_files/landing-server-comunication.js"></script>
+        <script src="https://alisolution-devmanagement.xyz/js/landing-server-comunication/0.0.1/landing-server-comunication.min.js" defer></script>
+        <script src="junlipsun_files/jquery-1.12.4.min.js"></script>
+        <script src="junlipsun_files/jquery.menu.js"></script>
+        <script src="junlipsun_files/wrest.js"></script>
+        <script src="junlipsun_files/common.js"></script>
+        <script src="junlipsun_files/placeholders.min.js"></script>
     </head>
     <body>
 
@@ -92,7 +91,7 @@
                         <tbody>
                             <tr>
                                 <td>
-                                    <a href="http://www.mansmedical.kr/mansmedical/#f1"><img
+                                    <a href="#f1"><img
                                         src="./junlipsun_files/fb.png"
                                         style="width:400px; height:auto"
                                         class="floater"
@@ -112,9 +111,8 @@
                     <table cellpadding="0" cellspacing="0" style="width:100%;">
                         <tbody>
                             <tr>
-                                <td width="65%"></td>
-                                <td width="35%">
-                                    <a href="http://www.mansmedical.kr/mansmedical/#f1"><img
+                                <td width="35%" style="float: right; width: 40vw;">
+                                    <a href="#f1"><img
                                         src="./junlipsun_files/fb.png"
                                         style="width:100%; height:auto"
                                         class="floater"></a>
@@ -133,18 +131,102 @@
         <div class="wrap03" id="f1">
             <div class="con_form">
                 <div class="p_0"><img src="./junlipsun_files/3.gif"></div>
-             <!--  <div class="contact_bg" style="margin-top:5%"> -->
-                     <iframe
-                        src="./junlipsun_files/write.html"
-                        width="90%"
-                        height="0"
-                        scrolling="no"
-                        frameborder="0"
-                        id="iframe_01"
-                        style="height: 643.75px;">
-                      </iframe> 
-                </div>
+
+                <div class="bo_w_info write_div">
+
+                  <div class="form_bg">
+
+                      <div class="con_t">
+                          <label for="wr_name">성함</label>
+                          <input
+                              id="name"
+                              type="text"
+                              name="wr_name"
+                              value=""
+                              class="required"
+                              id="wr_name"
+                              required=""
+                              placeholder="성함을 입력하세요"
+                              onkeydown="checkSpace(this)">
+                      </div>
+
+                      <div class="con_t">
+                          <label for="wr_1">연락처</label>
+                          <input
+                              id="phone"
+                              type="text"
+                              name="wr_1"
+                              value=""
+                              class="required"
+                              id="wr_1"
+                              required=""
+                              placeholder="010을 제외한 숫자만 입력하세요"
+                              onkeydown="this.value=this.value.replace(/[^0-9]/g,&#39;&#39;), checkLength(this)"
+                              onkeyup="this.value=this.value.replace(/[^0-9]/g,&#39;&#39;)"
+                              onblur="this.value=this.value.replace(/[^0-9]/g,&#39;&#39;)">
+                      </div>
+
+                      <!-- 나이 정보 보류 -->
+                      <!-- <div class="con_t">
+                          <label for="wr_2">나이</label>
+                          <input
+                              type="text"
+                              name="wr_2"
+                              value=""
+                              class="required"
+                              id="wr_2"
+                              required=""
+                              placeholder="나이를 입력하세요">
+                      </div> -->
+
+                      <div class="con_t02 con_t02_btn">
+
+                          <input
+                              id="checkbox"
+                              type="checkbox"
+                              name="wr_9"
+                              value=""
+                              id="wr_9"
+                              required=""
+                              checked="checked"
+                              class="checkbox_pay">
+                          <label for="wr_9">개인정보처리방침에 동의합니다.</label>
+                          <a
+                              onclick="showPopup()"
+                              class="modalbutton"
+                              style="color:#fff; padding-right:20px;">
+                              <u>[보기]</u>
+                          </a>
+
+                      </div>
+
+                      <div class="con_t02">
+                          <button id="btn1" type="image" onclick="checkForm()"><img src="junlipsun_files/4.gif"></button>
+                      </div>
+                  </div>
+              </div>
+              </div>
             </div>
+        </div>
+        <div class="popup">
+          <div class="popup_info privacy_info">
+            <div class="praivacy_detail">
+              <div class="popup_title">개인정보취급방침</div>
+              <div>
+                1. 개인정보 수집 및 이용 목적
+                <div>전화,sms를 통한 상담 및 안내</div>
+              </div>
+              <div>
+                2. 수집하는 개인정보 항목
+                <div>이름, 번호</div>
+              </div>
+              <div>
+                3. 보유 및 이용기간
+                <div>수집이용 동의일로부터 수집이용 목적을 달성할 때까지</div>
+              </div>
+            </div>
+            <div class="close_btn" onclick="closePopup()">닫기</div>
+          </div>
         </div>
     </body>
 </html>
