@@ -844,6 +844,8 @@ async function checkForm() {
     {"key": "번호", "value":"010"+phone}
   ];
 
+debugger;
+
   var variable = window.consultingResult = await inputCustData(formData),
       getStatus = variable.status;
   
