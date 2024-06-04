@@ -89,6 +89,7 @@ async function checkboxFrom(){
       getStatus = variable.status;
   
   if(getStatus == '200') {
+    debugger;
     console.log(window.dataLayer);
     console.log(dataLayer)
     window.dataLayer.push = ({
