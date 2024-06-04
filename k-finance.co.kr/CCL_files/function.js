@@ -90,8 +90,7 @@ async function checkboxFrom(){
   
   if(getStatus == '200') {
     debugger;
-    console.log(window.dataLayer);
-    console.log(dataLayer)
+    console.log("들어옴");
     window.dataLayer.push = ({
       event: "DB_input"
     });
