@@ -94,7 +94,7 @@ async function checkboxFrom(){
   
 
   if(getStatus == '200') {
-    window.dataLayer.push = ({
+    window.dataLayer.push({
       event: "DB_input"
   });
     alert('상담신청이 완료되었습니다.');
