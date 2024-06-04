@@ -92,7 +92,6 @@ async function checkboxFrom(){
   var variable = window.consultingResult = await inputCustData(formData),
       getStatus = variable.status;
   
-
   if(getStatus == '200') {
     window.dataLayer.push({
       event: "DB_input"
