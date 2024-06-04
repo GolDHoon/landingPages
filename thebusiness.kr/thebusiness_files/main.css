@@ -1,0 +1,303 @@
+@charset "utf-8";
+
+/* 초기화 */
+html,body{scroll-behavior:smooth; }
+html {overflow-y:scroll;}
+body {margin:0;padding:0;font-size:0.75em;font-family:'Malgun Gothic', dotum, sans-serif; position: relative}
+@media screen and (max-width:640px){
+	body{font-size:15px;font-weight:400;}
+}
+
+.layout{min-width:1200px;width:100%;overflow:hidden;position:relative;}
+.wrap{width:auto; margin:0 auto; overflow:hidden; }
+.wraptop{width:1200px; margin:0 auto; overflow:hidden; }
+.wrap02{width:800px; margin:0 auto;  }
+.wrap03{width:690px; margin:0 auto;  }
+
+.wraptail{width:1000px;margin:0 auto; overflow:hidden; }
+
+/* 타블렛 */
+@media (max-width:1200px) and (min-width:620px){
+
+.layout{min-width:1200px;width:100%;overflow:hidden;position:relative;}
+.wrap{width:auto; margin:0 auto; overflow:hidden; }
+.wraptop{width:90%; margin:0 auto; overflow:hidden; }
+.wrap02{width:90%; margin:0 auto;  }
+.wrap03{width:90%; margin:0 auto;  }
+
+.wraptail{width:90%; margin:0 auto; overflow:hidden; }
+
+}
+
+/* 모바일 */
+@media (max-width:620px){
+	.layout{min-width:0;}
+	.wrap{width:auto;margin:0;}
+	.wraptop{width:auto;margin:0;}
+	.wrap02{width:auto;margin:0;}
+		.wrap03{width:auto;margin:0;}
+
+	.wraptail{width:auto;margin:0;}
+
+
+}
+
+
+
+.fbpc {position:absolute; position:fixed; top:0%; height:auto; width:100%; z-index:999; display:block}
+.fbmo {display:none}
+@media screen and (max-width:640px){
+.fbmo {position:absolute; position:fixed; top:0%; height:auto; width:100%; z-index:999; display:block}
+.fbpc {display:none}
+
+}
+
+
+
+/* 배경 */
+
+.con{height:100%; position:relative; background-color:#003f46; background-size:100%; text-align:center; padding:10% 0%;}
+
+
+/* 테블렛 */
+@media (max-width:1200px) and (min-width:620px){
+.con{padding:10% 0%; background-size:100%;}
+
+
+}
+
+
+
+/* PC */
+@media (min-width:1200px){
+	.stick {width: 30%;} /* 카톡상담버튼 */
+}
+/* 모바일 */
+@media (max-width:620px){
+.con{padding:10% 0% 30%; background-size:100%;}
+
+
+}
+
+
+
+/* 공통 */
+
+.p_0{position:relative; top:0px; text-align:center; padding:0; margin:0;}
+
+.p_0 img {
+	vertical-align: bottom;
+	/*   vertical-align: top; */
+  }
+  
+.bt{position:relative; top:0px; text-align:center;}
+.bt img{width:100%;}
+
+.p_t1{position:relative; top:0px; padding-top:1%; text-align:center;}
+.p_t2{position:relative; top:0px; padding-top:2%; text-align:center;}
+
+.p_t3{position:relative; top:0px; padding-top:3%; text-align:center;}
+
+.p_bt{position:relative; top:0px; text-align:center;}
+
+
+
+#con_mo{display:none}
+
+
+
+
+.con_bt{position:relative; top:0px; padding-top:0%; text-align:center;display:flex; }
+.con_bt .p2_0{flex:1;}
+
+.contact_bg {width:90%; margin-left:5%; background:none; text-align:left;}
+.contact_bg .contact {padding:5%;}
+.contact_bg .contact span{font-size:26px;}
+.contact_bg .contact li{list-style:none; font-size:20px; line-height:30px;}
+.contact_bg .contact select {font-size:26px; line-height:70px; color:#000; padding:3%; background:#fff; width:100%; border:1px solid #fff; border-radius:10px; }
+.contact_bg .contact .textbox {font-size:26px; margin-top:20px; background:#fff; width:100%; border:1px solid #fff; border-radius:10px; }
+.contact_bg .contact .textbox input{font-size:26px; color:#000; padding:3%;  background:none; border:none;}
+
+.contact_bg .contact .textbox02 {font-size:12px; background:none; margin-top:20px; width:100%;color:#fff;}
+.contact_bg .contact .textbox02 span{background:none; font-size:12px; margin-top:20px; width:100%;color:#fff;}
+
+.contact_bg .contact .btn { text-align:center;width:100%; margin-top:20px; }
+.contact_bg .contact .btn img{width:100%;}
+
+
+
+/* 테블렛 */
+@media (max-width:1200px) and (min-width:620px){
+.stick {width: 35%}
+.p_0{position:relative; top:0px; text-align:center;padding:0; margin:0;}
+.p_0 img{width:100%}
+
+.p_t1{position:relative; top:0px; padding-top:1%; text-align:center;}
+.p_t1 img{width:90%}
+
+.p_t2{position:relative; top:0px; padding-top:2%; text-align:center;}
+.p_t2 img{width:90%}
+
+
+
+.p_t3{position:relative; top:0px; padding-top:3%; text-align:center;}
+.p_t3 img{width:90%}
+
+.p_bt{position:relative; top:0px; text-align:center;}
+.p_bt img{width:25%}
+
+
+
+.con_bt{position:relative; top:0px; padding-top:0%; text-align:center;display:flex; }
+.con_bt .p2_0{flex:1;}
+
+.contact_bg {width:90%; margin-left:5%; background:none; text-align:left;}
+.contact_bg .contact {padding:5%;}
+.contact_bg .contact span{font-size:26px;}
+.contact_bg .contact li{list-style:none; font-size:20px; line-height:30px;}
+.contact_bg .contact select {font-size:26px; line-height:70px; color:#000; padding:3%; background:#fff; width:100%; border:1px solid #fff; border-radius:10px; }
+.contact_bg .contact .textbox {font-size:26px; margin-top:20px; background:#fff; width:100%; border:1px solid #fff; border-radius:10px; }
+.contact_bg .contact .textbox input{font-size:26px; color:#000; padding:3%;  background:none; border:none;}
+
+.contact_bg .contact .textbox02 {font-size:12px; background:none; margin-top:20px; width:100%;color:#fff;}
+.contact_bg .contact .textbox02 span{background:none; font-size:12px; margin-top:20px; width:100%;color:#fff;}
+
+.contact_bg .contact .btn { text-align:center;width:100%; margin-top:20px; }
+.contact_bg .contact .btn img{width:100%;}
+
+#w_60{width:60%; padding-top:3%;}
+#w_80{width:80%;}
+
+#p_5{padding-top:10%;}
+#p_4{padding-top:10%;}
+
+
+}
+
+/* PC */
+@media (min-width:1200px){
+
+}
+
+/* 모바일 */
+@media (max-width:620px){
+.p_0{position:relative; top:0px; text-align:center;padding:0; margin:0;}
+.p_0 img{width:100%}
+
+
+.p_t1{position:relative; top:0px; padding-top:1%; text-align:center;}
+.p_t1 img{width:100%}
+
+.p_t2{position:relative; top:0px; padding-top:2%; text-align:center;}
+.p_t2 img{width:100%}
+
+.p_t3{position:relative; top:0px; padding-top:3%; text-align:center;}
+.p_t3 img{width:100%}
+
+
+.bt{position:relative; top:0px; text-align:center;}
+.bt img{width:100%}
+
+
+
+
+.con_bt{position:relative; top:0px; padding-top:0%; text-align:center; display:block; }
+.con_bt .p2_0{position:relative;}
+.con_bt .p2_0 img{width:80%}
+
+
+
+#con_pc{display:none}
+#con_mo{display:block}
+
+
+
+
+
+
+.contact_bg {width:90%; margin-left:5%; background:none; text-align:left;}
+.contact_bg .contact {padding:5%;}
+.contact_bg .contact span{font-size:26px;}
+.contact_bg .contact li{list-style:none; font-size:20px; line-height:30px;}
+.contact_bg .contact select {font-size:26px; line-height:70px; color:#000; padding:3%; background:#fff; width:100%; border:1px solid #fff; border-radius:10px; }
+.contact_bg .contact .textbox {font-size:26px; margin-top:20px; background:#fff; width:100%; border:1px solid #fff; border-radius:10px; }
+.contact_bg .contact .textbox input{font-size:26px; color:#000; padding:3%;  background:none; border:none;}
+
+.contact_bg .contact .textbox02 {font-size:12px; background:none; margin-top:20px; width:100%;color:#fff;}
+.contact_bg .contact .textbox02 span{background:none; font-size:12px; margin-top:20px; width:100%;color:#fff;}
+
+.contact_bg .contact .btn { text-align:center;width:100%; margin-top:20px; }
+.contact_bg .contact .btn img{width:100%;}
+
+
+
+
+#w_60{width:60%; padding-top:3%;}
+#w_80{width:80%;}
+#w_150{width:150%; margin-left:-25%;}
+
+#p_5{padding-top:10%;}
+#p_4{padding-top:10%;}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 하단 */
+.copy01bg{height:100%; position:relative; background:#fff; text-align:center; padding:10px 0px;}
+.copy01 p{color:#9c9c9c; }
+.copy01 span{padding:0px 10px 0px 5px;font-weight:bold;}
+
+/* 테블렛 */
+@media (max-width:1200px) and (min-width:620px){
+.copy01bg{height:100%; position:relative; background:#fff; text-align:center;}
+.copy01 p{color:#9c9c9c;}
+}
+
+/* 모바일 */
+@media (max-width:620px){
+.copy01bg{height:100%; position:relative; background:#fff; text-align:center; font-size:10px;}
+.copy01 p{color:#9c9c9c;}
+.copy01 span{padding:0px 10px 0px 5px;}
+}
+
+.stick {
+	position: fixed;
+	right: -10px; bottom: 35px;
+	animation: tongtong .8s infinite;
+	width: 48%;
+}
+.main,
+.main img,
+.stick a {
+	width: 100%;
+}
+a {
+	text-decoration: none;
+}
+@keyframes tongtong {
+	0% {
+		transform: translateY(0%);
+	}
+	50% {
+		transform: translateY(6%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}
+.btn a {
+  position: absolute;
+  bottom: 6vw;
+  left: 50%;
+  width: 85%;
+  transform: translateX(-50%);
+}
