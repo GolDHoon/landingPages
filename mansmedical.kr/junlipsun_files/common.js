@@ -71,7 +71,7 @@ function number_format(data)
     var cutlen = 3;
     var comma = ',';
     var i;
-    
+
     data = data + '';
 
     var sign = data.match(/^[\+\-]/);
@@ -154,9 +154,9 @@ function set_cookie(name, value, expirehours, domain)
 // 쿠키 얻음
 function get_cookie(name)
 {
-	var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
-	if (match) return unescape(match[2]);
-	return "";
+    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    if (match) return unescape(match[2]);
+    return "";
 }
 
 // 쿠키 지움
@@ -409,7 +409,7 @@ var win_zip = function(frm_name, frm_zip, frm_addr1, frm_addr2, frm_addr3, frm_j
         if(of[frm_jibeon] !== undefined){
             of[frm_jibeon].value = data.userSelectedType;
         }
-        
+
         setTimeout(function(){
             $("#meta_viewport").attr("content", vContent);
             of[frm_addr2].focus();
@@ -535,17 +535,17 @@ $(function() {
 
 /**
  * 텍스트 리사이즈
-**/
+ **/
 function font_resize(id, rmv_class, add_class, othis)
 {
     var $el = $("#"+id);
 
-	if((typeof rmv_class !== "undefined" && rmv_class) || (typeof add_class !== "undefined" && add_class)){
-		$el.removeClass(rmv_class).addClass(add_class);
+    if((typeof rmv_class !== "undefined" && rmv_class) || (typeof add_class !== "undefined" && add_class)){
+        $el.removeClass(rmv_class).addClass(add_class);
 
-		set_cookie("ck_font_resize_rmv_class", rmv_class, 1, g5_cookie_domain);
-		set_cookie("ck_font_resize_add_class", add_class, 1, g5_cookie_domain);
-	}
+        set_cookie("ck_font_resize_rmv_class", rmv_class, 1, g5_cookie_domain);
+        set_cookie("ck_font_resize_add_class", add_class, 1, g5_cookie_domain);
+    }
 
     if(typeof othis !== "undefined"){
         $(othis).addClass('select').siblings().removeClass('select');
@@ -554,7 +554,7 @@ function font_resize(id, rmv_class, add_class, othis)
 
 /**
  * 댓글 수정 토큰
-**/
+ **/
 function set_comment_token(f)
 {
     if(typeof f.token === "undefined")
@@ -757,122 +757,110 @@ $(function() {
 });
 // reg start
 function serialize(obj) {
-return Object
-  .keys(obj)
-  .map(function (key) {
-      return encodeURIComponent(key) + '=' + encodeURIComponent(obj[key]);
-  })
-  .join('&');
+    return Object
+        .keys(obj)
+        .map(function (key) {
+            return encodeURIComponent(key) + '=' + encodeURIComponent(obj[key]);
+        })
+        .join('&');
 }
 
 function phoneNumberCheck(phone) {
-  let result = /^(?!01)\d{8}$/;
-  return result.test(phone);
+    let result = /^(?!01)\d{8}$/;
+    return result.test(phone);
 }
 
 function isChosung(char) {
-  const chosungRegExp = /^[ㄱ-ㅎ]/;
-  return chosungRegExp.test(char);
+    const chosungRegExp = /^[ㄱ-ㅎ]/;
+    return chosungRegExp.test(char);
 }
 
 function checkSpace(e) {
-var getValue = $(e).val();
-getValue = getValue.replace(/ /gi,"");
-$(e).val(getValue);
+    var getValue = $(e).val();
+    getValue = getValue.replace(/ /gi,"");
+    $(e).val(getValue);
 }
 
 function checkLength(e) {
-  var getLength = $(e).val().length+1,
-      getValue = $(e).val(),
-      maxLength = 8;
+    var getLength = $(e).val().length+1,
+        getValue = $(e).val(),
+        maxLength = 8;
 
-  $(e).val(getValue);
-  if(getLength > maxLength) {
-    getValue = getValue.substr(0, maxLength-1);
     $(e).val(getValue);
-  }
+    if(getLength > maxLength) {
+        getValue = getValue.substr(0, maxLength-1);
+        $(e).val(getValue);
+    }
 }
 function validateKoreanInput(input) {
-  // 정규식: 2~4글자의 한글만 허용
-  const koreanRegex = /^[가-힣]{2,4}$/;
-  // 검증
-  return koreanRegex.test(input);
+    // 정규식: 2~4글자의 한글만 허용
+    const koreanRegex = /^[가-힣]{2,4}$/;
+    // 검증
+    return koreanRegex.test(input);
 }
 // reg end
 async function checkForm() {
-  var name = $('#name').val(),
-    phone = $('#phone').val(),
-    checkbox = $('#checkbox');
+    var name = $('#name').val(),
+        phone = $('#phone').val(),
+        checkbox = $('#checkbox');
 
-
-  var blockK = window.blockedKeyword.data,
-    checkName = $('#name').val(),
-    isBreak,
-    result = blockK.filter(function(word) {
-    isBreak = true;
-    alert('차단된 키워드가 사용되었습니다. 다시 입력해 주세요. (' + checkName +')');
-  });
-
-  if (isBreak ==true) {
-    return false;
-  }
-  if (name === '' || name === 'undefined') {
-    alert('이름을 입력해주세요.');
-    return false;
-  } else {
-    var cho_sung_result = isChosung(name);
-    if (!cho_sung_result) {
-        // 한글 2-4글자 제한
-        if (!validateKoreanInput(name)) {
-            alert('초성을 제외한 한글 2~4글자를 입력해주세요.');
+    if (name === '' || name === 'undefined') {
+        alert('이름을 입력해주세요.');
+        return false;
+    } else {
+        var cho_sung_result = isChosung(name);
+        if (!cho_sung_result) {
+            // 한글 2-4글자 제한
+            if (!validateKoreanInput(name)) {
+                alert('초성을 제외한 한글 2~4글자를 입력해주세요.');
+                return false;
+            }
+        } else {
+            alert('초성을 제거해주세요.');
             return false;
         }
+    }
+
+    if (phone === '' || phone === 'undefined') {
+        alert('휴대폰 번호를 입력해주세요.');
+        return false;
     } else {
-        alert('초성을 제거해주세요.');
+        phone = phone.replace(/-/g, "");
+        var result = phoneNumberCheck(phone);
+        if (!result) {
+            alert('정확한 휴대폰 번호를 입력해주세요.');
+            return false;
+        }
+    }
+
+    var getCheckd = checkbox.prop('checked');
+    if (!getCheckd) {
+        alert('개인정보처리방침에 동의해주세요');
         return false;
     }
-  }
 
-  if (phone === '' || phone === 'undefined') {
-    alert('휴대폰 번호를 입력해주세요.');
-    return false;
-  } else {
-    phone = phone.replace(/-/g, "");
-    var result = phoneNumberCheck(phone);
-    if (!result) {
-        alert('정확한 휴대폰 번호를 입력해주세요.');
-        return false;
-    }
-  }
+    var formData =  [
+        {"key": "이름", "value":name},
+        {"key": "번호", "value":"010"+phone}
+    ];
 
-  var getCheckd = checkbox.prop('checked');
-  if (!getCheckd) {
-    alert('개인정보처리방침에 동의해주세요');
-    return false;
-  }
+    var variable = window.consultingResult = await inputCustData(formData),
+        getStatus = variable.status;
 
-  var formData =  [
-    {"key": "이름", "value":name},
-    {"key": "번호", "value":"010"+phone}
-  ];
-
-  var variable = window.consultingResult = await inputCustData(formData),
-      getStatus = variable.status;
-  
-  if(getStatus == '200') {
-    window.dataLayer.push({
-      event: "DB_input"
-  });
-    alert('상담신청이 완료되었습니다.');
-  } else if (getStatus == '403') alert('비정상적인 접근입니다. 다시 시도해 주세요.'); 
-  else if (getStatus == '500') alert('서버 내부 오류입니다. 다시 시도해 주세요.');
+    if(getStatus == '200') {
+        window.dataLayer.push({
+            event: "DB_input"
+        });
+        alert('상담신청이 완료되었습니다.');
+    } else if (getStatus == '403') alert('비정상적인 접근입니다. 다시 시도해 주세요.');
+    else if (getStatus == '500') alert('서버 내부 오류입니다. 다시 시도해 주세요.');
 }
 
 function showPopup() {
-  $('.popup').show();
-  $('html').addClass('active');
+    $('.popup').show();
+    $('html').addClass('active');
 }
 function closePopup() {
-  $('.popup').hide();
-  $('html').removeClass('active');
+    $('.popup').hide();
+    $('html').removeClass('active');
 }

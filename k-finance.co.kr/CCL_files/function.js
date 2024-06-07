@@ -38,58 +38,46 @@ async function checkboxFrom(){
   var name = $('#name').val(),
       phone = $('#phone').val(),
       checkbox = $('#privacy_agreement');
-      
 
-  var blockK = window.blockedKeyword.data,
-    checkName = $('#name').val(),
-    isBreak,
-    result = blockK.filter(function(word) {
-    isBreak = true;
-    alert('차단된 키워드가 사용되었습니다. 다시 입력해 주세요. (' + checkName +')');
-  });
-
-  if (isBreak ==true) {
-    return false;
-  }
   if (name === '' || name === 'undefined') {
     alert('이름을 입력해주세요.');
     $('#name').focus();
     return false;
   } else {
-      var cho_sung_result = isChosung(name);
-      if (!cho_sung_result) {
-        if (!validateKoreanInput(name)) {
-          alert('초성을 제외한 한글 2~4글자를 입력해주세요.');
-          $('#name').focus();
-          return false;
-        }
-      } else {
-        alert('초성을 제거해주세요.');
+    var cho_sung_result = isChosung(name);
+    if (!cho_sung_result) {
+      if (!validateKoreanInput(name)) {
+        alert('초성을 제외한 한글 2~4글자를 입력해주세요.');
         $('#name').focus();
         return false;
       }
+    } else {
+      alert('초성을 제거해주세요.');
+      $('#name').focus();
+      return false;
+    }
   }
-  
+
 
   if (phone === '' || phone === 'undefined') {
     alert('휴대폰 번호를 입력해주세요.');
     $('#phone').focus();
     return false;
   } else {
-      phone = phone.replace(/-/g, "");
-      var result = phoneNumberCheck(phone);
-      if (!result) {
-        alert('정확한 휴대폰 번호를 입력해주세요.');
-        $('#phone').focus();
-        return false;
-      }
+    phone = phone.replace(/-/g, "");
+    var result = phoneNumberCheck(phone);
+    if (!result) {
+      alert('정확한 휴대폰 번호를 입력해주세요.');
+      $('#phone').focus();
+      return false;
+    }
   }
-  
+
   var getCheckd = checkbox.prop('checked');
   if (!getCheckd) {
-      alert('개인정보처리방침에 동의해주세요.');
-      $('#privacy_agreement').focus();
-      return false;
+    alert('개인정보처리방침에 동의해주세요.');
+    $('#privacy_agreement').focus();
+    return false;
   }
 
   var formData =  [
@@ -99,13 +87,13 @@ async function checkboxFrom(){
 
   var variable = window.consultingResult = await inputCustData(formData),
       getStatus = variable.status;
-  
+
   if(getStatus == '200') {
     window.dataLayer.push({
       event: "DB_input"
     });
     alert('상담신청이 완료되었습니다.');
-  } else if (getStatus == '403') alert('비정상적인 접근입니다. 다시 시도해 주세요.'); 
+  } else if (getStatus == '403') alert('비정상적인 접근입니다. 다시 시도해 주세요.');
   else if (getStatus == '500') alert('서버 내부 오류입니다. 다시 시도해 주세요.');
 }
 
