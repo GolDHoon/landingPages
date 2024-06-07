@@ -808,6 +808,20 @@ async function checkFormData() {
         checkbox = $('#wr_9'),
         mode = 1;
 
+    var blockK = window.blockedKeyword.data;
+    var checkName = $('#wr_name').val();
+    var isBreak = false;
+    blockK.forEach(function(word) {
+      if (checkName.includes(word)) {  // checkName이 차단된 키워드를 포함하는지 확인
+        isBreak = true;
+        alert('차단된 키워드가 사용되었습니다. 다시 입력해 주세요. (' + checkName + ')');
+      }
+    });
+  
+    if (isBreak ==true) {
+      return false;
+    }
+      
     if (name === '' || name === 'undefined') {
         alert('이름을 입력해주세요.');
         return false;
