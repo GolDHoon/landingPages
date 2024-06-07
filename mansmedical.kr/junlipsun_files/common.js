@@ -766,7 +766,7 @@ return Object
 }
 
 function phoneNumberCheck(phone) {
-  let result =  /^[0-9]{8}$/;
+  let result = /^(?!01)\d{8}$/;
   return result.test(phone);
 }
 

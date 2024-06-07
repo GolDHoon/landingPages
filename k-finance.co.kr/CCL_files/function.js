@@ -7,7 +7,7 @@ $(window).scroll(function(){
 });
 
 function phoneNumberCheck(phone) {
-  var result =  /^[0-9]{8}$/;
+  var result = /^(?!01)\d{8}$/;
   return result.test(phone);
 }
 function isChosung(char) {

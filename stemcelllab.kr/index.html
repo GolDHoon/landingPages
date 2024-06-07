@@ -163,6 +163,7 @@
                                 id="wr_1"
                                 required=""
                                 placeholder="010을 제외한 숫자만 입력하세요"
+                                onpaste="return false;" 
                                 onkeydown="this.value=this.value.replace(/[^0-9]/g,&#39;&#39;), checkLength(this)"
                                 onkeyup="this.value=this.value.replace(/[^0-9]/g,&#39;&#39;)"
                                 onblur="this.value=this.value.replace(/[^0-9]/g,&#39;&#39;)">
