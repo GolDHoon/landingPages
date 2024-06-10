@@ -1,7 +1,7 @@
 console.log('js is load👍');
 
 $(document).ready(function(){
-  // $('.popup_silby, html').addClass('active');
+  $('.popup_silby, html').addClass('active');
 })
 
 $(window).scroll(function(){
