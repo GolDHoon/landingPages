@@ -9,7 +9,6 @@ var main_page = $('.p_02'),
 $('.p_02').css('top', offsetHeight-offsetWidth + "px");
 $('.p_03').css('top', (offsetHeightt-offsetWidth) + (offsetHeight) + "px");
 
-
 function setSilby(e, i) {
   if(e == 'y') silby = "y";
   else if(e == 'n') silby = "n";
@@ -27,7 +26,7 @@ function setSize() {
 
 $(window).scroll(function(){ 
   var h = $(document).scrollTop();
-  if(h > offsetHeightt) $('.navi_btn').fadeOut();
+  if(h > $('.p_03').position().top-900) $('.navi_btn').fadeOut();
   else $('.navi_btn').fadeIn();
 });
 

@@ -482,3 +482,6 @@ input[type=number] {
 .con_t02_btn, .btn {
   cursor: pointer;
 }
+.checkbox {
+  width: 3vw; height: 3vw;
+}
