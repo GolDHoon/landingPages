@@ -1,3 +1,10 @@
+.main_info {
+  position: absolute;
+  left: 50%; top: 0;
+  width: 90%;
+  transform: translateX(-50%);
+}
+
 /* 초기화 */
 html,body{scroll-behavior:smooth; }
 html {overflow-y:scroll;}
@@ -16,6 +23,9 @@ body {margin:0;padding:0;font-size:0.75em;font-family:'Malgun Gothic', dotum, sa
 
 /* 타블렛 */
 @media (max-width:1200px) and (min-width:620px){
+.main_info {
+  width: 100%;
+}
 
 .layout{min-width:1200px;width:100%;overflow:hidden;position:relative;}
 .wrap{width:auto; margin:0 auto; overflow:hidden; }
@@ -29,6 +39,9 @@ body {margin:0;padding:0;font-size:0.75em;font-family:'Malgun Gothic', dotum, sa
 
 /* 모바일 */
 @media (max-width:620px){
+  .main_info {
+    width: 100%;
+  }
 	.layout{min-width:0;}
 	.wrap{width:auto;margin:0;}
 	.wraptop{width:auto;margin:0;}
@@ -109,6 +122,9 @@ border:1px solid #558ab7 !important;
 
 @media screen and (max-width:640px){
 #hd, #wrapper, #ft {min-width:0;}
+.main_info {
+  width: 100%;
+}
 
 #hd_pop,
 #hd_wrapper,
@@ -171,6 +187,9 @@ border:1px solid #558ab7 !important;
 @media screen and (max-width:640px){
 .fbmo {display:block}
 .fbpc {display:none}
+.main_info {
+  width: 100%;
+}
 
 }
 
@@ -184,6 +203,9 @@ border:1px solid #558ab7 !important;
 
 /* 테블렛 */
 @media (max-width:1200px) and (min-width:620px){
+  .main_info {
+    width: 100%;
+  }
 .con_form{width:100%; height:auto; padding:15% 0% 40%; background-size:100%;}
 
 }
