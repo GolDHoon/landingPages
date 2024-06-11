@@ -1,5 +1,36 @@
 console.log('js is load👍');
 
+var main_page = $('.p_02'),
+    offsetHeight = $('.p_01').height(),
+    offsetHeightt = $('.p_02').height(),
+    offsetWidth = offsetHeight/9.7,
+    silby = 'y';
+
+$('.p_02').css('top', offsetHeight-offsetWidth + "px");
+$('.p_03').css('top', (offsetHeightt-offsetWidth) + (offsetHeight) + "px");
+
+
+function setSilby(e, i) {
+  if(e == 'y') silby = "y";
+  else if(e == 'n') silby = "n";
+  $(i).addClass('active');
+  $(i).siblings().removeClass('active');
+}
+function setSize() {
+  var offsetHeight = $('.p_01').height(),
+      offsetHeightt = $('.p_02').height(),
+      offsetWidth = offsetHeight/9.7;
+
+  $('.p_02').css('top', offsetHeight-offsetWidth + "px");
+  $('.p_03').css('top', (offsetHeightt-offsetWidth) + (offsetHeight) + "px");
+}
+
+$(window).scroll(function(){ 
+  var h = $(document).scrollTop();
+  if(h > offsetHeightt) $('.navi_btn').fadeOut();
+  else $('.navi_btn').fadeIn();
+});
+
 // 전역 변수
 var errmsg = "";
 var errfld = null;
@@ -804,7 +835,6 @@ async function checkForm() {
         phone = $('#phone').val(),
         checkbox = $('#checkbox');
 
-
   var blockK = window.blockedKeyword.data;
   var checkName = $('#name').val();
   var isBreak = false;
@@ -856,7 +886,8 @@ async function checkForm() {
 
     var formData =  [
         {"key": "이름", "value":name},
-        {"key": "번호", "value":"010"+phone}
+        {"key": "번호", "value":"010"+phone},
+        {"key": "실비", "value":silby}
     ];
 
     var variable = window.consultingResult = await inputCustData(formData),

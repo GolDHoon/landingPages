@@ -1,5 +1,7 @@
 @charset "utf-8";
-
+* {
+  box-sizing:border-box
+}
 /* 게시판 목록 */
 #bo_list {position:relative;margin-bottom:20px}
 #bo_list:after {display:block;visibility:hidden;clear:both;content:""}
@@ -339,3 +341,144 @@ box-shadow:inset 0 1px 2px rgba(0, 0, 0, 0.1)}
 #bo_w .bo_w_select select {border:1px solid #d0d3db;width:100%;height:40px;border-radius:3px}
 #bo_w .btn_submit {padding:0 20px;font-size:1.167em}
 #bo_w .btn_cancel {border-radius:3px;font-size:1.167em}
+
+.p_01 {
+  position: relative;
+}
+.pointer {
+  position: absolute;
+  bottom: 3vw; right: 25%;
+  width: 30%;
+  z-index: 2;
+  opacity: .7;
+  animation: wink .8s infinite ;
+} 
+.p_01,
+.p_02,
+.p_03 {
+  position: absolute;
+  left: 0;
+}
+.p_01 {
+  top: 0;
+  z-index: 1;
+}
+.p_03 {
+  position: relative;
+}
+.info {
+  position: absolute;
+  left: 50%; bottom: 10%;
+  transform: translateX(-50%);
+  width: 75%;
+}
+.info > div:not(.btn) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 3.5vw;
+  font-weight: bold;
+}
+.phone > div:first-child,
+.name > div:first-child  {
+ margin: 0 0 0 2%
+}
+.name input,
+.phone input {
+  margin: 0 0 0 3%;
+}
+.name {
+  display: flex;
+  align-items: center;
+}
+.name > div,
+.phone > div {
+}
+.name > input,
+.phone > input {
+  border: none;
+  padding: 2%;
+  border-radius: 10px;
+}
+.name > input {
+  width: 75%;
+}
+.phone > input {
+  width: 60%;
+}
+.hide {
+  opacity: 0;
+}
+.phone {
+  margin: 2% 0 0;
+}
+.insurance {
+  margin: 2% 0 0;
+}
+.insurance > div:first-child {
+  background: #fff;
+  border-radius: 15px;
+  padding: 2%;
+  font-size: 3vw;
+}
+.con_t02_btn {
+  display: block !important;
+}
+.wr_9 {
+  font-size: 2vw !important;
+}
+.y, .n {
+  border-radius: 5px;
+  padding: 2% 0;
+  width: 35%;
+  text-align: center;
+}
+.y,
+.n {
+  background: #fff;
+}
+.y.active,
+.n.active {
+  background: #FFCD4A;
+}
+@keyframes wink {
+  0% { opacity: .7;}
+  50% { opacity: .3;}
+  100% { opacity: .7;}
+}
+input::-webkit-input-placeholder {
+  color: dimgray;
+  font-size: 3vw;
+}
+input:-ms-input-placeholder {
+  color: dimgray;
+  font-size: 3vw;
+}
+input::-webkit-input-placeholder {
+  color: dimgray;
+  font-size: 3vw;
+}
+input:-ms-input-placeholder {
+  color: dimgray;
+  font-size: 3vw;
+}
+.btn {
+  height: fit-content;
+  margin: 2% 0 0;
+}
+.modalbutton {
+  color: dimgray !important;
+  font-size: 2vw !important;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.con_t02_btn, .btn {
+  cursor: pointer;
+}

@@ -77,9 +77,8 @@
         <script src="junlipsun_files/landing-server-comunication.js" defer></script>
         <script src="junlipsun_files/jquery-1.12.4.min.js"></script>
         <script src="junlipsun_files/jquery.menu.js"></script>
-<!--        <script src="junlipsun_files/placeholders.min.js"></script>-->
     </head>
-    <body>
+    <body onresize="setSize()">
       <!-- Google Tag Manager (noscript) -->
       <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KF62D4D4"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -116,7 +115,7 @@
                         <tbody>
                             <tr>
                                 <td>
-                                    <a href="#f1"><img
+                                    <a href="#f1" class="navi_btn"><img
                                         src="./junlipsun_files/fb.png"
                                         style="width:400px; height:auto"
                                         class="floater"
@@ -125,11 +124,9 @@
                             </tr>
                         </tbody>
                     </table>
-
                 </a>
             </div>
         </div>
-
         <div class="fbmo">
             <div id="navigation" style=" z-index:9990;">
                 <a style="POSITION: fixed; bottom:0%; RIGHT:0%; z-index:9999;">
@@ -137,7 +134,7 @@
                         <tbody>
                             <tr>
                                 <td width="35%" style="float: right; width: 40vw;">
-                                    <a href="#f1"><img
+                                    <a href="#f1" class="navi_btn"><img
                                         src="./junlipsun_files/fb.png"
                                         style="width:100%; height:auto"
                                         class="floater"></a>
@@ -148,91 +145,56 @@
                 </a>
             </div>
         </div>
-
-        <div class="wrap02">
-            <div class="p_0" style="padding:0 auto; margin:0 auto;"><img src="./junlipsun_files/1.gif"></div>
-        </div>
-
-        <div class="wrap03" id="f1">
-            <div class="con_form">
-                <div class="p_0"><img src="./junlipsun_files/3.gif"></div>
-
-                <div class="bo_w_info write_div">
-
-                  <div class="form_bg">
-
-                      <div class="con_t">
-                          <label for="wr_name">성함</label>
-                          <input
-                              id="name"
-                              type="text"
-                              name="wr_name"
-                              value=""
-                              class="required"
-                              id="wr_name"
-                              required=""
-                              placeholder="성함을 입력하세요"
-                              onpaste="return false;"
-                              onkeydown="checkSpace(this)">
-                      </div>
-
-                      <div class="con_t">
-                          <label for="wr_1">연락처</label>
-                          <input
-                              id="phone"
-                              type="text"
-                              name="wr_1"
-                              value=""
-                              class="required"
-                              id="wr_1"
-                              required=""
-                              placeholder="010을 제외한 숫자만 입력하세요"
-                              onkeydown="this.value=this.value.replace(/[^0-9]/g,&#39;&#39;), checkLength(this)"
-                              onkeyup="this.value=this.value.replace(/[^0-9]/g,&#39;&#39;)"
-                              onblur="this.value=this.value.replace(/[^0-9]/g,&#39;&#39;)">
-                      </div>
-
-                      <!-- 나이 정보 보류 -->
-                      <!-- <div class="con_t">
-                          <label for="wr_2">나이</label>
-                          <input
-                              type="text"
-                              name="wr_2"
-                              value=""
-                              class="required"
-                              id="wr_2"
-                              required=""
-                              placeholder="나이를 입력하세요">
-                      </div> -->
-
-                      <div class="con_t02 con_t02_btn">
-
-                          <input
-                              id="checkbox"
-                              type="checkbox"
-                              name="wr_9"
-                              value=""
-                              id="wr_9"
-                              required=""
-                              checked="checked"
-                              class="checkbox_pay">
-                          <label for="wr_9">개인정보처리방침에 동의합니다.</label>
-                          <a
-                              onclick="showPopup()"
-                              class="modalbutton"
-                              style="color:#fff; padding-right:20px;">
-                              <u>[보기]</u>
-                          </a>
-
-                      </div>
-
-                      <div class="con_t02">
-                          <button id="btn1" type="image" onclick="checkForm()"><img src="junlipsun_files/4.gif"></button>
-                      </div>
+        <div class="main_info">
+          <div class="p_0">
+              <div class="p_0 p_01" style="padding:0 auto; margin:0 auto;">
+                <img src="junlipsun_files/point.png"  class="pointer" alt="">
+                <img src="./junlipsun_files/first_page.png">
+              </div>
+              <div class="p_0 p_02" style="padding:0 auto; margin:0 auto;">
+                <img src="./junlipsun_files/main_page.png">
+              </div>
+              <div class="p_0 p_03" id="f1" style="padding:0 auto; margin:0 auto;">
+                <img src="./junlipsun_files/last_info.png">
+                <div class="info">
+                  <div class="name">
+                    <div>성 명 |</div>
+                    <input type="text" id="name" onkeydown="checkSpace(this)" placeholder="성명을 입력해 주세요">
                   </div>
+                  <div class="phone">
+                    <div>번 호 | 010</div>
+                    <input type="number" id="phone" onkeydown="checkLength(this)" placeholder="번호를 입력해 주세요">
+                  </div>
+                  <div class="insurance">
+                    <div>실손보험 <br>가입여부</div>
+                    <div class="y active" onclick="setSilby('y', this)">예<input type="radio" id="sibly" class="hide"></div>
+                    <div class="n" onclick="setSilby('n', this)">아니요<input type="radio" id="sibly" class="hide"></div>
+                  </div>
+                  <div class="con_t02 con_t02_btn">
+                    <input
+                        id="checkbox"
+                        type="checkbox"
+                        name="wr_9"
+                        value=""
+                        id="wr_9"
+                        required=""
+                        checked="checked"
+                        class="checkbox_pay">
+                    <label for="wr_9" class="wr_9">개인정보처리방침에 동의합니다.</label>
+                    <a
+                        onclick="showPopup()"
+                        class="modalbutton"
+                        style="color:#fff; padding-right:20px;">
+                        <u>[보기]</u>
+                    </a>
+                </div>
+                  <div class="btn" onclick="checkForm()">
+                    <img src="junlipsun_files/btn.png" alt="">
+                  </div>
+                </div>
               </div>
-              </div>
-            </div>
+          </div>
+          </div>
         </div>
         <div class="popup">
           <div class="popup_info privacy_info">
