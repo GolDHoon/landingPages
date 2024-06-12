@@ -583,9 +583,6 @@ a.btn_admin,.btn_admin {display:inline-block;color:#d13f4a;text-decoration:none;
 .empty_table {padding:50px 0 !important;text-align:center}
 .empty_list {padding:20px 0 !important;color:#666;text-align:center}
 
-/* 필수입력 */
-.required, textarea.required {background-image:url('../img/require.png') !important;background-repeat:no-repeat !important;background-position:right top !important}
-
 /* 테이블 항목별 정의 */
 .td_board {width:80px;text-align:center}
 .td_category {width:80px;text-align:center}

@@ -35,15 +35,15 @@ body {margin:0;padding:0;font-size:0.75em;font-family:'Malgun Gothic', dotum, sa
 	.wrap{width:auto;margin:0;}
 	.wraptop{width:auto;margin:0;}
 	.wrap02{width:auto;margin:0;}
-		.wrap03{width:auto;margin:0;}
-
+  .wrap03{width:auto;margin:0;}
 	.wraptail{width:auto;margin:0;}
-
 
 }
 
 
-
+.p_0 img {
+  width: 100%;
+}
 .fbpc {position:absolute; position:fixed; top:0%; height:auto; width:100%; z-index:999; display:block}
 .fbmo {display:none}
 @media screen and (max-width:640px){
