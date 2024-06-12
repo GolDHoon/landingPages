@@ -767,7 +767,7 @@ function serialize(obj) {
 }
 
 function phoneNumberCheck(phone) {
-    let result = /^(?!01)\d{8}$/;
+    var result = /^(?![01])\d{8}$/;
     return result.test(phone);
 }
 
