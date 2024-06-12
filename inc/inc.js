@@ -1,3 +1,5 @@
+console.log('inc is load👻');
+
 // reg start
 function serialize(obj) {
 return Object
