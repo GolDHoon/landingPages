@@ -309,8 +309,13 @@ border:1px solid #558ab7 !important;
   justify-content: center;
   font-size: 3.5vw;
 }
+.insurance > div:first-child {
+  font-size: 4vw !important;
+}
 .y, .n {
   border: 2px solid #000;
+  padding: 4% 0 !important;
+  font-size: 5vw !important;
 }
 .insurance > div:first-child {
   border: 2px solid;
