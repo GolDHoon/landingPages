@@ -1085,3 +1085,6 @@ box-sizing:content-box;
 .bold {
   font-weight: bold;
 }
+html.active {
+  overflow: hidden;
+}
