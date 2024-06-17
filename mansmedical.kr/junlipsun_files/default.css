@@ -298,10 +298,14 @@ border:1px solid #558ab7 !important;
   padding: 0 0 0 20% !important;
 }
 .phone > input,
-.name > input {
+.name > input,
+select {
   border: 2px solid #000 !important;
   border-radius: 0 !important;
   font-size: 6vw !important;
+}
+select {
+  width: 100% !important;
 }
 .hide_notice {
   display: flex !important;
@@ -334,11 +338,12 @@ input::placeholder {
 .btn {
   padding: 0 !important;
 }
-.last_info {
+.last_info,
+.local > div {
   display: none;
 }
 .p_03 {
-  height: 80vw;
+  height: 105vw;
 }
 .p_t1{position:relative; top:0px; padding-top:1%; text-align:center;}
 .p_t1 img{width:100%}

@@ -3,6 +3,13 @@
 <html lang="ko">
     <head>
       <meta charset="UTF-8">
+      <!-- Danggeun Market Code -->
+      <script src="https://karrot-pixel.business.daangn.com/0.2/karrot-pixel.umd.js"></script>
+      <script>
+      window.karrotPixel.init('1718257939718800001');
+      window.karrotPixel.track('ViewPage');
+      </script>
+      <!-- End Danggeun Market Code -->
       <!-- Google tag (gtag.js) -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-YQJ5J5ZQNV"></script>
       <script>
@@ -62,6 +69,7 @@
             href="./steamcellab_files/wickedcss.min.css">
         <link rel="stylesheet" href="./steamcellab_files/font-awesome.min.css">
         <link rel="stylesheet" href="./steamcellab_files/default.css">
+        <link rel="stylesheet" href="./steamcellab_files/style.css">
         <script src="https://www.alisolution-devmanagement.xyz/js/landing-server-comunication/0.0.1/landing-server-comunication.min.js" defer></script>
         <script src="./steamcellab_files/common.js" defer></script>
         <script src="./steamcellab_files/jquery-1.12.4.min.js"></script>
@@ -106,7 +114,7 @@
                             <tr>
                                 <td>
                                     <a href="#f1"><img
-                                        src="./steamcellab_files/fb.png"
+                                        src="./steamcellab_files/short_cut_btn.png"
                                         style="width:400px; height:auto"
                                         class="floater"
                                         title=""></a>
@@ -127,7 +135,7 @@
                             <tr>
                                 <std>
                                     <a href="#f1"><img
-                                        src="./steamcellab_files/fb.png"
+                                        src="./steamcellab_files/short_cut_btn.png"
                                         style="width:45vw; height:auto"
                                         class="floater"></a>
                                 </std>
@@ -139,86 +147,58 @@
         </div>
 
         <div class="wrap02">
-            <div class="p_0" style="padding:0 auto; margin:0 auto;"><img src="./steamcellab_files/1.gif"></div>
-            <div class="p_0" style="padding:0 auto; margin:0 auto;"><img src="./steamcellab_files/2.png"></div>
-            <div class="p_0"><img src="./steamcellab_files/3.png"></div>
-            <div class="p_0"><img src="./steamcellab_files/4.gif"></div>
-            <div class="p_0"><img src="./steamcellab_files/5.png"></div>
-            <div class="p_0"><img src="./steamcellab_files/6.gif"></div>
-            <div class="p_0"><img src="./steamcellab_files/7.png"></div>
-            <div class="p_0"><img src="./steamcellab_files/8.gif"></div>
-            <div class="p_0"><img src="./steamcellab_files/9.png"></div>
-        </div>
-
-        <div class="wrap03" id="f1">
-            <div class="con_form">
-                <div class="p_0"><img src="./steamcellab_files/10.gif"></div>
-                <div class="contact_bg" style="margin-top:5%">
-                  <div class="bo_w_info write_div" id="f1">
-
-                    <div class="form_bg">
-
-                        <div class="con_t">
-                            <label for="wr_name">성함</label>
-                            <input
-                                type="text"
-                                name="wr_name"
-                                value=""
-                                class="required"
-                                id="wr_name"
-                                required=""
-                                placeholder="성함을 입력하세요"
-                                onkeydown="checkSpace(this)">
-                        </div>
-
-                        <div class="con_t">
-                            <label for="wr_1">연락처</label>
-                            <input
-                                type="text"
-                                name="wr_1"
-                                value=""
-                                class="required"
-                                id="wr_1"
-                                required=""
-                                placeholder="010을 제외한 숫자만 입력하세요"
-                                onpaste="return false;" 
-                                onkeydown="this.value=this.value.replace(/[^0-9]/g,&#39;&#39;), checkLength(this)"
-                                onkeyup="this.value=this.value.replace(/[^0-9]/g,&#39;&#39;)"
-                                onblur="this.value=this.value.replace(/[^0-9]/g,&#39;&#39;)">
-                        </div>
-
-                        <!-- 나이 정보 보류 -->
-                        <!-- <div class="con_t">
-                            <label for="wr_2">나이</label>
-                            <input
-                                type="text"
-                                name="wr_2"
-                                value=""
-                                class="required"
-                                id="wr_2"
-                                required=""
-                                placeholder="나이를 입력하세요">
-                        </div> -->
-
-                        <div class="con_t02 con_t02_btn">
-                            <input
-                                type="checkbox"
-                                name="wr_9"
-                                value=""
-                                id="wr_9"
-                                required=""
-                                checked="checked"
-                                class="checkbox_pay">
-                            <label for="wr_9">개인정보처리방침에 동의합니다.</label>
-                            <div onclick="showPopup()">[보기]</div>
-                        </div>
-
-                        <div class="con_t02">
-                            <button id="btn1" type="image" onclick="checkFormData()"><img src="steamcellab_files/무릎2.gif"></button>
-                        </div>
+            <div class="p_0" style="padding:0 auto; margin:0 auto;"><img src="./steamcellab_files/main.png"></div>
+            <div class="p_0 info_box" style="padding:0 auto; margin:0 auto;">
+              <div class="info_left">
+                <div class="info_title" id="f1">무료상담신청하기</div>
+                <div class="info_desc">
+                  <div class="name">이 름<input type="text" id="name" onkeydown="checkSpace(this)"></div>
+                  <div class="phone">번 호
+                    <div class="phone_box"><div class="defailt_num">010</div><input type="number" id="phone" onkeydown="checkLength(this)"></div>
+                  </div>
+                  <div class="local">거주지
+                    <select name="local" id="local" onchange="checkLocal()">
+                      <option value="">거주지를 선택해 주세요</option>
+                      <option value="" disabled>===================</option>
+                      <option value="서울특별시">서울특별시</option>
+                      <option value="부산광역시">부산광역시</option>
+                      <option value="대구광역시">대구광역시</option>
+                      <option value="인천광역시">인천광역시</option>
+                      <option value="광주광역시">광주광역시</option>
+                      <option value="대전광역시">대전광역시</option>
+                      <option value="울산광역시">울산광역시</option>
+                      <option value="세종특별자치시">세종특별자치시</option>
+                      <option value="경기도">경기도</option>
+                      <option value="강원도">강원도</option>
+                      <option value="충청남도">충청남도</option>
+                      <option value="충청북도">충청북도</option>
+                      <option value="전라남도">전라남도</option>
+                      <option value="전라북도">전라북도</option>
+                      <option value="경상남도">경상남도</option>
+                      <option value="경상북도">경상북도</option>
+                      <option value="제주도">제주도</option>
+                    </select>
+                  </div>
+                  <div class="silby">실 비
+                    <div>
+                      <div class="active" onclick="checkSilby('y', this)">있음</div>
+                      <div onclick="checkSilby('n', this)">없음</div>
                     </div>
+                  </div>
+                  <div class="agree">
+                    <input type="checkbox" id="checkBox" checked>개인정보처리방침에 동의합니다
+                    <div class="argree_btn" onclick="showPopup()">[보기]</div>
+                  </div>
+                  <div class="ok_btn" onclick="checkFormData()">신청하기</div>
                 </div>
-                </div>
+              </div>
+              <div class="info_right">
+                <div class="info_title">병원 오시는 길</div>
+                <img src="./steamcellab_files/map.png" alt="">
+                <div class="addr">| 서울시 구로구 디지털로 27가길 17. 오닉스빌딩</div>
+                <div class="to_time">월&nbsp;&nbsp;&nbsp;금 : 9:30 18:30</div>
+                <div class="to_time">토요일 : 9:30 13:00</div>
+              </div>
             </div>
         </div>
         <div class="popup">
@@ -231,7 +211,7 @@
               </div>
               <div>
                 2. 수집하는 개인정보 항목
-                <div>이름, 번호</div>
+                <div>이름, 번호, 실비보험 유무, 거주지역</div>
               </div>
               <div>
                 3. 보유 및 이용기간

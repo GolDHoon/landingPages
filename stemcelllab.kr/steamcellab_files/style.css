@@ -340,3 +340,131 @@ box-shadow:inset 0 1px 2px rgba(0, 0, 0, 0.1)}
 #bo_w .btn_submit {padding:0 20px;font-size:1.167em}
 #bo_w .btn_cancel {border-radius:3px;font-size:1.167em}
 .con_t input {padding: 5%;}
+.info_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 50vw;
+}
+.info_box > div {
+  width: 50%; height: inherit;
+  padding: 2.5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.info_left {
+  background: #a0c3fb;
+  color: #1b1b58;
+}
+.info_right {
+  background: #1b1b58;
+  color: #fff;
+}
+.info_title {
+  font-size: 4.5vw;
+  font-weight: bold;
+  margin: 0 0 1.5vw;
+  text-align: left;
+}
+.info_desc {
+  font-size: 3vw;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+.info_desc div {
+  display: flex;
+  align-items: center;
+}
+.info_desc div:not(.ok_btn, .silby > div div) {
+  justify-content: space-between;
+}
+.info_desc input, #phone {
+  margin: 0 0 0 .5vw;
+  border: none;
+  font-weight: bold;
+  padding: 1vw;
+}
+.phone_box,
+.info_desc input:not(#phone, #checkBox), select {
+  width: 76%;
+}
+select {
+  border: none;
+  font-weight: bold;
+  padding: 1vw;
+}
+.defailt_num {
+  width: 20%;
+  background: #fff;
+  padding: 1vw;
+  justify-content: center !important;
+}
+#phone {
+  width: 78%;
+}
+.silby > div {
+  width: 76%;
+}
+.silby > div div {
+  width: 47%;
+  justify-content: center;
+  padding: .5vw 0;
+  cursor: pointer;
+  background: #fff;
+}
+.silby > div div.active {
+  background: #1b1b58;
+  color: #fff;
+}
+.ok_btn {
+  text-align: center;
+  background: #1b1b58;
+  color: #fff;
+  padding: 2vw;
+  justify-content: center;
+  cursor: pointer;
+}
+.addr {
+  font-size: 1.7vw;
+  text-align: left;
+  margin: .8vw 0 3vw;
+}
+.info_right {
+  text-align: left;
+}
+.info_right img {
+  display: block;
+  width: 100%;
+}
+.to_time {
+  font-weight: bold;
+  font-size: 3.5vw;
+}
+.argree_btn{
+  cursor: pointer;
+  color: dimgray;
+}
+.agree {
+  width: 100%;
+  font-size: 2vw;
+  text-align: center;
+  justify-content: start !important;
+}
+#checkBox {
+  margin: 0 1vw 0 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

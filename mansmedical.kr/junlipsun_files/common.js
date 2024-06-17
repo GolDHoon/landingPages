@@ -4,10 +4,15 @@ var main_page = $('.p_02'),
     offsetHeight = $('.p_01').height(),
     offsetHeightt = $('.p_02').height(),
     offsetWidth = offsetHeight/9.7,
-    silby = 'y';
+    silby = 'y',
+    local = '';
 
 $('.p_02').css('top', offsetHeight-offsetWidth + "px");
 $('.p_03').css('top', (offsetHeightt-offsetWidth) + (offsetHeight) + "px");
+
+function checkLocal() {
+  local = $("select[name=local] option:selected").val();
+}
 
 function setSilby(e, i) {
   if(e == 'y') silby = "y";
@@ -886,7 +891,8 @@ async function checkForm() {
     var formData =  [
         {"key": "이름", "value":name},
         {"key": "번호", "value":"010"+phone},
-        {"key": "실비", "value":silby}
+        {"key": "실비", "value":silby},
+        {"key": "거주지", "value":local}
     ];
 
     var variable = window.consultingResult = await inputCustData(formData),

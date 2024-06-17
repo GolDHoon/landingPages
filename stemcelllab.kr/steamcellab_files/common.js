@@ -3,7 +3,30 @@ console.log('js is load👍');
 // 전역 변수
 var errmsg = "";
 var errfld = null;
+var silby = 'y';
+var local = '';
 
+$(window).scroll(function(){ 
+  var h = $(document).scrollTop();
+
+  if($(document).width() > 700) {
+    if(h > 2700) $('.floater').fadeOut();
+    else $('.floater').fadeIn();
+  } else {
+    if(h > 900) $('.floater').fadeOut();
+    else $('.floater').fadeIn();
+  }
+});
+
+function checkLocal() {
+  local = $("select[name=local] option:selected").val();
+}
+
+function checkSilby(e, i) {
+  silby = e;
+  $(i).siblings().removeClass('active');
+  $(i).addClass('active');
+}
 // 필드 검사
 function check_field(fld, msg)
 {
@@ -803,9 +826,9 @@ function validateKoreanInput(input) {
 
 
 async function checkFormData() {
-    var name = $('#wr_name').val(),
-        phone = $('#wr_1').val(),
-        checkbox = $('#wr_9'),
+    var name = $('#name').val(),
+        phone = $('#phone').val(),
+        checkbox = $('#checkBox'),
         mode = 1;
 
     var blockK = window.blockedKeyword.data;
@@ -853,20 +876,15 @@ async function checkFormData() {
 
     var getCheckd = checkbox.prop('checked');
     if (!getCheckd) {
-        alert('개인정보처리방침에 동의해주세요');
-        return false;
-    }
-
-    var getCheckd = checkbox.prop('checked');
-    if (!getCheckd) {
         alert('개인정보처리방침에 동의해주세요.');
-        $('#checkbox').focus();
         return false;
     }
 
     var formData =  [
         {"key": "이름", "value":name},
-        {"key": "번호", "value":"010"+phone}
+        {"key": "번호", "value":"010"+phone},
+        {"key": "실비", "value":silby},
+        {"key": "거주지", "value":local}
     ];
 
     var variable = window.consultingResult = await inputCustData(formData),
