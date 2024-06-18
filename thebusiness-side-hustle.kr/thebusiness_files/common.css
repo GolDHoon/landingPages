@@ -1,0 +1,26 @@
+/* common */
+* {
+  box-sizing: border-box;
+  font-weight: 400;
+  font-style: normal;
+}
+html,
+.main,
+body {
+	scroll-behavior: smooth;
+}
+body {
+  position: relative;
+	margin: 0;
+	padding: 0;
+  font-size: 0.75em;
+  font-family: "Malgun Gothic", dotum, sans-serif;
+}
+/* 팝업 표시 시 스크롤 방지 > common.js 참조 */
+.main.active {
+  overflow: hidden;
+}
+/* 모든 버튼 형식 객체 button 클래스명 기본 */
+.button {
+  cursor: pointer;
+}

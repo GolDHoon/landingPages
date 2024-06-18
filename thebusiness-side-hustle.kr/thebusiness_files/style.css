@@ -1,0 +1,69 @@
+/* 폰트 사이즈, 마진, 패딩 > vw 단위 사용권장 */
+.main,
+.btn,
+.info {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.main {
+  position: relative;
+  top: 0;
+}
+.main img {
+  display: block;
+}
+.main div:not(.btn) > img:not(.shortcut_01 img, .shortcut_02 img) {
+  width: 100%;
+}
+.btn {
+  position: absolute;
+  width: 90%;
+  bottom: 1.5vw;
+}
+.btn img {
+  width: 100%;
+}
+.shortbox_01,
+.shortbox_02 {
+  position: relative;
+}
+.shortcut_01,
+.shortcut_02 {
+  position: absolute;
+  transform: translateX(-50%);
+}
+.shortcut_01 {
+  width: 35%;
+  left: 50%;
+}
+.shortcut_02 {
+  width: 20%;
+  left: 49%;
+}
+.shortcut_01 img,
+.shortcut_02 img {
+  width: 100%;
+  cursor: pointer;
+}
+.shortcut_01 {
+  bottom: 0;
+}
+.shortcut_02 {
+  top: 0;
+}
+/* 웹 */ 
+@media all and (min-width:768px) { 
+  .main {
+    width: 60%;
+  }
+} 
+/* 태블릿  */
+@media all and (min-width:480px) and (max-width:767px) {
+  
+} 
+/* 모바일 */ 
+@media all and (max-width:479px) {
+  .main {
+    width: 100%;
+  }
+} 
