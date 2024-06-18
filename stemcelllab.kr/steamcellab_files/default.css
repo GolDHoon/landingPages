@@ -39,6 +39,9 @@ body {margin:0;padding:0;font-size:0.75em;font-family:'Malgun Gothic', dotum, sa
 
 	.wraptail{width:auto;margin:0;}
 
+  .info_box > div {
+    justify-content: center;
+  }
 
 }
 
