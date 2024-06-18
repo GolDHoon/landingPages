@@ -67,3 +67,18 @@
     width: 100%;
   }
 } 
+.wrap02 {
+  text-align: center;
+  padding: 1.5vw;
+  background: #efefef;
+}
+.effect {
+  font-weight: bold;
+  display: inline-block;
+  margin: 0 .3vw 0 0;
+}
+.wrap02 p {
+  color: dimgray;
+  margin: 0;
+  padding: 0;
+}
