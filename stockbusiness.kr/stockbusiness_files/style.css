@@ -163,14 +163,47 @@ p {
   .main > div:not(.footer) {
     width: 75%;
   }
+  .svg_pc {
+    display: block;
+  }
+  .svg_mo {
+    display: none;
+  }
 } 
 /* 태블릿  */
 @media all and (min-width:480px) and (max-width:767px) {
   
 } 
 /* 모바일 */ 
-@media all and (max-width:479px) {
+@media all and (max-width:600px) {
   .main {
     width: 100%;
+  }
+  .slide_02 div:last-child, .slide_03 > div:first-child:not(.count_box) {
+    margin: 3vw 0 0;
+    font-size: 10vw;
+  }
+  .slide_03 > div:first-child,
+  .count_notice   {
+    font-size: 5vw;
+  }
+  .footer {
+    font-size: 3vw;
+    padding: 5vw;
+  }
+  .timer {
+    width: 17vw;
+  }
+  .live_date {
+    font-size: 6vw;
+  }
+  .progress_box {
+    height: 60vw;
+  }
+  .svg_pc {
+    display: none;
+  }
+  .svg_mo {
+    display: block;
   }
 }

@@ -28,7 +28,7 @@
         <div class="progress_box">
           <div class="empty slide_01"></div>
           <div class="progress_round slide_02">
-            <div>
+            <div class="svg_pc">
               <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svgspinner" height="15vw" width="15vw" viewBox="0 0 90 90">
                 <g class="spingroup" transform="translate(45,45)">
                   <circle class="spincircle" r="40" stroke-width="5" stroke="blue" fill="none"/>
@@ -50,7 +50,29 @@
                   }
                 </style>
               </svg>
-              
+            </div>
+            <div class="svg_mo">
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svgspinner" height="40vw" width="40vw" viewBox="0 0 90 90">
+                <g class="spingroup" transform="translate(45,45)">
+                  <circle class="spincircle" r="40" stroke-width="5" stroke="blue" fill="none"/>
+                </g>
+                <style>
+                  .svgspinner .spincircle{
+                    animation: loading-round 1.3s infinite linear, loading-dash 3s infinite linear;
+                    stroke-dasharray: 251.2; /* 2 * π * r (r=40) */
+                    stroke-linecap: round;
+                  }
+                  @keyframes loading-round{
+                    0% {transform: rotate(0deg);}
+                    100% {transform: rotate(720deg);}
+                  }
+                  @keyframes loading-dash{
+                    0% {stroke-dashoffset: 251.2;} /* 2 * π * r (r=40) */
+                    50% {stroke-dashoffset: 0;}
+                    100% {stroke-dashoffset: 251.2;}
+                  }
+                </style>
+              </svg>
             </div>
             <div>LOADING</div>
           </div>
