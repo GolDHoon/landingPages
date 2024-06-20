@@ -829,7 +829,7 @@ function checkLength(e) {
 }
 function validateKoreanInput(input) {
     // 정규식: 2~4글자의 한글만 허용
-    const koreanRegex = /^[가-힣]{2,4}$/;
+    const koreanRegex = /^[가-힣]{2,7}$/;
     // 검증
     return koreanRegex.test(input);
 }
@@ -861,7 +861,7 @@ async function checkForm() {
         if (!cho_sung_result) {
             // 한글 2-4글자 제한
             if (!validateKoreanInput(name)) {
-                alert('초성을 제외한 한글 2~4글자를 입력해주세요.');
+                alert('초성을 제외한 한글 2~7글자를 입력해주세요.');
                 return false;
             }
         } else {
