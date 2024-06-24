@@ -15,9 +15,10 @@ window.onload = function() {
 
     let url;
 
-    if(scComponent.domain.includes('local')){
+    if(scComponent.domain.includes('local') || scComponent.domain.includes('datamon')){
         url = 'http://localhost:8080';
         scComponent.mode = "local";
+        if( scComponent.domain.includes('datamon')) scComponent.mode = "dev";
     } else{
         url = 'https://datamonserver-001.xyz'
         scComponent.mode = "prod";

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>하지정맥 전문병원</title>
-    <link rel="stylesheet" type="text/css" href="hazitherapy.files/style.css">
+    <link rel="stylesheet" type="text/css" href="localFiles/style.css">
     <meta
         name="description"
         content="수술없이 실손보험으로 부담을 줄인">
@@ -13,129 +13,43 @@
     <meta name="robots" content="index,follow">
     <meta name="apple-mobile-web-app-title" content="MSO">
     <meta name="application-name" content="MSO">
-    <link rel="canonical" href="http://www.hazitherapy.co.kr/">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="MSO">
-    <meta property="og:site_name" content="MSO">
-    <meta property="og:url" content="http://www.hazitherapy.co.kr/">
-    <meta property="og:image:width" content="400">
-    <meta property="og:image:height" content="266">
-    <meta
-      property="og:description"
-      content="MSO병원은 하지정맥 전문병원입니다.">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="MSO">
-    <meta name="twitter:site" content="MSO">
-    <meta
-      name="twitter:description"
-      content="MSO병원은 하지정맥 전문병원입니다.">
-    <script src="hazitherapy.files/jquery-1.12.4.min.js" type="text/javascript"></script>
-    <script src="hazitherapy.files/landing-server-comunication.js" defer></script>
-    <script src="hazitherapy.files/function.js" type="text/javascript" defer></script>
+    <script src="localFiles/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="localFiles/landing-server-comunication.js" defer></script>
+    <script src="localFiles/common.js" type="text/javascript" defer></script>
+<!--    <script src="https://www.alisolution-devmanagement.xyz/js/landing-server-comunication/0.0.1/landing-server-comunication.min.js" defer></script>-->
   </head>
   <body>
-    <a href="#board" class="navi_btn"><img src="hazitherapy.files/images/navi_btn.png" alt=""></a>
-    <div class="main">
-      <div class="navi_btn"></div>
-      <div class="popup popup_silby">
-        <div class="popup_info">
-          <img src="hazitherapy.files/images/popup_icon.png" alt="">
-          <div class="popup_desc"><div>실비보험</div>이 있으신가요?</div>
-          <div class="silby_btns">
-            <div class="y_btn" onclick="closePopup01('Y')">예</div>
-            <div class="n_btn" onclick="closePopup01('N')">아니요</div>
-          </div>
-        </div>
-      </div>
-      <div class="popup popup_privacy">
-        <div class="popup_info privacy_info">
-          <div class="praivacy_detail">
-            <div class="popup_title">개인정보취급방침</div>
-            <div>
-              1. 개인정보 수집 및 이용 목적
-              <div>전화,sms를 통한 상담 및 안내</div>
-            </div>
-            <div>
-              2. 수집하는 개인정보 항목
-              <div>실비보험 유무, 이름, 번호</div>
-            </div>
-            <div>
-              3. 보유 및 이용기간
-              <div>수집이용 동의일로부터 수집이용 목적을 달성할 때까지</div>
-            </div>
-          </div>
-          <div class="close_btn" onclick="closePopup02()">닫기</div>
-        </div>
-      </div>
-      <div class="con00">
-        <div class="wrap">
-          <div class="p_0 sec1">
-            <img src="hazitherapy.files/images/1_2.png">
-            <img src="hazitherapy.files/images/makin_title.png" alt="" class="main_title">
-          </div>
-        </div>
-      </div>
-      <div class="con00">
-        <div class="wrap">
-          <div class="p_0 sec2">
-            <img src="hazitherapy.files/images/2.png">
-            <div class="card_box">
-              <div class="card">
-                <div class="card_text">
-                  <div class="card_num">01</div>
-                  <div class="card_info">발바닥이<br>저리고<br>아프다</div>
-                </div>
-                <img src="hazitherapy.files/images/" alt="">
-              </div>
-              <div class="card">
-                <div class="card_text">
-                  <div class="card_num">02</div>
-                  <div class="card_info">다리가<br>쑤시는 듯한<br>느낌이 든다</div>
-                </div>
-                <img src="hazitherapy.files/images/" alt="">
-              </div>
-              <div class="card">
-                <div class="card_text">
-                  <div class="card_num">03</div>
-                  <div class="card_info">종아리가<br>자주<br>붓는다</div>
-                </div>
-                <img src="hazitherapy.files/images/" alt="">
-              </div>
-              <div class="card">
-                <div class="card_text">
-                  <div class="card_num">04</div>
-                  <div class="card_info">피부에<br>푸른 혈관이<br>비치다</div>
-                </div>
-                <img src="hazitherapy.files/images/" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="con00">
-        <div class="wrap wrap03">
-          <div class="p_0 sec3 ">
-            <img src="hazitherapy.files/images/3.png">
-          </div>
-          <div class="board" id="board">
-            <img src="hazitherapy.files/images/4.png" alt="">
-            <div class="info_box">
-              <div class="infos">
-                <div>이 름 | <input type="text" id="name" onkeydown="checkSpace(this)" placeholder="이름을 입력해 주세요."></div>
-                <div>번 호 | <input type="number" id="phone" onkeydown="checkLength(this)" placeholder="010을 제외하고 입력해 주세요."                               onpaste="return false;" 
-                  ></div>
-                <div class="private"><input type="checkbox" id="checkbox" checked>(필수) 개인정보 동의 취급 및 위탁 동의<div onclick="showPopup('private')" class="show_btn">[보기]</div></div>
-              </div>
-            </div>
-            <div class="btn" onclick="checkboxFrom()">
-              <img src="hazitherapy.files/images/direct_btn.png" alt="">
-            </div>
-          </div>
-        </div>
-      </div>
+    <div>이 름 | <input type="text" id="name"></div>
+    <div>번 호 | <input type="number" id="phone"></div>
+    <div>
+      <label>있다</label><input type="radio" name="silby" value="Y" checked>
+      <label>없다</label><input type="radio" name="silby" value="N">
+    </div>
+    <div>
+      <select name="local" id="local">
+        <option value="">거주지를 선택해 주세요</option>
+        <option value="" disabled>===================</option>
+        <option value="서울특별시">서울특별시</option>
+        <option value="부산광역시">부산광역시</option>
+        <option value="대구광역시">대구광역시</option>
+        <option value="인천광역시">인천광역시</option>
+        <option value="광주광역시">광주광역시</option>
+        <option value="대전광역시">대전광역시</option>
+        <option value="울산광역시">울산광역시</option>
+        <option value="세종특별자치시">세종특별자치시</option>
+        <option value="경기도">경기도</option>
+        <option value="강원도">강원도</option>
+        <option value="충청남도">충청남도</option>
+        <option value="충청북도">충청북도</option>
+        <option value="전라남도">전라남도</option>
+        <option value="전라북도">전라북도</option>
+        <option value="경상남도">경상남도</option>
+        <option value="경상북도">경상북도</option>
+        <option value="제주도">제주도</option>
+      </select>
+    </div>
+    <div class="btn" onclick="checkFormData()">
+      전송
     </div>
   </body>
 </html>
