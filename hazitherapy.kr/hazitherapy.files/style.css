@@ -205,13 +205,13 @@ input::placeholder {
 }
 .board {
   position: absolute;
-  bottom: 6%; left: 50%;
+  bottom: 4%; left: 50%;
   transform: translateX(-50%);
   width: 80%;
 }
 .infos {
   font-weight: normal;
-  width:  75%; height: 100%;
+  width: 100%; height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -223,22 +223,24 @@ input::placeholder {
   width: 100%;
 }
 .infos div {
-  height: 45%;
+  height: 50%;
+}
+.infos div:not(:first-child) {
+  margin: .5vw 0 0;
 }
 .info_box {
   justify-content: center;
   display: flex;
-  width: 100%; height: 12vw;
+  width: 100%;
   font-size: 3vw;
 }
 .btn {
   background:#1E233A;
   color: #fff;
   padding: 3%;
-  height: 10%;
-  font-size: 3vw;
-  margin: 0 0 0 1%;
-  height: 100%;
+  font-size: 4vw;
+  text-align: center;
+  margin: 2vw 0 0;
 }
 .footer {
   background: #1E233A;
@@ -248,7 +250,7 @@ input::placeholder {
   color: rgba(255, 255, 255, .5);
   line-height: 2vw;
 }
-#name, #phone {
+#name, #phone, #local {
   width: 85%;
   height: 100%;
   padding: 3%;
@@ -262,7 +264,8 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-input::placeholder {
+input::placeholder,
+select {
   font-size: 3vw;
   font-weight:100;
 }
@@ -283,7 +286,10 @@ input[type=number] {
     width: 90%;
   }
 }
-
+.sec3 {
+  padding: 0 0 25vw;
+  background: rgb(241, 241, 241, .8);
+}
 /* @keyframes wink {
   0% {opacity: 100%;}
   50% {opacity: 0}

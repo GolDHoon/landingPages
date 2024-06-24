@@ -152,7 +152,7 @@ input::placeholder {
   font-size: 4vw;
   gap: 8%;
 }
-.infos div:not(.private, .private div) {
+.infos div:not(.private, .private div, .local > div) {
   width: inherit; height: 45%;
   display: flex;
   align-items: center;
@@ -161,14 +161,14 @@ input::placeholder {
   border-radius: 50px;
   border: .5vw solid #000;
 }
-.infos div input:not(#checkbox) {
+.infos div input:not(#checkbox), select {
   width: 79%; height: 100%;
   border: none;
   font-size: 4vw;
 }
 .btn {
   position: absolute;
-  bottom: -22px;
+  bottom: -10vw;
   left: 61%;
   transform: translateX(-50%);
   width: 95%;

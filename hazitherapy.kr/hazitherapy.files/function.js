@@ -38,6 +38,12 @@ function validateKoreanInput(input) {
   var koreanRegex = /^[가-힣]{2,7}$/;
   return koreanRegex.test(input);
 }
+
+var local = '';
+function checkLocal() {
+  local = $("select[name=local] option:selected").val();
+}
+
 async function checkboxFrom(){
   var name = $('#name').val(),
       phone = $('#phone').val(),
@@ -100,7 +106,8 @@ async function checkboxFrom(){
   var formData =  [
     {"key": "이름", "value":name},
     {"key": "번호", "value":"010"+phone},
-    {"key": "실비", "value":silby}
+    {"key": "실비", "value":silby},
+    {"key": "거주지", "value":local}
   ];
 
   var variable = window.consultingResult = await inputCustData(formData),
