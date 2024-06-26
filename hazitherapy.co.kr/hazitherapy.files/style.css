@@ -168,7 +168,7 @@ input::placeholder {
 }
 .btn {
   position: absolute;
-  bottom: -10vw;
+  bottom: -3vw;
   left: 61%;
   transform: translateX(-50%);
   width: 95%;
