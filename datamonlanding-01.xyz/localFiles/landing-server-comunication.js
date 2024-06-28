@@ -99,7 +99,7 @@ window.onload = function() {
     }
 
     async function getInitialData(url) {
-        fetch(url +'/landingPage/getInitialData?domain='+window.location.hostname, {
+        fetch(url +'/landingPage/getInitialData?domain='+window.location.hostname+window.location.pathname, {
             method: 'GET',
             headers: {'Content-Type': 'application/json'},
         })
