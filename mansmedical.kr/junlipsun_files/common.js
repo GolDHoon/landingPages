@@ -891,8 +891,8 @@ async function checkForm() {
     var formData =  [
         {"key": "이름", "value":name},
         {"key": "번호", "value":"010"+phone},
-        {"key": "실비", "value":silby},
-        {"key": "거주지", "value":local}
+        {"key": "실비", "value":silby}
+        // {"key": "거주지", "value":local}
     ];
 
     var variable = window.consultingResult = await inputCustData(formData),

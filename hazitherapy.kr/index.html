@@ -82,7 +82,7 @@
             </div>
             <div>
               2. 수집하는 개인정보 항목
-              <div>실비보험 유무, 이름, 번호, 거주지</div>
+              <div>실비보험 유무, 이름, 번호</div>
             </div>
             <div>
               3. 보유 및 이용기간
@@ -124,14 +124,13 @@
         <div class="wrap wrap03">
           <div class="p_0 sec3 ">
             <img src="hazitherapy.files/images/3.png">
-            </div>
             <div class="board" id="board">
               <div class="info_box">
                 <div class="infos">
                   <div>이름<input type="text" id="name" onkeydown="checkSpace(this)" placeholder="이름을 입력해 주세요."></div>
                   <div>번호<input type="number" id="phone" onkeydown="checkLength(this)" placeholder="010을 제외하고 입력해 주세요."                               onpaste="return false;" 
                     ></div>
-                  <div class="local"><div>거주지</div>
+                  <!-- <div class="local"><div>거주지</div>
                   <select name="local" id="local" onchange="checkLocal()">
                     <option value="" selected>거주지를 선택해 주세요</option>
                     <option value="" disabled>===================</option>
@@ -152,14 +151,15 @@
                     <option value="경상남도">경상남도</option>
                     <option value="경상북도">경상북도</option>
                     <option value="제주도">제주도</option>
-                  </select>
+                  </select> -->
                 </div>
                 </div>
-              </div>
-              <div class="private"><input type="checkbox" id="checkbox" checked>(필수) 개인정보 동의 취급 및 위탁 동의<div onclick="showPopup('private')" class="show_btn">[보기]</div></div>
-              <div class="btn" onclick="checkboxFrom()">비용확인상담받기</div>
             </div>
+          </div>
+          <div class="private"><input type="checkbox" id="checkbox" checked>(필수) 개인정보 동의 취급 및 위탁 동의<div onclick="showPopup('private')" class="show_btn">[보기]</div></div>
+          <div class="btn" onclick="checkboxFrom()">비용확인상담받기</div>
         </div>
+      </div>
       </div>
       <div class="footer wrap">
         <div>더행복한흉부외과</div>

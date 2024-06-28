@@ -55,7 +55,7 @@ body {
 }
 p {
   padding: 0;
-  margin: 2vw 0 0;
+  /* margin: 2vw 0 0; */
 }
 .button {
   opacity: 1;
