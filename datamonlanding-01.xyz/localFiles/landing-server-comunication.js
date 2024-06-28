@@ -16,7 +16,7 @@ window.onload = function() {
     let url;
 
     if(scComponent.domain.includes('local') || scComponent.domain.includes('datamon')){
-        url = 'http://localhost:8080';
+        url = 'https://datamonserver-002.xyz';
         scComponent.mode = "local";
         if( scComponent.domain.includes('datamon')) scComponent.mode = "dev";
     } else{
