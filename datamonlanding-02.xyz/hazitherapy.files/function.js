@@ -1,15 +1,5 @@
 console.log('js is load👍');
 
-$(document).ready(function(){
-  $('.popup_silby, html').addClass('active');
-})
-
-$(window).scroll(function(){
-  var h = $(document).scrollTop();
-  if(h > 900) $('.navi_btn').fadeOut();
-  else $('.navi_btn').fadeIn();
-});
-
 function phoneNumberCheck(phone) {
   var result = /^(?!01)\d{8}$/;
   return result.test(phone);
@@ -23,6 +13,7 @@ function checkSpace(e) {
   getValue = getValue.replace(/ /gi,"");
   $(e).val(getValue);
 }
+
 function checkLength(e) {
   var getLength = $(e).val().length+1,
       getValue = $(e).val(),
@@ -34,6 +25,7 @@ function checkLength(e) {
     $(e).val(getValue);
   }
 }
+
 function validateKoreanInput(input) {
   var koreanRegex = /^[가-힣]{2,4}$/;
   return koreanRegex.test(input);
@@ -113,19 +105,4 @@ async function checkboxFrom(){
     alert('상담신청이 완료되었습니다.');
   } else if (getStatus == '403') alert('비정상적인 접근입니다. 다시 시도해 주세요.');
   else if (getStatus == '500') alert('서버 내부 오류입니다. 다시 시도해 주세요.');
-}
-
-function showPopup(e) {
-  if(e=="private") $('.popup_privacy, html').addClass('active');
-  else $('.popup_silby, html').addClass('active');
-}
-
-var silby = "";
-function closePopup01(e) {
-  $('.popup_silby, html').removeClass('active');
-  silby = e;
-}
-
-function closePopup02() {
-  $('.popup_privacy, html').removeClass('active');
 }
