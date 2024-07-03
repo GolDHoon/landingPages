@@ -45,7 +45,7 @@ function checkLocal() {
 async function checkboxFrom(){
   var name = $('#name').val(),
       phone = $('#phone').val(),
-      silby = document.querySelector('input[name="silson"]:checked')? document.querySelector('input[name="silson"]:checked').value: document.querySelector('input[name="silson"]:checked'),
+      silby = document.querySelector('input[name="silson"]:checked')? document.querySelector('input[name="silson"]:checked').value: "",
       checkbox = $('#checkbox');
      
   var blockK = window.blockedKeyword.data;
