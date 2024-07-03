@@ -1,8 +1,6 @@
 console.log('js is load👍');
 
-$(document).ready(function(){
-  $('.popup_silby, html').addClass('active');
-})
+
 
 $(window).scroll(function(){
   var h = $(document).scrollTop();
@@ -11,7 +9,7 @@ $(window).scroll(function(){
 });
 
 function phoneNumberCheck(phone) {
-  var result = /^(?!01)\d{8}$/;
+  var result = /^(?![01])\d{8}$/;
   return result.test(phone);
 }
 function isChosung(char) {
@@ -35,14 +33,20 @@ function checkLength(e) {
   }
 }
 function validateKoreanInput(input) {
-  var koreanRegex = /^[가-힣]{2,4}$/;
+  var koreanRegex = /^[가-힣]{2,7}$/;
   return koreanRegex.test(input);
 }
+
+var local = '';
+function checkLocal() {
+  local = $("select[name=local] option:selected").val();
+}
+
 async function checkboxFrom(){
   var name = $('#name').val(),
       phone = $('#phone').val(),
       checkbox = $('#checkbox');
-
+     
   var blockK = window.blockedKeyword.data;
   var checkName = $('#name').val();
   var isBreak = false;
@@ -65,7 +69,7 @@ async function checkboxFrom(){
     var cho_sung_result = isChosung(name);
     if (!cho_sung_result) {
       if (!validateKoreanInput(name)) {
-        alert('초성을 제외한 한글 2~4글자를 입력해주세요.');
+        alert('초성을 제외한 한글 2~7글자를 입력해주세요.');
         $('#name').focus();
         return false;
       }
@@ -101,6 +105,7 @@ async function checkboxFrom(){
     {"key": "이름", "value":name},
     {"key": "번호", "value":"010"+phone},
     {"key": "실비", "value":silby}
+    // {"key": "거주지", "value":local}
   ];
 
   var variable = window.consultingResult = await inputCustData(formData),
