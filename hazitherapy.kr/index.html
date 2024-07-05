@@ -60,104 +60,56 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div class="main">
-      <div class="popup popup_silby">
-        <div class="popup_info">
-          <div class="popup_desc">
-            <div class="main_desc"><div>실비보험</div>이 있으신가요?</div>
-            <div class="sub_desc">보다 정확한 상담을 위해<br>실비보험 유무를 선택해 주세요.</div>
-          </div>
-          <div class="silby_btns">
-            <div class="y_btn" onclick="closePopup01('Y')">예</div>
-            <div class="n_btn" onclick="closePopup01('N')">아니요</div>
-          </div>
-        </div>
-      </div>
       <div class="popup popup_privacy">
-        <div class="popup_info privacy_info">
+        <div class="popup_info">
           <div class="praivacy_detail">
             <div class="popup_title">개인정보취급방침</div>
+            <br>
             <div>
               1. 개인정보 수집 및 이용 목적
               <div>전화,sms를 통한 상담 및 안내</div>
             </div>
             <div>
               2. 수집하는 개인정보 항목
-              <div>실비보험 유무, 이름, 번호</div>
+              <div>성함, 연락처, 실비보험 유무</div>
             </div>
             <div>
               3. 보유 및 이용기간
               <div>수집이용 동의일로부터 수집이용 목적을 달성할 때까지</div>
             </div>
+            <br>
           </div>
-          <div class="close_btn" onclick="closePopup02()">닫기</div>
+          <div class="close_btn" onclick="closePopup()">닫기</div>
         </div>
       </div>
       <div class="con00">
         <div class="wrap">
           <div class="p_0 sec1">
-            <img src="hazitherapy.files/images/1.png">
-            <div class="card_box">
-              <div class="card">
-                <img src="hazitherapy.files/images/card_1.png" alt="">
-              </div>
-              <div class="card">
-                <img src="hazitherapy.files/images/card_2.png" alt="">
-              </div>
-              <div class="card">
-                <img src="hazitherapy.files/images/card_3.png" alt="">
-              </div>
-              <div class="card">
-                <img src="hazitherapy.files/images/card_4.png" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="con00">
-        <div class="wrap">
-          <div class="p_0 sec2">
-            <img src="hazitherapy.files/images/2.png">
+            <img src="hazitherapy.files/images/main.png">
           </div>
         </div>
       </div>
       <div class="con00">
         <div class="wrap wrap03">
           <div class="p_0 sec3 ">
-            <img src="hazitherapy.files/images/3.png">
             <div class="board" id="board">
               <div class="info_box">
                 <div class="infos">
-                  <div>이름<input type="text" id="name" onkeydown="checkSpace(this)" placeholder="이름을 입력해 주세요."></div>
-                  <div>번호<input type="number" id="phone" onkeydown="checkLength(this)" placeholder="010을 제외하고 입력해 주세요."                               onpaste="return false;" 
+                  <div>성함<input type="text" id="name" onkeydown="checkSpace(this)" placeholder="성함을 입력해 주세요."></div>
+                  <div class="phone_box">연락처<input type="number" id="phone" onkeydown="checkLength(this)" placeholder="010을 제외하고 입력해 주세요."                               onpaste="return false;" 
                     ></div>
-                  <!-- <div class="local"><div>거주지</div>
-                  <select name="local" id="local" onchange="checkLocal()">
-                    <option value="" selected>거주지를 선택해 주세요</option>
-                    <option value="" disabled>===================</option>
-                    <option value="서울특별시">서울특별시</option>
-                    <option value="부산광역시">부산광역시</option>
-                    <option value="대구광역시">대구광역시</option>
-                    <option value="인천광역시">인천광역시</option>
-                    <option value="광주광역시">광주광역시</option>
-                    <option value="대전광역시">대전광역시</option>
-                    <option value="울산광역시">울산광역시</option>
-                    <option value="세종특별자치시">세종특별자치시</option>
-                    <option value="경기도">경기도</option>
-                    <option value="강원도">강원도</option>
-                    <option value="충청남도">충청남도</option>
-                    <option value="충청북도">충청북도</option>
-                    <option value="전라남도">전라남도</option>
-                    <option value="전라북도">전라북도</option>
-                    <option value="경상남도">경상남도</option>
-                    <option value="경상북도">경상북도</option>
-                    <option value="제주도">제주도</option>
-                  </select> -->
+                  <div class="silby_box">실손보험
+                    <div class="select_box">
+                      <input type="radio" name="silby" value="y" onchange="checkSilby(this)" checked><div>가입</div>
+                      <input type="radio" name="silby"value="n" onchange="checkSilby(this)"><div>미가입</div>
+                    </div>
+                  </div>
                 </div>
-                </div>
-            </div>
+              </div>
+              <div class="private"><input type="checkbox" id="checkbox" checked>(필수) 개인정보 동의 취급 및 위탁 동의<div onclick="showPopup()" class="show_btn">[보기]</div></div>
+              <div class="btn" onclick="checkboxFrom()"><img src="./hazitherapy.files/images/direct_btn.png" alt=""></div>
+              </div>
           </div>
-          <div class="private"><input type="checkbox" id="checkbox" checked>(필수) 개인정보 동의 취급 및 위탁 동의<div onclick="showPopup('private')" class="show_btn">[보기]</div></div>
-          <div class="btn" onclick="checkboxFrom()">비용확인상담받기</div>
         </div>
       </div>
       </div>
