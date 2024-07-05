@@ -54,18 +54,18 @@ html.active {
 }
 input {
   border-radius: 0;
-  border: 1px solid dimgray;
-  margin: 0 0 0 1%;
-  font-size: 3vw;
+  border: unset;
+  font-size: 4vw;
+  background: #efefef;
+  margin: none;
 }
 input::placeholder {
-  font-weight: 300;
-  font-size: 10px;
-  color: lightgray;
+  color: gray;
+  font-size: 4vw !important;
 }
 .wrap03 {
   position: relative;
-  background: #f6f6f6;
+  background: #001375;
   padding: 0 2% 6%;
 }
 .show_btn, .btn, .y_btn, .n_btn, .navi_btn, .close_btn {
@@ -86,55 +86,6 @@ input::placeholder {
 .sec1 {
   position: relative;
 }
-.card_box {
-  position: absolute;
-  bottom: -3%; left: 50%;
-  transform: translateX(-50%);
-  width: 90%; height: 41%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 1%;
-}
-.card img {
-  display: block;
-}
-.card {
- transition: .35s;
-}
-.card:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 5px 3px rgba(0, 0, 0, .2);
-}
-.popup {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgb(0 0 0 / 70%);
-  z-index: 999;
-  display: none;
-}
-.popup_title {
-  font-size: 5vw;
-}
-.popup_privacy.active,
-.popup_silby.active {
-  display: block;
-}
-.popup_info {
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 5px;
-  height: auto;
-  background: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  padding: 5%;
-  width: 65%;
-}
 .close_btn {
   color: gray;
   border: 1px solid gray;
@@ -143,21 +94,6 @@ input::placeholder {
   margin: 3% 0 0;
 }
 .privacy_info {
-  text-align: center;
-}
-.popup_info img {
-  width: 10%;
-  margin: 0 0 3%;
-}
-.praivacy_detail > div {
-  margin: 3% 0;
-}
-.praivacy_detail > div:not(:first-child),.close_btn {
-  font-size: 2.5vw;
-}
-.popup_desc {
-  display: flex;
-  flex-direction: column;
   text-align: center;
 }
 .main_desc {
@@ -177,8 +113,6 @@ input::placeholder {
   flex-direction: column;
   width: 100%;
   justify-content: center;
-  gap: 5%;
-  margin: 7% 0 0;
 }
 .silby_btns div {
   width: 100%;
@@ -206,10 +140,7 @@ input::placeholder {
   width: 100%;
 }
 .board {
-  position: absolute;
-  bottom: 40%; left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
+  width: 100%;
 }
 .infos {
   font-weight: normal;
@@ -227,22 +158,22 @@ input::placeholder {
 .infos div {
   height: 50%;
 }
-.infos div:not(:first-child) {
-  margin: .5vw 0 0;
-}
 .info_box {
   justify-content: center;
   display: flex;
   width: 100%;
-  font-size: 3vw;
+  font-size: 4vw;
 }
 .btn {
-  background:#1E233A;
-  color: #fff;
-  padding: 3%;
-  font-size: 4vw;
-  text-align: center;
-  margin: 2vw 0 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 5vw 0 0;
+}
+.btn img {
+  width: 90%;
+  display: block;
+  border-radius: 1vw;
 }
 .footer {
   background: #1E233A;
@@ -252,10 +183,22 @@ input::placeholder {
   color: rgba(255, 255, 255, .5);
   line-height: 2vw;
 }
-#name, #phone, #local {
-  width: 85%;
+#name, #phone, .select_box {
+  width: 80%;
   height: 100%;
   padding: 3%;
+}
+.select_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+}
+.select_box input {
+  margin: 0 0 .5vw;
+}
+.select_box input:last-of-type {
+  margin: 0 0 .5vw 5vw;
 }
 #checkbox {
   width: 3%;
@@ -266,14 +209,33 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-input::placeholder,
-select {
-  font-size: 3vw;
-  font-weight:100;
+.phone_box, .silby_box {
+  margin: 2vw 0 0;
 }
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+.popup {
+  display: none;
+  text-align: center;
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  background: rgba(0, 0, 0, .7);
+  width: 100%; height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.popup.active {
+  display: flex;
+}
+.popup_info {
+  background: #fff;
+  border-radius: 2vw;
+  padding: 10vw;
 }
 /* 모바일 */
 @media (max-width: 700px) {
@@ -289,13 +251,7 @@ input[type=number] {
   }
 }
 .sec3 {
-  background: rgb(241, 241, 241, .8);
+  background: #fff;
+  padding: 5% 3%;
+  border-radius: 1vw;
 }
-/* @keyframes wink {
-  0% {opacity: 100%;}
-  50% {opacity: 0}
-  100% {opacity: 100%}
-}
-@keyframes shadow {
-  100% { background: none; }
-} */

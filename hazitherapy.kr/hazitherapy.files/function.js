@@ -1,9 +1,5 @@
 console.log('js is load👍');
 
-$(document).ready(function(){
-  $('.popup_silby, html').addClass('active');
-})
-
 $(window).scroll(function(){
   var h = $(document).scrollTop();
   if(h > 900) $('.navi_btn').fadeOut();
@@ -39,9 +35,9 @@ function validateKoreanInput(input) {
   return koreanRegex.test(input);
 }
 
-var local = '';
-function checkLocal() {
-  local = $("select[name=local] option:selected").val();
+var silby = 'y';
+function checkSilby(e) {
+  silby = $(e).val();
 }
 
 async function checkboxFrom(){
@@ -107,9 +103,8 @@ async function checkboxFrom(){
     {"key": "이름", "value":name},
     {"key": "번호", "value":"010"+phone},
     {"key": "실비", "value":silby}
-    // {"key": "거주지", "value":local}
   ];
-
+  
   var variable = window.consultingResult = await inputCustData(formData),
       getStatus = variable.status;
 
@@ -122,17 +117,10 @@ async function checkboxFrom(){
   else if (getStatus == '500') alert('서버 내부 오류입니다. 다시 시도해 주세요.');
 }
 
-function showPopup(e) {
-  if(e=="private") $('.popup_privacy, html').addClass('active');
-  else $('.popup_silby, html').addClass('active');
+function showPopup() {
+  $('.popup, html').addClass('active')
+}
+function closePopup() {
+  $('.popup, html').removeClass('active')
 }
 
-var silby = "";
-function closePopup01(e) {
-  $('.popup_silby, html').removeClass('active');
-  silby = e;
-}
-
-function closePopup02() {
-  $('.popup_privacy, html').removeClass('active');
-}
