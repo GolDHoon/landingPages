@@ -29,7 +29,7 @@
 <!--        <script src="https://www.alisolution-devmanagement.xyz/js/landing-server-comunication/0.0.1/landing-server-comunication.min.js" defer></script>-->
         <script src="./js/common.js" defer></script>
     </head>
-    <body>
+    <body onresize="bodyResize()">
         <!-- Google Tag Manager (noscript) -->
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7WNPSMR"
                           height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -42,96 +42,104 @@
                 </div>
             </div>
         </div>
-        <div class="contents-box flex flex-direction_column">
-            <div class="content-box">
-                <img src="./image/01.png" alt="콘텐츠01">
-            </div>
-            <div class="content-box">
-                <img class="content-img" src="./image/02.png" alt="콘텐츠02">
-                <div style="width: 100%">
-                    <div class="flex justify-content_space-evenly" style="width: 100%">
-                        <img class="consult_img_01" src="./image/consult_img_01.png" alt="컨설팅 배너 이미지">
-                    </div>
-                    <div class="flex flex-direction_column align-items_center">
-                        <div class="inputForm">
-                            <div class="flex justify-content_center">
-                                <div class="flex flex-direction_column align-items_flex-start">
-                                    <label class="inputFormLabel"><span class="asterisk">*</span>성함</label>
-                                    <label class="inputFormLabel"><span class="asterisk">*</span>연락처</label>
-                                </div>
-                                <div class="flex flex-direction_column align-items_center inputGrid">
-                                    <label>
-                                        <input class="inputFormInput" type="text" placeholder="성함을 입력해주세요"/>
-                                    </label>
-                                    <label>
-                                        <input class="inputFormInput phoneInput" type="number" placeholder="연락처를 입력해주세요"/>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="flex justify-content_center">
-                                <label>
-                                    <input class="agreeInput" type="checkbox" checked>
-                                </label>
-                                <span class="agreeText">개인정보 수집 및 이용에 동의합니다.</span>
-                                <span class="agreeText view">[보기]</span>
-                            </div>
-                            <div class="flex justify-content_center">
-                                <button class="consult_button">
-                                    간편상담하기
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="content-box">
-                <img src="./image/03.png" alt="콘텐츠03">
-            </div>
-            <div class="content-box">
-                <img src="./image/04.png" alt="콘텐츠04">
-            </div>
-            <div class="content-box">
-                <img src="./image/05.png" alt="콘텐츠05">
-            </div>
-            <div class="content-box">
-                <img class="content-img" src="./image/06.png" alt="콘텐츠06">
-                <div style="width: 100%">
-                    <div class="flex justify-content_space-evenly" style="width: 100%">
-                        <img class="consult_img_01" src="./image/consult_img_01.png" alt="컨설팅 배너 이미지">
-                    </div>
-                    <div class="flex flex-direction_column align-items_center">
-                        <div class="inputForm">
-                            <div class="flex justify-content_center">
-                                <div class="flex flex-direction_column align-items_flex-start">
-                                    <label class="inputFormLabel"><span class="asterisk">*</span>성함</label>
-                                    <label class="inputFormLabel"><span class="asterisk">*</span>연락처</label>
-                                </div>
-                                <div class="flex flex-direction_column align-items_center inputGrid">
-                                    <label>
-                                        <input class="inputFormInput" type="text" placeholder="성함을 입력해주세요"/>
-                                    </label>
-                                    <label>
-                                        <input class="inputFormInput phoneInput" type="number" placeholder="연락처를 입력해주세요"/>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="flex justify-content_center">
-                                <label>
-                                    <input class="agreeInput" type="checkbox" checked>
-                                </label>
-                                <span class="agreeText">개인정보 수집 및 이용에 동의합니다.</span>
-                                <span class="agreeText view">[보기]</span>
-                            </div>
-                            <div class="flex justify-content_center">
-                                <button class="consult_button">
-                                    간편상담하기
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div style="width: 100%">
+            <div class="content01"></div>
+            <div class="content02"></div>
+            <div class="content03"></div>
+            <div class="content04"></div>
+            <div class="content05"></div>
+            <div class="content06"></div>
         </div>
+<!--        <div class="contents-box flex flex-direction_column">-->
+<!--            <div class="content-box">-->
+<!--                <img src="./image/01.png" alt="콘텐츠01">-->
+<!--            </div>-->
+<!--            <div class="content-box">-->
+<!--                <img class="content-img" src="./image/02.png" alt="콘텐츠02">-->
+<!--                <div style="width: 100%">-->
+<!--                    <div class="flex justify-content_space-evenly" style="width: 100%">-->
+<!--                        <img class="consult_img_01" src="./image/consult_img_01.png" alt="컨설팅 배너 이미지">-->
+<!--                    </div>-->
+<!--                    <div class="flex flex-direction_column align-items_center">-->
+<!--                        <div class="inputForm">-->
+<!--                            <div class="flex justify-content_center">-->
+<!--                                <div class="flex flex-direction_column align-items_flex-start">-->
+<!--                                    <label class="inputFormLabel"><span class="asterisk">*</span>성함</label>-->
+<!--                                    <label class="inputFormLabel"><span class="asterisk">*</span>연락처</label>-->
+<!--                                </div>-->
+<!--                                <div class="flex flex-direction_column align-items_center inputGrid">-->
+<!--                                    <label>-->
+<!--                                        <input class="inputFormInput" type="text" placeholder="성함을 입력해주세요"/>-->
+<!--                                    </label>-->
+<!--                                    <label>-->
+<!--                                        <input class="inputFormInput phoneInput" type="number" placeholder="연락처를 입력해주세요"/>-->
+<!--                                    </label>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="flex justify-content_center">-->
+<!--                                <label>-->
+<!--                                    <input class="agreeInput" type="checkbox" checked>-->
+<!--                                </label>-->
+<!--                                <span class="agreeText">개인정보 수집 및 이용에 동의합니다.</span>-->
+<!--                                <span class="agreeText view">[보기]</span>-->
+<!--                            </div>-->
+<!--                            <div class="flex justify-content_center">-->
+<!--                                <button class="consult_button">-->
+<!--                                    간편상담하기-->
+<!--                                </button>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="content-box">-->
+<!--                <img src="./image/03.png" alt="콘텐츠03">-->
+<!--            </div>-->
+<!--            <div class="content-box">-->
+<!--                <img src="./image/04.png" alt="콘텐츠04">-->
+<!--            </div>-->
+<!--            <div class="content-box">-->
+<!--                <img src="./image/05.png" alt="콘텐츠05">-->
+<!--            </div>-->
+<!--            <div class="content-box">-->
+<!--                <img class="content-img" src="./image/06.png" alt="콘텐츠06">-->
+<!--                <div style="width: 100%">-->
+<!--                    <div class="flex justify-content_space-evenly" style="width: 100%">-->
+<!--                        <img class="consult_img_01" src="./image/consult_img_01.png" alt="컨설팅 배너 이미지">-->
+<!--                    </div>-->
+<!--                    <div class="flex flex-direction_column align-items_center">-->
+<!--                        <div class="inputForm">-->
+<!--                            <div class="flex justify-content_center">-->
+<!--                                <div class="flex flex-direction_column align-items_flex-start">-->
+<!--                                    <label class="inputFormLabel"><span class="asterisk">*</span>성함</label>-->
+<!--                                    <label class="inputFormLabel"><span class="asterisk">*</span>연락처</label>-->
+<!--                                </div>-->
+<!--                                <div class="flex flex-direction_column align-items_center inputGrid">-->
+<!--                                    <label>-->
+<!--                                        <input class="inputFormInput" type="text" placeholder="성함을 입력해주세요"/>-->
+<!--                                    </label>-->
+<!--                                    <label>-->
+<!--                                        <input class="inputFormInput phoneInput" type="number" placeholder="연락처를 입력해주세요"/>-->
+<!--                                    </label>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="flex justify-content_center">-->
+<!--                                <label>-->
+<!--                                    <input class="agreeInput" type="checkbox" checked>-->
+<!--                                </label>-->
+<!--                                <span class="agreeText">개인정보 수집 및 이용에 동의합니다.</span>-->
+<!--                                <span class="agreeText view">[보기]</span>-->
+<!--                            </div>-->
+<!--                            <div class="flex justify-content_center">-->
+<!--                                <button class="consult_button">-->
+<!--                                    간편상담하기-->
+<!--                                </button>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
         <div>
             <img src="./image/footter.png" alt="콘텐츠05">
         </div>
