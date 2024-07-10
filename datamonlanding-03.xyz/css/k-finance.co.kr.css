@@ -91,31 +91,37 @@
     .content01{
         background-image: url('../image/01_m.png');
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: 100% 100%;
+        /*background-size: auto;*/
     }
     .content02{
         background-image: url('../image/02_m.png');
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: 100% 100%;
+        /*background-size: auto;*/
     }
     .content03{
         background-image: url('../image/03_m.png');
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: 100% 100%;
+        /*background-size: auto;*/
     }
     .content04{
         background-image: url('../image/04_m.png');
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: 100% 100%;
+        /*background-size: auto;*/
     }
     .content05{
         background-image: url('../image/05_m.png');
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: 100% 100%;
+        /*background-size: auto;*/
     }
     .content06{
         background-image: url('../image/06_m.png');
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: 100% 100%;
+        /*background-size: auto;*/
     }
 }
