@@ -1,5 +1,5 @@
 window.onload = function () {
-    var width = window.innerWidth;
+    var width = document.querySelector('body').offsetWidth;
 
     var imgElems = document.querySelectorAll('[alt="콘텐츠01"]');
     imgElems.forEach(function(imgElem) {
@@ -9,8 +9,6 @@ window.onload = function () {
             imgElem.src = './image/01.png';
         }
     });
-
-    alert("imgElems : " + imgElems);
 
     let contentboxList = document.querySelectorAll(".content-box");
 
