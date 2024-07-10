@@ -1,7 +1,5 @@
 window.onload = function () {
-    var width = window.innerWidth
-        || document.documentElement.clientWidth
-        || document.body.clientWidth;
+    var width = window.innerWidth;
 
     var imgElems = document.querySelectorAll('[alt="콘텐츠01"]');
     imgElems.forEach(function(imgElem) {
