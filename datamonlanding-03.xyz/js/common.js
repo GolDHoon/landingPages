@@ -11,6 +11,7 @@ window.onload = function () {
     }
 
     window.onresize = bodyResize;
+    bodyResize();
 }
 
 function bodyResize(){
@@ -21,18 +22,18 @@ function bodyResize(){
     //     contentboxList[i].style.height = contentboxList[i].offsetHeight - 4 + "px";
     // }
 
-    // var width = window.innerWidth
-    //     || document.documentElement.clientWidth
-    //     || document.body.clientWidth;
-    //
-    // var imgElems = document.querySelectorAll('[alt="콘텐츠01"]');
-    // imgElems.forEach(function(imgElem) {
-    //     if (width <= 768) {
-    //         imgElem.src = './image/01_m.png';
-    //     } else {
-    //         imgElem.src = './image/01.png';
-    //     }
-    // });
+    var width = window.innerWidth
+        || document.documentElement.clientWidth
+        || document.body.clientWidth;
+
+    var imgElems = document.querySelectorAll('[alt="콘텐츠01"]');
+    imgElems.forEach(function(imgElem) {
+        if (width <= 768) {
+            imgElem.src = './image/01_m.png';
+        } else {
+            imgElem.src = './image/01.png';
+        }
+    });
 }
 
 function detectDevice() {
