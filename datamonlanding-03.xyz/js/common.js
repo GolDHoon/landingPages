@@ -12,6 +12,8 @@ window.onload = function () {
         }
     });
 
+    alert("imgElems : " + imgElems);
+
     let contentboxList = document.querySelectorAll(".content-box");
 
     for(var i = 0; i <contentboxList.length; i++){
