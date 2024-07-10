@@ -1,0 +1,257 @@
+* {
+  box-sizing: border-box;
+  font-family: "Do Hyeon", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+html,
+body {
+	scroll-behavior: smooth;
+}
+html {
+	overflow-y: scroll;
+}
+body {
+  position: relative;
+	margin: 0;
+	padding: 0;
+  font-size: 0.75em;
+  font-family: "Malgun Gothic", dotum, sans-serif;
+}
+html.active {
+  overflow: hidden;
+}
+.layout {
+	min-width: 1200px;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+.wrap {
+	margin: 0 auto;
+	overflow: hidden;
+}
+.p_0,
+.p_0 img:first-child {
+  width: 100%;
+}
+.wrap {
+  width: 80%;
+}
+.p_0 > img{
+  display: block;
+}
+.privacy {
+  font-size: 8px;
+  color: dimgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.privacy div:last-child {
+  color: lightgray;
+  margin: 0 0 0 3px;
+}
+input {
+  border-radius: 0;
+  border: unset;
+  font-size: 4vw;
+  background: #efefef;
+  margin: none;
+}
+input::placeholder {
+  color: gray;
+  font-size: 4vw !important;
+}
+.wrap03 {
+  position: relative;
+  background: #001375;
+  padding: 0 2% 6%;
+}
+.show_btn, .btn, .y_btn, .n_btn, .navi_btn, .close_btn {
+  cursor: pointer;
+}
+.private {
+  font-size: 2vw;
+  color: dimgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2% 0 0;
+}
+.private > div {
+  color: lightgray;
+  margin: 0 0 0 1%;
+}
+.sec1 {
+  position: relative;
+}
+.close_btn {
+  color: gray;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 1% 5%;
+  margin: 3% 0 0;
+}
+.privacy_info {
+  text-align: center;
+}
+.main_desc {
+  font-size: 6vw;
+}
+.main_desc > div {
+  display: inline;
+  color: #0C3996;
+}
+.sub_desc {
+  font-weight: 200 !important;
+  color: dimgray;
+  font-size: 3vw;
+}
+.silby_btns {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+}
+.silby_btns div {
+  width: 100%;
+  padding: 4%;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 4vw;
+}
+.silby_btns div:first-child {
+  color: #000;
+  border: 3px solid #0C3996;
+}
+.silby_btns div:last-child {
+  background: #0C3996;
+  color: #fff;
+  margin: 3% 0 0;
+}
+.navi_btn {
+  position: fixed;
+  right: 0; bottom: 5%;
+  width: 50%;
+  z-index: 3;
+}
+.navi_btn img {
+  width: 100%;
+}
+.board {
+  width: 100%;
+}
+.infos {
+  font-weight: normal;
+  width: 100%; height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.infos > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.infos div {
+  height: 50%;
+}
+.info_box {
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  font-size: 4vw;
+}
+.btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 5vw 0 0;
+}
+.btn img {
+  width: 90%;
+  display: block;
+  border-radius: 1vw;
+}
+.footer {
+  background: #1E233A;
+  padding: 2.5%;
+  text-align: center;
+  font-size: 1.5vw;
+  color: rgba(255, 255, 255, .5);
+  line-height: 2vw;
+}
+#name, #phone, .select_box {
+  width: 80%;
+  height: 100%;
+  padding: 3%;
+}
+.select_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+}
+.select_box input {
+  margin: 0 0 .5vw;
+}
+.select_box input:last-of-type {
+  margin: 0 0 .5vw 5vw;
+}
+#checkbox {
+  width: 3%;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.phone_box, .silby_box {
+  margin: 2vw 0 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.popup {
+  display: none;
+  text-align: center;
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  background: rgba(0, 0, 0, .7);
+  width: 100%; height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.popup.active {
+  display: flex;
+}
+.popup_info {
+  background: #fff;
+  border-radius: 2vw;
+  padding: 10vw;
+}
+/* 모바일 */
+@media (max-width: 700px) {
+  body {
+		font-size: 15px;
+		font-weight: 400;
+	}
+  .wrap {
+    width: 100%;
+  }
+  .popup_info {
+    width: 90%;
+  }
+}
+.sec3 {
+  background: #fff;
+  padding: 5% 3%;
+  border-radius: 1vw;
+}
