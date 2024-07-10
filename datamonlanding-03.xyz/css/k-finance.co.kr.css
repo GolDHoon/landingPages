@@ -3,7 +3,27 @@
         width: 1024px;
         display: flex;
         justify-content: space-around;
+        padding: 10px;
     }
+
+    .topper-content div{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        font-weight: bold;
+        font-size: x-large;
+    }
+
+    .contents_img{
+        background-image: url('../image/button.png');
+        background-size: cover;
+        width: 276px;
+        height: 57px;
+        border: none;
+        background-color: white;
+        margin-right: 15px;
+    }
+
     .content01{
         background-image: url('../image/01.png');
         background-repeat: no-repeat;
@@ -100,7 +120,27 @@
         width: 1024px;
         display: flex;
         justify-content: space-around;
+        padding: 10px;
     }
+
+    .topper-content div{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        font-weight: bold;
+        font-size: x-large;
+    }
+
+    .contents_img{
+        background-image: url('../image/button.png');
+        background-size: cover;
+        width: 276px;
+        height: 57px;
+        border: none;
+        background-color: white;
+        margin-right: 15px;
+    }
+
     .content01{
         background-image: url('../image/01.png');
         background-repeat: no-repeat;
@@ -147,7 +187,8 @@
         background-image: url('../image/footer.png');
         background-repeat: no-repeat;
         background-size: cover;
-        height: 59px;
+        width: 100%;
+        min-height: 2.78em;
     }
     .consult_img_01{
         margin-top: 15%;
@@ -195,48 +236,69 @@
     .topper-content{
         width: 100%;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
+        padding: 5px;
     }
+
+    .topper-content div{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        font-weight: bold;
+        font-size: medium;
+    }
+
+    .contents_img{
+        background-image: url('../image/button_m.png');
+        background-size: cover;
+        width: 121px;
+        height: 25px;
+        border: none;
+        background-color: white;
+        margin-right: 15px;
+    }
+
     .content01{
         background-image: url('../image/01_m.png');
         background-repeat: no-repeat;
         background-size: 100% 100%;
-        /*background-size: auto;*/
+        min-height: 285px;
     }
     .content02{
         background-image: url('../image/02_m.png');
         background-repeat: no-repeat;
         background-size: 100% 100%;
-        /*background-size: auto;*/
+        min-height: 260px;
     }
     .content03{
         background-image: url('../image/03_m.png');
         background-repeat: no-repeat;
         background-size: 100% 100%;
-        /*background-size: auto;*/
+        min-height: 430px;
     }
     .content04{
         background-image: url('../image/04_m.png');
         background-repeat: no-repeat;
         background-size: 100% 100%;
-        /*background-size: auto;*/
+        min-height: 185px;
     }
     .content05{
         background-image: url('../image/05_m.png');
         background-repeat: no-repeat;
         background-size: 100% 100%;
-        /*background-size: auto;*/
+        min-height: 355px;
     }
     .content06{
         background-image: url('../image/06_m.png');
         background-repeat: no-repeat;
         background-size: 100% 100%;
-        /*background-size: auto;*/
+        min-height: 260px;
     }
     .footer-content{
         background-image: url('../image/footer_m.png');
         background-repeat: no-repeat;
         background-size: cover;
+        min-width: 768px;
     }
     .consult_img_01{
         margin-top: 15%;
@@ -336,4 +398,3 @@ input.phoneInput[type="number"] {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
