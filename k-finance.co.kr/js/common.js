@@ -2,7 +2,7 @@
 window.onload = function () {
     let name = "";
     let phone = "";
-    let agree;
+    let agree = true;
 
     document.querySelector('.contents_img').addEventListener('click', function() {
         window.scrollTo(0,document.body.scrollHeight);
@@ -100,7 +100,7 @@ window.onload = function () {
             } else {
                 phone = phone.replace(/-/g, "");
                 if (!/^(?![01])\d{8}$/.test(phone)) {
-                    alert('정확한 휴대폰 번호를 입력해주세요.');
+                    alert('010을 제외한 휴대폰 번호를 정확히 입력해주세요.');
                     phoneInputElement[0].focus();
                     return false;
                 }
