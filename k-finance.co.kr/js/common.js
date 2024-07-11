@@ -1,5 +1,5 @@
 
-window.onload = function () {
+document.addEventListener("DOMContentLoaded", function() {
     let name = "";
     let phone = "";
     let agree = true;
@@ -63,7 +63,7 @@ window.onload = function () {
                 var isBreak = false;
 
                 blockK.forEach(function (word) {
-                    if (name.includes(word)) {  // checkName이 차단된 키워드를 포함하는지 확인
+                    if (name.includes(word)) {
                         isBreak = true;
                         alert('차단된 키워드가 사용되었습니다. 다시 입력해 주세요. (' + name + ')');
                     }
@@ -117,7 +117,7 @@ window.onload = function () {
                 {"key": "번호", "value": "010" + phone}
             ];
 
-            submit(formData);
+            submit(formData).then(r => {});
         });
     })
 
@@ -125,13 +125,13 @@ window.onload = function () {
         var variable = window.consultingResult = await window.inputCustData(formData),
             getStatus = variable.status;
 
-        if (getStatus == '200') {
+        if (getStatus === '200') {
             window.dataLayer.push({
                 event: "DB_input"
             });
             alert('상담신청이 완료되었습니다.');
-        } else if (getStatus == '403') alert('비정상적인 접근입니다. 다시 시도해 주세요.');
-        else if (getStatus == '500') alert('서버 내부 오류입니다. 다시 시도해 주세요.');
+        } else if (getStatus === '403') alert('비정상적인 접근입니다. 다시 시도해 주세요.');
+        else if (getStatus === '500') alert('서버 내부 오류입니다. 다시 시도해 주세요.');
     }
 
     // Get the modal
@@ -151,5 +151,5 @@ window.onload = function () {
             modal.style.display = 'none';
         }
     }
-}
+});
 
