@@ -122,7 +122,7 @@ window.onload = function () {
     })
 
     async function submit(formData) {
-        var variable = window.consultingResult = await inputCustData(formData),
+        var variable = window.consultingResult = await window.inputCustData(formData),
             getStatus = variable.status;
 
         if (getStatus == '200') {
