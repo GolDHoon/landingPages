@@ -1,0 +1,447 @@
+@media (min-width: 1024px) {
+    .topper-content{
+        width: 1024px;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+    }
+
+    .topper-content div{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        font-weight: bold;
+        font-size: x-large;
+    }
+
+    .contents_img{
+        background-image: url('../image/button.png');
+        background-size: cover;
+        width: 276px;
+        height: 57px;
+        border: none;
+        background-color: white;
+        margin-right: 15px;
+    }
+
+    .content01{
+        background-image: url('../image/01.png');
+        background-repeat: no-repeat;
+        background-size: auto;
+        width: 1024px;
+        height: 505px;
+    }
+    .content02{
+        background-image: url('../image/02.png');
+        background-repeat: no-repeat;
+        background-size: auto;
+        width: 1024px;
+        height: 544px;
+    }
+    .content03{
+        background-image: url('../image/03.png');
+        background-repeat: no-repeat;
+        background-size: auto;
+        width: 1024px;
+        height: 817px;
+    }
+    .content04{
+        background-image: url('../image/04.png');
+        background-repeat: no-repeat;
+        background-size: auto;
+        width: 1024px;
+        height: 304px;
+    }
+    .content05{
+        background-image: url('../image/05.png');
+        background-repeat: no-repeat;
+        background-size: auto;
+        width: 1024px;
+        height: 544px;
+    }
+    .content06{
+        background-image: url('../image/06.png');
+        background-repeat: no-repeat;
+        background-size: auto;
+        width: 1024px;
+        height: 545px;
+    }
+    .footer-content{
+        background-image: url('../image/footer.png');
+        background-repeat: no-repeat;
+        background-size: auto;
+        width: 1024px;
+        height: 59px;
+    }
+
+    .consult_img_01{
+        margin-top: 15%;
+        margin-bottom: 5%;
+        width: 55%;
+    }
+
+    .inputForm{
+        width: 120%;
+        padding: 30px;
+    }
+
+    .inputFormLabel{
+        font-weight: bold;
+        font-size: x-large;
+        margin-bottom: 10px;
+    }
+
+    .inputGrid{
+        width: 70%;
+    }
+
+    .inputGrid input, .inputGrid label {
+        width: 95%;
+    }
+
+    .inputGrid input {
+        height: 30px;
+        margin-bottom: 10px;
+    }
+
+    .agreeText{
+        font-size: small;
+    }
+
+    .consult_button{
+        font-weight: bold;
+        font-size: x-large;
+        color: white;
+        padding: 15px 40px;
+    }
+}
+@media (max-width: 1024px) {
+    .topper-content{
+        width: 1024px;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+    }
+
+    .topper-content div{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        font-weight: bold;
+        font-size: x-large;
+    }
+
+    .contents_img{
+        background-image: url('../image/button.png');
+        background-size: cover;
+        width: 276px;
+        height: 57px;
+        border: none;
+        background-color: white;
+        margin-right: 15px;
+    }
+
+    .content01{
+        background-image: url('../image/01.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        min-height: 379px;
+    }
+    .content02{
+        background-image: url('../image/02.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        min-height: 408px;
+    }
+    .content03{
+        background-image: url('../image/03.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        min-height: 613px;
+    }
+    .content04{
+        background-image: url('../image/04.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        min-height: 228px;
+    }
+    .content05{
+        background-image: url('../image/05.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        min-height: 408px;
+    }
+    .content06{
+        background-image: url('../image/06.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        min-height: 409px;
+    }
+    .footer-content{
+        background-image: url('../image/footer.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        min-height: 2.78em;
+    }
+    .consult_img_01{
+        margin-top: 15%;
+        margin-bottom: 5%;
+        width: 55%;
+    }
+
+    .inputForm{
+        padding: 20px;
+        width: 100%;
+    }
+
+    .inputFormLabel{
+        font-weight: bold;
+        font-size: x-large;
+        margin-bottom: 10px;
+    }
+
+    .inputGrid{
+        width: 70%;
+    }
+
+    .inputGrid input, .inputGrid label {
+        width: 90%;
+    }
+
+    .inputGrid input {
+        height: 30px;
+        margin-bottom: 10px;
+    }
+
+    .agreeText{
+        font-size: small;
+    }
+
+    .consult_button{
+        font-weight: bold;
+        font-size: large;
+        color: white;
+        padding: 10px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .topper-content{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+    }
+
+    .topper-content div{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        font-weight: bold;
+        font-size: medium;
+    }
+
+    .contents_img{
+        background-image: url('../image/button_m.png');
+        background-size: cover;
+        width: 121px;
+        height: 25px;
+        border: none;
+        background-color: white;
+        margin-right: 15px;
+    }
+
+    .content01{
+        background-image: url('../image/01_m.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        min-height: 285px;
+    }
+    .content02{
+        background-image: url('../image/02_m.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        min-height: 260px;
+    }
+    .content03{
+        background-image: url('../image/03_m.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        min-height: 430px;
+    }
+    .content04{
+        background-image: url('../image/04_m.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        min-height: 185px;
+    }
+    .content05{
+        background-image: url('../image/05_m.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        min-height: 355px;
+    }
+    .content06{
+        background-image: url('../image/06_m.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        min-height: 260px;
+    }
+    .footer-content{
+        background-image: url('../image/footer_m.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-width: 1px;
+    }
+    .consult_img_01{
+        margin-top: 15%;
+        margin-bottom: 10%;
+        width: 100%;
+    }
+
+    .inputForm{
+        padding: 10px;
+        width: 100%;
+    }
+
+    .inputFormLabel{
+        font-weight: bold;
+        font-size: medium;
+        margin-bottom: 5px;
+    }
+
+    .inputGrid{
+        width: 70%;
+    }
+
+    .inputGrid input, .inputGrid label {
+        width: 90%;
+    }
+
+    .inputGrid input {
+        height: 21px;
+        margin-bottom: 5px;
+    }
+
+    .agreeText{
+        font-size: 7px;
+    }
+
+    .agreeArea label{
+        width: 10px;
+        height: 10px;
+    }
+
+    .agreeInput{
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        margin: 0px;
+    }
+
+    .consult_button{
+        font-weight: bold;
+        font-size: small;
+        color: white;
+        padding: 5px 20px;
+    }
+}
+
+.infoForm{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputForm{
+    background-color: white;
+}
+
+.asterisk{
+    color: red;
+}
+
+.inputFormInput{
+    border: none;
+    background-color: RGB(242,242,242);
+}
+
+.consult_button{
+    border: none;
+    background-color: RGB(0, 140, 255);
+    cursor: pointer;
+}
+
+input.phoneInput[type="number"]::-webkit-inner-spin-button,
+input.phoneInput[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input.phoneInput[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.view{
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.agreeArea{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.contents_img{
+    cursor: pointer;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content-text{
+    text-align: center;
+}
