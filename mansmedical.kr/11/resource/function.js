@@ -55,6 +55,12 @@ async function checkboxFrom(){
       break;
     }
   }
+
+  if(silson === undefined){
+    silson = "";
+  }
+
+  debugger;
      
   var blockK = window.blockedKeyword.data;
   var checkName = $('#name').val();
