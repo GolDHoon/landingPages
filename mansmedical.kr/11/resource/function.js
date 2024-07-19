@@ -2,11 +2,11 @@ console.log('js is load👍');
 
 
 
-window.onscroll = function(){
-  var h = document.querySelector("body").offsetHeight;
-  // if(h > 900) $('.navi_btn').fadeOut();
-  // else $('.navi_btn').fadeIn();
-};
+$(window).scroll(function(){
+  var h = $(document).scrollTop();
+  if(h > 900) $('.navi_btn').fadeOut();
+  else $('.navi_btn').fadeIn();
+});
 
 function phoneNumberCheck(phone) {
   var result = /^(?![01])\d{8}$/;
@@ -22,8 +22,8 @@ function checkSpace(e) {
   $(e).val(getValue);
 }
 function checkLength(e) {
-  var getLength = e.val().length+1,
-      getValue = e.val(),
+  var getLength = $(e).val().length+1,
+      getValue = $(e).val(),
       maxLength = 8;
 
   $(e).val(getValue);
