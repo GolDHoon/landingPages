@@ -4,8 +4,8 @@ console.log('js is load👍');
 
 window.onscroll = function(){
   var h = document.querySelector("body").offsetHeight;
-  if(h > 900) $('.navi_btn').fadeOut();
-  else $('.navi_btn').fadeIn();
+  // if(h > 900) $('.navi_btn').fadeOut();
+  // else $('.navi_btn').fadeIn();
 };
 
 function phoneNumberCheck(phone) {
