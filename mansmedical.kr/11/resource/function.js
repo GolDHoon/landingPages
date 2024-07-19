@@ -22,8 +22,8 @@ function checkSpace(e) {
   $(e).val(getValue);
 }
 function checkLength(e) {
-  var getLength = $(e).val().length+1,
-      getValue = $(e).val(),
+  var getLength = e.val().length+1,
+      getValue = e.val(),
       maxLength = 8;
 
   $(e).val(getValue);
