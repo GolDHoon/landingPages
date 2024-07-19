@@ -29,7 +29,7 @@
     <!-- Danggeun Market Code -->
     <script src="https://karrot-pixel.business.daangn.com/0.2/karrot-pixel.umd.js"></script>
     <script>
-      window.karrotPixel.init('1718257888718800001');
+      window.karrotPixel.init('1721104842616500001');
       window.karrotPixel.track('ViewPage');
     </script>
     <!-- End Danggeun Market Code -->
@@ -82,20 +82,25 @@
     <script src="resourcequery-1.12.4.min.js" type="text/javascript"></script>
     <script src="https://www.alisolution-devmanagement.xyz/js/landing-server-comunication/0.0.1/landing-server-comunication.min.js" defer></script>
     <script src="resourceunction.js" type="text/javascript" defer></script>
+    <script>
+      window.onscroll = function() {
+        var d = document.documentElement;
+        var offset = d.scrollTop + window.innerHeight;
+        var height = d.offsetHeight;
+
+        if (offset === height) {
+          document.querySelector('.fb').style.display = 'none';
+        }else {
+          document.querySelector('.fb').style.display = 'block';
+        }
+      };
+    </script>
   </head>
   <body>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVFXHD7X"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-   
-
-
-
-
-
-
-
 
     <div class="wrap">
       <div class="popup popup_privacy">
@@ -118,18 +123,16 @@
           <div class="close_btn" onclick="closePopup02()">닫기</div>
         </div>
       </div>
-      
-      
-
 
       <div class="con">
           <div class="fb">
             <a href="#f1"><img src="resource/images/fb.gif"></a>
           </div>
-          
+
           <img src="resource/images/01.gif">
           <img src="resource/images/02.gif">
           <img src="resource/images/03.gif">
+
       </div>
 
       <div class="contact" id="f1">
@@ -160,6 +163,12 @@
           </div>
         </div>
       </div>
+
+      <footer class="" style="display: flex; flex-direction: column; align-items: center;">
+        <div class="container">상호명 : 강남성모비뇨의학과의원 | 대표자 : 성재우 | 사업자등록번호 : 781-98-01518</div>
+        <div class="container">전화 : 02.544.0175 | 주소 : 서울 서초구 강남대로 559 7층</div>
+        <div class="container">Copyright &copy; 2023 강남성모비뇨의학과의원. All Rights Reserved.</div>
+      </footer>
     </div>
   </body>
 </html>
