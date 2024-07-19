@@ -46,6 +46,15 @@ async function checkboxFrom(){
   var name = $('#name').val(),
       phone = $('#phone').val(),
       checkbox = $('#checkbox');
+
+  var radios = document.getElementsByName('silson');
+  var silson;
+  for (var i = 0; i < radios.length; i++) {
+    if (radios[i].checked) {
+      silson = radios[i].value;
+      break;
+    }
+  }
      
   var blockK = window.blockedKeyword.data;
   var checkName = $('#name').val();
@@ -104,7 +113,7 @@ async function checkboxFrom(){
   var formData =  [
     {"key": "이름", "value":name},
     {"key": "번호", "value":"010"+phone},
-    {"key": "실비", "value":silby}
+    {"key": "실비", "value":silson}
     // {"key": "거주지", "value":local}
   ];
 
