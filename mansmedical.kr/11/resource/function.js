@@ -2,11 +2,11 @@ console.log('js is load👍');
 
 
 
-$(window).scroll(function(){
+window.onscroll = function(){
   var h = $(document).scrollTop();
   if(h > 900) $('.navi_btn').fadeOut();
   else $('.navi_btn').fadeIn();
-});
+};
 
 function phoneNumberCheck(phone) {
   var result = /^(?![01])\d{8}$/;
