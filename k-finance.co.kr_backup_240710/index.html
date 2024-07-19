@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <!-- Google Tag Manager -->
+      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5NXMS9Q2');</script>
+        <!-- End Google Tag Manager -->
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-LV4BXR6ZGY"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-LV4BXR6ZGY');
+      </script>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CCL</title>
+        <meta name="copyright" content="드리븐">
+        <meta name="subject" content="CCL 신규고객 이벤트">
+        <meta name="title" content="CCL">
+        <meta
+            name="description"
+            content="CCL은 정식 인증을 받은 해외선물거래소입니다. 이벤트 혜택 받고 해외선물투자 시작하세요.">
+        <meta name="keywords" content="해외선물,해외선물거래소,선물투자,주식투자,지수선물,선물거래">
+        <meta name="robots" content="index,follow">
+        <meta name="apple-mobile-web-app-title" content="CCL">
+        <meta name="application-name" content="CCL">
+        <link rel="shortcut icon" href="#">
+        <link rel="canonical" href="http://www.k-finance.co.kr/">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="CCL">
+        <meta property="og:site_name" content="CCL">
+        <meta property="og:url" content="http://www.k-finance.co.kr/">
+        <meta
+            property="og:image"
+            content="http://www.k-finance.co.kr/ctexchange/main_b.jpg">
+        <meta property="og:image:width" content="400">
+        <meta property="og:image:height" content="266">
+        <meta
+            property="og:description"
+            content="CCL은 정식 인증을 받은 해외선물거래소입니다. 이벤트 혜택 받고 해외선물투자 시작하세요.">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="CCL">
+        <meta name="twitter:site" content="CCL">
+        <meta
+            name="twitter:image"
+            content="http://www.k-finance.co.kr/ctexchange/main_b.jpg">
+        <meta
+            name="twitter:description"
+            content="CCL은 정식 인증을 받은 해외선물거래소입니다. 이벤트 혜택 받고 해외선물투자 시작하세요.">
+        <script src="CCL_files/jquery-1.12.4.min.js" type="text/javascript"></script>
+        <script src="https://www.alisolution-devmanagement.xyz/js/landing-server-comunication/0.0.1/landing-server-comunication.min.js" defer></script>
+        <script src="CCL_files/function.js" defer></script>
+        <link rel="stylesheet" type="text/css" href="./CCL_files/main.css">
+        <style>
+          .privacy_modal_close, .privacy_modal {
+            cursor: pointer;
+          }
+          html.active {
+            overflow: hidden;
+          }
+            #form {
+                position: relative;
+            }
+            .privacy_modal_close {
+                margin-left: auto;
+                float: right;
+                font-weight: 800;
+                font-size: 1rem;
+
+            }
+            #privacy_modal_container {
+                display: none;
+                position: fixed;
+                width: 100%; height: 100%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 100;
+                background: rgba(0, 0, 0, 0.7);
+            }
+            .privacy_modal_content {
+                background-color: #fff;
+                padding: 10px;
+                height: 105%;
+                width: 90%; height: fit-content;
+                border-radius: 5px;
+                position: absolute;
+                top: 50%; left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+            p {
+              margin: 0;
+            }
+            .p_t2 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+            .background {
+                height: 375px;
+                width: 65%;
+                background-color: white;
+                overflow: hidden;
+                box-shadow: 0 10px 10px black;
+                border-radius: 10px;
+            }
+            .rolling_div {
+                display: flex;
+                justify-content: space-evenly;
+                height: 35px;
+                font-size: 30px;
+                padding: 20px;
+                border-bottom: solid #EFEFEF 1px;
+            }
+
+            .rolling_date {
+                width: 33%;
+                color: #A3A3A3;
+                flex: 1 1 auto;
+            }
+            .rolling_name {
+                width: 33%;
+                flex: 1 1 auto;
+            }
+            .rolling_number {
+                width: 33%;
+                flex: 1 1 auto;
+            }
+            .rolling_section {
+                transform: translateY(0px);
+            }
+            .rolling_section.animated {
+                transition: 0.5s ease-out;
+            }
+            @media (max-width: 1200px) {
+                .background {
+                    width: 85%;
+                }
+                .rolling_date {
+                    width: 36%;
+                }
+                .rolling_name {
+                    width: 23%;
+                }
+                .rolling_number {
+                    width: 44%;
+                }
+            }
+            @media (max-width: 620px) {
+                .rolling_div {
+                    font-size: 19px;
+                    align-items: center;
+                }
+            }
+            @media (max-width: 420px) {
+                .rolling_div {
+                    font-size: 15px;
+                }
+            }
+            footer {
+                color: #F2F2F2;
+                font-size: 13px;
+                background-color: #424242;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 1%;
+            }
+        </style>
+    </head>
+    <body>
+      <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5NXMS9Q2"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        <style type="text/css">
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            #navigation {
+                position: fixed;
+            }
+            #f1 {
+                height: 100%;
+            }
+            #f2 {
+                height: 100%;
+            }
+            #f3 {
+                height: 100%;
+            }
+        </style>
+
+        <!-- 본문가리지 않는 플로팅배너 모듈 {-->
+        <div class="fbpc">
+            <div id="navigation" style="z-index:9;">
+                <a style="POSITION: fixed; bottom:5%; right:2%; z-index:9;">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="http://www.k-finance.co.kr/#f1"><img
+                                        src="./CCL_files/fb01.png"
+                                        style="width:220px; height:auto"
+                                        class="floater"></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </a>
+            </div>
+        </div>
+        <div class="fbmo">
+            <div id="navigation" style=" z-index:9;">
+                <a style="POSITION: fixed; bottom:1%; RIGHT:0%; z-index:9;">
+                    <table cellpadding="0" cellspacing="0" style="width:100%;">
+                        <tbody>
+                            <tr>
+                                <td width="70%"></td>
+                                <td width="30%">
+                                    <a href="http://www.k-finance.co.kr/#f1"><img src="./CCL_files/fb01.png" style="width:100%; height:auto" class="floater"></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </a>
+            </div>
+        </div>
+        <div class="con00">
+            <div class="wrap">
+                <div class="p_0"><img src="./CCL_files/top_pc.jpg" id="con_pc"></div>
+                <div class="p_0"><img src="./CCL_files/top_mo.jpg" id="con_mo"></div>
+            </div>
+        </div>
+
+        <div class="con01">
+            <div class="wrap">
+                <div class="p_0"><img src="./CCL_files/con01_img01.png" class="floater"></div>
+                <div class="p_t2"><img src="./CCL_files/con01_img02.png"></div>
+            </div>
+        </div>
+        <div class="con02">
+            <div class="wrap">
+                <div class="p_0"><img src="./CCL_files/con02_img01.gif"></div>
+                <div class="p_t2"><img src="./CCL_files/con02_img02.jpg"></div>
+            </div>
+        </div>
+        <div class="con03">
+            <div class="wrap">
+                <div class="p_0"><img src="./CCL_files/con03_img01.gif"></div>
+                <div class="p_t2"><img src="./CCL_files/con03_img02.jpg"></div>
+            </div>
+        </div>
+        <div class="con04">
+            <div class="wrap">
+                <div class="p_0"><img src="./CCL_files/con04_img01.gif"></div>
+                <div class="p_t2"><img src="./CCL_files/con04_img02.jpg"></div>
+            </div>
+        </div>
+
+        <div class="con05">
+            <div class="wrap">
+                <div class="p_0"><img src="./CCL_files/con05_img01.png" class="floater"></div>
+                <div class="p_t2"><img src="./CCL_files/con05_img02.png"></div>
+                <div class="p_t2">
+                    <div class="background">
+                        <div class="rolling_section animated" style="transform: translateY(-75px);">
+                            <div class="rolling_div">
+                                <div class="rolling_date">2024-05-27</div>
+                                <div class="rolling_name">정문*</div>
+                                <div class="rolling_number">010-5345-****</div>
+                            </div>
+                            <div class="rolling_div">
+                                <div class="rolling_date">2024-05-27</div>
+                                <div class="rolling_name">김신*</div>
+                                <div class="rolling_number">010-7709-****</div>
+                            </div>
+                            <div class="rolling_div">
+                                <div class="rolling_date">2024-05-27</div>
+                                <div class="rolling_name">한혜*</div>
+                                <div class="rolling_number">010-5324-****</div>
+                            </div>
+                            <div class="rolling_div">
+                                <div class="rolling_date">2024-05-27</div>
+                                <div class="rolling_name">김현*</div>
+                                <div class="rolling_number">010-0133-****</div>
+                            </div>
+                            <div class="rolling_div">
+                                <div class="rolling_date">2024-05-27</div>
+                                <div class="rolling_name">최규*</div>
+                                <div class="rolling_number">010-0843-****</div>
+                            </div>
+                            <div class="rolling_div clone">
+                                <div class="rolling_date">2024-05-27</div>
+                                <div class="rolling_name">정문*</div>
+                                <div class="rolling_number">010-5345-****</div>
+                            </div>
+                            <div class="rolling_div clone">
+                                <div class="rolling_date">2024-05-27</div>
+                                <div class="rolling_name">김신*</div>
+                                <div class="rolling_number">010-7709-****</div>
+                            </div>
+                            <div class="rolling_div clone">
+                                <div class="rolling_date">2024-05-27</div>
+                                <div class="rolling_name">한혜*</div>
+                                <div class="rolling_number">010-5324-****</div>
+                            </div>
+                            <div class="rolling_div clone">
+                                <div class="rolling_date">2024-05-27</div>
+                                <div class="rolling_name">김현*</div>
+                                <div class="rolling_number">010-0133-****</div>
+                            </div>
+                            <div class="rolling_div clone">
+                                <div class="rolling_date">2024-05-27</div>
+                                <div class="rolling_name">최규*</div>
+                                <div class="rolling_number">010-0843-****</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="con06">
+            <div class="wrap">
+                <div class="p_0"><img src="./CCL_files/con06_img01.gif"></div>
+                <div class="p_t2"><img src="./CCL_files/con06_img02.jpg"></div>
+            </div>
+        </div>
+
+        <div id="f1"></div>
+        <div class="con07">
+            <div class="wrap">
+                <div class="p_0"><img src="./CCL_files/con07_img01.png" class="pulse"></div>
+            </div>
+            <div class="wrap03">
+                <div class="contact_bg">
+                    <div class="contact">
+                        <form name="form" id="form" method="post">
+                            <div class="textbox">
+                                <input
+                                    type="text"
+                                    name="name"
+                                    value=""
+                                    id="name"
+                                    required=""
+                                    placeholder="성함을 입력하세요"
+                                    onkeydown="checkSpace(this)">
+                            </div>
+                            <div class="textbox phone_textBox">
+                              <div>010</div>
+                                <input
+                                    type="number"
+                                    name="phone"
+                                    value=""
+                                    id="phone"
+                                    required=""
+                                    class="phon_box"
+                                    placeholder="010을 제외한 연락처를 입력하세요"
+                                    onkeydown="checkLength(this)"
+                                    onpaste="return false;"
+                                    >
+                            </div>
+
+                            <div class="textbox02">
+                                <div class="privacy_container">
+                                    <input type="checkbox" id="privacy_agreement" required="" checked="checked">
+                                    <label for="privacy_agreement" class="label_privacy_agreement">
+                                        개인정보처리방침에 동의합니다.</label>
+                                    <span class="privacy_modal" onclick="showPopup()">[보기]</span>
+                                </div>
+                            </div>
+                            <div class="btn">
+                              <div id="btn" class="consult_request_btn" onclick="checkboxFrom()">
+                                <img src="CCL_files/con07_bt.png" alt="" style="width: -webkit-fill-available;
+                              cursor: pointer;">
+                              </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="wrap">
+                <div class="p_t2"><img src="./CCL_files/con07_img02.png"></div>
+            </div>
+        </div>
+        <div id="privacy_modal_container">
+          <div class="privacy_modal_content">
+              <div class="privacy_modal_close" onclick="closePopup()">X</div>
+              <div>
+                  <br>
+                  <h3>개인정보취급방침</h3>
+                  <br>
+                  <p>1. 개인정보 수집 및 이용 목적</p>
+                  <p>
+                      전화,SMS를 통한 상담 및 안내</p>
+                  <br>
+                  <p>2. 수집하는 개인정보 항목</p>
+                  <p>
+                      이름, 연락처</p>
+                  <br>
+                  <p>3. 보유 및 이용기간</p>
+                  <p>
+                      수집이용 동의일로부터 수집이용 목적을<br>달성할 때까지</p>
+                  <br>
+              </div>
+          </div>
+      </div>
+        <footer>
+            <div>
+                <div>상호명 : 더불리쉬 유한회사 | 대표자: 박은철</div>
+                <div>사업자번호 : 340-81-02583 | TEL : 02-522-8818</div>
+                <div>주소 : 서울특별시 강서구 방화대로33길 14-4, 2층(방화동)</div>
+            </div>
+        </footer>
+    </body>
+</html>
