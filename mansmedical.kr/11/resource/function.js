@@ -3,7 +3,7 @@ console.log('js is load👍');
 
 
 window.onscroll = function(){
-  var h = $(document).scrollTop();
+  var h = document.scrollTop();
   if(h > 900) $('.navi_btn').fadeOut();
   else $('.navi_btn').fadeIn();
 };
