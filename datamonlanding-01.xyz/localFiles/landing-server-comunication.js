@@ -18,10 +18,10 @@ window.onload = function() {
     if(scComponent.domain.includes('local') || scComponent.domain.includes('datamon')){
         url = 'http://localhost:8080';
         scComponent.mode = "local";
-        if( scComponent.domain.includes('datamon')){
-            scComponent.mode = "dev";
-            url = 'https://datamonserver-002.xyz';
-        }
+        // if( scComponent.domain.includes('datamon')){
+        //     scComponent.mode = "dev";
+        //     url = 'https://datamonserver-002.xyz';
+        // }
     } else{
         url = 'https://datamonserver-001.xyz'
         scComponent.mode = "prod";
