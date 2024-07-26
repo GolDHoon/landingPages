@@ -69,7 +69,7 @@
             </div>
             <div class="flex flex-direction_column align-items_flex-start">
               <input id="name" class="cust_info_name_input" type="text" placeholder="성함을 입력해주세요">
-              <div class="cust_info_phone_inputs flex justify-content_space-between">
+              <div class="cust_info_phone_inputs flex justify-content_space-between" style="width: 100%">
                 <input id="phone1" class="cust_info_phone_input" type="number" value="010" disabled>
                 <input id="phone2" class="cust_info_phone_input" type="number" placeholder="4자리숫자" min="2000" max="9999">
                 <input id="phone3" class="cust_info_phone_input" type="number" placeholder="4자리숫자" min="0" max="9999">
@@ -80,7 +80,7 @@
             <input type="checkbox" class="agreeCheckBox">
             <span class="agreeText">개인정보 수집 및 이용에 동의합니다.<span id="pop_view" onclick="modalView()">[보기]</span></span>
           </div>
-          <img id="custDBForm_button" src="./resource/image/button.png" onclick="">
+          <img id="custDBForm_button" src="./resource/image/button.png" onclick="consultingButton()">
         </div>
       </div>
     </div>
