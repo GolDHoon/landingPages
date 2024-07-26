@@ -530,3 +530,7 @@ input.cust_info_phone_input[type="number"] {
 .footer_contents > div{
     margin : 3px 0;
 }
+
+#custDBForm_button{
+    cursor: pointer;
+}

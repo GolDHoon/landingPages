@@ -40,13 +40,6 @@
           <div class="slider">
             <div class="banner">
               <ul id="rolling-ul">
-                <li>
-                  <div class="flex">
-                    <div class="rolling-content rolling-date">2024-07-25</div>
-                    <div class="rolling-content rolling-name">이*름</div>
-                    <div class="rolling-content rolling-number">010-2222-****</div>
-                  </div>
-                </li>
               </ul>
             </div>
           </div>
@@ -78,8 +71,8 @@
               <input id="name" class="cust_info_name_input" type="text" placeholder="성함을 입력해주세요">
               <div class="cust_info_phone_inputs flex justify-content_space-between">
                 <input id="phone1" class="cust_info_phone_input" type="number" value="010" disabled>
-                <input id="phone2" class="cust_info_phone_input" type="number" placeholder="4자리숫자">
-                <input id="phone3" class="cust_info_phone_input" type="number" placeholder="4자리숫자">
+                <input id="phone2" class="cust_info_phone_input" type="number" placeholder="4자리숫자" min="2000" max="9999">
+                <input id="phone3" class="cust_info_phone_input" type="number" placeholder="4자리숫자" min="0" max="9999">
               </div>
             </div>
           </div>
@@ -87,7 +80,7 @@
             <input type="checkbox" class="agreeCheckBox">
             <span class="agreeText">개인정보 수집 및 이용에 동의합니다.<span id="pop_view" onclick="modalView()">[보기]</span></span>
           </div>
-          <img id="custDBForm_button" src="./resource/image/button.png">
+          <img id="custDBForm_button" src="./resource/image/button.png" onclick="">
         </div>
       </div>
     </div>
