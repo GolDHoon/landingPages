@@ -244,6 +244,12 @@
 }
 
 @media (max-width: 768px)  {
+    #custDB {
+        width: 50%;
+        background-color: white;
+        border-radius: 10px;
+    }
+
     .banner {
         height: 70px;
         overflow: hidden;
