@@ -1,0 +1,533 @@
+@media (min-width: 1024px)  {
+    #custDB {
+        width: 70%;
+        background-color: white;
+        border-radius: 50px;
+    }
+
+    .banner {
+        height: 400px;
+        overflow: hidden;
+        position: relative;
+        box-sizing: border-box;
+    }
+
+    .banner ul {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        /*height: 50px;*/
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        text-align: center;
+        animation: scrolling 70s linear infinite;
+    }
+
+    .banner li {
+        margin : auto 10%;
+        border-top: 1px solid #f2f2f2;
+        height: 100%;
+    }
+
+    .banner li > div{
+        height: 100%;
+    }
+
+    .rolling-content{
+        margin: 2% 0;
+        height: 100%;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    @keyframes scrolling {
+        0% { top: 0; }
+        100% { top: -6000px; }
+    }
+
+    .rolling-date{
+        width: 30%;
+        color: #7c7c7c;
+    }
+
+    .rolling-name{
+        width: 30%;
+    }
+
+    .rolling-number{
+        width: 40%;
+    }
+
+    #custDBForm{
+        background-color: white;
+        padding : 1% 2%;
+        width: 40%;
+        border-radius: 20px;
+    }
+
+    #custDBForm > div {
+        padding : 1%;
+        width: 100%;
+    }
+
+    #custDBForm > div > div{
+        padding : 1%;
+    }
+
+    #custDBForm > div > div:first-child{
+        width: 20%;
+    }
+
+    #custDBForm > div > div:not(:first-child){
+        width: 100%;
+    }
+
+    .cust_info_label{
+        font-size: 30px;
+        margin: 10px 3%;
+        width: 100%;
+        white-space: nowrap;
+    }
+
+    .cust_info_name_input{
+        height: 36px;
+        width: 99%;
+        margin: 10px 0;
+        font-size: 20px;
+    }
+
+    .cust_info_phone_input{
+        width: 30%;
+        text-align: center;
+        margin: 10px 0;
+        height: 36px;
+        font-size: 20px;
+    }
+
+    .checkbox_wrapper{
+        margin : 2%;
+    }
+
+    #custDBForm_button{
+        margin: 2%;
+    }
+
+    #youtube{
+        border-radius: 20px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px)  {
+    #custDB {
+        width: 50%;
+        background-color: white;
+        border-radius: 50px;
+    }
+
+    .banner {
+        height: 250px;
+        overflow: hidden;
+        position: relative;
+        box-sizing: border-box;
+    }
+
+    .banner ul {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        /*height: 50px;*/
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        text-align: center;
+        animation: scrolling 100s linear infinite;
+    }
+
+    .banner li {
+        margin : auto 10%;
+        border-top: 1px solid #f2f2f2;
+        height: 100%;
+    }
+
+    .banner li > div{
+        height: 100%;
+    }
+
+    .rolling-content{
+        margin: 2% 0;
+        height: 100%;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    @keyframes scrolling {
+        0% { top: 0; }
+        100% { top: -3100px; }
+    }
+
+    .rolling-date{
+        width: 30%;
+        color: #7c7c7c;
+    }
+
+    .rolling-name{
+        width: 30%;
+    }
+
+    .rolling-number{
+        width: 40%;
+    }
+
+
+    #custDBForm{
+        background-color: white;
+        padding : 1% 2%;
+        width: 40%;
+        border-radius: 20px;
+    }
+
+    #custDBForm > div {
+        padding : 1%;
+        width: 100%;
+    }
+
+    #custDBForm > div > div{
+        padding : 1%;
+    }
+
+    #custDBForm > div > div:first-child{
+        width: 20%;
+    }
+
+    #custDBForm > div > div:not(:first-child){
+        width: 100%;
+    }
+
+    .cust_info_label{
+        font-size: 20px;
+        margin: 6px 3%;
+        width: 100%;
+        white-space: nowrap;
+    }
+
+    .cust_info_name_input{
+        height: 25px;
+        width: 99%;
+        margin: 6px 0;
+        font-size: 20px;
+    }
+
+    .cust_info_phone_input{
+        width: 30%;
+        text-align: center;
+        margin: 6px 0;
+        height: 25px;
+        font-size: 20px;
+    }
+
+    .checkbox_wrapper{
+        margin : 2%;
+    }
+
+    #custDBForm_button{
+        margin: 2%;
+    }
+
+    .agreeText{
+        font-size: 13px;
+    }
+
+    .footer_contents{
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px)  {
+    #custDB {
+        width: 50%;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    .banner {
+        height: 70px;
+        overflow: hidden;
+        position: relative;
+        box-sizing: border-box;
+    }
+
+    .banner ul {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        /*height: 50px;*/
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        text-align: center;
+        animation: scrolling 150s linear infinite;
+    }
+
+    .banner li {
+        margin : auto 10%;
+        border-top: 1px solid #f2f2f2;
+        height: 100%;
+    }
+
+    .banner li > div{
+        height: 100%;
+    }
+
+    .rolling-content{
+        margin: 2% 0;
+        height: 100%;
+        font-size: 5px;
+        text-align: center;
+    }
+
+    @keyframes scrolling {
+        0% { top: 0; }
+        100% { top: -1100px; }
+    }
+
+    .rolling-date{
+        width: 30%;
+        color: #7c7c7c;
+    }
+
+    .rolling-name{
+        width: 30%;
+    }
+
+    .rolling-number{
+        width: 40%;
+    }
+
+
+    #custDBForm{
+        background-color: white;
+        padding : 1% 4%;
+        width: 40%;
+        border-radius: 10px;
+    }
+
+    #custDBForm > div {
+        padding : 1%;
+        width: 100%;
+    }
+
+    #custDBForm > div > div{
+        padding : 1%;
+    }
+
+    #custDBForm > div > div:first-child{
+        width: 20%;
+    }
+
+    #custDBForm > div > div:not(:first-child){
+        width: 80%;
+    }
+
+    .cust_info_label{
+        font-size: 10px;
+        margin: 5px 3%;
+        width: 100%;
+        white-space: nowrap;
+    }
+
+    .cust_info_name_input{
+        height: 12px;
+        width: 92%;
+        margin: 4px 0;
+        font-size: 10px;
+    }
+
+    .cust_info_phone_inputs{
+        width: 95%;
+    }
+
+    .cust_info_phone_input{
+        width: 25%;
+        text-align: center;
+        margin: 4px 0;
+        height: 12px;
+        font-size: 10px;
+    }
+
+    .checkbox_wrapper{
+        margin : 0;
+    }
+
+    #custDBForm_button{
+        margin: 2%;
+    }
+
+    .agreeCheckBox{
+        width: 5px;
+        height: 5px;
+        margin: 0;
+    }
+
+    .agreeText{
+        font-size: 3px;
+    }
+
+    .footer_contents{
+        font-size: 5px;
+    }
+
+    #youtube{
+        border-radius: 10px;
+    }
+
+}
+
+#top_img {
+    width: 100%;
+    max-width: 1920px;
+}
+
+.topper {
+    cursor: pointer;
+}
+
+#content01 {
+    background-image: url("../image/content01.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    max-width: 1920px;
+    height: auto;
+}
+
+#content02 {
+    background-image: url("../image/content02.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    max-width: 1920px;
+    height: auto;
+}
+
+
+#content02-01 {
+    margin-top: 7%;
+    margin-bottom: 2%;
+}
+
+#content03 {
+    background-image: url("../image/content03.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    max-width: 1920px;
+    height: auto;
+}
+
+.contents03-wrapper{
+    height: 100%;
+}
+
+.contents03{
+    margin: auto 0;
+    height: inherit;
+    border-radius: 10px;
+}
+
+#content04 {
+    background-image: url("../image/content04.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    max-width: 1920px;
+    height: auto;
+}
+
+.content04-wrapper{
+    height: 100%;
+}
+
+#content04-01 {
+    margin-top: 20%;
+    margin-bottom: 10%;
+}
+
+input.cust_info_phone_input[type="number"]::-webkit-inner-spin-button,
+input.cust_info_phone_input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input.cust_info_phone_input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.footer{
+    width: 100%;
+}
+
+.footer_contents{
+    width: 100%;
+    max-width: 1920px;
+    background-color: #292929;
+    color: white;
+    padding : 1% 0;
+}
+
+#pop_view {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+.contents_img{
+    cursor: pointer;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content-text{
+    text-align: center;
+}
+
+
+.footer_contents > div{
+    margin : 3px 0;
+}
