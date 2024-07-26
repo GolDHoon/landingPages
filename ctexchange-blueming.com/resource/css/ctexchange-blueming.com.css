@@ -244,12 +244,6 @@
 }
 
 @media (max-width: 768px)  {
-    #custDB {
-        width: 50%;
-        background-color: white;
-        border-radius: 10px;
-    }
-
     .banner {
         height: 70px;
         overflow: hidden;
@@ -304,16 +298,14 @@
         width: 40%;
     }
 
-
     #custDBForm{
         background-color: white;
-        padding : 1% 4%;
-        width: 40%;
+        width: 80%;
         border-radius: 10px;
+        padding : 2%;
     }
 
     #custDBForm > div {
-        padding : 1%;
         width: 100%;
     }
 
@@ -330,7 +322,7 @@
     }
 
     .cust_info_label{
-        font-size: 10px;
+        font-size: 12px;
         margin: 5px 3%;
         width: 100%;
         white-space: nowrap;
@@ -339,8 +331,8 @@
     .cust_info_name_input{
         height: 12px;
         width: 92%;
-        margin: 4px 0;
-        font-size: 10px;
+        margin: 5px 0;
+        font-size: 12px;
     }
 
     .cust_info_phone_inputs{
@@ -350,9 +342,9 @@
     .cust_info_phone_input{
         width: 25%;
         text-align: center;
-        margin: 4px 0;
+        margin: 5px 0;
         height: 12px;
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .checkbox_wrapper{
@@ -360,13 +352,13 @@
     }
 
     #custDBForm_button{
-        margin: 2%;
+        margin-top: 2%;
     }
 
     .agreeCheckBox{
         width: 5px;
         height: 5px;
-        margin: 0;
+        margin: auto 0;
     }
 
     .agreeText{
@@ -374,7 +366,7 @@
     }
 
     .footer_contents{
-        font-size: 5px;
+        font-size: 4px;
     }
 
     #youtube{
