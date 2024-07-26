@@ -54,7 +54,8 @@ function resize(){
 }
 
 function topperOnClick() {
-    window.scrollTo(0, document.body.scrollHeight);
+    // window.scrollTo(0, document.body.scrollHeight);
+    document.querySelector("#content04").scrollIntoView();
 }
 
 
@@ -86,5 +87,21 @@ function modalClose() {
 window.onclick = function(event) {
     if (event.target == document.getElementById('myModal')) {
         document.getElementById('myModal').style.display = 'none';
+    }
+}
+
+function phone2OnChange(event) {
+    if(!(event.key === 'Backspace' || event.key === 'Delete')) {
+        if(event.target.value.length === 4){
+            document.querySelector("#phone3").focus();
+        }
+    }
+}
+
+function phone3OnChange(event) {
+    if(!(event.key === 'Backspace' || event.key === 'Delete')) {
+        if(event.target.value.length >= 4){
+            document.querySelector("#phone3").value = event.target.value.toString().substring(0, 3);
+        }
     }
 }

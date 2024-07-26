@@ -1,4 +1,3 @@
-
 function consultingButton () {
     let name = document.querySelector("#name").value;
     let phone = document.querySelector("#phone1").value + document.querySelector("#phone2").value + document.querySelector("#phone3").value;
