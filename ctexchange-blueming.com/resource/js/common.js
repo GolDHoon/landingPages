@@ -1,9 +1,9 @@
+window.isAgree = 2
 function consultingButton () {
     let name = document.querySelector("#name").value;
     let phone = document.querySelector("#phone1").value + document.querySelector("#phone2").value + document.querySelector("#phone3").value;
     let phone2 = document.querySelector("#phone2").value;
     let phone3 = document.querySelector("#phone3").value;
-    let agree = true;
 
     if (window.blockedKeyword) {
         var blockK = window.blockedKeyword.data;
@@ -65,10 +65,18 @@ function consultingButton () {
         return false;
     }
 
-    if (!document.querySelector('.agreeCheckBox').checked) {
-        alert('개인정보처리방침에 동의해주세요.');
-        document.querySelector('.agreeCheckBox').focus();
-        return false;
+    if(window.isAgree === 2){
+        if (!document.querySelector('.agreeCheckBox').checked) {
+            alert('개인정보처리방침에 동의해주세요.');
+            document.querySelector('.agreeCheckBox').focus();
+            return false;
+        }
+    } else {
+        if (window.isAgree === 0) {
+            alert('개인정보처리방침에 동의해주세요.');
+            document.querySelector('.agreeCheckBox').focus();
+            return false;
+        }
     }
 
     var formData = [

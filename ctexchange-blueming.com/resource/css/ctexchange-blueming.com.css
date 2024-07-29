@@ -59,27 +59,27 @@
         width: 40%;
     }
 
-    #custDBForm{
+    .custDBForm{
         background-color: white;
         padding : 1% 2%;
         width: 40%;
         border-radius: 20px;
     }
 
-    #custDBForm > div {
+    .custDBForm > div {
         padding : 1%;
         width: 100%;
     }
 
-    #custDBForm > div > div{
+    .custDBForm > div > div{
         padding : 1%;
     }
 
-    #custDBForm > div > div:first-child{
+    .custDBForm > div > div:first-child{
         width: 20%;
     }
 
-    #custDBForm > div > div:not(:first-child){
+    .custDBForm > div > div:not(:first-child){
         width: 100%;
     }
 
@@ -115,6 +115,14 @@
 
     #youtube{
         border-radius: 20px;
+    }
+
+    .mo{
+        display: none;
+    }
+
+    .nonMo{
+        display: flex;
     }
 }
 
@@ -180,27 +188,27 @@
     }
 
 
-    #custDBForm{
+    .custDBForm{
         background-color: white;
         padding : 1% 2%;
         width: 40%;
         border-radius: 20px;
     }
 
-    #custDBForm > div {
+    .custDBForm > div {
         padding : 1%;
         width: 100%;
     }
 
-    #custDBForm > div > div{
+    .custDBForm > div > div{
         padding : 1%;
     }
 
-    #custDBForm > div > div:first-child{
+    .custDBForm > div > div:first-child{
         width: 20%;
     }
 
-    #custDBForm > div > div:not(:first-child){
+    .custDBForm > div > div:not(:first-child){
         width: 100%;
     }
 
@@ -240,6 +248,14 @@
 
     .footer_contents{
         font-size: 13px;
+    }
+
+    .mo{
+        display: none;
+    }
+
+    .nonMo {
+        display: flex;
     }
 }
 
@@ -304,7 +320,7 @@
         width: 40%;
     }
 
-    #custDBForm{
+    .custDBForm{
         background-color: white;
         width: 80%;
         border-radius: 10px;
@@ -312,19 +328,19 @@
         margin : 2%;
     }
 
-    #custDBForm > div {
+    .custDBForm > div {
         width: 100%;
     }
 
-    #custDBForm > div > div{
+    .custDBForm > div > div{
         padding : 1%;
     }
 
-    #custDBForm > div > div:first-child{
+    .custDBForm > div > div:first-child{
         width: 20%;
     }
 
-    #custDBForm > div > div:not(:first-child){
+    .custDBForm > div > div:not(:first-child){
         width: 80%;
     }
 
@@ -380,6 +396,73 @@
         border-radius: 10px;
     }
 
+    .mo {
+        display: flex;
+    }
+
+    .nonMo {
+        display: none;
+    }
+
+    .mo_custForm_button{
+        width: 80%;
+        margin: 5px;
+        padding: 5px;
+        /*border: 0.5px solid black;*/
+        color: #212529;
+        font-weight: bold;
+        border-radius: 10px;
+        box-shadow: 0 9px 10px 0 rgba(0,0,0,0.1); /* 그림자 효과 */
+        cursor: pointer; /* 마우스를 올려놓았을 때 손가락 커서 */
+        transition: all 0.3s ease; /* 부드러운 전환 효과 */
+    }
+
+    .mo_custForm_button:hover {
+        color: white; /* 밝은 글씨 */
+    }
+
+    .agree_n {
+        background-color: green;
+    }
+
+    .agree_y {
+        background-color: red;
+    }
+
+    #mo_consulting_button {
+        background-color: #0c63e4;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 250px) {
+    .mo-input-label{
+        white-space: nowrap;
+        padding: 1%;
+        margin: 1%;
+        font-size: 100%;
+        width: 80%;
+    }
+    .mo-input-label > input {
+        font-size: 110%;
+        width: 100%;
+    }
+    .mo-input-label > input::placeholder {
+        font-size: 90%;
+    }
+
+}
+
+@media (max-width: 250px) {
+    .mo-input-label{
+        white-space: nowrap;
+        font-size: 80%;
+        margin-top: 5px;
+    }
+
+    .mo-input-label > input {
+        font-size: 100%;
+        width: 100%;
+    }
 }
 
 #top_img {

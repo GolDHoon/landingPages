@@ -105,3 +105,36 @@ function phone3OnChange(event) {
         }
     }
 }
+function nameMoOnChange(event) {
+    document.querySelector("#name").value = event.target.value
+}
+
+function phone2MoOnKeyDown(event) {
+    if(!(event.key === 'Backspace' || event.key === 'Delete')) {
+        if(event.target.value.length >= 8){
+            document.querySelector("#phone2_mo").value = event.target.value.toString().substring(0, 7);
+        }
+    }
+}
+
+function phone2MoOnChange(event) {
+    document.querySelector("#phone2").value = event.target.value.substring(0,4);
+    document.querySelector("#phone3").value = event.target.value.substring(4,8);
+}
+
+function moAgreeButtonOnClick(event) {
+    modalView();
+    if(window.isAgree === 0 || window.isAgree === 2){
+        document.querySelector("#mo_agree_button").classList.remove('agree_n');
+        document.querySelector("#mo_agree_button").classList.add('agree_y');
+        window.isAgree = 1;
+        document.querySelector("#mo_agree_button").innerText = '개인정보 수집거부';
+        alert("개인정보 수집을 동의하셨습니다.");
+    }else{
+        document.querySelector("#mo_agree_button").classList.remove('agree_y');
+        document.querySelector("#mo_agree_button").classList.add('agree_n');
+        window.isAgree = 0;
+        document.querySelector("#mo_agree_button").innerText = '개인정보 수집동의';
+        alert("개인정보 수집을 거부하셨습니다.");
+    }
+}
