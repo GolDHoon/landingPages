@@ -1,6 +1,6 @@
 # ipconfig /flushdns
 
-# sudo nano /etc/nginx/sites-available/mansmedical.com
+# sudo nano /etc/nginx/sites-available/{domain}
 
 ```shell
 #http
@@ -18,7 +18,7 @@ server {
 #https
 server {
     listen 80;
-    server_name mansmedical.com www.mansmedical.com;
+    server_name {domain} www.{domain};
 
     location / {
         return 301 https://$host$request_uri;
@@ -43,6 +43,6 @@ server {
     }
 }
 ```
-# sudo ln -s /etc/nginx/sites-available/mansmedical.com /etc/nginx/sites-enabled/
+# sudo ln -s /etc/nginx/sites-available/{domain} /etc/nginx/sites-enabled/
 # sudo service nginx restart
 
