@@ -124,7 +124,7 @@ function phone2MoOnChange(event) {
 
 function moAgreeButtonOnClick(event) {
     modalView();
-    if(window.isAgree === 0 || window.isAgree === 2){
+    if(window.isAgree === 0){
         document.querySelector("#mo_agree_button").classList.remove('agree_n');
         document.querySelector("#mo_agree_button").classList.add('agree_y');
         window.isAgree = 1;
