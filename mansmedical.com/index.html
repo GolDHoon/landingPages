@@ -113,7 +113,8 @@
                                 <div class="con_t"><input type="text" name="wr_name" id="wr_name" placeholder="성함" style="width: 100%"></div>
                                 <div class="con_t">
                                     <label for="wr_1">연락처</label>
-                                    <input type="text" name="wr_1" value="" id="wr_1" placeholder="연락처를 입력하세요" style="width: 100%">
+                                    <input type="text" name="wr_1" value="010" id="wr_1" placeholder="연락처를 입력하세요" style="width: 100%"
+                                           onkeydown="phoneNumberChange(event)">
                                 </div>
                                 <div class="con_t02" style="margin-bottom: 20px">
                                     <label for="wr_9">개인정보처리방침에</label>
@@ -130,6 +131,33 @@
         </div>
     </div>
 </div>
+<script>
+    function phoneNumberChange(event){
+        var keyCode = event.keyCode || event.charCode;
+
+        if ((keyCode < 48 || keyCode > 57)  // standard number keys
+            && (keyCode < 96 || keyCode > 105)  // numpad keys
+            && keyCode !== 8  // backspace key
+            && keyCode !== 46) {  // delete key
+            event.preventDefault();
+        }
+
+        if(event.target.value.length === 3){
+            if (keyCode == 8 || keyCode == 46) {
+                event.preventDefault();
+            }
+        }else if(event.target.value.length < 3){
+            event.preventDefault();
+        }else if(3 <= event.target.value.length && event.target.value.length < 11){
+
+        }else if(11 === event.target.value.length){
+            if (!(keyCode == 8 || keyCode == 46)) {
+                event.preventDefault();
+                event.target.value=event.target.value.substring(0, event.target.value.length - 1) + event.key
+            }
+        }
+    }
+</script>
 <div class="copy01bg">
     <div class="wraptail">
         <div class="copy01">
