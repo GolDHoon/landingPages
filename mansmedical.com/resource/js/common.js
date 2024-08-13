@@ -46,7 +46,7 @@ function consultingButton () {
         return false;
     }
 
-    if (20000000 >= Number(phone.substring(3)) || phone.substring(3).length !== 8) {
+    if (20000000 >= Number(phone) || phone.length !== 8) {
         alert('휴대폰 번호를 정확히 입력해주세요.');
         document.querySelector("#wr_1").focus();
         return false;

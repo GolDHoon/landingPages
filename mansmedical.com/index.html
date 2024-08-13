@@ -111,10 +111,15 @@
                                 <div class="p_0"><img src="./resource/img/img06.gif"></div>
                                 <label for="wr_name">성함</label>
                                 <div class="con_t"><input type="text" name="wr_name" id="wr_name" placeholder="성함" style="width: 100%"></div>
-                                <div class="con_t">
-                                    <label for="wr_1">연락처</label>
-                                    <input type="text" name="wr_1" value="010" id="wr_1" placeholder="연락처를 입력하세요" style="width: 100%"
-                                           onkeypress="phoneNumberChange(event)">
+                                <div style="display: flex;justify-content: space-between">
+                                    <div class="con_t" style="width: 20%">
+                                        <label for="wr_2">연락처</label>
+                                        <input type="text" name="wr_2" value="010" id="wr_2" readonly disabled style="width: 100%; text-align: center">
+                                    </div>
+                                    <div class="con_t" style="width: 80%">
+                                        <label for="wr_1">연락처</label>
+                                        <input type="text" name="wr_1" id="wr_1" placeholder="연락처를 입력하세요" style="width: 100%;">
+                                    </div>
                                 </div>
                                 <div class="con_t02" style="margin-bottom: 20px">
                                     <label for="wr_9">개인정보처리방침에</label>
@@ -131,60 +136,6 @@
         </div>
     </div>
 </div>
-<script>
-    let oldValue = '010';
-    function phoneNumberChange(event){
-        var keyCode = event.keyCode || event.charCode;
-
-        if (keyCode == 32) {
-            event.preventDefault();
-            event.target.value = oldValue;
-            return false;
-        }
-
-        if (isNaN(event.target.value) || !/^010/.test(event.target.value)) {
-            event.preventDefault();
-            event.target.value = oldValue;
-            if(isNaN(event.target.value)){
-                event.preventDefault();
-                event.target.value = "010";
-                oldValue = "010";
-            }
-            return false;
-        }
-
-        if(event.target.value.length === 3){
-            if (keyCode == 8 || keyCode == 46) {
-                event.preventDefault();
-                event.target.value = "010";
-                return false;
-            }
-        }else if(event.target.value.length < 3){
-            if (keyCode == 8 || keyCode == 46) {
-                event.preventDefault();
-                event.target.value = "010";
-                return false;
-            }
-            event.preventDefault();
-            event.target.value = "010";
-        }else if(3 <= event.target.value.length && event.target.value.length < 11){
-
-        }else if(11 === event.target.value.length){
-            if (!(keyCode == 8 || keyCode == 46)) {
-                event.preventDefault();
-                var tempValue = event.target.value.substring(0, event.target.value.length - 1) + event.key;
-
-                if(tempValue.length !== 11){
-                    event.target.value = oldValue;
-                }else{
-                    event.target.value = tempValue;
-                }
-            }
-        }
-
-        oldValue = event.target.value
-    }
-</script>
 <div class="copy01bg">
     <div class="wraptail">
         <div class="copy01">
