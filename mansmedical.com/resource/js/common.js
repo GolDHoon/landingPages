@@ -60,7 +60,7 @@ function consultingButton () {
 
     let formData = [
         {"key": "이름", "value": name},
-        {"key": "번호", "value": phone}
+        {"key": "번호", "value": "010"+phone}
     ];
 
     submit(formData).then(() => {});
