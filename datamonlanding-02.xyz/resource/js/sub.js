@@ -116,7 +116,6 @@ function imgReSetting() {
     let topper_img_src = topper_img.src.substring(0, topper_img.src.indexOf("/resource/img/") + "/resource/img/".length);
     let date_count_img = document.querySelector(".date_count_img");
     let date_count_img_src = date_count_img.src.substring(0, date_count_img.src.indexOf("/resource/img/") + "/resource/img/".length);
-    alert(body.offsetWidth)
     if(body.offsetWidth > 767){
         switch (date.getDay()){
             case 0:
@@ -261,13 +260,13 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 window.addEventListener("resize", function () {
-    // imgReSetting();
+    imgReSetting();
     contentsReSizing([2])
     rollerReSizing(rollers1);
 })
 
 window.addEventListener("scroll", function () {
-    rollerReSizing(rollers1);
+    // rollerReSizing(rollers1);
 });
 
 window.onload = function () {
