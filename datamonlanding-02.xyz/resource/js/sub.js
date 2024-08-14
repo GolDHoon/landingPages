@@ -62,7 +62,6 @@ function contentsReSizing(excluded){
             content.style.height = `${(height-1)}px`;
             if((!body.offsetWidth > 767)){
                 document.querySelector(".date-count-contents").style.height = `${(document.querySelector(".date_count_img").offsetHeight) - 1}px`;
-                document.querySelector(".date-count-contents").style.height = `${(document.querySelector(".date_count_img").offsetHeight) - 1}px`;
             }
         }
 
