@@ -254,7 +254,7 @@ window.addEventListener("load", function() {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-    imgReSetting();
+    // imgReSetting();
     contentsReSizing([2])
     rollerReSizing(rollers1);
     setTimeout(function() {
@@ -263,7 +263,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 window.addEventListener("resize", function () {
-    imgReSetting();
+    // imgReSetting();
     contentsReSizing([2])
     rollerReSizing(rollers1);
 })
@@ -271,6 +271,10 @@ window.addEventListener("resize", function () {
 window.addEventListener("scroll", function () {
     rollerReSizing(rollers1);
 });
+
+window.onload = function () {
+    imgReSetting();
+}
 
 function rollBannerSelectorClick(evnet, index){
     swiper.slideTo(index)
