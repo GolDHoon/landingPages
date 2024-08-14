@@ -59,10 +59,9 @@ function contentsReSizing(excluded){
 
         if(!excluded.includes(index)){
             const height = (img.onload().height) * (content.offsetWidth / img.onload().width);
-            if(body.offsetWidth > 767){
-                content.style.height = `${(height-1)}px`;
-            }else{
-                content.style.height = `${height}px`;
+            content.style.height = `${(height-1)}px`;
+            if((!body.offsetWidth > 767)){
+                document.querySelector(".date-count-contents").style.height = `${(document.querySelector(".date_count_img").offsetHeight) - 1}px`;
                 document.querySelector(".date-count-contents").style.height = `${(document.querySelector(".date_count_img").offsetHeight) - 1}px`;
             }
         }
