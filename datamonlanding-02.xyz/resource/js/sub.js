@@ -254,6 +254,7 @@ window.addEventListener("load", function() {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
+    imgReSetting();
     contentsReSizing([2])
     rollerReSizing(rollers1);
     setTimeout(function() {
