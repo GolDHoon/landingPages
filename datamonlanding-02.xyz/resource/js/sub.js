@@ -60,7 +60,7 @@ function contentsReSizing(excluded){
         if(!excluded.includes(index)){
             const height = (img.onload().height) * (content.offsetWidth / img.onload().width);
             content.style.height = `${(height-1)}px`;
-            if((!body.offsetWidth > 767)){
+            if(body.offsetWidth < 768){
                 document.querySelector(".date-count-contents").style.height = `${(document.querySelector(".date_count_img").offsetHeight) - 1}px`;
             }
         }
