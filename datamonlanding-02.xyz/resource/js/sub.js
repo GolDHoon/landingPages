@@ -255,11 +255,9 @@ window.addEventListener("load", function() {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-    // imgReSetting();
-    contentsReSizing([2])
+    imgReSetting();
     rollerReSizing(rollers1);
     setTimeout(function() {
-        contentsReSizing([2]);
     }, 1000);
 });
 
@@ -274,7 +272,8 @@ window.addEventListener("scroll", function () {
 });
 
 window.onload = function () {
-    imgReSetting();
+    contentsReSizing([2])
+    contentsReSizing([2]);
 }
 
 function rollBannerSelectorClick(evnet, index){
