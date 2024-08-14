@@ -256,7 +256,6 @@ window.addEventListener("load", function() {
 
 document.addEventListener("DOMContentLoaded", function() {
     imgReSetting();
-    rollerReSizing(rollers1);
     setTimeout(function() {
     }, 1000);
 });
@@ -272,7 +271,7 @@ window.addEventListener("scroll", function () {
 });
 
 window.onload = function () {
-    contentsReSizing([2])
+    rollerReSizing(rollers1);
     contentsReSizing([2]);
 }
 
