@@ -483,14 +483,14 @@
     padding: 5%;
 }
 
-.input, .input_mo{
-    border: 0;
-    background-color: #f2f2f2;
-}
+/*.input, .input_mo{*/
+/*    border: 0;*/
+/*    background-color: #f2f2f2;*/
+/*}*/
 
-.input::placeholder, .input_mo::placeholder{
-    color:#838383;
-}
+/*.input::placeholder, .input_mo::placeholder{*/
+/*    color:#838383;*/
+/*}*/
 
 .input_wrapper, .input_wrapper{
     margin-bottom: 1%;
