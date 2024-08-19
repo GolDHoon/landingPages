@@ -17,6 +17,13 @@ body{
     cursor: pointer;
 }
 
+.right {
+    position: fixed;
+    z-index: 100;
+    bottom: 10px;
+    right: 10px;
+}
+
 .footer_wrapper{
     width: 100%;
     max-width: 1920px;
@@ -47,6 +54,10 @@ body{
 
 .flex-direction_column {
     flex-direction: column;
+}
+
+.flex-direction_row-reverse{
+    flex-direction: row-reverse
 }
 
 .align-items_center{
@@ -112,4 +123,11 @@ input[type="number"] {
 
 .button_img{
     cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+.content {
+    height: 100vh; /* For demonstration purposes */
 }

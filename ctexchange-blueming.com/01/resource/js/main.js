@@ -1,3 +1,20 @@
+document.addEventListener("DOMContentLoaded", function() {
+    var targetElement = document.querySelector('.content04');
+    var rightDiv = document.querySelector('.right');
+
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                rightDiv.classList.add('hidden');
+            } else {
+                rightDiv.classList.remove('hidden');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    observer.observe(targetElement);
+});
+
 const modal = document.querySelector("#myModal");
 
 function toInputForm (event) {
