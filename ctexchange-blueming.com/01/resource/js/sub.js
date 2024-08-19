@@ -297,8 +297,8 @@ window.addEventListener("scroll", function () {
 });
 
 window.onload = function () {
-    rollerReSizing(rollers1);
     contentsReSizing([2]);
+    rollerReSizing(rollers1);
 }
 
 function rollBannerSelectorClick(evnet, index){
