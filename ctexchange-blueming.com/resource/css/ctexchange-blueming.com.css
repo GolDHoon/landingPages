@@ -617,3 +617,29 @@ input.cust_info_phone_input[type="number"] {
 #custDBForm_button{
     cursor: pointer;
 }
+
+
+
+/*스와이퍼*/
+.vertical-banner-item{
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.vertical-banner-wrapper{
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.item-date{
+    color: #7c7c7c;
+}
+
+.vertical-banner-list{
+    padding: 0 5%;
+    border-bottom: 1px solid #c6c6c6;
+}
+.content02_2_wrapper{
+    background-color: white;
+}
