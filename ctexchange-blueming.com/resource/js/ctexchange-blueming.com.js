@@ -4,38 +4,40 @@ document.body.onresize = function() {
     resize()
 }
 
-const rollingUlElement = document.querySelector("#rolling-ul");
+let ul = document.querySelector('.banner_ul');
 
-for (var i = 0; i < 100; i++) {
-    const li = document.createElement("li");
+var currentDate = new Date();
+var year = currentDate.getFullYear();
+var month = ("0" + (currentDate.getMonth() + 1)).slice(-2); // getMonth() is zero-based
+var day = ("0" + currentDate.getDate()).slice(-2);
 
-    const divFlex = document.createElement("div");
-    divFlex.className = "flex";
+for(var i = 0; i < 100; i++){
+    var slideDiv = document.createElement('div');
+    slideDiv.className = 'swiper-slide vertical-banner-list';
+    slideDiv.style.width = '90%';
+    slideDiv.style.display = 'flex';
+    slideDiv.style.justifyContent = 'space-between';
+    slideDiv.style.alignItems = 'center';
+    slideDiv.role = 'group'
+    slideDiv.ariaLabel = (i + 1).toString() + ' / 100'
 
-    const divDate = document.createElement("div");
-    divDate.className = "rolling-content rolling-date";
-    var currentDate = new Date();
-    var year = currentDate.getFullYear();
-    var month = ("0" + (currentDate.getMonth() + 1)).slice(-2); // getMonth() is zero-based
-    var day = ("0" + currentDate.getDate()).slice(-2);
+    var itemDateDiv = document.createElement('div');
+    itemDateDiv.className = 'vertical-banner-item item-date';
+    itemDateDiv.textContent = `${year}-${month}-${day}`;
+    slideDiv.appendChild(itemDateDiv);
 
-    divDate.textContent = `${year}-${month}-${day}`;
+    var itemNameDiv = document.createElement('div');
+    itemNameDiv.className = 'vertical-banner-item item-name';
+    itemNameDiv.textContent = nameCreate();
+    slideDiv.appendChild(itemNameDiv);
 
-    const divName = document.createElement("div");
-    divName.className = "rolling-content rolling-name";
-    divName.textContent = nameCreate();
+    var itemPhoneDiv = document.createElement('div');
+    itemPhoneDiv.className = 'vertical-banner-item item-phone';
+    itemPhoneDiv.textContent = numberCreate();
+    slideDiv.appendChild(itemPhoneDiv);
 
-    const divNumber = document.createElement("div");
-    divNumber.className = "rolling-content rolling-number";
-    divNumber.textContent = numberCreate();
-
-    divFlex.appendChild(divDate);
-    divFlex.appendChild(divName);
-    divFlex.appendChild(divNumber);
-
-    li.appendChild(divFlex);
-
-    rollingUlElement.appendChild(li);
+    var wrapperDiv = document.querySelector('.swiper-wrapper.vertical-banner');
+    wrapperDiv.appendChild(slideDiv);
 }
 
 function resize(){
@@ -57,7 +59,6 @@ function topperOnClick() {
     // window.scrollTo(0, document.body.scrollHeight);
     document.querySelector("#content04").scrollIntoView();
 }
-
 
 function nameCreate() {
     var familyNames = ['김', '이', '박', '최', '정', '강', '조', '윤', '장', '임'];
