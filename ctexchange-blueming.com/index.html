@@ -19,10 +19,38 @@
 
     <link rel="stylesheet" type="text/css" href="./resource/css/common.css">
     <link rel="stylesheet" type="text/css" href="./resource/css/ctexchange-blueming.com.css">
+    <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script src="https://www.alisolution-devmanagement.xyz/js/landing-server-comunication/0.0.1/landing-server-comunication.min.js" defer></script>
     <script src="./resource/js/common.js" type="text/javascript" defer></script>
     <script src="resource/js/ctexchange-blueming.com.js" type="text/javascript" defer></script>
+
+    <script>
+      const swiper2 = new Swiper('.swiper2', {
+        direction: 'vertical',
+        loop: true,
+
+        slidesPerView:5,
+
+        autoplay: {
+          delay: 1000,
+        },
+
+        // pagination: {
+        //     el: '.swiper-pagination',
+        // },
+
+        // navigation: {
+        //     nextEl: '.swiper-button-next',
+        //     prevEl: '.swiper-button-prev',
+        // },
+
+        // scrollbar: {
+        //     el: '.swiper-scrollbar',
+        // },
+      });
+    </script>
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -62,7 +90,7 @@
             <div class="content02_2_wrapper">
               <div class="vertical-banner-wrapper">
                 <div class="swiper2" style="width: 100%;height: 100%">
-                  <div class="swiper-wrapper vertical-banner">
+                  <div class="swiper-wrapper vertical-banner flex-direction_column">
                   </div>
                 </div>
               </div>
@@ -73,11 +101,11 @@
     </div>
     <div id="content03">
       <div class="contents03-wrapper flex justify-content_space-evenly">
-        <div class="contents03">
-          <iframe id="youtube" width="560" height="315"  src="https://www.youtube.com/embed/UidLkGBSoAY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="contents03 m-content-03-b">
+          <iframe id="youtube" class="m_iframe" width="560" height="315"  src="https://www.youtube.com/embed/UidLkGBSoAY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <div class="contents03">
-          <img id="content03-01"  src="./resource/image/content03-01.png" alt="정식거래소 인증">
+        <div class="contents03 m-content-03-a">
+          <img id="content03-01"  class="m-content-03-01-image" src="./resource/image/content03-01.png" alt="정식거래소 인증">
         </div>
       </div>
     </div>
