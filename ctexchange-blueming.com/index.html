@@ -27,28 +27,18 @@
     <script src="resource/js/ctexchange-blueming.com.js" type="text/javascript" defer></script>
 
     <script>
-      const swiper2 = new Swiper('.swiper2', {
-        direction: 'vertical',
-        loop: true,
-
-        slidesPerView:5,
-
-        autoplay: {
-          delay: 1000,
-        },
-
-        // pagination: {
-        //     el: '.swiper-pagination',
-        // },
-
-        // navigation: {
-        //     nextEl: '.swiper-button-next',
-        //     prevEl: '.swiper-button-prev',
-        // },
-
-        // scrollbar: {
-        //     el: '.swiper-scrollbar',
-        // },
+      document.addEventListener('DOMContentLoaded', () => {
+        const swiper = new Swiper('.swiper', {
+          // Optional parameters
+          direction: 'vertical',
+          loop: true,
+          speed: 400,
+          slidesPerView: 5,
+          autoplay: {
+            delay: 1000, // 슬라이드가 자동으로 넘어가는 시간 간격 (ms)
+            disableOnInteraction: true, // 상호작용 후에도 autoplay 유지
+          },
+        });
       });
     </script>
 
@@ -86,12 +76,13 @@
           <img id="content02-01" src="./resource/image/content02-01.png" alt="DB 목록">
         </div>
         <div class="flex justify-content_center">
-          <div class="flex justify-content_center">
-            <div class="content02_2_wrapper">
-              <div class="vertical-banner-wrapper">
-                <div class="swiper2" style="width: 100%;height: 100%">
-                  <div class="swiper-wrapper vertical-banner flex-direction_column">
-                  </div>
+          <div class="swiperWrapper">
+            <div class="swiper" style="width: 600px; height: 300px;">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide swiper-custom-item-wrapper" style="display:flex; justify-content: space-around;">
+                  <div class="swiper-custom-item-date">날짜</div>
+                  <div class="swiper-custom-item-name">이름</div>
+                  <div class="swiper-custom-item-number">휴대폰번호</div>
                 </div>
               </div>
             </div>

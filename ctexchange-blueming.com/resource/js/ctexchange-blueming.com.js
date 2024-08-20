@@ -12,32 +12,38 @@ var month = ("0" + (currentDate.getMonth() + 1)).slice(-2); // getMonth() is zer
 var day = ("0" + currentDate.getDate()).slice(-2);
 
 for(var i = 0; i < 100; i++){
-    var slideDiv = document.createElement('div');
-    slideDiv.className = 'swiper-slide vertical-banner-list';
-    slideDiv.style.width = '90%';
-    slideDiv.style.display = 'flex';
-    slideDiv.style.justifyContent = 'space-between';
-    slideDiv.style.alignItems = 'center';
-    slideDiv.role = 'group'
-    slideDiv.ariaLabel = (i + 1).toString() + ' / 100'
+    const swiperWrapper = document.querySelector('.swiper-wrapper');
 
-    var itemDateDiv = document.createElement('div');
-    itemDateDiv.className = 'vertical-banner-item item-date';
-    itemDateDiv.textContent = `${year}-${month}-${day}`;
-    slideDiv.appendChild(itemDateDiv);
+    // 새로운 div 요소를 생성합니다
+    const swiperSlide = document.createElement('div');
+    swiperSlide.className = 'swiper-slide swiper-custom-item-wrapper';
+    swiperSlide.style.display = 'flex';
+    swiperSlide.style.justifyContent = 'space-around';
+    swiperSlide.style.alignItems = 'center';
+    swiperSlide.role = 'group'
+    swiperSlide.ariaLabel = (i + 1).toString() + ' / 100'
 
-    var itemNameDiv = document.createElement('div');
-    itemNameDiv.className = 'vertical-banner-item item-name';
-    itemNameDiv.textContent = nameCreate();
-    slideDiv.appendChild(itemNameDiv);
+    // 각 하위 요소를 생성하고 텍스트를 설정합니다
+    const dateDiv = document.createElement('div');
+    dateDiv.className = 'swiper-custom-item-date';
+    dateDiv.textContent = `${year}-${month}-${day}`;
 
-    var itemPhoneDiv = document.createElement('div');
-    itemPhoneDiv.className = 'vertical-banner-item item-phone';
-    itemPhoneDiv.textContent = numberCreate();
-    slideDiv.appendChild(itemPhoneDiv);
+    const nameDiv = document.createElement('div');
+    nameDiv.className = 'swiper-custom-item-name';
+    nameDiv.textContent = nameCreate();
 
-    var wrapperDiv = document.querySelector('.swiper-wrapper.vertical-banner');
-    wrapperDiv.appendChild(slideDiv);
+    const numberDiv = document.createElement('div');
+    numberDiv.className = 'swiper-custom-item-number';
+    numberDiv.textContent = numberCreate();
+
+    // 하위 요소들을 부모 요소에 추가합니다
+    swiperSlide.appendChild(dateDiv);
+    swiperSlide.appendChild(nameDiv);
+    swiperSlide.appendChild(numberDiv);
+
+    // 최종적으로 swiper-wrapper에 새로운 요소를 추가합니다
+    swiperWrapper.appendChild(swiperSlide);
+
 }
 
 function resize(){
