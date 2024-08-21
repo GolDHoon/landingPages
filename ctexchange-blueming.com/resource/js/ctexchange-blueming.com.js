@@ -49,9 +49,12 @@ for(var i = 0; i < 100; i++){
 function resize(){
     if(document.body.offsetWidth < 768){
         document.querySelector("#top_img").src = document.querySelector("#top_img").src.substring(0, document.querySelector("#top_img").src.indexOf("/resource/image/") + "/resource/image/".length) + "top_mo.png"
+        document.querySelector("#custDBForm_button").style.width = (((315/560) * document.querySelector("#content04").offsetWidth) * 0.8).toString() + 'px';
     }else{
         document.querySelector("#top_img").src = document.querySelector("#top_img").src.substring(0, document.querySelector("#top_img").src.indexOf("/resource/image/") + "/resource/image/".length) + "top.png"
+        document.querySelector("#custDBForm_button").style.width = (((315/560) * document.querySelector("#content04").offsetWidth) * 0.5).toString() + 'px';
     }
+
 
     document.querySelector("#space-top").style.height = document.querySelector("#top_img").offsetHeight.toString()+'px';
     document.querySelector("#content01").style.minHeight = ((4679/1920) * document.querySelector("#content01").offsetWidth).toString() + 'px';
@@ -64,7 +67,6 @@ function resize(){
     document.querySelector("#youtube").style.height = ((315/560) *  Number(document.querySelector("#youtube").style.width.replace('px', ''))) + 'px';
     document.querySelector("#content04").style.minHeight = ((1100/1920) * document.querySelector("#content04").offsetWidth).toString() + 'px';
     document.querySelector("#content04-01").style.width = (((315/560) * document.querySelector("#content04").offsetWidth) * 0.5).toString() + 'px';
-    document.querySelector("#custDBForm_button").style.width = (((315/560) * document.querySelector("#content04").offsetWidth) * 0.5).toString() + 'px';
     document.querySelector(".swiper").style.height = ((Number(document.querySelector("#content02").style.minHeight.replace("px","")) - Number(document.querySelector("#content03-01").style.height.replace("px","")))*0.5).toString() + "px"
 }
 
