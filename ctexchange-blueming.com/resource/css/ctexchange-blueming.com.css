@@ -88,14 +88,11 @@
 
 }
 
-.swiper-custom-item-date {
-    color: #000;
+.swiper-custom-item-number, .swiper-custom-item-name, .swiper-custom-item-date {
+    font-weight: bold;
 }
 
-.swiper-custom-item-name {
-    color: #000;
-}
-.swiper-custom-item-number {
+.swiper-custom-item-date {
     color: #949494;
 }
 
@@ -236,6 +233,10 @@
     .mo_label{
         display: none;
     }
+
+    .swiper-custom-item-number, .swiper-custom-item-name, .swiper-custom-item-date {
+        font-size: 40px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1024px)  {
@@ -375,6 +376,10 @@
     }
     .mo_label{
         display: none;
+    }
+
+    .swiper-custom-item-number, .swiper-custom-item-name, .swiper-custom-item-date {
+        font-size: 30px;
     }
 }
 
@@ -628,17 +633,7 @@
         height: 150px;
     }
 
-    .swiper-custom-item-date {
-        color: #000;
-        font-size: 12px;
-    }
-
-    .swiper-custom-item-name {
-        color: #000;
-        font-size: 12px;
-    }
-    .swiper-custom-item-number {
-        color: #949494;
+    .swiper-custom-item-number, .swiper-custom-item-name, .swiper-custom-item-date {
         font-size: 12px;
     }
 
@@ -663,6 +658,10 @@
     .mo-input-label > input {
         font-size: 100%;
         width: 100%;
+    }
+
+    .swiper-custom-item-number, .swiper-custom-item-name, .swiper-custom-item-date {
+        font-size: 5px;
     }
 }
 
