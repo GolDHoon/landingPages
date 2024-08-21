@@ -76,15 +76,10 @@
         <div>
           <img id="content02-01" src="./resource/image/content02-01.png" alt="DB 목록">
         </div>
-        <div class="flex justify-content_center">
+        <div class="flex justify-content_center" style="width: 100%">
           <div class="swiperWrapper">
             <div class="swiper pc-swiper mo-swiper">
               <div class="swiper-wrapper">
-                <div class="swiper-slide swiper-custom-item-wrapper" style="display:flex; justify-content: space-around;">
-                  <div class="swiper-custom-item-date">날짜</div>
-                  <div class="swiper-custom-item-name">이름</div>
-                  <div class="swiper-custom-item-number">휴대폰번호</div>
-                </div>
               </div>
             </div>
           </div>
@@ -121,9 +116,9 @@
               </div>
             </div>
           </div>
-          <div checkbox_wrapper flex justify-content_center">
-<!--            <input type="checkbox" class="agreeCheckBox" checked>-->
-<!--            <span class="agreeText">개인정보 수집 및 이용에 동의합니다.<span id="pop_view" onclick="modalView()">[보기]</span></span>-->
+          <div class="checkbox_wrapper flex justify-content_center">
+            <input type="checkbox" class="agreeCheckBox" checked>
+            <span class="agreeText">개인정보 수집 및 이용에 동의합니다.<span id="pop_view" onclick="modalView()">[보기]</span></span>
           </div>
           <img id="custDBForm_button" src="./resource/image/button.png" onclick="consultingButton()">
         </div>

@@ -67,14 +67,20 @@
 
 /* Swiper Css start*/
 
-.pc-swiper {
-    width: 600px;
-    height: 300px;
-}
+/*.pc-swiper {*/
+/*    width: 600px;*/
+/*    height: 300px;*/
+/*}*/
 
 .swiperWrapper {
+    width: 70%;
     border-radius: 25px;
     padding: 0 20px;
+    margin-bottom: 10%;
+}
+
+.swiper{
+    width: 100%;
 }
 
 .swiper-custom-item-wrapper {
@@ -479,13 +485,13 @@
     }
 
     .agreeCheckBox{
-        width: 5px;
-        height: 5px;
+        width: 11px;
+        height: 11px;
         margin: auto 0;
     }
 
     .agreeText{
-        font-size: 3px;
+        font-size: 11px;
     }
 
     .footer_contents{
@@ -590,14 +596,13 @@
         padding-top: 350%;
     }
 
-    #content02 {
-        height: 380px;
-    }
+    /*#content02 {*/
+    /*    height: 380px;*/
+    /*}*/
 
-    .pc-swiper {
-        display: none;
-    }
-
+    /*.pc-swiper {*/
+    /*    display: none;*/
+    /*}*/
 
     .mo-swiper {
         max-width: 250px;
@@ -735,8 +740,6 @@ input.cust_info_phone_input[type="number"] {
 #custDBForm_button{
     cursor: pointer;
 }
-
-
 
 /*스와이퍼*/
 .swiperWrapper{
