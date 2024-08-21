@@ -47,6 +47,12 @@ for(var i = 0; i < 100; i++){
 }
 
 function resize(){
+    if(document.body.offsetWidth < 768){
+        document.querySelector("#top_img").src = document.querySelector("#top_img").src.substring(0, document.querySelector("#top_img").src.indexOf("/resource/image/") + "/resource/image/".length) + "top_mo.png"
+    }else{
+        document.querySelector("#top_img").src = document.querySelector("#top_img").src.substring(0, document.querySelector("#top_img").src.indexOf("/resource/image/") + "/resource/image/".length) + "top.png"
+    }
+
     document.querySelector("#space-top").style.height = document.querySelector("#top_img").offsetHeight.toString()+'px';
     document.querySelector("#content01").style.minHeight = ((4679/1920) * document.querySelector("#content01").offsetWidth).toString() + 'px';
     document.querySelector("#content02").style.minHeight = ((1328/1920) * document.querySelector("#content02").offsetWidth).toString() + 'px';
