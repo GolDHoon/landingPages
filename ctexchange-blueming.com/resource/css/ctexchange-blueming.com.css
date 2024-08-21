@@ -73,14 +73,15 @@
 /*}*/
 
 .swiperWrapper {
-    width:70%;
+    width: 70%;
     border-radius: 25px;
     padding: 0 20px;
     margin-bottom: 10%;
-    background-color: white;
 }
 
-
+.swiper{
+    width: 100%;
+}
 
 .swiper-custom-item-wrapper {
     border-bottom: 1px solid #ccc;
@@ -227,6 +228,14 @@
     .nonMo{
         display: flex;
     }
+
+
+    .pc_label{
+        display: flex;
+    }
+    .mo_label{
+        display: none;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1024px)  {
@@ -361,7 +370,12 @@
         display: flex;
     }
 
-
+    .pc_label{
+        display: flex;
+    }
+    .mo_label{
+        display: none;
+    }
 }
 
 @media (max-width: 768px)  {
@@ -451,16 +465,13 @@
 
     .cust_info_label{
         font-size: 12px;
-        margin: 5px 3%;
         width: 100%;
         white-space: nowrap;
     }
 
     .cust_info_name_input{
-        height: 12px;
-        width: 92%;
-        margin: 5px 0;
-        font-size: 12px;
+        width: 100%;
+        font-size: 20px;
     }
 
     .cust_info_phone_inputs{
@@ -468,11 +479,10 @@
     }
 
     .cust_info_phone_input{
-        width: 25%;
+        width: 30%;
         text-align: center;
-        margin: 5px 0;
-        height: 12px;
-        font-size: 12px;
+        font-size: 20px;
+        margin: 0 1%;
     }
 
     .checkbox_wrapper{
@@ -565,6 +575,16 @@
     .content01 {
         display: none;
     }
+
+    .pc_label{
+        display: none;
+    }
+
+    .mo_label{
+        font-weight: bold;
+        font-size: 20px;
+        display: block;
+    }
 }
 
 @media (max-width: 768px) and (min-width: 250px) {
@@ -604,8 +624,8 @@
     /*}*/
 
     .mo-swiper {
-
-        height: 120px !important;
+        max-width: 250px;
+        height: 150px;
     }
 
     .swiper-custom-item-date {
@@ -623,14 +643,14 @@
     }
 
     .swiperWrapper {
-        border-radius: 15px;
-        padding: 0 10px;
+        border-radius: 25px;
+        padding: 0 20px;
     }
 
     .swiper-custom-item-wrapper {
         border-bottom: 1px solid #ccc;
-    }
 
+    }
 }
 
 @media (max-width: 250px) {
@@ -741,5 +761,5 @@ input.cust_info_phone_input[type="number"] {
 
 /*스와이퍼*/
 .swiperWrapper{
-
+    background-color: white;
 }
