@@ -7,6 +7,10 @@
     height: auto;
 }
 
+#m-content01 {
+    display: none;
+}
+
 
 
 #content02 {
@@ -60,6 +64,36 @@
     margin-top: 20%;
     margin-bottom: 10%;
 }
+
+/* Swiper Css start*/
+
+.pc-swiper {
+    width: 600px;
+    height: 300px;
+}
+
+.swiperWrapper {
+    border-radius: 25px;
+    padding: 0 20px;
+}
+
+.swiper-custom-item-wrapper {
+    border-bottom: 1px solid #ccc;
+
+}
+
+.swiper-custom-item-date {
+    color: #000;
+}
+
+.swiper-custom-item-name {
+    color: #000;
+}
+.swiper-custom-item-number {
+    color: #949494;
+}
+
+/* Swiper Css end*/
 
 
 @media (min-width: 1024px)  {
@@ -508,11 +542,10 @@
 
     .m-content-03-a {
         order: 1;
-
     }
 
     .m-content-03-01-image {
-        width: 100px;
+        width: 120px !important;
     }
     .m-content-03-b {
         order: 2;
@@ -520,10 +553,13 @@
     }
 
     .m-content-03-b .m_iframe {
-        width: 350px !important;
-        height: 150px !important;
+        width: 250px !important;
+        height: 130px !important;
     }
 
+    .content01 {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) and (min-width: 250px) {
@@ -543,15 +579,54 @@
         font-size: 90%;
     }
 
-    #content01 {
+
+    .contents-box { overflow: hidden; display: block; width: 100%;}
+    #content01 { display: none; }
+    #m-content01 {
+        display: block;
         background-image: url("../image/m_content01.png");
         background-repeat: no-repeat;
         background-size: cover;
-        width: 100%;
-        height: auto;
+        padding-top: 350%;
+    }
+
+    #content02 {
+        height: 380px;
+    }
+
+    .pc-swiper {
+        display: none;
     }
 
 
+    .mo-swiper {
+        max-width: 250px;
+        height: 150px;
+    }
+
+    .swiper-custom-item-date {
+        color: #000;
+        font-size: 12px;
+    }
+
+    .swiper-custom-item-name {
+        color: #000;
+        font-size: 12px;
+    }
+    .swiper-custom-item-number {
+        color: #949494;
+        font-size: 12px;
+    }
+
+    .swiperWrapper {
+        border-radius: 25px;
+        padding: 0 20px;
+    }
+
+    .swiper-custom-item-wrapper {
+        border-bottom: 1px solid #ccc;
+
+    }
 
 }
 

@@ -70,6 +70,7 @@
         <img id="top_img" class="sticky_t" src="./resource/image/top.png" alt="topper" onclick="topperOnClick()">
     </div>
     <div id="content01"></div>
+    <div id="m-content01"></div>
     <div id="content02">
       <div class="flex flex-direction_column align-items_center">
         <div>
@@ -77,7 +78,7 @@
         </div>
         <div class="flex justify-content_center">
           <div class="swiperWrapper">
-            <div class="swiper" style="width: 600px; height: 300px;">
+            <div class="swiper pc-swiper mo-swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide swiper-custom-item-wrapper" style="display:flex; justify-content: space-around;">
                   <div class="swiper-custom-item-date">날짜</div>
@@ -105,7 +106,7 @@
         <div>
           <img  id="content04-01" src="./resource/image/content04-01.png" alt="db 수집">
         </div>
-        <div class="nonMo custDBForm flex flex-direction_column align-items_center">
+        <div class="custDBForm flex flex-direction_column align-items_center">
           <div class="flex justify-content_space-evenly">
             <div class="flex flex-direction_column align-items_flex-start">
               <div class="cust_info_label">이 름</div>
@@ -120,33 +121,13 @@
               </div>
             </div>
           </div>
-          <div class="nonMo checkbox_wrapper flex justify-content_center">
-            <input type="checkbox" class="agreeCheckBox" checked>
-            <span class="agreeText">개인정보 수집 및 이용에 동의합니다.<span id="pop_view" onclick="modalView()">[보기]</span></span>
+          <div checkbox_wrapper flex justify-content_center">
+<!--            <input type="checkbox" class="agreeCheckBox" checked>-->
+<!--            <span class="agreeText">개인정보 수집 및 이용에 동의합니다.<span id="pop_view" onclick="modalView()">[보기]</span></span>-->
           </div>
-          <img id="custDBForm_button" class="nonMo" src="./resource/image/button.png" onclick="consultingButton()">
+          <img id="custDBForm_button" src="./resource/image/button.png" onclick="consultingButton()">
         </div>
-        <div class="mo custDBForm flex flex-direction_column align-items_center">
-          <div class="flex flex-direction_column align-items_center">
-            <label class="mo-input-label flex align-items_center">
-              이 름
-              <input id="name_mo" type="text" placeholder="성함을 입력해주세요" onchange="nameMoOnChange(event)">
-            </label>
-            <label class="mo-input-label flex align-items_center">
-              연락처
-              <input id="phone1_mo" type="number" value="010" disabled style="width: 30%">
-              <input id="phone2_mo" type="number" placeholder="8자리숫자" min="20000000" max="99999999" onkeydown="phone2MoOnKeyDown(event)" onchange="phone2MoOnChange(event)">
-            </label>
-            <div class="flex justify-content_space-between" style="width: 100%">
-              <div class="flex justify-content_center" style="width: 100%">
-                <button id="mo_agree_button" class="mo_custForm_button agree_y" onclick="moAgreeButtonOnClick(event)">개인정보 수집거부</button>
-              </div>
-              <div class="flex justify-content_center" style="width: 90%">
-                <button id="mo_consulting_button" class="mo_custForm_button" onclick="consultingButton()">무료상담신청</button>
-              </div>
-            </div>
-          </div>
-        </div>
+
       </div>
     </div>
   </div>
