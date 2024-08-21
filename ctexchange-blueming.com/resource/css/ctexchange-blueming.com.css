@@ -73,15 +73,14 @@
 /*}*/
 
 .swiperWrapper {
-    width: 70%;
+    width:70%;
     border-radius: 25px;
     padding: 0 20px;
     margin-bottom: 10%;
+    background-color: white;
 }
 
-.swiper{
-    width: 100%;
-}
+
 
 .swiper-custom-item-wrapper {
     border-bottom: 1px solid #ccc;
@@ -605,8 +604,8 @@
     /*}*/
 
     .mo-swiper {
-        max-width: 250px;
-        height: 150px;
+
+        height: 120px !important;
     }
 
     .swiper-custom-item-date {
@@ -624,13 +623,12 @@
     }
 
     .swiperWrapper {
-        border-radius: 25px;
+        border-radius: 15px;
         padding: 0 20px;
     }
 
     .swiper-custom-item-wrapper {
         border-bottom: 1px solid #ccc;
-
     }
 
 }
@@ -743,5 +741,5 @@ input.cust_info_phone_input[type="number"] {
 
 /*스와이퍼*/
 .swiperWrapper{
-    background-color: white;
+
 }
