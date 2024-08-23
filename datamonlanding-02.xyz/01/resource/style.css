@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* 공용 스타일 값 / 변수값 지정 영역*/
 
 :root {
@@ -88,7 +90,6 @@ input, button {
 
 .section-info-fixed .info-btn {
     background:var(--main-background-yellow);
-    color: var(--main-background-yellow);
     width: 15%;
     margin-left: 2%;
 
