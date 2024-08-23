@@ -19,41 +19,73 @@ img { max-width: 100%; height: auto; }
     height: 80px;
 }
 
+/*손철훈 개발자가 수정한 코드*/
+
 .landing-wrap .section-02 {
-    background: url("../image/ccl)main_02.png");
+    background: url("../image/ccl)main_02.png") no-repeat center;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 1000px;
-
-
 }
 
-.landing-wrap .section-02 .mySwiper{
-    width: 100%;
-    height: 500px;
-    overflow: hidden;
-
+.mySwiper_wrapper{
     display: flex;
-    justify-content: center;
-
+    justify-content: space-around;
+    width: 100%;
 }
 
-.landing-wrap .section-02 .mySwiper .swiper-wrap {
-
-    position: absolute;
-    left: 50%; right: 50%;
-    top: 70%;
-
-    transform: translate(-50%,-50%);
-
-    background-color: #fff;
-    width: 50%;
-    height: 50%;
-    overflow: hidden;
-    padding: 20px;
-    text-align: center;
+.mySwiper{
+    overflow-y: hidden;
+    background-color: white;
+    padding: 30px;
 }
+
+
+@media (min-width: 768px) {
+    .mySwiper{
+        margin-top: 25%;
+        margin-bottom: 5%;
+        width: 50%;
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mySwiper{
+        margin-top: 25%;
+        margin-bottom: 5%;
+        width: 50%;
+        height: 60px;
+    }
+}
+
+/*손철훈 개발자가 수정한 코드*/
+
+
+
+
+/*.landing-wrap .section-02 .mySwiper{*/
+/*    height: 100%;*/
+/*    overflow: hidden;*/
+
+/*    display: flex;*/
+/*    justify-content: center;*/
+
+/*}*/
+
+/*.landing-wrap .section-02 .mySwiper .swiper-wrap {*/
+
+/*    position: absolute;*/
+/*    left: 50%; right: 50%;*/
+/*    top: 70%;*/
+
+/*    transform: translate(-50%,-50%);*/
+
+/*    background-color: #fff;*/
+/*    width: 50%;*/
+/*    height: 50%;*/
+/*    overflow: hidden;*/
+/*    padding: 20px;*/
+/*    text-align: center;*/
+/*}*/
 
 .landing-wrap .section-02 .mySwiper .swiper-wrap .swiper-slide {
     border-bottom: 1px solid #ccc;
