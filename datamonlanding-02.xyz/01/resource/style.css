@@ -11,8 +11,7 @@ body {
     color: #fff;
     font-size: 16px;
     font-weight:1;
-
-
+    overflow: hidden;
 }
 img, iframe {
     width: 100%;
