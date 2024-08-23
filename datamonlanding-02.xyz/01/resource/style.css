@@ -91,6 +91,7 @@ input, button {
 
 .section-info-fixed .info-btn {
 
+    color: var(--main-font-colorW);
     background:var(--main-background-yellow);
     width: 15%;
     margin-left: 2%;
