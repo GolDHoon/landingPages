@@ -1,0 +1,60 @@
+*{ margin: 0; padding: 0; vertical-align: top; }
+
+img { max-width: 100%; height: auto; }
+
+
+
+.landing-wrap {
+    max-width: 1920px;
+    overflow: hidden;
+    position: relative;
+}
+
+.landing-wrap .link_a {
+    position: absolute;
+    right: 30px; bottom: 30px;
+}
+
+.landing-wrap .link_a > a >  img {
+    height: 80px;
+}
+
+.landing-wrap .section-02 {
+    background: url("../image/ccl)main_02.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 1000px;
+
+
+}
+
+.landing-wrap .section-02 .mySwiper{
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.landing-wrap .section-02 .mySwiper .swiper-wrap {
+
+    position: absolute;
+    left: 50%; right: 50%;
+    top: 70%;
+
+    transform: translate(-50%,-50%);
+
+    background-color: #fff;
+    width: 50%;
+    height: 50%;
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+}
+
+.landing-wrap .section-02 .mySwiper .swiper-wrap .swiper-slide {
+    border-bottom: 1px solid #ccc;
+}
