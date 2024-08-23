@@ -88,7 +88,7 @@ input, button {
 
 .section-info-fixed .info-btn {
     background:var(--main-background-yellow);
-    color: var(--main-font-color);
+    color: var(--main-background-yellow);
     width: 15%;
     margin-left: 2%;
 
