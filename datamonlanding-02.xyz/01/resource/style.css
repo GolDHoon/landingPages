@@ -40,7 +40,7 @@ input, button {
 
 /* Swiper 영역 시작 */
 
-.mySwiper .swiper-pagination-bullet-active {  background-color: var(--main-background-green)}
+.mySwiper .swiper-pagination-bullet-active {  background-color: var(--main-background-green); }
 .mySwiper .swiper-pagination-bullet {
 
     line-height: 23px;
@@ -65,6 +65,7 @@ input, button {
 
 .content_wrapper .content_section-1 {
     height: 100%;
+
 }
 
 .section-info-fixed .info-type-01 {
