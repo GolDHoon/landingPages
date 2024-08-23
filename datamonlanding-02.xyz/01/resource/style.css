@@ -28,7 +28,7 @@ input, button {
 
 /* 공용 스타일 값 / 변수값 지정 영역*/
 
-.content_wrapper { height: 100%; padding-bottom: 25% overflow: hidden; }
+.content_wrapper { height: 100%; padding-bottom: 25%; overflow: hidden; }
 
 .content_wrapper .topper {
     text-align: center;
@@ -47,7 +47,7 @@ input, button {
     border-radius: 5px;
 
 }
-}
+
 
 .mySwiper .swiper-pagination-bullet
 /*.mySwiper .swiper-pagination-bullet {*/
