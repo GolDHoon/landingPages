@@ -1,6 +1,6 @@
 /* 공용 스타일 값 / 변수값 지정 영역*/
 
-:Root {
+:root {
     --main-font-colorW:#fff;
     --main-font-colorB:#000f22;
     --main-background-yellow:#f55330;
