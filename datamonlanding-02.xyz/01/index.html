@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!--SEO 관련설정 / 공유 스니펫 설정 start-->
-  <title>Title</title>
+  <title>temp</title>
   <meta name="title" property="og:title" content="밤마다 괴롭히는 저릿저릿한 다리저림">
   <meta name="description" property="og:description" content="최대 100% 실비보험 지원">
   <meta name="url" property="og:url" content="https://hazitherapy.kr">
@@ -20,35 +20,107 @@
   <meta name="twitter:image" content="./hazitherapy.files/image/thumbnail.png" />
   <!--SEO 관련설정 / 공유 스니펫 설정 end-->
 
-  <link rel="stylesheet" type="text/css" href="./resource/style.css">
+  <link rel="stylesheet" type="text/css" href="resource/reset.css">
+  <link rel="stylesheet" type="text/css" href="resource/style.css">
   <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
-<!--top 배너 fixed-->
-<div class="topper">
-  123456
-</div>
-<!--side 배너 fixed-->
-<div class="left">
-  456456
-</div>
-<!--side 배너 fixed-->
-<div class="right">
-  789456
-</div>
-
 <div class="content_wrapper">
-  <!--이미지만 들어가는 콘텐츠 타입-->
-  <div></div>
-  <!--스와퍼 배너 가로형-->
-  <div></div>
-  <!--스와이퍼 배너 세로형-->
-  <div></div>
-  <!--스와이퍼 배너 버튼형-->
-  <div></div>
-</div>
 
-<div class="footer"></div>
+  <div class="topper top_header">
+    <img src="./images/top_logo_black.png" alt="">
+  </div>
+<!--    탑 헤더영역-->
+<!--  </div>-->
+
+<!--  <section class="content-box-01">-->
+<!--      이미지형-->
+<!--  </section>-->
+  <!-- 이미지형  -->
+
+
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide swiper-banner-01">
+        <p class="">
+          <img src="./images/img_1.gif" alt="">
+        </p>
+      </div>
+      <div class="swiper-slide swiper-banner-02">
+        <p class="">
+          <img src="./images/img_1.gif" alt="">
+        </p>
+      </div>
+      <div class="swiper-slide swiper-banner-03">
+        <p class="">
+          <img src="./images/img_1.gif" alt="">
+        </p>
+      </div>
+    </div>
+    <div class="swiper-pagination">
+        <span class="pagination_cus">테스트1</span>
+        <span class="pagination_cus">테스트2</span>
+        <span class="pagination_cus">테스트3</span>
+    </div>
+  </div>
+  <!--  swiper -->
+
+  <section class="content_section-1">
+    <div class="section-01-image">
+      <img src="./images/img_6.jpg" alt="">
+    </div>
+
+    <div class="section-01-video" >
+      <iframe id="youtube" class="m_iframe" width="300" height="300"  src="https://www.youtube.com/embed/UidLkGBSoAY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </section>
+
+
+
+  <section class="section-info-fixed">
+    <form class="info-type-01" action="">
+      <label>이름
+        <input class="input-cus" type="text" placeholder="홍길동">
+      </label>
+      <label>전화번호
+        <input class="input-cus" type="text" placeholder="010-1234-5678" >
+        <button class="info-btn"> 신청 </button>
+      </label>
+      <label style="display: block; margin-top: 5px" >
+        <input type="checkbox" placeholder="010-1234-5678" >
+        <span>(필수) 개인정보 동의 취급 및 위탁동의 </span>
+      </label>
+    </form>
+  </section>
+
+  <section class="content_section-2">
+    <div class="section-02-image">
+      <img src="./images/redesign-01.gif" alt="">
+    </div>
+  </section>
+
+</div>
+<!--content_wraper END -->
+
+
+
+<script>
+  var bullet = ['테스트' , ['테스트'] , ['테스트'] ];
+  var swiper = new Swiper(".mySwiper", {
+
+    autoplay : true,
+    speed:2000,
+
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (bullet[index]) + "</span>";
+      },
+    },
+  });
+</script>
+
 </body>
 </html>
