@@ -127,7 +127,7 @@ a {
         transform: translate(-50%,-50%);
         width: 75%;
         background-color: #fff;
-        padding: 20px 30px;
+        padding: 10px 30px;
     }
 
     .landing-wrap .section-04 .section-04-inner > form > input {
@@ -146,9 +146,9 @@ a {
         font-size: 28px;
         font-weight: 500;
         border: none;
-        padding: 10px 25px;
+        padding: 8px 15px;
         width: 100%;
-        margin-top: 20px;
+        margin-top: 10px;
     }
 }
 
