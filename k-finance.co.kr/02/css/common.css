@@ -59,7 +59,7 @@ a {
 
 .landing-wrap .link_a {
     position: fixed;
-    right: 30px; bottom: 10px;
+    right: 20px; bottom: 10px;
     z-index: 9999;
 
 }
@@ -102,7 +102,6 @@ a {
     left: 50%; top: 50%;
     transform: translate(-50%,-50%);
     width: 50%;
-    height: %;
     background-color: #fff;
     padding: 20px 30px;
 }
