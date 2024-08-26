@@ -3,8 +3,11 @@
 img { max-width: 100%; height: auto; }
 a {
     text-decoration: none;
-
 }
+.mo-content {
+    display: none;
+}
+
 button{
     cursor: pointer;
 }
@@ -162,6 +165,12 @@ button{
 }
 
 @media (min-width: 768px) {
+
+    .landing-wrap .m-toper {
+        position: fixed;
+
+    }
+
     .mySwiper{
         margin-top: 25%;
         margin-bottom: 5%;
@@ -171,6 +180,12 @@ button{
 }
 
 @media (max-width: 768px) {
+
+    .pc-content { display: none}
+    .mo-content {
+        display: block;
+    }
+
     .mySwiper{
         margin-top: 25%;
         margin-bottom: 5%;
@@ -192,7 +207,7 @@ button{
     }
 
     .landing-wrap .section-04 {
-        background: url("../image/ccl-section4-01.png") no-repeat center;
+        background: url("../image/m_ccl)main_04.png") no-repeat center;
         background-size: cover;
         height: 470px;
     }
