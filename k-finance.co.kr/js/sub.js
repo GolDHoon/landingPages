@@ -39,7 +39,7 @@ window.addEventListener("load", function() {
         swiperSlide.appendChild(itemDateDiv);
 
         var itemNameDiv = document.createElement('div');
-        itemNameDiv.className = 'vertical-ba2er-item item-name';
+        itemNameDiv.className = 'vertical-banner-item item-name';
         itemNameDiv.textContent = nameCreate();
         swiperSlide.appendChild(itemNameDiv);
 

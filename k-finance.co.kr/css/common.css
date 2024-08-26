@@ -93,7 +93,7 @@ button{
 /*손철훈 개발자가 수정한 코드*/
 
 .landing-wrap .section-02 {
-    background: url("../image/ccl)main_02.png") no-repeat center;
+    background: url("../image/contents_02_bg.png") no-repeat center;
     background-size: cover;
 }
 
@@ -109,40 +109,11 @@ button{
     padding: 30px;
 }
 
-
-.landing-wrap .section-04 {
-    background: url("../image/ccl-section4-01.png") no-repeat center;
-    background-size: cover;
-    height: 850px;
-    position: relative;
-
-
-}
-
-.landing-wrap .section-04 .section-04-inner{
-
-    position: absolute;
-    left: 50%; top: 50%;
-    transform: translate(-50%,-50%);
-    width: 100%;
-    max-width: 530px;
-    background-color: #fff;
-    padding: 20px 30px;
-}
-
-.landing-wrap .section-04 .section-04-inner > form > input {
-    background: #f2f2f2;
-    border: none;
-    padding: 10px 0 10px 15px;
-    width: 97%;
-    display: block;
-
-    margin: 15px 3px;
-
-}
-
-.landing-wrap .section-04 .section-04-inner > form .agreeText {
-    font-size: 14px;
+.section-04{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly
 }
 
 .landing-wrap .section-04 .section-04-inner > .section-04-btn-submit {
@@ -156,15 +127,45 @@ button{
     margin-top: 20px;
 }
 
-.landing-wrap .section-04  .section-04-banner {
-
-    position: absolute;
-    left: 50%; top: 75%;
-    transform: translate(-50%,-50%);
-
+.section-04-banner-01{
+    max-width: 80%;
+    margin: 10% 0;
 }
 
+.section-04-banner-02{
+    max-width: 80%;
+    margin: 10% 0;
+}
+
+form {
+    margin: 3% 0;
+}
+
+form input{
+    font-size: clamp(0.6rem, 3vw, 3rem);
+}
+
+.agreeText{
+    font-size: clamp(0.4rem, 2vw, 3rem);
+    white-space: nowrap;
+}
+
+.vertical-banner-item{
+    font-size: clamp(0.4rem, 2vw, 2rem);
+    margin: 0 1%;
+    font-weight: bold;
+}
+
+.item-date{
+    color:#A3A3A3
+}
+
+
 @media (min-width: 768px) {
+    .pc-content { display: block}
+    .mo-content {
+        display: none;
+    }
 
     .landing-wrap .m-toper {
         position: fixed;
@@ -176,6 +177,28 @@ button{
         margin-bottom: 5%;
         width: 50%;
         height: 300px;
+    }
+
+    .landing-wrap .section-04 {
+        background: url("../image/contents_04_bg.png") no-repeat center;
+        background-size: cover;
+        min-height: 741px;
+    }
+
+    .landing-wrap .section-04 .section-04-inner{
+        width: 100%;
+        max-width: 50%;
+        background-color: #fff;
+        padding: 3%;
+    }
+
+    .landing-wrap .section-04 .section-04-inner > form > input {
+        background: #f2f2f2;
+        border: none;
+        padding: 3%;
+        width: 100%;
+        display: block;
+        margin: 15px 3px;
     }
 }
 
@@ -207,30 +230,26 @@ button{
     }
 
     .landing-wrap .section-04 {
-        background: url("../image/m_ccl)main_04.png") no-repeat center;
+        background: url("../image/contents_04_m_bg.png") no-repeat center;
         background-size: cover;
-        height: 470px;
-    }
-
-    .landing-wrap .section-04  .section-04-banner {
-
-        position: absolute;
-        left: 50%; top: 85%;
-        transform: translate(-50%,-50%);
-
+        min-height: 450px;
     }
 
     .landing-wrap .section-04 .section-04-inner{
-
-        position: absolute;
-        left: 50%; top: 50%;
-        transform: translate(-50%,-50%);
-        width: 75%;
+        width: 100%;
+        max-width: 50%;
         background-color: #fff;
-        padding: 10px 30px;
+        padding: 3%;
     }
 
-
+    .landing-wrap .section-04 .section-04-inner > form > input {
+        background: #f2f2f2;
+        border: none;
+        padding: 3%;
+        width: 100%;
+        display: block;
+        margin: 5px 3px;
+    }
 
     .landing-wrap .section-04 .section-04-inner > .section-04-btn-submit {
         background: #2f77d8;
