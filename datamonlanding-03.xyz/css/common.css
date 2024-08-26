@@ -11,7 +11,9 @@ button{
 
 .landing-wrap .lading-topper {
     position: fixed;
-    left: 0; top: 0;
+    max-width: 1920px;
+/*    left: 0; top: 0;*/
+    z-index: 999;
 }
 
 .modal {
@@ -172,10 +174,6 @@ button{
 
 
         font-size: 0.75em;
-    }
-    .landing-wrap .lading-topper {
-        position: fixed;
-        left: 0; top: 0;
     }
 
     .mySwiper .swiper-slide {
