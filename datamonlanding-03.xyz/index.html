@@ -15,13 +15,12 @@
         <meta name="application-name" content="CCL">
         <link rel="shortcut icon" href="#">
         <link rel="canonical" href="http://www.k-finance.co.kr/">
-        <script src="./js/sub2.js" defer></script>
-<!--        <script src="https://www.alisolution-devmanagement.xyz/js/landing-server-comunication/0.0.1/landing-server-comunication.min.js" defer></script>-->
-        <script src="./js/sub.js" defer></script>
 
         <link rel="stylesheet" type="text/css" href="css/common.css">
         <link rel="stylesheet" type="text/css" href="css/k-finance.co.kr.css">
+        <script src="https://www.alisolution-devmanagement.xyz/js/landing-server-comunication/0.0.1/landing-server-comunication.min.js" defer></script>
         <script src="./js/main.js" defer></script>
+        <script src="./js/sub.js" defer></script>
 
         <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -74,8 +73,8 @@
                     <input id="name" type="text" placeholder="성함을 입력해주세요.">
                 </form >
                 <form style="display: flex; justify-content: space-between;">
-                    <input type="text" value="010" style="flex:1" disabled>
-                    <input id="phone" type="text" style="flex:2" placeholder="연락처를 입력하세요." onkeydown="phoneValidation(event)">
+                    <input type="text" value="010" style="width: 50px" disabled>
+                    <input id="phone" type="text" placeholder="연락처를 입력하세요." onkeydown="phoneValidation(event)">
                 </form >
                 <form>
                     <a>
@@ -120,17 +119,7 @@
     </body>
 
     <script>
-        const swiper = new Swiper('.mySwiper', {
-            // Optional parameters
-            direction: 'vertical',
-            loop: true,
-            speed: 400,
-            slidesPerView: 5,
-            autoplay: {
-                delay: 1000, // 슬라이드가 자동으로 넘어가는 시간 간격 (ms)
-                disableOnInteraction: true, // 상호작용 후에도 autoplay 유지
-            },
-        });
+
 
         const modal = document.querySelector("#myModal");
 

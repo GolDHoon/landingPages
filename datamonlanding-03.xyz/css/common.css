@@ -134,7 +134,12 @@ button{
     width: 97%;
     display: block;
 
-    margin: 15px 0;
+    margin: 15px 3px;
+
+}
+
+.landing-wrap .section-04 .section-04-inner > form .agreeText {
+    font-size: 14px;
 }
 
 .landing-wrap .section-04 .section-04-inner > .section-04-btn-submit {
@@ -210,15 +215,7 @@ button{
         padding: 10px 30px;
     }
 
-    .landing-wrap .section-04 .section-04-inner > form > input {
-        background: #f2f2f2;
-        border: none;
-        padding: 10px 0 10px 15px;
-        width: 97%;
-        display: block;
 
-        margin: 15px 0;
-    }
 
     .landing-wrap .section-04 .section-04-inner > .section-04-btn-submit {
         background: #2f77d8;
