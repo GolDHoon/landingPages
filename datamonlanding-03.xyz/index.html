@@ -1,9 +1,180 @@
 <!DOCTYPE html>
 <html lang="ko">
     <head>
-        <title>서민금융진흥원</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>서민금융진흥원ㅇㅇ</title>
+        <meta name="copyright" content="드리븐">
+        <meta name="subject" content="저금리 서민대출">
+        <meta name="title" property="og:title" content="서민금융진흥원">
+        <meta name="description" property="og:description" content="신불자만 아니라면 대상 제한없이 낮은 금리로 대출 기회를 제공 중이니 확인하세요.">
+        <meta name="keywords" content="저금리,서민대출,서민금융진흥원,대출,대환대출,채무통합,통합대출,저금리">
+        <meta name="robots" content="index,follow">
+        <meta name="apple-mobile-web-app-title" content="CCL">
+        <meta name="application-name" content="CCL">
+        <link rel="shortcut icon" href="#">
+        <link rel="canonical" href="http://www.k-finance.co.kr/">
+        <link rel="stylesheet" type="text/css" href="css/common.css">
+        <link rel="stylesheet" type="text/css" href="css/k-finance.co.kr.css">
+        <script src="https://www.alisolution-devmanagement.xyz/js/landing-server-comunication/0.0.1/landing-server-comunication.min.js" defer></script>
+        <script src="./js/main.js" defer></script>
+        <script src="./js/sub.js" defer></script>
+
+        <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     </head>
-    <body style="margin: 0">
-        <img src="./resource/img/temp.png" style="width: 100%">
+    <body style="display: flex; justify-content: center">
+        <div class="landing-wrap">
+            <div class="link_a">
+                <img src="./image/icon.png" alt="지원금 신청 버튼" onclick="toInputForm()">
+            </div>
+        <section class="section-01">
+            <div>
+                <img src="./image/ccl)main_01.png" alt="">
+            </div>
+        </section>
+        <section class="section-02">
+            <div class="mySwiper_wrapper">
+                <div class="mySwiper">
+                    <div class="swiper-wrapper swiper-wrap">
+                        <div class="swiper-slide" style="display: flex; align-items: center; justify-content: space-around; ">
+                            <div>2024-08-23</div>
+                            <div>정*신1</div>
+                            <div>010-5784-2834</div>
+                        </div>
+                        <div class="swiper-slide" style="display: flex; align-items: center; justify-content: space-around; ">
+                            <div>2024-08-23</div>
+                            <div>정*신2</div>
+                            <div>010-5784-2834</div>
+                        </div>
+                        <div class="swiper-slide" style="display: flex; align-items: center; justify-content: space-around; ">
+                            <div>2024-08-23</div>
+                            <div>정*신3</div>
+                            <div>010-5784-2834</div>
+                        </div>
+                        <div class="swiper-slide" style="display: flex; align-items: center; justify-content: space-around; ">
+                            <div>2024-08-23</div>
+                            <div>정*신4</div>
+                            <div>010-5784-2834</div>
+                        </div>
+                        <div class="swiper-slide" style="display: flex; align-items: center; justify-content: space-around; ">
+                            <div>2024-08-23</div>
+                            <div>정*신5</div>
+                            <div>010-5784-2834</div>
+                        </div>
+                        <div class="swiper-slide" style="display: flex; align-items: center; justify-content: space-around; ">
+                            <div>2024-08-23</div>
+                            <div>정*신1</div>
+                            <div>010-5784-2834</div>
+                        </div>
+                        <div class="swiper-slide" style="display: flex; align-items: center; justify-content: space-around; ">
+                            <div>2024-08-23</div>
+                            <div>정*신2</div>
+                            <div>010-5784-2834</div>
+                        </div>
+                        <div class="swiper-slide" style="display: flex; align-items: center; justify-content: space-around; ">
+                            <div>2024-08-23</div>
+                            <div>정*신3</div>
+                            <div>010-5784-2834</div>
+                        </div>
+                        <div class="swiper-slide" style="display: flex; align-items: center; justify-content: space-around; ">
+                            <div>2024-08-23</div>
+                            <div>정*신4</div>
+                            <div>010-5784-2834</div>
+                        </div>
+                        <div class="swiper-slide" style="display: flex; align-items: center; justify-content: space-around; ">
+                            <div>2024-08-23</div>
+                            <div>정*신5</div>
+                            <div>010-5784-2834</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- section2 END-->
+
+        <section class="section-03">
+            <div>
+                <img src="./image/k-finance_02.png" alt="">
+            </div>
+        </section>
+
+        <section class="section-04">
+            <div class="section-04-inner">
+                <form class="section-04-form">
+                    <input id="name" type="text" placeholder="성함을 입력해주세요.">
+                </form >
+                <form style="display: flex">
+                    <input type="text" value="010" style="text-align: center" disabled>
+                    <input id="phone" type="text" placeholder="연락처를 입력하세요." onkeydown="phoneValidation(event)">
+                </form >
+                <form>
+                    <a>
+                    <input id="agree" type="checkbox" >
+                            <span class="agreeText">&nbsp;개인정보 수집 및 이용에 동의합니다. <span id="agreeView" class="agreeText" onclick="modalOpen(event)">[보기]</span></span>
+                    </a>
+                </form >
+                <button class="section-04-btn-submit" onclick="dbInput()">
+                    상담신청
+                </button>
+            </div>
+                <!-- section04 inner-->
+        </section>
+        </div>
+        <!--    lading-wrap  END -->
     </body>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="modalClose(event)">&times;</span>
+            <br>
+            <h3>개인정보취급방침</h3>
+            <br>
+            <p>1. 개인정보 수집 및 이용 목적</p>
+            <p>
+                전화,SMS를 통한 상담 및 안내</p>
+            <br>
+            <p>2. 수집하는 개인정보 항목</p>
+            <p>
+                이름, 연락처</p>
+            <br>
+            <p>3. 보유 및 이용기간</p>
+            <p>
+                수집이용 동의일로부터 수집이용 목적을 달성할 때까지</p>
+            <br>
+        </div>
+
+    <script>
+        const swiper = new Swiper('.mySwiper', {
+            // Optional parameters
+            direction: 'vertical',
+            loop: true,
+            speed: 400,
+            slidesPerView: 5,
+            autoplay: {
+                delay: 1000, // 슬라이드가 자동으로 넘어가는 시간 간격 (ms)
+                disableOnInteraction: true, // 상호작용 후에도 autoplay 유지
+            },
+        });
+
+        const modal = document.querySelector("#myModal");
+
+        function modalOpen (event) {
+            modal.style.display = "block";
+        }
+
+        function modalClose (event) {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if("agreeView" !== event.target.id){
+                modalClose(event);
+            }
+        }
+
+
+    </script>
 </html>
