@@ -6,6 +6,11 @@ a {
     cursor: pointer;
 }
 
+.landing-wrap .lading-topper {
+    position: fixed;
+    left: 0; top: 0;
+}
+
 .modal {
     display: none;
     position: fixed;
@@ -64,8 +69,8 @@ a {
 
 }
 
-.landing-wrap .link_a > a >  img {
-    height: 65px;
+.landing-wrap .link_a > img {
+    height: 80px;
 }
 
 /*손철훈 개발자가 수정한 코드*/

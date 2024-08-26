@@ -38,6 +38,10 @@
                       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
         <div class="landing-wrap">
+            <div class="lading-topper">
+                <img src="./image/topper.png" alt="지원금 신청 버튼" onclick="toInputForm()">
+            </div>
+
             <div class="link_a">
                 <img src="./image/icon.png" alt="지원금 신청 버튼" onclick="toInputForm()">
             </div>
@@ -123,11 +127,11 @@
                 </form >
                 <form>
                     <a>
-                    <input id="agree" type="checkbox" >
-                            <span class="agreeText">&nbsp;개인정보 수집 및 이용에 동의합니다. <span id="agreeView" class="agreeText" onclick="modalOpen(event)">[보기]</span></span>
+                    <input id="agree" type="checkbox" checked>
+                            <span class="agreeText" >&nbsp;개인정보 수집 및 이용에 동의합니다. <span id="agreeView" class="agreeText" onclick="modalOpen(event)">[보기]</span></span>
                     </a>
                 </form >
-                <button class="section-04-btn-submit" onclick="dbInput()">
+                <button class="section-04-btn-submit" onclick="dbInput()" >
                     상담신청
                 </button>
             </div>
@@ -184,6 +188,13 @@
             if("agreeView" !== event.target.id){
                 modalClose(event);
             }
+        }
+
+        // 인풋폼 이동 함수
+        function toInputForm (event) {
+            document.querySelector('.section-04').scrollIntoView({
+                behavior: 'smooth' // 스크롤을 부드럽게 이동하게 설정
+            });
         }
 
 
