@@ -1,7 +1,10 @@
 *{ margin: 0; padding: 0; vertical-align: top; }
 
 img { max-width: 100%; height: auto; }
-
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
 
 
 .landing-wrap {
@@ -12,7 +15,9 @@ img { max-width: 100%; height: auto; }
 
 .landing-wrap .link_a {
     position: absolute;
-    right: 30px; bottom: 30px;
+    right: 30px; bottom: 50px;
+    z-index: 9999;
+
 }
 
 .landing-wrap .link_a > a >  img {
@@ -39,6 +44,46 @@ img { max-width: 100%; height: auto; }
 }
 
 
+.landing-wrap .section-04 {
+    background: url("../image/ccl)main_04.png") no-repeat center;
+    background-size: cover;
+    height: 1167px;
+    position: relative;
+
+}
+
+.landing-wrap .section-04 .section-04-inner{
+
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+    height: %;
+    background-color: #fff;
+    padding: 20px 30px;
+}
+
+.landing-wrap .section-04 .section-04-inner > form > input {
+    background: #f2f2f2;
+    border: none;
+    padding: 10px 0 10px 15px;
+    width: 97%;
+    display: block;
+
+    margin: 15px 0;
+}
+
+.landing-wrap .section-04 .section-04-inner > .section-04-btn-submit {
+ background: #2f77d8;
+    color: #fff;
+    font-size: 28px;
+    font-weight: 500;
+    border: none;
+    padding: 10px 25px;
+    width: 100%;
+    margin-top: 20px;
+}
+
 @media (min-width: 768px) {
     .mySwiper{
         margin-top: 25%;
@@ -53,7 +98,26 @@ img { max-width: 100%; height: auto; }
         margin-top: 25%;
         margin-bottom: 5%;
         width: 50%;
-        height: 60px;
+        height: 80px;
+
+
+        font-size: 0.75em;
+    }
+
+    .mySwiper .swiper-slide {
+
+        height: 20px !important;
+    }
+
+    .landing-wrap .link_a > a > img {
+
+        height: 40px;
+    }
+
+    .landing-wrap .section-04 {
+        background: url("../image/ccl)main_04.png") no-repeat center;
+        background-size: cover;
+        height: 583px;
     }
 }
 
