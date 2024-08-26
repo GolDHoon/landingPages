@@ -115,9 +115,9 @@
                     <input type="text" placeholder="연락처를 입력하세요.">
                 </form >
                 <form>
-                    <a href="" class="modallayer-popup" target="_blank">
+                    <a>
                     <input type="checkbox" >
-                    개인정보처리방침에 동의합니다.[보기]
+                            <span class="agreeText">&nbsp;개인정보 수집 및 이용에 동의합니다. <span id="agreeView" class="agreeText" onclick="modalOpen(event)">[보기]</span></span>
                     </a>
                 </form >
                 <button class="section-04-btn-submit">
@@ -129,6 +129,26 @@
         </div>
         <!--    lading-wrap  END -->
     </body>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="modalClose(event)">&times;</span>
+            <br>
+            <h3>개인정보취급방침</h3>
+            <br>
+            <p>1. 개인정보 수집 및 이용 목적</p>
+            <p>
+                전화,SMS를 통한 상담 및 안내</p>
+            <br>
+            <p>2. 수집하는 개인정보 항목</p>
+            <p>
+                이름, 연락처</p>
+            <br>
+            <p>3. 보유 및 이용기간</p>
+            <p>
+                수집이용 동의일로부터 수집이용 목적을 달성할 때까지</p>
+            <br>
+        </div>
 
     <script>
         const swiper = new Swiper('.mySwiper', {
@@ -142,6 +162,24 @@
                 disableOnInteraction: true, // 상호작용 후에도 autoplay 유지
             },
         });
+
+        const modal = document.querySelector("#myModal");
+
+        function modalOpen (event) {
+            modal.style.display = "block";
+        }
+
+        function modalClose (event) {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if("agreeView" !== event.target.id){
+                modalClose(event);
+            }
+        }
+
+
     </script>
 
 
