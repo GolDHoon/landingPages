@@ -38,12 +38,12 @@
                       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
         <div class="landing-wrap">
-            <div class="lading-topper">
-                <img src="./image/topper.png" alt="지원금 신청 버튼" onclick="toInputForm()">
+            <div class="lading-topper ">
+                <img src="./image/topper.png" alt="지원금 신청 버튼" onclick="toInputForm()" class="img-cursor">
             </div>
 
-            <div class="link_a">
-                <img src="./image/icon.png" alt="지원금 신청 버튼" onclick="toInputForm()">
+            <div class="link_a ">
+                <img src="./image/icon.png" alt="지원금 신청 버튼" onclick="toInputForm()" class="img-cursor">
             </div>
         <section class="section-01">
             <div>
@@ -121,9 +121,9 @@
                 <form class="section-04-form">
                     <input id="name" type="text" placeholder="성함을 입력해주세요.">
                 </form >
-                <form style="display: flex">
-                    <input type="text" value="010" style="text-align: center" disabled>
-                    <input id="phone" type="text" placeholder="연락처를 입력하세요." onkeydown="phoneValidation(event)">
+                <form style="display: flex; justify-content: space-between;">
+                    <input type="text" value="010" style="flex:1" disabled>
+                    <input id="phone" type="text" style="flex:2" placeholder="연락처를 입력하세요." onkeydown="phoneValidation(event)">
                 </form >
                 <form>
                     <a>
@@ -134,8 +134,14 @@
                 <button class="section-04-btn-submit" onclick="dbInput()" >
                     상담신청
                 </button>
+
             </div>
                 <!-- section04 inner-->
+
+            <div class="section-04-banner">
+                <img src="./image/ccl-section4-02.png" alt="">
+            </div>
+
         </section>
         </div>
         <!--    lading-wrap  END -->
