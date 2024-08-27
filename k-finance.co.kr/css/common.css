@@ -142,11 +142,11 @@ form {
 }
 
 form input{
-    font-size: clamp(0.6rem, 3vw, 3rem);
+    font-size: clamp(1.2rem, 3vw, 3rem);
 }
 
 .agreeText{
-    font-size: clamp(0.4rem, 2vw, 3rem);
+    font-size: clamp(0.6rem, 2vw, 3rem);
     white-space: nowrap;
 }
 
@@ -237,7 +237,7 @@ form input{
 
     .landing-wrap .section-04 .section-04-inner{
         width: 100%;
-        max-width: 50%;
+        max-width: 80%;
         background-color: #fff;
         padding: 3%;
     }
