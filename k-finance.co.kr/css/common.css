@@ -1,16 +1,11 @@
 *{ margin: 0; padding: 0; vertical-align: top; }
-
+a { text-decoration: none; }
+button{ cursor: pointer; }
 img { max-width: 100%; height: auto; }
-a {
-    text-decoration: none;
-}
-.mo-content {
-    display: none;
-}
+.mo-content { display: none; }
 
-button{
-    cursor: pointer;
-}
+
+/**/
 
 .landing-wrap .lading-topper {
     position: fixed;
@@ -226,7 +221,7 @@ form input{
 
     .landing-wrap .link_a > img {
 
-        height: 60px;
+        height: 95px;
     }
 
     .landing-wrap .section-04 {
@@ -292,33 +287,6 @@ form input{
 
 /*손철훈 개발자가 수정한 코드*/
 
-
-
-
-/*.landing-wrap .section-02 .mySwiper{*/
-/*    height: 100%;*/
-/*    overflow: hidden;*/
-
-/*    display: flex;*/
-/*    justify-content: center;*/
-
-/*}*/
-
-/*.landing-wrap .section-02 .mySwiper .swiper-wrap {*/
-
-/*    position: absolute;*/
-/*    left: 50%; right: 50%;*/
-/*    top: 70%;*/
-
-/*    transform: translate(-50%,-50%);*/
-
-/*    background-color: #fff;*/
-/*    width: 50%;*/
-/*    height: 50%;*/
-/*    overflow: hidden;*/
-/*    padding: 20px;*/
-/*    text-align: center;*/
-/*}*/
 
 .landing-wrap .section-02 .mySwiper .swiper-wrap .swiper-slide {
     border-bottom: 1px solid #ccc;
