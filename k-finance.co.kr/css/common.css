@@ -82,7 +82,7 @@ img { max-width: 100%; height: auto; }
 }
 
 .landing-wrap .link_a img {
-    height: 80px;
+    height: 95px;
 }
 
 /*손철훈 개발자가 수정한 코드*/
@@ -221,7 +221,7 @@ form input{
 
     .landing-wrap .link_a > img {
 
-        height: 95px;
+        height: 75px;
     }
 
     .landing-wrap .section-04 {
