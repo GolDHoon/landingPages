@@ -199,7 +199,7 @@ form input{
 
 @media (max-width: 768px) {
 
-    .pc-content { display: none}
+    .pc-content { display: none ; }
     .mo-content {
         display: block;
     }
