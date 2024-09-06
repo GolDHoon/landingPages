@@ -1,6 +1,6 @@
 // 인풋폼 이동 함수
 function toInputForm (event) {
-    document.querySelector('.section-04').scrollIntoView({
+    document.querySelector('.section-07').scrollIntoView({
         behavior: 'smooth' // 스크롤을 부드럽게 이동하게 설정
     });
 }
