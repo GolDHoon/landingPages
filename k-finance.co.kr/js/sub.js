@@ -28,7 +28,7 @@ window.addEventListener("load", function() {
 
         swiperSlide.className = 'swiper-slide';
         swiperSlide.style.display = 'flex';
-        swiperSlide.style.alignItems = 'center';
+        // swiperSlide.style.alignItems = 'center';
         swiperSlide.style.justifyContent = 'space-around';
         swiperSlide.role = 'group'
         swiperSlide.ariaLabel = (i + 1).toString() + ' / 100'

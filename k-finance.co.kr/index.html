@@ -33,56 +33,52 @@
         })(window,document,'script','dataLayer','GTM-5NXMS9Q2');</script>
         <!-- End Google Tag Manager -->
     </head>
-    <body style="display: flex; justify-content: center">
+    <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5NXMS9Q2"
                       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!--     End Google Tag Manager (noscript) -->
         <div class="landing-wrap">
-            <div class="lading-topper pc-content">
-                <img src="./image/topper.png" alt="topper" onclick="toInputForm()" class="img-cursor">
-            </div>
-            <div class="lading-topper mo-content">
-                <img src="./image/topper_m.png" alt="topper" onclick="toInputForm()" class="img-cursor">
+            <div class="lading-topper">
+                <img src="./image/topper.png" alt="topper" onclick="toInputForm()" class="pc_contents cursor">
+                <img src="./image/topper_m.png" alt="topper" onclick="toInputForm()" class="mo_contents cursor">
             </div>
             <div class="link_a ">
-                <img src="./image/icon.png" alt="지원금 신청 버튼" onclick="toInputForm()" class="img-cursor">
+                <img class="floater cursor" src="./image/icon.png" alt="지원금 신청 버튼" onclick="toInputForm()">
             </div>
-
-            <section class="section-01">
-                <div class="pc-content">
-                    <img class="m-content-01" src="./image/contents_01_bg.png" alt="">
-                </div>
-                <div class="mo-content">
-                    <img class="m-content-01" src="./image/contents_01_m_bg.png" alt="">
-                </div>
-            </section>
-
-            <section class="section-02">
+            <div class="section section-01">
+                <img class="contact-01-01 floater" src="./image/contents_01_1.png" alt="">
+                <img class="contact-01-02" src="./image/contents_01_2.png" alt="">
+            </div>
+            <div class="section section-02">
+                <img class="contact-02-01" src="./image/contents_02_1.gif" alt="">
+                <img class="contact-02-02" src="./image/contents_02_2.png" alt="">
+            </div>
+            <div class="section section-03">
+                <img class="contact-03-01" src="./image/contents_03_1.gif" alt="">
+                <img class="contact-03-02" src="./image/contents_03_2.png" alt="">
+            </div>
+            <div class="section section-04">
+                <img class="contact-04-01" src="./image/contents_04_1.gif" alt="">
+                <img class="contact-04-02" src="./image/contents_04_2.png" alt="">
+            </div>
+            <div class="section section-05">
+                <img class="contact-05-01" src="./image/contents_05_1.png" alt="">
                 <div class="mySwiper_wrapper">
                     <div class="mySwiper">
                         <div class="swiper-wrapper swiper-wrap slide_custom_list">
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+            <div class="section section-06">
+                <img class="contact-06-01" src="./image/contents_06_1.gif" alt="">
+                <img class="contact-06-02" src="./image/contents_06_2.png" alt="">
+            </div>
 
-<!-- section2 END-->
-
-            <section class="section-03">
-                <div class="pc-content">
-                    <img src="./image/contents_03_bg.png" alt="">
-                </div>
-                <div class="mo-content">
-                    <img src="./image/contents_03_m_bg.png" alt="">
-                </div>
-            </section>
-
-            <section class="section-04">
-                <div style="display: flex; justify-content: center">
-                    <img class="section-04-banner-01" src="image/contents_04_item_01.png" alt="">
-                </div>
-                <div class="section-04-inner">
+            <div class="section section-07">
+                <img class="contact-07-01 pulse" src="./image/contents_07_1.png" alt="">
+                <div class="inputForm-wrapper">
                     <form style="display: flex; justify-content: space-between;">
                         <input id="name" type="text" placeholder="성함을 입력해주세요.">
                     </form >
@@ -92,17 +88,21 @@
                     </form >
                     <form style="display: flex; align-items: center">
                         <input id="agree" type="checkbox" checked style="min-width: 1vw;min-height: 1vw;width: 5%;"/>
-                        <span class="agreeText" >&nbsp;개인정보 수집 및 이용에 동의합니다. <span id="agreeView" class="agreeText" onclick="modalOpen(event)">[보기]</span></span>
+                        <span class="agreeText" >&nbsp;개인정보 수집 및 이용에 동의합니다. <span id="agreeView" class="agreeText cursor" onclick="modalOpen(event)">[보기]</span></span>
                     </form >
-                    <button class="section-04-btn-submit" onclick="dbInput()" >
-                        상담신청
-                    </button>
-
+                    <div style="display: flex; justify-content: center">
+                        <img class="dbInput-submit cursor" src="./image/contents_07_btn.png" alt="" onclick="dbInput()">
+                    </div>
                 </div>
-                <div style="display: flex; justify-content: center">
-                    <img class="section-04-banner-02" src="image/contents_04_item_02.png" alt="">
+                <img class="contact-07-02" src="./image/contents_07_2.png" alt="">
+            </div>
+            <footer>
+                <div>
+                    <div>상호명 : 더불리쉬 유한회사 | 대표자: 박은철</div>
+                    <div>사업자번호 : 340-81-02583 | TEL : 02-522-8818</div>
+                    <div>주소 : 서울특별시 강서구 방화대로33길 14-4, 2층(방화동)</div>
                 </div>
-            </section>
+            </footer>
         </div>
         <!--    lading-wrap  END -->
         <div id="myModal" class="modal">
