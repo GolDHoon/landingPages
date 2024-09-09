@@ -1,0 +1,93 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper{
+    max-width: 1920px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.topper_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1920px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.right_wrapper{
+    /*display: inline-block;*/
+    position: fixed;
+    right: 3%;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.inputFormWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    background-color: white;
+    padding: 4rem;
+    margin: 2rem;
+}
+
+.topper_img, .con_wrapper, .con_bg_img, .right_img, .input_content, .input_contents_wrapper, .input_content_label{
+    width: 100%;
+}
+
+.con_bg_img, .topper_img{
+    display: block;
+}
+
+.cursor_pointer{
+    cursor: pointer;
+}
+
+.require::before{
+    content: "*";
+    color: red;
+    margin: auto 4px;
+}
+
+.display_none{
+    display: none;
+}
+
+.bg_background{
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+.display_flex{
+    display: flex;
+}
+
+.flex-direction_column{
+    flex-direction: column;
+}
+
+.align-items_center{
+    align-items: center;
+}
+
+.justify-content_space-around{
+    justify-content: space-around;
+}
+
+.justify-content_center{
+    justify-content:center;
+}
