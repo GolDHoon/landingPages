@@ -107,7 +107,7 @@
         margin-bottom: 3%;
     }
 
-    .inputFormWrapper{
+    div.inputFormWrapper{
         padding: 2rem;
         margin: 1rem;
     }
@@ -175,7 +175,8 @@
         margin-bottom: 3%;
     }
 
-    .inputFormWrapper{
+    div.inputFormWrapper{
+        width: 90%;
         padding: 0.5rem;
         margin: 0.5rem;
     }
