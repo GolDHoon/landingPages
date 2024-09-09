@@ -10,10 +10,6 @@
         margin: 17% 0;
     }
 
-    .con02_wrapper{
-        background-size: contain;
-    }
-
     .con02_01{
         width: 50%;
         margin: 10% 0;
@@ -81,10 +77,6 @@
     .con01_01{
         width: 70%;
         margin: 10% 0;
-    }
-
-    .con02_wrapper{
-        background-size: contain;
     }
 
     .con02_01{
@@ -168,13 +160,9 @@
         margin: 8% 0;
     }
 
-    .con02_wrapper{
-        background-size: cover;
-    }
-
     .con02_01{
-        width: 70%;
-        margin: 3% 0;
+        width: 90%;
+        margin: 10% 0;
     }
 
     .con03_wrapper{
