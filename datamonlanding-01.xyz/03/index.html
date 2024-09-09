@@ -14,6 +14,7 @@
   <div class="wrapper">
     <div class="topper_wrapper cursor_pointer" onclick="goInputForm()">
       <img class="topper_img pc_contents" src="./resource/img/topper_pc.png" alt="topper, 상담문의 바로가기">
+      <img class="topper_img mo_contents" src="./resource/img/topper_mo.png" alt="topper, 상담문의 바로가기">
     </div>
     <div class="right_wrapper cursor_pointer" onclick="goInputForm()">
       <img class="right_img" src="./resource/img/right_button.png" alt="상담바로가기">
@@ -43,9 +44,9 @@
         <label for="phone2" class="input_content_label display_none"></label>
         <label for="phone3" class="input_content_label display_none"></label>
         <label for="company_name" class="input_content_label display_none"></label>
-        <label for="company_kind"></label>
-        <label for="company_sales"></label>
-        <label for="company_location"></label>
+        <label for="company_kind" class="input_content_label display_none"></label>
+        <label for="company_sales" class="input_content_label display_none"></label>
+        <label for="company_location" class="input_content_label display_none"></label>
         <!--label 영역 end-->
         <div class="inputGrid_01 inputGrid">
           <div class="input_contents_wrapper display_flex">
@@ -54,9 +55,9 @@
           </div>
           <div class="input_contents_wrapper display_flex">
             <span class="label_span require">연락처</span>
-            <input id="phone1" class="input_content phone" type="number" value="010" disabled/>
-            <input id="phone2" class="input_content phone" type="number" placeholder="4자리 숫자"/>
-            <input id="phone3" class="input_content phone" type="number" placeholder="4자리 숫자"/>
+            <input id="phone1" class="input_content phone number_controller_none" type="number" value="010" disabled/>
+            <input id="phone2" class="input_content phone number_controller_none" type="number" placeholder="4자리"/>
+            <input id="phone3" class="input_content phone number_controller_none" type="number" placeholder="4자리"/>
           </div>
         </div>
         <div class="inputGrid_02 inputGrid">
@@ -134,10 +135,13 @@
             </div>
           </div>
         </div>
-        <div class="inputGrid_04 inputGrid">
-            <label for="agree" class="display_flex align-items_center">
-              <input id="agree" type="checkbox" checked/><span class="agree_text">개인정보 수집 및 이용에 동의합니다. <span id="agree_view" class="cursor_pointer">[보기]</span></span>
-            </label>
+        <div class="inputGrid_05 inputGrid">
+          <div class="display_flex justify-content_center align-items_center">
+              <label for="agree" class="display_flex align-items_center" style="margin: auto 0; padding :0;">
+                <input id="agree" class="cursor_pointer" type="checkbox" checked/>
+              </label>
+              <span class="agree_text">개인정보 수집 및 이용에 동의합니다. <span id="agree_view" class="cursor_pointer">[보기]</span></span>
+          </div>
         </div>
         <img class="con06_02 cursor_pointer" src="resource/img/inputDbForm.png" alt="상담접수" onclick="goInputForm()">
       </div>

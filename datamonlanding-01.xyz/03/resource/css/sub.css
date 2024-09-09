@@ -50,6 +50,22 @@
         margin-bottom: 3%;
     }
 
+    .inputFormWrapper input, .inputFormWrapper select, .inputFormWrapper label{
+        font-size: clamp(0.4rem, 1.6vw, 1.8rem);
+    }
+
+    .label_span {
+        font-size: clamp(0.1rem, 1.5vw, 2rem);
+    }
+
+    .agree_text{
+        font-size: clamp(0.4rem, 2vw, 2.5rem);
+    }
+
+    #agree{
+        width: clamp(0.4rem, 2vw, 2.5rem);
+    }
+
     .con06_02{
         width: 50%;
     }
@@ -110,6 +126,29 @@
     div.inputFormWrapper{
         padding: 2rem;
         margin: 1rem;
+    }
+
+    div.inputGrid{
+        padding : 0;
+    }
+
+    div.inputFormWrapper input, div.inputFormWrapper select, div.inputFormWrapper label{
+        padding: 10px;
+        font-size: clamp(0.4rem, 1.6vw, 1.8rem);
+        margin: 5px 5px;
+        height: 2.2rem;
+    }
+
+    .label_span {
+        font-size: clamp(0.1rem, 1.5vw, 2rem);
+    }
+
+    .agree_text{
+        font-size: clamp(0.4rem, 2vw, 2.5rem);
+    }
+
+    #agree{
+        width: clamp(0.4rem, 2vw, 2.5rem);
     }
 
     .con06_02{
@@ -176,9 +215,8 @@
     }
 
     div.inputFormWrapper{
-        width: 90%;
-        padding: 0.5rem;
-        margin: 0.5rem;
+        padding: 2rem;
+        margin: 1rem;
     }
 
     div.inputGrid{
@@ -186,15 +224,37 @@
         padding : 0;
     }
 
-    div.inputGrid input, div.inputGrid label, div.inputGrid select{
-        padding: 3px;
+    div.inputFormWrapper input, div.inputFormWrapper select, div.inputFormWrapper label{
+        padding: 10px;
+        font-size: clamp(0.4rem, 2.4vw, 1.8rem);
         margin: 5px 5px;
-        height: 2.2rem;
+        height: 2.7rem;
+    }
+
+    span.label_span {
+        font-size: clamp(0.1rem, 2.2vw, 2.2rem);
+    }
+
+    span.agree_text{
+        font-size: clamp(0.4rem, 3vw, 3rem);
+    }
+
+    input#agree{
+        width: clamp(0.4rem, 3vw, 3rem);
+        height: clamp(0.4rem, 3vw, 3rem);
+    }
+
+    div.inputGrid_04{
+        flex-direction: row;
     }
 
     .con06_02{
         width: 90%;
     }
+}
+
+.right_wrapper{
+    max-width: 384px;
 }
 
 .con01_wrapper{
@@ -279,12 +339,4 @@ label.radio_label, label.counsel_type_label{
 
 #agree_view{
     font-weight: bold;
-}
-
-.inputFormWrapper input, .inputFormWrapper select, .inputFormWrapper label{
-    font-size: clamp(0.4rem, 1.8vw, 2rem);
-}
-
-.label_span {
-    font-size: clamp(0.1rem, 1.5vw, 2rem);
 }

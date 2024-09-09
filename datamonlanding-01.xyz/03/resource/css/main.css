@@ -67,6 +67,17 @@ body{
     display: none;
 }
 
+input[type='number'].number_controller_none::-webkit-outer-spin-button,
+input[type='number'].number_controller_none::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type='number'].number_controller_none {
+    -moz-appearance: textfield;
+}
+
 .bg_background{
     background-size: contain;
     background-position: top;
@@ -90,4 +101,24 @@ body{
 
 .justify-content_center{
     justify-content:center;
+}
+
+@media (max-width: 768px) {
+    .pc_contents{
+       display: none;
+    }
+
+    .mo_contents{
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    .pc_contents{
+        display: block;
+    }
+
+    .mo_contents{
+        display: none;
+    }
 }
