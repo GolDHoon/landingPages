@@ -6,6 +6,10 @@
     width: 100%;
 }
 
+.nav-wrapper{
+    background-color: unset;
+}
+
 .cursor_pointer{
     cursor: pointer;
 }
