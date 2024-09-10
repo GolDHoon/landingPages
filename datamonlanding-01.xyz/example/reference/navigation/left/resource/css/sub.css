@@ -1,0 +1,13 @@
+.sub-body{
+    width: 100%;
+    background-color: lightgray;
+}
+
+.contents-wrapper > img{
+    width: 100%;
+    height: auto;
+}
+
+#left_nav_fixed{
+    padding : 1rem;
+}

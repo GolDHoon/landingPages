@@ -4,7 +4,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>우측 네비게이션</title>
+  <title>좌측 네비게이션</title>
 
   <!--부트스트랩 start-->
   <link href="./../../../resource/bundle/bootstrap@5.3.3_dist_css_bootstrap.css" rel="stylesheet">
@@ -21,7 +21,7 @@
   <h1>기획시 주의사항</h1>
     <div style="margin-left: 2%">
       <p>
-        우측 네비게이션의 경우 탭이 많아질 경우 PC 버전에서는 컨텐츠의 제목을 두고 지금 어떤 정보를 보고 있는지 확인하는 컨텐츠 마커의 역할을 하기도 하며, 모바일에서는 pc 상단 네비게이션 대용으로 쓰기도 합니다. 모바일버전에서 가로 길이가 너무 길어지게 되면 메인 컨텐츠를 가리게 됩니다.
+        주로 대시보드 형태의 페이지 쓰입니다. 가로길이가 넓어지게 되면 메인 컨텐츠를 가리게됩니다.
       </p>
       <br/>
       <p>
@@ -38,9 +38,9 @@
 
 <div class="sub-body d-flex flex-column align-items-center">
   <div class="wrapper">
-    <div class="nav-wrapper position-fixed d-flex flex-row-reverse">
-      <nav id="right_nav_fixed" class="navbar bg-white">
-        <ul class="nav nav-pills right-basic flex-column" data-nav-type="right-basic" data-nav-active-type="active-class" data-nav_click_action="scroll">
+    <div class="nav-wrapper position-fixed d-flex flex-row">
+      <nav id="left_nav_fixed" class="navbar bg-white">
+        <ul class="nav nav-pills left-basic flex-column" data-nav-type="left-basic" data-nav-active-type="active-class" data-nav_click_action="scroll">
           <li class="nav-item cursor_pointer">
             <div class="nav-link active" onclick="">버튼 콘텐츠(활성화)</div>
           </li>
@@ -66,7 +66,7 @@
       </nav>
     </div>
 
-    <div class="contents-wrapper" data-bs-spy="scroll" data-bs-target="#right_nav_fixed">
+    <div class="contents-wrapper" data-bs-spy="scroll" data-bs-target="#left_nav_fixed">
       <div id="con01_wrapper" class="contents-wrapper border border-5 border-primary">
         <img src="../../../resource/img/all_ratio/image_23_1920x1200.png" alt="테스트용">
       </div>
