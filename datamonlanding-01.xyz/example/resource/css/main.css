@@ -1,0 +1,11 @@
+.wrapper, .nav-wrapper{
+    max-width: 1920px;
+}
+
+.wrapper, .nav-wrapper{
+    width: 100%;
+}
+
+.cursor_pointer{
+    cursor: pointer;
+}

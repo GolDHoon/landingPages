@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>상단 네비게이션</title>
+
+  <!--부트스트랩 start-->
+  <link href="./../../../resource/bundle/bootstrap@5.3.3_dist_css_bootstrap.css" rel="stylesheet">
+  <!--부트스트랩 end-->
+
+  <link rel="stylesheet" type="text/css" href="./../../../resource/css/main.css">
+  <link rel="stylesheet" type="text/css" href="./resource/css/sub.css">
+  <script src="./../../../resource/js/main.js" defer></script>
+</head>
+<body class="d-flex flex-column align-items-center">
+<div class="wrapper">
+  <div class="nav-wrapper position-fixed">
+    <ul class="nav nav-underline top-basic" data-nav-type="top-basic" data-nav-active-type="active-class" data-nav_click_action="scroll">
+      <li class="nav-item cursor_pointer">
+        <div class="nav-link active" onclick="">버튼 콘텐츠(활성화)</div>
+      </li>
+      <li class="nav-item cursor_pointer">
+        <div class="nav-link">버튼 콘텐츠 01(비활성화)</div>
+      </li>
+      <li class="nav-item cursor_pointer" data-nav-point="con01_wrapper" onclick="navOnclick(event)">
+        <div class="nav-link">1번 콘텐츠로 가기</div>
+      </li>
+      <li class="nav-item cursor_pointer" data-nav-point="con02_wrapper" onclick="navOnclick(event)">
+        <div class="nav-link">2번 콘텐츠로 가기</div>
+      </li>
+      <li class="nav-item cursor_pointer" data-nav-point="con03_wrapper" onclick="navOnclick(event)">
+        <div class="nav-link">3번 콘텐츠로 가기</div>
+      </li>
+      <li class="nav-item cursor_pointer" data-nav-point="con04_wrapper" onclick="navOnclick(event)">
+        <div class="nav-link">4번 콘텐츠로 가기</div>
+      </li>
+      <li class="nav-item cursor_pointer" data-nav-point="con05_wrapper" onclick="navOnclick(event)">
+        <div class="nav-link">5번 콘텐츠로 가기</div>
+      </li>
+    </ul>
+  </div>
+  <div id="con01_wrapper" class="contents-wrapper border border-5 border-primary">
+    <img src="../../../resource/img/all_ratio/image_23_1920x1200.png" alt="테스트용">
+  </div>
+  <div id="con02_wrapper" class="contents-wrapper border border-5 border-secondary">
+    <img src="../../../resource/img/all_ratio/image_23_1920x1200.png" alt="테스트용">
+  </div>
+  <div id="con03_wrapper" class="contents-wrapper border border-5 border-danger">
+    <img src="../../../resource/img/all_ratio/image_23_1920x1200.png" alt="테스트용">
+  </div>
+  <div id="con04_wrapper" class="contents-wrapper border border-5 border-warning">
+    <img src="../../../resource/img/all_ratio/image_23_1920x1200.png" alt="테스트용">
+  </div>
+  <div id="con05_wrapper" class="contents-wrapper border border-5 border-dark">
+    <img src="../../../resource/img/all_ratio/image_23_1920x1200.png" alt="테스트용">
+  </div>
+</div>
+<!--부트스트랩 start-->
+<script src="./../../../resource/bundle/bootstrap@5.3.3_dist_js_bootstrap.bundle.js"></script>
+<!--부트스트랩 end-->
+</body>
+</html>
