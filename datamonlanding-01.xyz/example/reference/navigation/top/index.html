@@ -17,44 +17,49 @@
 <body class="d-flex flex-column align-items-center">
 <div class="wrapper">
   <div class="nav-wrapper position-fixed">
-    <ul class="nav nav-underline top-basic" data-nav-type="top-basic" data-nav-active-type="active-class" data-nav_click_action="scroll">
-      <li class="nav-item cursor_pointer">
-        <div class="nav-link active" onclick="">버튼 콘텐츠(활성화)</div>
-      </li>
-      <li class="nav-item cursor_pointer">
-        <div class="nav-link">버튼 콘텐츠 01(비활성화)</div>
-      </li>
-      <li class="nav-item cursor_pointer" data-nav-point="con01_wrapper" onclick="navOnclick(event)">
-        <div class="nav-link">1번 콘텐츠로 가기</div>
-      </li>
-      <li class="nav-item cursor_pointer" data-nav-point="con02_wrapper" onclick="navOnclick(event)">
-        <div class="nav-link">2번 콘텐츠로 가기</div>
-      </li>
-      <li class="nav-item cursor_pointer" data-nav-point="con03_wrapper" onclick="navOnclick(event)">
-        <div class="nav-link">3번 콘텐츠로 가기</div>
-      </li>
-      <li class="nav-item cursor_pointer" data-nav-point="con04_wrapper" onclick="navOnclick(event)">
-        <div class="nav-link">4번 콘텐츠로 가기</div>
-      </li>
-      <li class="nav-item cursor_pointer" data-nav-point="con05_wrapper" onclick="navOnclick(event)">
-        <div class="nav-link">5번 콘텐츠로 가기</div>
-      </li>
-    </ul>
+    <nav id="top_nav_fixed" class="navbar">
+      <ul class="nav nav-underline top-basic" data-nav-type="top-basic" data-nav-active-type="active-class" data-nav_click_action="scroll">
+        <li class="nav-item cursor_pointer">
+          <div class="nav-link active" onclick="">버튼 콘텐츠(활성화)</div>
+        </li>
+        <li class="nav-item cursor_pointer">
+          <div class="nav-link">버튼 콘텐츠 01(비활성화)</div>
+        </li>
+        <li class="nav-item cursor_pointer" data-nav-point="con01_wrapper">
+          <a class="nav-link" href="#con01_wrapper">1번 콘텐츠로 가기</a>
+        </li>
+        <li class="nav-item cursor_pointer" data-nav-point="con02_wrapper">
+          <a class="nav-link" href="#con02_wrapper">2번 콘텐츠로 가기</a>
+        </li>
+        <li class="nav-item cursor_pointer" data-nav-point="con03_wrapper">
+          <a class="nav-link" href="#con03_wrapper">3번 콘텐츠로 가기</a>
+        </li>
+        <li class="nav-item cursor_pointer" data-nav-point="con04_wrapper">
+          <a class="nav-link" href="#con04_wrapper">4번 콘텐츠로 가기</a>
+        </li>
+        <li class="nav-item cursor_pointer" data-nav-point="con05_wrapper">
+          <a class="nav-link" href="#con05_wrapper">5번 콘텐츠로 가기</a>
+        </li>
+      </ul>
+    </nav>
   </div>
-  <div id="con01_wrapper" class="contents-wrapper border border-5 border-primary">
-    <img src="../../../resource/img/all_ratio/image_23_1920x1200.png" alt="테스트용">
-  </div>
-  <div id="con02_wrapper" class="contents-wrapper border border-5 border-secondary">
-    <img src="../../../resource/img/all_ratio/image_23_1920x1200.png" alt="테스트용">
-  </div>
-  <div id="con03_wrapper" class="contents-wrapper border border-5 border-danger">
-    <img src="../../../resource/img/all_ratio/image_23_1920x1200.png" alt="테스트용">
-  </div>
-  <div id="con04_wrapper" class="contents-wrapper border border-5 border-warning">
-    <img src="../../../resource/img/all_ratio/image_23_1920x1200.png" alt="테스트용">
-  </div>
-  <div id="con05_wrapper" class="contents-wrapper border border-5 border-dark">
-    <img src="../../../resource/img/all_ratio/image_23_1920x1200.png" alt="테스트용">
+
+  <div class="contents-wrapper" data-bs-spy="scroll" data-bs-target="#top_nav_fixed">
+    <div id="con01_wrapper" class="contents-wrapper border border-5 border-primary">
+      <img src="../../../resource/img/all_ratio/image_23_1920x1200.png" alt="테스트용">
+    </div>
+    <div id="con02_wrapper" class="contents-wrapper border border-5 border-secondary">
+      <img src="../../../resource/img/all_ratio/image_23_1920x1200.png" alt="테스트용">
+    </div>
+    <div id="con03_wrapper" class="contents-wrapper border border-5 border-danger">
+      <img src="../../../resource/img/all_ratio/image_23_1920x1200.png" alt="테스트용">
+    </div>
+    <div id="con04_wrapper" class="contents-wrapper border border-5 border-warning">
+      <img src="../../../resource/img/all_ratio/image_23_1920x1200.png" alt="테스트용">
+    </div>
+    <div id="con05_wrapper" class="contents-wrapper border border-5 border-dark">
+      <img src="../../../resource/img/all_ratio/image_23_1920x1200.png" alt="테스트용">
+    </div>
   </div>
 </div>
 <!--부트스트랩 start-->
