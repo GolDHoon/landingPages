@@ -5,6 +5,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Title</title>
+
+  <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
   <link rel="stylesheet" type="text/css" href="./resource/css/main.css">
   <link rel="stylesheet" type="text/css" href="./resource/css/sub.css">
   <script src="./resource/js/main.js" defer></script>
@@ -27,10 +31,35 @@
     </div>
     <div class="con03_wrapper con_wrapper bg_background display_flex flex-direction_column align-items_center">
       <img class="con03_01" src="./resource/img/con03_01.png" alt="한국중소기업연구소 강점">
-      <img class="con03_02 cursor_pointer" src="resource/img/inputDbForm.png" alt="상담바로가기" onclick="goInputForm()">
+      <img class="con03_02 cursor_pointer" src="./resource/img/inputDbForm.png" alt="상담바로가기" onclick="goInputForm()">
     </div>
     <div class="con04_wrapper con_wrapper bg_background display_flex flex-direction_column align-items_center">
-      <img class="con04_01" src="./resource/img/con04_01.png" alt="한국중소기업연구소 혜택">
+      <img class="con04_01 pc_contents" src="./resource/img/con04_01.png" alt="한국중소기업연구소 혜택">
+      <img class="con04_01 mo_contents" src="./resource/img/con04_01_mo.png" alt="한국중소기업연구소 혜택">
+      <div class="swiper_01_wrapper swiper_wrapper mo_contents">
+        <!-- Slider main container -->
+        <div class="swiper_01">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <img class="swiper-slide" src="./resource/img/con04_02_mo_01.png" alt="한국중소기업연구소 혜택1">
+            <img class="swiper-slide" src="./resource/img/con04_02_mo_02.png" alt="한국중소기업연구소 혜택2">
+            <img class="swiper-slide" src="./resource/img/con04_02_mo_03.png" alt="한국중소기업연구소 혜택3">
+            <img class="swiper-slide" src="./resource/img/con04_02_mo_04.png" alt="한국중소기업연구소 혜택4">
+            <img class="swiper-slide" src="./resource/img/con04_02_mo_05.png" alt="한국중소기업연구소 혜택5">
+            <img class="swiper-slide" src="./resource/img/con04_02_mo_06.png" alt="한국중소기업연구소 혜택6">
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+<!--          &lt;!&ndash; If we need navigation buttons &ndash;&gt;-->
+<!--          <div class="swiper-button-prev"></div>-->
+<!--          <div class="swiper-button-next"></div>-->
+
+<!--          &lt;!&ndash; If we need scrollbar &ndash;&gt;-->
+<!--          <div class="swiper-scrollbar"></div>-->
+        </div>
+      </div>
     </div>
     <div class="con05_wrapper con_wrapper bg_background display_flex flex-direction_column align-items_center">
       <img class="con05_01" src="./resource/img/con05_01.png" alt="한국중소기업연구소 이용 실제성공사례">
@@ -143,7 +172,7 @@
               <span class="agree_text">개인정보 수집 및 이용에 동의합니다. <span id="agree_view" class="cursor_pointer">[보기]</span></span>
           </div>
         </div>
-        <img class="con06_02 cursor_pointer" src="resource/img/inputDbForm.png" alt="상담접수" onclick="goInputForm()">
+        <img class="con06_02 cursor_pointer" src="./resource/img/inputDbForm.png" alt="상담접수" onclick="goInputForm()">
       </div>
     </div>
   </div>

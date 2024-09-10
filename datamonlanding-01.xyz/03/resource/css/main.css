@@ -103,6 +103,12 @@ input[type='number'].number_controller_none {
     justify-content:center;
 }
 
+.swiper_wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
 @media (max-width: 768px) {
     .pc_contents{
        display: none;

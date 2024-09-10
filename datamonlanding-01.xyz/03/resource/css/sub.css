@@ -182,7 +182,7 @@
 
     .con04_01{
         width: 90%;
-        margin: 16% 0;
+        margin: 7% 0;
     }
 
     .con05_01{
@@ -323,6 +323,22 @@ label.radio_label, label.counsel_type_label{
 .label_span, .counsel_type_label{
     white-space: nowrap;
     margin: auto;
+}
+
+.swiper_01 {
+    width: 96%;
+    min-width: 172px;
+    min-height: 200px;
+    max-width: 482px;
+    max-height: 561px;
+    padding : 2%;
+}
+
+.swiper-wrapper{
+    width: 100%;
+}
+
+.swiper-wrapper img{
 }
 
 #agree_view{
