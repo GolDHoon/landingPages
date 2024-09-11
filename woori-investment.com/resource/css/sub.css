@@ -87,16 +87,16 @@
     }
 
     .input_form_item > label{
-        font-size: clamp(1rem, 2.3vw, 10rem)
+        font-size: clamp(1rem, 2.3vw, 4.6rem)
     }
 
     .input_form_item input{
-        font-size: clamp(1rem, 1.8vw, 10rem);
+        font-size: clamp(1rem, 1.8vw, 3.6rem);
         border-radius: 13px;
     }
 
     .agree_wrapper{
-        font-size: clamp(0.5rem, 1vw, 10rem);
+        font-size: clamp(0.5rem, 1vw, 2rem);
     }
 
     #agree{
