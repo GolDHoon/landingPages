@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>백업</title>
+
+  <!--부트스트랩 start-->
+  <link href="./resource/bundle/bootstrap@5.3.3_dist_css_bootstrap.css" rel="stylesheet">
+  <!--부트스트랩 end-->
+
+  <!--스와이퍼 start-->
+  <link rel="stylesheet" href="resource/bundle/swiper@11_swiper-bundle.css"/>
+  <script src="resource/bundle/swiper@11_swiper-bundle.js"></script>
+  <!--스와이퍼 end-->
+
+  <link rel="stylesheet" type="text/css" href="./resource/css/main.css">
+  <link rel="stylesheet" type="text/css" href="./resource/css/sub.css">
+  <script src="./resource/js/main.js" defer></script>
+  <script src="./resource/js/sub.js" defer></script>
+</head>
+<body class="d-flex justify-content-center">
+<div class="wrapper d-flex flex-column align-items-center position-relative">
+  <div class="nav-wrapper p-0 position-sticky top-0 w-100 z-3">
+    <nav id="top_nav_fixed p-0 w-100" class="navbar w-100" style="padding: 0">
+      <ul class="nav w-100">
+        <li class="nav-item cursor_pointer w-100">
+          <a class="nav-link p-0 w-100" href="#con06_wrapper">
+            <img class="mo_con w-100" src="resource/img/mo/topper.gif" alt="상담신청 바로가기">
+            <img class="pc_con w-100" src="resource/img/pc/topper.gif" alt="상담신청 바로가기">
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="contents-wrapper d-flex flex-column align-items-center w-100" data-bs-spy="scroll" data-bs-target="#top_nav_fixed">
+    <div id="con01_wrapper" class="content-wrapper w-100 d-flex flex-column align-items-center">
+      <img class="mo_con w-100" src="resource/img/mo/con01.gif" alt="후킹이미지">
+      <img class="pc_con w-100" src="resource/img/pc/con01.gif" alt="후킹이미지">
+    </div>
+    <div id="con02_wrapper" class="content-wrapper">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide con02_01 con02_slide w-100 d-flex justify-content-center">
+            <img class="mo_con w-75 cursor_pointer" src="resource/img/common/con02_01_btn.png" alt="상담신청 바로가기" style="margin-top: 145%;margin-bottom: 12%;" onclick="goInputForm()">
+            <img class="pc_con w-50 cursor_pointer" src="resource/img/common/con02_01_btn.png" alt="상담신청 바로가기" style="margin-top: 71%;margin-bottom: 5%;" onclick="goInputForm()">
+          </div>
+          <div class="swiper-slide w-100">
+            <img class="mo_con con02_slide w-100" src="resource/img/mo/con02_02.gif" alt="혜택정보2">
+            <img class="pc_con con02_slide w-100" src="resource/img/pc/con02_02.gif" alt="혜택정보2">
+          </div>
+          <div class="swiper-slide w-100">
+            <img class="mo_con con02_slide w-100" src="resource/img/mo/con02_03.jpg" alt="혜택정보3">
+            <img class="pc_con con02_slide w-100" src="resource/img/pc/con02_03.jpg" alt="혜택정보3">
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+    <div id="con03_wrapper" class="content-wrapper">
+      <img class="mo_con w-100" src="resource/img/mo/con03.gif" alt="혜택정보3">
+      <img class="pc_con w-100" src="resource/img/pc/con03.gif" alt="혜택정보3">
+    </div>
+    <div id="con04_wrapper" class="content-wrapper">
+      <img class="mo_con w-100" src="resource/img/mo/con04.png" alt="후킹메시지">
+      <img class="pc_con w-100" src="resource/img/pc/con04.png" alt="후킹메시지">
+    </div>
+    <div id="con05_wrapper" class="content-wrapper">
+      <img class="mo_con w-100" src="resource/img/mo/con05.gif" alt="후기">
+      <img class="pc_con w-100" src="resource/img/pc/con05.gif" alt="후기">
+    </div>
+    <div id="con06_wrapper" class="content-wrapper d-flex flex-column align-items-center">
+      <img class="mo_con pt-5 cursor_pointer" src="resource/img/common/con06_01.gif" alt="상담신청 타이틀" style="width: 90%">
+      <img class="pc_con w-50 cursor_pointer" src="resource/img/common/con06_01.gif" alt="상담신청 타이틀" style="margin-top: 10%">
+
+      <div class="input_form_wrapper">
+        <div class="input_form_item d-flex flex-column align-items-start ps-4 pe-4 pt-4">
+          <label for="name">성함</label>
+          <input type="text" id="name" class="w-100 p-2" placeholder="성함을 입력해주세요.">
+        </div>
+        <div class="input_form_item d-flex flex-column align-items-start ps-4 pe-4 pt-3">
+          <label for="phone">연락처</label>
+          <label for="phone2"></label>
+          <label for="phone3"></label>
+          <div class="d-flex justify-content-between w-100">
+            <input type="number" id="phone" class="p-2" placeholder="010" style="width: 26%">
+            <input type="number" id="phone2" class="p-2" placeholder="1234" style="width: 32%">
+            <input type="number" id="phone3" class="p-2" placeholder="5678" style="width: 32%">
+          </div>
+        </div>
+        <div class="input_form_item d-flex flex-column align-items-start ps-4 pe-4 pt-3 pb-4">
+          <div class="agree_wrapper">
+            <label for="agree"></label><input type="checkbox" id="agree" checked>
+            <span class="agree_text">개인정보 수집 및 이용에 동의합니다. <span id="agree_modal_on" class="fw-bold cursor_pointer">[보기]</span></span>
+          </div>
+        </div>
+      </div>
+      <img class="mo_con p-5 cursor_pointer" src="resource/img/common/con06_btn.png" alt="상담신청버튼" style="width: 90%">
+      <img class="pc_con p-5 cursor_pointer w-50" src="resource/img/common/con06_btn.png" alt="상담신청버튼">
+    </div>
+  </div>
+  <div class="footer w-100 d-flex flex-column align-items-center p-5">
+    <p class="m-1">상호명 : 더블유우리투자  ㅣ  대표자 : 임애숙</p>
+    <p class="m-1">사업자번호: 399-81-01626</p>
+    <p class="m-1">주소 : 서울특별시 강남구 논현로 85길 59, 남곡빌딩 5층</p>
+  </div>
+</div>
+
+<div class="modal fade" id="policyModal" tabindex="-1" aria-labelledby="policyModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="policyModalLabel">개인정보처리방침</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>
+          1. 개인정보 수집 및 이용 목적<br>
+          전화,SMS를 통한 상담 및 안내<br><br>
+          2. 수집하는 개인정보 항목<br>
+          이름, 연락처<br><br>
+          3. 보유 및 이용기간<br>
+          수집이용 동의일로부터 수집이용 목적을 달성할 때까지
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--부트스트랩 start-->
+<script src="./resource/bundle/bootstrap@5.3.3_dist_js_bootstrap.bundle.js"></script>
+<!--부트스트랩 end-->
+</body>
+</html>
