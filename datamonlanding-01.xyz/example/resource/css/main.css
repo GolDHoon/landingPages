@@ -2,7 +2,7 @@
     max-width: 1920px;
 }
 
-.wrapper, .nav-wrapper{
+.wrapper, .contents-wrapper, .content-wrapper{
     width: 100%;
 }
 

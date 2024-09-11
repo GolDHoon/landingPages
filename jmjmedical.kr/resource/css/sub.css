@@ -1,0 +1,50 @@
+.content-wrapper > img, .content-wrapper > .input_form_wrapper {
+    max-width: 871.5px;
+    width: 100%;
+}
+
+#right_nav_fixed{
+    padding : 1rem;
+}
+
+.input_form_wrapper{
+    background-color: #000;
+    padding : 5rem 0
+}
+
+.input_form{
+    width: 90%;
+    padding: 5%;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.input_form_item_wrapper > input {
+    font-size: 1.5rem;
+    background: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    border-radius: 10px;
+    color: #000;
+    padding: 1rem;
+    margin: 10px 0;
+}
+
+.nav-link>img{
+    min-width: 85px;
+    max-width: 300px;
+}
+
+@media (max-width: 872px) {
+    .nav-wrapper {
+        width: 30%;
+    }
+}
+@media (max-width: 620px) {
+    .input_form_item_wrapper > input {
+        font-size: 1.1rem;
+    }
+    .agree-text{
+        font-size: 0.7rem;
+    }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>남성클리닉 전문의원</title>
+
+    <meta name="copyright" content="드리븐">
+    <meta name="subject" content="">
+    <meta name="title" content="남성클리닉 전문의원">
+    <meta name="description" content="빠른 회복과 고객만족을 책임지는 전문의원으로 안전 시술사례 5만명 돌파">
+    <meta name="keywords" content="">
+    <meta name="robots" content="index,follow">
+    <meta name="apple-mobile-web-app-title" content="남성클리닉 전문의원">
+    <meta name="application-name" content="">
+    <link rel="canonical" href="https://jmjmedical.kr/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="남성클리닉 전문의원">
+    <meta property="og:site_name" content="">
+    <meta property="og:url" content="https://jmjmedical.kr/">
+    <meta property="og:image" content="">
+    <meta property="og:image:width" content="">
+    <meta property="og:image:height" content="">
+    <meta property="og:description" content="빠른 회복과 고객만족을 책임지는 전문의원으로 안전 시술사례 5만명 돌파">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="남성클리닉 전문의원">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:image" content="">
+    <meta name="twitter:description" content="빠른 회복과 고객만족을 책임지는 전문의원으로 안전 시술사례 5만명 돌파">
+
+    <!--부트스트랩 start-->
+    <link href="./resource/bundle/bootstrap@5.3.3_dist_css_bootstrap.css" rel="stylesheet">
+    <!--부트스트랩 end-->
+
+    <link rel="stylesheet" type="text/css" href="./resource/css/main.css">
+    <link rel="stylesheet" type="text/css" href="./resource/css/sub.css">
+    <script src="./resource/js/main.js" defer></script>
+    <script src="./resource/js/sub.js" defer></script>
+</head>
+<body class="d-flex justify-content-center">
+    <div class="wrapper">
+        <div class="nav-wrapper position-fixed bottom-0 end-0">
+            <nav id="right_nav_fixed" class="navbar w-100">
+                <ul class="nav right-basic flex-column w-100">
+                    <li class="nav-item cursor_pointer w-100">
+                        <a class="nav-link w-100" href="#con04_wrapper">
+                            <img class="w-100" src="resource/img/fb.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="contents-wrapper" data-bs-spy="scroll" data-bs-target="#right_nav_fixed">
+            <div id="con01_wrapper" class="content-wrapper d-flex justify-content-center">
+                <img src="resource/img/img01.gif" alt="이미지1">
+            </div>
+            <div id="con02_wrapper" class="content-wrapper d-flex justify-content-center">
+                <img src="resource/img/img02.gif" alt="이미지2">
+            </div>
+            <div id="con03_wrapper" class="content-wrapper d-flex justify-content-center">
+                <img class="cursor_pointer" src="resource/img/img03.jpg" alt="이미지3" onclick="addressCopy('서울 서초구 강남대로 519 도충빌딩 4층')">
+            </div>
+            <div id="con04_wrapper" class="content-wrapper d-flex flex-column align-items-center">
+                <div class="input_form_wrapper d-flex flex-column align-items-center">
+                    <img class="w-100" src="resource/img/contact_t.png" alt="이미지 4">
+                    <div class="input_form bg-white d-flex flex-column align-items-center">
+                        <div class="input_form_item_wrapper w-100">
+                            <label class="d-none" for="name"></label>
+                            <input id="name" class="w-100" type="text" placeholder="성함을 입력하세요."/>
+                        </div>
+                        <div class="input_form_item_wrapper w-100">
+                            <label class="d-none" for="phone"></label>
+                            <input id="phone" class="w-100" type="number" placeholder="연락처를 입력하세요.">
+                        </div>
+                        <div class="input_form_item_wrapper d-flex justify-content-center align-items-center w-100">
+                            <label class="d-none" for="agree"></label>
+                            <input type="checkbox" id="agree" required="" checked="checked"/>
+                            <span class="agree-text">&nbsp;※ 개인정보처리방침에 동의합니다.<span id="modal-open" class="fw-bold cursor_pointer">[보기]</span></span>
+                        </div>
+                        <div class="input_form_item_wrapper d-flex justify-content-center w-100">
+                            <img class="w-100" src="resource/img/contact_bt.gif" alt="이미지 5">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="policyModal" tabindex="-1" aria-labelledby="policyModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="policyModalLabel">개인정보처리방침</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        1. 개인정보 수집 및 이용 목적<br>
+                        전화,SMS를 통한 상담 및 안내<br><br>
+                        2. 수집하는 개인정보 항목<br>
+                        이름, 연락처<br><br>
+                        3. 보유 및 이용기간<br>
+                        수집이용 동의일로부터 수집이용 목적을 달성할 때까지
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--부트스트랩 start-->
+<script src="./resource/bundle/bootstrap@5.3.3_dist_js_bootstrap.bundle.js"></script>
+<!--부트스트랩 end-->
+</body>
+</html>
