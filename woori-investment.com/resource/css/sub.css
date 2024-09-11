@@ -60,6 +60,10 @@
         width: clamp(0.5rem, 2vw, 10rem);
         height: clamp(0.5rem, 2vw, 10rem);
     }
+
+    .footer > p{
+        font-size: clamp(0.5rem, 1vw, 2rem);
+    }
 }
 
 @media (min-width: 768px) {
