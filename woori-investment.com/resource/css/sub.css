@@ -29,6 +29,10 @@
         display: block;
     }
 
+    .nav_right {
+        width: 30%;
+    }
+
     .con02_01{
         background-image: url("../img/mo/con02_01_bg.gif");
     }
@@ -73,6 +77,10 @@
 
     .pc_con{
         display: block;
+    }
+
+    .nav_right{
+        width: 200px;
     }
 
     .con02_01{

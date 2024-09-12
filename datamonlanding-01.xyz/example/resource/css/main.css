@@ -25,6 +25,16 @@
     -moz-appearance: textfield;
 }
 
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 1s ease-in;
+}
+
 @media (max-width: 768px) {
     .pc_con{
         display: none;

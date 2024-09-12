@@ -22,8 +22,9 @@
 </head>
 <body class="d-flex justify-content-center">
 <div class="wrapper d-flex flex-column align-items-center position-relative">
+  <!--상단 nav start-->
   <div class="nav-wrapper p-0 position-sticky top-0 w-100 z-3">
-    <nav id="top_nav_fixed p-0 w-100" class="navbar w-100" style="padding: 0">
+    <nav id="top_nav_fixed" class="navbar w-100 p-0" style="padding: 0">
       <ul class="nav w-100">
         <li class="nav-item cursor_pointer w-100">
           <a class="nav-link p-0 w-100" href="#con06_wrapper">
@@ -34,6 +35,21 @@
       </ul>
     </nav>
   </div>
+  <!--상단 nav end-->
+
+  <!--  우측 nav start-->
+  <div class="nav-wrapper p-0 nav_right position-fixed bottom-0 end-0">
+    <nav id="right_nav_fixed" class="navbar w-100 p-0">
+      <ul class="nav nav-pills right-basic flex-column w-100">
+        <li class="nav-item cursor_pointer w-100">
+          <a class="nav-link w-100" href="#con06_wrapper">
+            <img class="w-100" src="resource/img/common/go_input_form_btn.png" alt="상담신청 바로가기">
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!--  우측 nav end-->
 
   <div class="contents-wrapper d-flex flex-column align-items-center w-100" data-bs-spy="scroll" data-bs-target="#top_nav_fixed">
     <div id="con01_wrapper" class="content-wrapper w-100 d-flex flex-column align-items-center">
@@ -77,7 +93,7 @@
       <img class="mo_con pt-5 cursor_pointer" src="resource/img/common/con06_01.gif" alt="상담신청 타이틀" style="width: 90%">
       <img class="pc_con w-50 cursor_pointer" src="resource/img/common/con06_01.gif" alt="상담신청 타이틀" style="margin-top: 10%">
 
-      <div class="input_form_wrapper">
+      <div id="input_form_wrapper" class="input_form_wrapper">
         <div class="input_form_item d-flex flex-column align-items-start ps-4 pe-4 pt-4">
           <label for="name">성함</label>
           <input type="text" id="name" class="w-100 p-2" placeholder="성함을 입력해주세요.">
