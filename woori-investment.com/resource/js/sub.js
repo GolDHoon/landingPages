@@ -24,6 +24,96 @@ function goInputForm(){
     document.querySelector("#footer").scrollIntoView({ behavior: 'smooth' });
 }
 
+function onCLickDBInput(){
+    const agree = document.querySelector("#agree");
+    const name = document.querySelector("#name");
+    const phone2 = document.querySelector("#phone2");
+    const phone3 = document.querySelector("#phone3");
+
+    // if (!!window.blockedKeyword) {
+    //     var blockK = window.blockedKeyword.data;
+    //     var isBreak = false;
+    //
+    //     blockK.forEach(function (word) {
+    //         if (name.value.includes(word)) {
+    //             isBreak = true;
+    //             window.input_disable_message = '차단된 키워드가 사용되었습니다. 다시 입력해 주세요. (' + name.value + ')'
+    //             name.focus();
+    //         }
+    //     });
+    //
+    //     if (isBreak === true) {
+    //         return validationBreakerResult(true);
+    //     }
+    // }
+
+    if (name.value === '' || name.value === 'undefined') {
+        window.input_disable_message = '이름을 입력해주세요.'
+        name.focus();
+        return validationBreakerResult(true);
+    } else {
+        var cho_sung_result = /^[ㄱ-ㅎ]/.test(name.value);
+        if (!cho_sung_result) {
+            if (!/^[가-힣]{2,7}$/.test(name.value)) {
+                window.input_disable_message = '초성을 제외한 한글 2~7글자를 입력해주세요.'
+                name.focus();
+                return validationBreakerResult(true);
+            }
+        } else {
+            window.input_disable_message = '초성을 제거해주세요.'
+            name.focus();
+            return validationBreakerResult(true);
+        }
+    }
+
+    if (2000 > Number(phone2.value) || phone2.value.length !== 4) {
+        window.input_disable_message = '010을 제외한 휴대폰 번호를 정확히 입력해주세요.';
+        phone2.focus();
+        return validationBreakerResult(true);
+    }
+
+    if (phone3.value.length !== 4) {
+        window.input_disable_message = '010을 제외한 휴대폰 번호를 정확히 입력해주세요.';
+        phone3.focus();
+        return validationBreakerResult(true);
+    }
+
+    if (!agree.checked) {
+        window.input_disable_message = '개인정보처리방침에 동의해주세요.';
+        agree.focus();
+        return validationBreakerResult(true);
+    }
+
+    dbInput();
+}
+
+function validationBreakerResult(bool){
+    if(bool){
+        window.input_allow = false;
+        dbInput();
+        return false;
+    }else{
+        window.input_data = [
+            {"key": "성함", "value": name.value},
+            {"key": "번호", "value": "010"+phone2.value+phone3.value}
+        ]
+        window.input_allow = true;
+        dbInput();
+        return true;
+    }
+}
+
+function inputValidation(event){
+    if (
+        event.target.value.length >= 4 &&
+        event.key !== 'Backspace' && event.key !== 'Delete' &&
+        event.key !== 'ArrowUp' && event.key !== 'ArrowDown' &&
+        event.key !== 'ArrowLeft' && event.key !== 'ArrowRight'
+    ) {
+        event.preventDefault();
+    }
+}
+
 document.getElementById('agree_modal_on').addEventListener('click', function() {
     var myModal = new bootstrap.Modal(document.getElementById('policyModal'));
     myModal.show();

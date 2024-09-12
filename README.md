@@ -27,10 +27,10 @@ server {
 
 server {
     listen 443 ssl;
-    server_name mansmedical.com www.mansmedical.com;
+    server_name {domain} www.{domain};
 
-    ssl_certificate  /etc/ssl/certs/mansmedical.com_crt.pem;
-    ssl_certificate_key  /etc/ssl/certs/mansmedical.com_key.pem;
+    ssl_certificate  /etc/ssl/certs/{domain}_crt.pem;
+    ssl_certificate_key  /etc/ssl/certs/{domain}_key.pem;
     ssl_session_timeout 5m;
 
     ssl_protocols   TLSv1.2;
@@ -38,7 +38,7 @@ server {
     ssl_prefer_server_ciphers on;
 
     location / {
-        root /www/mansmedical.com;
+        root /www/{domain};
         index index.html;
     }
 }
