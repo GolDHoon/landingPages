@@ -111,7 +111,8 @@ function inputValidation(event) {
         event.target.value.length >= 4 &&
         event.key !== 'Backspace' && event.key !== 'Delete' &&
         event.key !== 'ArrowUp' && event.key !== 'ArrowDown' &&
-        event.key !== 'ArrowLeft' && event.key !== 'ArrowRight'
+        event.key !== 'ArrowLeft' && event.key !== 'ArrowRight' &&
+        event.key !== 'Tab'
     ) {
         event.preventDefault();
     }
