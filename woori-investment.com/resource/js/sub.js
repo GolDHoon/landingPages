@@ -83,7 +83,7 @@ function onCLickDBInput() {
         return validationBreakerResult(true);
     }
 
-    dbInput();
+    validationBreakerResult(false);
 }
 
 function validationBreakerResult(bool) {
