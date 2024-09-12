@@ -30,22 +30,22 @@ function onCLickDBInput(){
     const phone2 = document.querySelector("#phone2");
     const phone3 = document.querySelector("#phone3");
 
-    // if (!!window.blockedKeyword) {
-    //     var blockK = window.blockedKeyword.data;
-    //     var isBreak = false;
-    //
-    //     blockK.forEach(function (word) {
-    //         if (name.value.includes(word)) {
-    //             isBreak = true;
-    //             window.input_disable_message = '차단된 키워드가 사용되었습니다. 다시 입력해 주세요. (' + name.value + ')'
-    //             name.focus();
-    //         }
-    //     });
-    //
-    //     if (isBreak === true) {
-    //         return validationBreakerResult(true);
-    //     }
-    // }
+    if (!!window.blockedKeyword) {
+        var blockK = window.blockedKeyword.data;
+        var isBreak = false;
+
+        blockK.forEach(function (word) {
+            if (name.value.includes(word)) {
+                isBreak = true;
+                window.input_disable_message = '차단된 키워드가 사용되었습니다. 다시 입력해 주세요. (' + name.value + ')'
+                name.focus();
+            }
+        });
+
+        if (isBreak === true) {
+            return validationBreakerResult(true);
+        }
+    }
 
     if (name.value === '' || name.value === 'undefined') {
         window.input_disable_message = '이름을 입력해주세요.'
