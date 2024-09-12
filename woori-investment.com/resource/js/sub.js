@@ -4,7 +4,7 @@ const swiper = new Swiper('.swiper', {
     loop: true,
     slidesPerView: 1,
     autoplay: {
-        delay: 1500,
+        delay: 2000,
         disableOnInteraction: true,
     },
     // If we need pagination
@@ -21,7 +21,7 @@ const swiper = new Swiper('.swiper', {
 });
 
 function goInputForm(){
-    document.querySelector("#con06_wrapper").scrollIntoView({ behavior: 'smooth' });
+    document.querySelector("#footer").scrollIntoView({ behavior: 'smooth' });
 }
 
 document.getElementById('agree_modal_on').addEventListener('click', function() {

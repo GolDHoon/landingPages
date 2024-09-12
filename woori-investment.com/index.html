@@ -27,7 +27,7 @@
     <nav id="top_nav_fixed" class="navbar w-100 p-0" style="padding: 0">
       <ul class="nav w-100">
         <li class="nav-item cursor_pointer w-100">
-          <a class="nav-link p-0 w-100" href="#con06_wrapper">
+          <a class="nav-link p-0 w-100" href="#footer">
             <img class="mo_con w-100" src="resource/img/mo/topper.gif" alt="상담신청 바로가기">
             <img class="pc_con w-100" src="resource/img/pc/topper.gif" alt="상담신청 바로가기">
           </a>
@@ -38,11 +38,11 @@
   <!--상단 nav end-->
 
   <!--  우측 nav start-->
-  <div class="nav-wrapper p-0 nav_right position-fixed bottom-0 end-0">
+  <div class="nav-wrapper p-0 nav_right position-fixed bottom-0 end-0  z-3">
     <nav id="right_nav_fixed" class="navbar w-100 p-0">
       <ul class="nav nav-pills right-basic flex-column w-100">
         <li class="nav-item cursor_pointer w-100">
-          <a class="nav-link w-100" href="#con06_wrapper">
+          <a class="nav-link w-100" href="#footer">
             <img class="w-100" src="resource/img/common/go_input_form_btn.png" alt="상담신청 바로가기">
           </a>
         </li>
@@ -51,7 +51,7 @@
   </div>
   <!--  우측 nav end-->
 
-  <div class="contents-wrapper d-flex flex-column align-items-center w-100" data-bs-spy="scroll" data-bs-target="#top_nav_fixed">
+  <div class="contents-wrapper d-flex flex-column align-items-center w-100">
     <div id="con01_wrapper" class="content-wrapper w-100 d-flex flex-column align-items-center">
       <img class="mo_con w-100" src="resource/img/mo/con01.gif" alt="후킹이미지">
       <img class="pc_con w-100" src="resource/img/pc/con01.gif" alt="후킹이미지">
@@ -90,8 +90,8 @@
       <img class="pc_con w-100" src="resource/img/pc/con05.gif" alt="후기">
     </div>
     <div id="con06_wrapper" class="content-wrapper d-flex flex-column align-items-center">
-      <img class="mo_con pt-5 cursor_pointer" src="resource/img/common/con06_01.gif" alt="상담신청 타이틀" style="width: 90%">
-      <img class="pc_con w-50 cursor_pointer" src="resource/img/common/con06_01.gif" alt="상담신청 타이틀" style="margin-top: 10%">
+      <img class="mo_con pt-5 cursor_pointer" src="resource/img/common/con06_01.png" alt="상담신청 타이틀" style="width: 90%">
+      <img class="pc_con w-50 cursor_pointer" src="resource/img/common/con06_01.png" alt="상담신청 타이틀" style="margin-top: 10%">
 
       <div id="input_form_wrapper" class="input_form_wrapper">
         <div class="input_form_item d-flex flex-column align-items-start ps-4 pe-4 pt-4">
@@ -119,7 +119,7 @@
       <img class="pc_con p-5 cursor_pointer w-50" src="resource/img/common/con06_btn.png" alt="상담신청버튼">
     </div>
   </div>
-  <div class="footer w-100 d-flex flex-column align-items-center p-5">
+  <div id="footer" class="footer w-100 d-flex flex-column align-items-center ps-5 pe-5 pt-1 pb-1" data-bs-target="#top_nav_fixed">
     <p class="m-1">상호명 : 더블유우리투자  ㅣ  대표자 : 임애숙</p>
     <p class="m-1">사업자번호: 399-81-01626</p>
     <p class="m-1">주소 : 서울특별시 강남구 논현로 85길 59, 남곡빌딩 5층</p>
