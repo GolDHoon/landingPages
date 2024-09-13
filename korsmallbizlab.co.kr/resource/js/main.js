@@ -69,11 +69,6 @@ document.addEventListener('DOMContentLoaded', function (){
     let checked_company_type = document.querySelector('input[name="company_type"]:checked');
     let checked_counsel_type = Array.from(document.querySelectorAll('.counsel_type[type="checkbox"]')).filter(checkbox => checkbox.checked);
 
-    document.querySelectorAll('.radio_label').forEach(node => {
-        if(node.getAttribute('for') === checked_company_type.id){
-            node.classList.add('checked');
-        }
-    })
 });
 window.onload = () => {
 
