@@ -46,13 +46,6 @@
         margin-bottom: 3%;
     }
 
-    .inputGrid_04_item{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 0 1rem;
-    }
-
     .inputFormWrapper input, .inputFormWrapper select, .inputFormWrapper label{
         font-size: clamp(0.4rem, 1.6vw, 1.8rem);
     }
@@ -122,27 +115,9 @@
         margin-bottom: 3%;
     }
 
-    .inputGrid_04_item{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 0 1rem;
-    }
-
     div.inputFormWrapper{
         padding: 2rem;
         margin: 1rem;
-    }
-
-    div.inputGrid{
-        padding : 0;
-    }
-
-    div.inputFormWrapper input, div.inputFormWrapper select, div.inputFormWrapper label{
-        padding: 10px;
-        font-size: clamp(0.4rem, 1.6vw, 1.8rem);
-        margin: 5px 5px;
-        height: 2.2rem;
     }
 
     .label_span {
@@ -216,30 +191,9 @@
         margin-bottom: 3%;
     }
 
-    .inputGrid_04_item{
-        display: flex;
-        justify-content: space-between;
-    }
-
     div.inputFormWrapper{
         padding: 2rem;
         margin: 1rem;
-    }
-
-    div.inputGrid{
-        flex-direction: column;
-        padding : 0;
-    }
-
-    div.inputFormWrapper input, div.inputFormWrapper select, div.inputFormWrapper label{
-        padding: 10px;
-        font-size: clamp(0.4rem, 2.4vw, 1.8rem);
-        margin: 5px 5px;
-        height: 2.7rem;
-    }
-
-    span.label_span {
-        font-size: clamp(0.1rem, 2.2vw, 2.2rem);
     }
 
     span.agree_text{
@@ -289,29 +243,23 @@
     background-image: url("../img/con06_bg.png");
 }
 
-.inputGrid{
-    width: 100%;
-    background-color: white;
-    display: flex;
-    justify-content: space-around;
+.input_contents_wrapper input, .input_contents_wrapper  label, .input_contents_wrapper  select{
     padding: 1rem;
-}
-
-.inputGrid input, .inputGrid label, .inputGrid select{
-    padding: 1rem;
-    margin: 0 0.5rem;
+    margin: 1rem 0.5rem;
     height: 4.2rem;
     box-sizing: border-box;
 }
 
 label.radio_label, label.counsel_type_label{
     display: flex;
-    border-radius: 2rem;
+    border-radius: 1.5rem;
     justify-content: center;
     align-items: center;
-    margin: 1rem 0;
+    margin: 0.5rem;
     border:1px solid black;
-    font-size: clamp(0.6rem, 1.8vw, 2rem) !important;
+    font-size: clamp(0.8rem, 1.8vw, 2rem) !important;
+    padding : 0 0.5rem !important;
+    height: 3.2rem !important;
 }
 
 .radio_label.checked, .counsel_type_label.checked{
@@ -348,7 +296,11 @@ label.radio_label, label.counsel_type_label{
 input.input_content, select.input_content{
     border-radius: 2rem;
     border: black 1px solid;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    font-size: clamp(0.8rem, 1.8vw, 2rem) !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: clamp(1rem, 1.8vw, 2rem) !important;
+}
+
+.counsel_type_label {
+    margin-top: 1rem;
 }

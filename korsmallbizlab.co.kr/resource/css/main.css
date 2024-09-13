@@ -91,6 +91,14 @@ input[type='number'].number_controller_none {
     flex-direction: column;
 }
 
+.flex-direction_row{
+    flex-direction: row;
+}
+
+.flex-wrap_wrap{
+    flex-wrap: wrap;
+}
+
 .align-items_center{
     align-items: center;
 }
@@ -101,6 +109,10 @@ input[type='number'].number_controller_none {
 
 .justify-content_center{
     justify-content:center;
+}
+
+.justify-content_space-between{
+    justify-content:space-between;
 }
 
 .swiper_wrapper {
