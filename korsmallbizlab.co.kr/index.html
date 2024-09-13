@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Title</title>
+
+  <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="./resource/css/main.css">
+  <link rel="stylesheet" type="text/css" href="./resource/css/sub.css">
+  <script src="./resource/js/main.js" defer></script>
+  <script src="./resource/js/sub.js" defer></script>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="topper_wrapper cursor_pointer" onclick="goInputForm()">
+      <img class="topper_img pc_contents" src="./resource/img/topper_pc.png" alt="topper, 상담문의 바로가기">
+      <img class="topper_img mo_contents" src="./resource/img/topper_mo.png" alt="topper, 상담문의 바로가기">
+    </div>
+    <div class="right_wrapper cursor_pointer" onclick="goInputForm()">
+      <img class="right_img" src="./resource/img/right_button.png" alt="상담바로가기">
+    </div>
+    <div class="con01_wrapper con_wrapper bg_background display_flex flex-direction_column align-items_center">
+      <img class="con01_01" src="./resource/img/con01_01.png" alt="한국중소기업연구소, 정책자금 전문가 보유, 고용지원금 전문가 보유">
+    </div>
+    <div id="input_form_contents_wrapper" class="con06_wrapper con_wrapper bg_background display_flex flex-direction_column align-items_center">
+      <img class="con06_01" src="./resource/img/con06_01.png" alt="한국중소기업연구소 이용 실제성공사례">
+      <div class="inputFormWrapper">
+        <!--label 영역 start-->
+        <label for="name" class="input_content_label display_none"></label>
+        <label for="phone1" class="input_content_label display_none"></label>
+        <label for="phone2" class="input_content_label display_none"></label>
+        <label for="phone3" class="input_content_label display_none"></label>
+        <label for="company_name" class="input_content_label display_none"></label>
+        <label for="company_kind" class="input_content_label display_none"></label>
+        <label for="company_sales" class="input_content_label display_none"></label>
+        <label for="company_location" class="input_content_label display_none"></label>
+        <!--label 영역 end-->
+        <div class="inputGrid_01 inputGrid">
+          <div class="input_contents_wrapper display_flex">
+            <span class="label_span require">성함</span>
+            <input id="name" class="input_content" type="text" placeholder="성함을 입력해주세요."/>
+          </div>
+          <div class="input_contents_wrapper display_flex">
+            <span class="label_span require">연락처</span>
+            <input id="phone1" class="input_content phone number_controller_none" type="number" value="010" disabled/>
+            <input id="phone2" class="input_content phone number_controller_none" type="number" placeholder="4자리"/>
+            <input id="phone3" class="input_content phone number_controller_none" type="number" placeholder="4자리"/>
+          </div>
+        </div>
+        <div class="inputGrid_02 inputGrid">
+          <div class="input_contents_wrapper display_flex">
+            <span class="label_span require">업체명</span>
+            <input id="company_name" class="input_content" type="text" placeholder="업체명을 입력해주세요.">
+          </div>
+          <div class="input_contents_wrapper display_flex">
+            <span class="label_span require">업체 소재지</span>
+            <select id="company_location" class="input_content cursor_pointer">
+              <option value="notSelected" selected disabled>업체 소재지를 선택해주세요.</option>
+              <option value="서울">서울</option>
+              <option value="경기도">경기도</option>
+              <option value="경상도">경상도</option>
+              <option value="전라도">전라도</option>
+              <option value="충청도">충청도</option>
+              <option value="강원도">강원도</option>
+            </select>
+          </div>
+        </div>
+        <div class="inputGrid_03 inputGrid">
+          <div class="input_contents_wrapper display_flex">
+            <span class="label_span require">업종</span>
+            <select id="company_kind" class="input_content cursor_pointer">
+              <option value="notSelected" selected disabled>업종을 선택해주세요.</option>
+              <option value="제조">제조</option>
+              <option value="도소매">도소매</option>
+              <option value="과학서비스">과학서비스</option>
+              <option value="응용소프트웨어(IT)">응용소프트웨어(IT)</option>
+              <option value="요식업">요식업</option>
+              <option value="기타">기타</option>
+            </select>
+          </div>
+          <div class="input_contents_wrapper display_flex">
+            <span class="label_span require">매출</span>
+            <select id="company_sales" class="input_content cursor_pointer">
+              <option value="notSelected" selected disabled>매출을 선택해주세요.</option>
+              <option value="1억 이상 ~ 5억 미만">1억 이상 ~ 5억 미만</option>
+              <option value="5억 이상 ~ 10억 미만">5억 이상 ~ 10억 미만</option>
+              <option value="10억 이상 ~ 20억 미만">10억 이상 ~ 20억 미만</option>
+              <option value="20억 이상 ~ 50억 미만">20억 이상 ~ 50억 미만</option>
+              <option value="50억 이상 ~ 100억 미만">50억 이상 ~ 100억 미만</option>
+              <option value="100억 이상">100억 이상</option>
+            </select>
+          </div>
+        </div>
+        <div class="inputGrid_04 inputGrid">
+          <div class="input_contents_wrapper display_flex">
+            <div class="display_flex flex-direction_column align-items_center" style="margin: auto;">
+              <span class="label_span require">사업구분</span>
+            </div>
+            <div class="inputGrid_04_item" style="width: 100%;">
+              <label for="company_type_a" class="input_content_label radio_label cursor_pointer" onclick="conversionCompanyType(event)">개인</label>
+              <input id="company_type_a" name="company_type" type="radio" value="개인사업자" class="input_content display_none"/>
+              <label for="company_type_b" class="input_content_label radio_label cursor_pointer" onclick="conversionCompanyType(event)">법인</label>
+              <input id="company_type_b" name="company_type" type="radio" value="법인사업자" class="input_content display_none"/>
+            </div>
+          </div>
+          <div class="input_contents_wrapper display_flex">
+            <div class="display_flex flex-direction_column align-items_center" style="margin: auto;">
+              <div>
+                <span class="label_span require">문의종류</span>
+              </div>
+              <div>
+                <span class="label_span">(복수선택가능)</span>
+              </div>
+            </div>
+            <div class="inputGrid_04_item" style="width: 100%;">
+              <input id="employment_support_fund" class="input_content counsel_type display_none" type="checkbox" value="고용지원금"/>
+              <label for="employment_support_fund" class="display_flex align-items_center counsel_type_label cursor_pointer" onclick="conversionCounselType(event)">고용지원금</label>
+              <input id="policy_funds" class="input_content counsel_type display_none" type="checkbox" value="정책자금"/>
+              <label for="policy_funds" class="display_flex align-items_center counsel_type_label cursor_pointer" onclick="conversionCounselType(event)">정책자금</label>
+              <input id="corporate_certification" class="input_content counsel_type display_none" type="checkbox" value="기업인증"/>
+              <label for="corporate_certification" class="display_flex align-items_center counsel_type_label cursor_pointer" onclick="conversionCounselType(event)">기업인증</label>
+            </div>
+          </div>
+        </div>
+        <div class="inputGrid_05 inputGrid">
+          <div class="display_flex justify-content_center align-items_center">
+            <label for="agree" class="display_flex align-items_center" style="margin: auto 0; padding :0;">
+              <input id="agree" class="cursor_pointer" type="checkbox" checked/>
+            </label>
+            <span class="agree_text">개인정보 수집 및 이용에 동의합니다. <span id="agree_view" class="cursor_pointer">[보기]</span></span>
+          </div>
+        </div>
+        <img class="con06_02 cursor_pointer" src="./resource/img/inputDbForm.png" alt="상담접수" onclick="goInputForm()">
+      </div>
+    </div>
+    <div class="con02_wrapper con_wrapper bg_background display_flex flex-direction_column align-items_center">
+      <img class="con02_01" src="./resource/img/con02_01.png" alt="대표님 사업장에 맞춰, 받을 수 있는 정책자금 추천!">
+    </div>
+    <div class="con03_wrapper con_wrapper bg_background display_flex flex-direction_column align-items_center">
+      <img class="con03_01" src="./resource/img/con03_01.png" alt="한국중소기업연구소 강점">
+      <img class="con03_02 cursor_pointer" src="./resource/img/inputDbForm.png" alt="상담바로가기" onclick="goInputForm()">
+    </div>
+    <div class="con04_wrapper con_wrapper bg_background display_flex flex-direction_column align-items_center">
+      <img class="con04_01" src="./resource/img/con04_01.png" alt="한국중소기업연구소 혜택">
+    </div>
+    <div class="con05_wrapper con_wrapper bg_background display_flex flex-direction_column align-items_center">
+      <img class="con05_01" src="./resource/img/con05_01.png" alt="한국중소기업연구소 이용 실제성공사례">
+    </div>
+  </div>
+</body>
+</html>

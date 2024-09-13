@@ -1,0 +1,358 @@
+/*pc버전*/
+@media (min-width: 1024px) {
+    .right_wrapper {
+        width: 20%;
+        bottom: 4%;
+    }
+
+    .con01_01{
+        width: 50%;
+        margin: 17% 0;
+    }
+
+    .con02_01{
+        width: 50%;
+        margin: 10% 0;
+    }
+
+    .con03_wrapper{
+        background-size: contain;
+    }
+
+    .con03_01{
+        margin-top: 10%;
+        width: 50%;
+    }
+
+    .con03_02{
+        margin-top: 3%;
+        margin-bottom: 10%;
+        width: 25%;
+    }
+
+    .con04_01{
+        width: 50%;
+        margin: 9% 0;
+    }
+
+    .con05_01{
+        width: 50%;
+        margin: 11% 0;
+    }
+
+    .con06_01{
+        width: 50%;
+        margin-top: 11%;
+        margin-bottom: 3%;
+    }
+
+    .inputGrid_04_item{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 1rem;
+    }
+
+    .inputFormWrapper input, .inputFormWrapper select, .inputFormWrapper label{
+        font-size: clamp(0.4rem, 1.6vw, 1.8rem);
+    }
+
+    .label_span {
+        font-size: clamp(0.1rem, 1.5vw, 2rem);
+    }
+
+    .agree_text{
+        font-size: clamp(0.4rem, 2vw, 2.5rem);
+    }
+
+    #agree{
+        width: clamp(0.4rem, 2vw, 2.5rem);
+    }
+
+    .con06_02{
+        width: 50%;
+    }
+}
+
+/*테블릿 버전*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    .right_wrapper {
+        width: 30%;
+        bottom: 2%;
+    }
+
+    .con01_01{
+        width: 70%;
+        margin: 10% 0;
+    }
+
+    .con02_01{
+        width: 50%;
+        margin: 10% 0;
+    }
+
+    .con03_wrapper{
+        background-size: contain;
+    }
+
+    .con03_01{
+        margin-top: 10%;
+        width: 50%;
+    }
+
+    .con03_02{
+        margin-top: 3%;
+        margin-bottom: 9%;
+        width: 25%;
+    }
+
+    .con04_01{
+        width: 50%;
+        margin: 9% 0;
+    }
+
+    .con05_01{
+        width: 50%;
+        margin: 11% 0;
+    }
+
+    .con06_01{
+        width: 70%;
+        margin-top: 11%;
+        margin-bottom: 3%;
+    }
+
+    .inputGrid_04_item{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 1rem;
+    }
+
+    div.inputFormWrapper{
+        padding: 2rem;
+        margin: 1rem;
+    }
+
+    div.inputGrid{
+        padding : 0;
+    }
+
+    div.inputFormWrapper input, div.inputFormWrapper select, div.inputFormWrapper label{
+        padding: 10px;
+        font-size: clamp(0.4rem, 1.6vw, 1.8rem);
+        margin: 5px 5px;
+        height: 2.2rem;
+    }
+
+    .label_span {
+        font-size: clamp(0.1rem, 1.5vw, 2rem);
+    }
+
+    .agree_text{
+        font-size: clamp(0.4rem, 2vw, 2.5rem);
+    }
+
+    #agree{
+        width: clamp(0.4rem, 2vw, 2.5rem);
+    }
+
+    .con06_02{
+        width: 70%;
+    }
+}
+
+/*모바일버전*/
+@media (max-width: 768px) {
+    .right_wrapper {
+        width: 30%;
+        bottom: 0.5%;
+    }
+
+    .con01_01{
+        width: 90%;
+        margin: 20% 0;
+    }
+
+    .con02_01{
+        width: 90%;
+        margin: 10% 0;
+    }
+
+    .con03_wrapper{
+        background-size: cover;
+    }
+
+    .con03_01{
+        margin-top: 10%;
+        width: 90%;
+    }
+
+    .con03_02{
+        margin-top: 7%;
+        margin-bottom: 7%;
+        width: 50%;
+    }
+
+    .con04_01{
+        width: 90%;
+        margin: 7% 0;
+    }
+
+    .con05_01{
+        width: 80%;
+        margin: 11% 0;
+    }
+
+    .con06_01{
+        width: 70%;
+        margin-top: 11%;
+        margin-bottom: 3%;
+    }
+
+    .con06_01{
+        width: 70%;
+        margin-top: 11%;
+        margin-bottom: 3%;
+    }
+
+    .inputGrid_04_item{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    div.inputFormWrapper{
+        padding: 2rem;
+        margin: 1rem;
+    }
+
+    div.inputGrid{
+        flex-direction: column;
+        padding : 0;
+    }
+
+    div.inputFormWrapper input, div.inputFormWrapper select, div.inputFormWrapper label{
+        padding: 10px;
+        font-size: clamp(0.4rem, 2.4vw, 1.8rem);
+        margin: 5px 5px;
+        height: 2.7rem;
+    }
+
+    span.label_span {
+        font-size: clamp(0.1rem, 2.2vw, 2.2rem);
+    }
+
+    span.agree_text{
+        font-size: clamp(0.4rem, 3vw, 3rem);
+    }
+
+    input#agree{
+        width: clamp(0.4rem, 3vw, 3rem);
+        height: clamp(0.4rem, 3vw, 3rem);
+    }
+
+    .con06_02{
+        width: 90%;
+    }
+}
+
+.right_wrapper{
+    max-width: 384px;
+}
+
+.con01_wrapper{
+    background-size: cover;
+    background-image: url("../img/con01_bg.png");
+}
+
+.con02_wrapper{
+    background-size: cover;
+    background-image: url("../img/con02_bg.png");
+}
+
+.con03_wrapper{
+    background-image: url("../img/con03_bg.png");
+}
+
+.con04_wrapper{
+    background-size: cover;
+    background-image: url("../img/con04_bg.png");
+}
+
+.con05_wrapper{
+    background-size: cover;
+    background-image: url("../img/con05_bg.png");
+}
+
+.con06_wrapper{
+    background-size: cover;
+    background-image: url("../img/con06_bg.png");
+}
+
+.inputGrid{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.inputGrid input, .inputGrid label, .inputGrid select{
+    padding: 1rem;
+    margin: 0 0.5rem;
+    height: 4.2rem;
+    box-sizing: border-box;
+}
+
+label.radio_label, label.counsel_type_label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+    /*border: 1px solid #004a9f;*/
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3),
+                -2px -2px 5px rgba(255, 255, 255, 0.5),
+                inset -1px -1px 1px rgba(255, 255, 255, 0.3),
+                inset 1px 1px 1px rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    margin: 1rem 0;
+    color: black;
+}
+
+.radio_label:active, .counsel_type_label:active{
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.5);
+    color: white;
+}
+
+.radio_label.checked, .counsel_type_label.checked{
+    background-color: #045aab;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.5);
+    color: white;
+}
+
+.label_span, .counsel_type_label{
+    white-space: nowrap;
+    margin: auto;
+}
+
+.swiper_01 {
+    width: 96%;
+    min-width: 172px;
+    min-height: 200px;
+    max-width: 482px;
+    max-height: 561px;
+    padding : 2%;
+}
+
+.swiper-wrapper{
+    width: 100%;
+}
+
+.swiper-wrapper img{
+}
+
+#agree_view{
+    font-weight: bold;
+}
