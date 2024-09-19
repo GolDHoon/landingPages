@@ -74,8 +74,7 @@ function validationBreakerResult(bool) {
             { "key": "연락처", "value": phone.value }
         ];
         window.input_allow = true;
-        alert('발리데이션 통과')
-        // dbInput();
+        dbInput();
         return true;
     }
 }
