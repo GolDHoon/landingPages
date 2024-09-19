@@ -32,8 +32,12 @@ function addressCopy(text){
     }
 }
 
-function dbInput () {
-    submit(window.input.data).then(r => {});
+function dbInput() {
+    if (window.input_allow) {
+        submit(window.input_data).then(r => {});
+    } else {
+        alert(window.input_disable_message);
+    }
 }
 
 async function submit(formData) {
