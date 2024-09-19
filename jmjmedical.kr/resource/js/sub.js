@@ -9,22 +9,22 @@ function onCLickDBInput() {
     const name = document.querySelector("#name");
     const phone = document.querySelector("#phone");
 
-    if (!!window.blockedKeyword) {
-        const blockK = window.blockedKeyword.data;
-        let isBreak = false;
-
-        blockK.forEach(function (word) {
-            if (name.value.includes(word)) {
-                isBreak = true;
-                window.input_disable_message = '차단된 키워드가 사용되었습니다. 다시 입력해 주세요. (' + name.value + ')';
-                name.focus();
-            }
-        });
-
-        if (isBreak === true) {
-            return validationBreakerResult(true);
-        }
-    }
+    // if (!!window.blockedKeyword) {
+    //     const blockK = window.blockedKeyword.data;
+    //     let isBreak = false;
+    //
+    //     blockK.forEach(function (word) {
+    //         if (name.value.includes(word)) {
+    //             isBreak = true;
+    //             window.input_disable_message = '차단된 키워드가 사용되었습니다. 다시 입력해 주세요. (' + name.value + ')';
+    //             name.focus();
+    //         }
+    //     });
+    //
+    //     if (isBreak === true) {
+    //         return validationBreakerResult(true);
+    //     }
+    // }
 
     if (name.value === '' || name.value === 'undefined') {
         window.input_disable_message = '이름을 입력해주세요.';
@@ -75,6 +75,7 @@ function validationBreakerResult(bool) {
         ];
         window.input_allow = true;
         dbInput();
+        location.reload(true);
         return true;
     }
 }
