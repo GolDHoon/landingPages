@@ -75,7 +75,6 @@ function validationBreakerResult(bool) {
         ];
         window.input_allow = true;
         dbInput();
-        location.reload(true);
         return true;
     }
 }
