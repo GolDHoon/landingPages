@@ -1,3 +1,28 @@
+window.input = {};
+window.input.data = [];
+
+function dbInput() {
+    if (window.input_allow) {
+        submit(window.input_data).then(r => {});
+    } else {
+        alert(window.input_disable_message);
+    }
+}
+
+async function submit(formData) {
+    var variable = window.consultingResult = await window.inputCustData(formData),
+        getStatus = variable.status;
+
+    if (getStatus === 200) {
+        window.dataLayer.push({
+            event: "DB_input"
+        });
+        alert('상담신청이 완료되었습니다.');
+        location.reload(true);
+    } else if (getStatus === 403) alert('비정상적인 접근입니다. 다시 시도해 주세요.');
+    else if (getStatus === 500) alert('서버 내부 오류입니다. 다시 시도해 주세요.');
+}
+
 function goInputForm(){
     document.querySelector("#input_form_contents_wrapper").scrollIntoView({ behavior: 'smooth' });
 }
@@ -62,12 +87,6 @@ document.addEventListener('DOMContentLoaded', function (){
     window.addEventListener('scroll', hideSideButton);
     window.addEventListener('resize', hideSideButton);
     hideSideButton();
-
-    let name = document.querySelector("#name");
-    let phone = document.querySelectorAll(".phone");
-    let company_name = document.querySelector("#company_name");
-    let checked_company_type = document.querySelector('input[name="company_type"]:checked');
-    let checked_counsel_type = Array.from(document.querySelectorAll('.counsel_type[type="checkbox"]')).filter(checkbox => checkbox.checked);
 
 });
 window.onload = () => {

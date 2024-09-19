@@ -60,6 +60,7 @@
 
     #agree{
         width: clamp(0.4rem, 2vw, 2.5rem);
+        height: clamp(0.4rem, 2vw, 2.5rem);
     }
 
     .con06_02{
@@ -130,6 +131,7 @@
 
     #agree{
         width: clamp(0.4rem, 2vw, 2.5rem);
+        height: clamp(0.4rem, 2vw, 2.5rem);
     }
 
     .con06_02{
@@ -207,6 +209,14 @@
 
     .con06_02{
         width: 90%;
+    }
+
+    input.input_content, select.input_content{
+        border-radius: 1.5rem !important;
+        border: black 1px solid !important;
+        padding-left: 0.1rem !important;
+        padding-right: 0.1rem !important;
+        font-size: clamp(1rem, 1.8vw, 1.8rem) !important;
     }
 }
 
@@ -298,7 +308,7 @@ input.input_content, select.input_content{
     border: black 1px solid;
     padding-left: 1rem;
     padding-right: 1rem;
-    font-size: clamp(1rem, 1.8vw, 2rem) !important;
+    font-size: clamp(1rem, 1.8vw, 1.8rem) !important;
 }
 
 .counsel_type_label {

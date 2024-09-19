@@ -6,15 +6,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Title</title>
 
-  <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!--부트스트랩 start-->
+  <link href="./resource/bundle/bootstrap@5.3.3_dist_css_bootstrap.css" rel="stylesheet">
+  <!--부트스트랩 end-->
+
+  <script src="https://www.alisolution-devmanagement.xyz/js/landing-server-comunication/0.0.1/landing-server-comunication.min.js" defer crossorigin="anonymous"></script>
 
   <link rel="stylesheet" type="text/css" href="./resource/css/main.css">
   <link rel="stylesheet" type="text/css" href="./resource/css/sub.css">
   <script src="./resource/js/main.js" defer></script>
   <script src="./resource/js/sub.js" defer></script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NLDC57Z6');</script>
+  <!-- End Google Tag Manager -->
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NLDC57Z6"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
   <div class="wrapper">
     <div class="topper_wrapper cursor_pointer" onclick="goInputForm()">
       <img class="topper_img pc_contents" src="./resource/img/topper_pc.png" alt="topper, 상담문의 바로가기">
@@ -48,13 +64,13 @@
           <span class="label_span require">연락처</span>
           <div class="display_flex justify-content_space-between">
             <input id="phone1" class="input_content phone number_controller_none" type="number" value="010" disabled/>
-            <input id="phone2" class="input_content phone number_controller_none" type="number" placeholder="4자리"/>
-            <input id="phone3" class="input_content phone number_controller_none" type="number" placeholder="4자리"/>
+            <input id="phone2" class="input_content phone number_controller_none" min="2000" max="9999" type="number" placeholder="4자리" onkeydown="inputValidation(event)"/>
+            <input id="phone3" class="input_content phone number_controller_none" min="0" max="9999" type="number" placeholder="4자리" onkeydown="inputValidation(event)"/>
           </div>
         </div>
 
         <div class="input_contents_wrapper">
-          <span class="label_span require">업체명</span>
+          <span class="label_span require">상호명</span>
           <input id="company_name" class="input_content" type="text" placeholder="업체명을 입력해주세요.">
         </div>
 
@@ -63,11 +79,22 @@
           <select id="company_location" class="input_content cursor_pointer">
             <option value="notSelected" selected disabled>업체 소재지를 선택해주세요.</option>
             <option value="서울">서울</option>
-            <option value="경기도">경기도</option>
-            <option value="경상도">경상도</option>
-            <option value="전라도">전라도</option>
-            <option value="충청도">충청도</option>
-            <option value="강원도">강원도</option>
+            <option value="인천">인천</option>
+            <option value="경기">경기</option>
+            <option value="부산">부산</option>
+            <option value="대구">대구</option>
+            <option value="광주">광주</option>
+            <option value="대전">대전</option>
+            <option value="울산">울산</option>
+            <option value="세종">세종</option>
+            <option value="경북">경북</option>
+            <option value="경남">경남</option>
+            <option value="충북">충북</option>
+            <option value="충남">충남</option>
+            <option value="전북">전북</option>
+            <option value="전남">전남</option>
+            <option value="강원">강원</option>
+            <option value="제주">제주</option>
           </select>
         </div>
 
@@ -102,8 +129,8 @@
           <div class="inputGrid_04_item display_flex justify-content_space-between" style="width: 100%;">
             <label for="company_type_a" class="input_content_label radio_label cursor_pointer" onclick="conversionCompanyType(event)">개인</label>
             <input id="company_type_a" name="company_type" type="radio" value="개인사업자" class="input_content display_none"/>
-            <label for="company_type_b" class="input_content_label radio_label cursor_pointer" onclick="conversionCompanyType(event)">법인</label>
-            <input id="company_type_b" name="company_type" type="radio" value="법인사업자" class="input_content display_none"/>
+            <label for="company_type_b" class="input_content_label radio_label cursor_pointer checked" onclick="conversionCompanyType(event)">법인</label>
+            <input id="company_type_b" name="company_type" type="radio" value="법인사업자" checked class="input_content display_none"/>
           </div>
         </div>
 
@@ -127,7 +154,7 @@
             <span class="agree_text">개인정보 수집 및 이용에 동의합니다. <span id="agree_view" class="cursor_pointer">[보기]</span></span>
           </div>
         </div>
-        <img class="con06_02 cursor_pointer" src="./resource/img/inputDbForm.png" alt="상담접수" onclick="goInputForm()">
+        <img class="con06_02 cursor_pointer" src="./resource/img/inputDbForm.png" alt="상담접수" onclick="onCLickDBInput()">
       </div>
     </div>
     <div class="con02_wrapper con_wrapper bg_background display_flex flex-direction_column align-items_center">
@@ -144,5 +171,31 @@
       <img class="con05_01" src="./resource/img/con05_01.png" alt="한국중소기업연구소 이용 실제성공사례">
     </div>
   </div>
+  <div class="modal fade" id="policyModal" tabindex="-1" aria-labelledby="policyModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="policyModalLabel">개인정보처리방침</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>
+            1. 개인정보 수집 및 이용 목적<br>
+            전화,SMS를 통한 상담 및 안내<br><br>
+            2. 수집하는 개인정보 항목<br>
+            성함, 연락처<br><br>
+            3. 보유 및 이용기간<br>
+            수집이용 동의일로부터 수집이용 목적을 달성할 때까지
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--부트스트랩 start-->
+  <script src="./resource/bundle/bootstrap@5.3.3_dist_js_bootstrap.bundle.js"></script>
+  <!--부트스트랩 end-->
 </body>
 </html>
