@@ -50,6 +50,7 @@ async function submit(formData) {
             event: "DB_input"
         });
         alert('상담신청이 완료되었습니다.');
+        location.reload(true);
     } else if (getStatus === 403) alert('비정상적인 접근입니다. 다시 시도해 주세요.');
     else if (getStatus === 500) alert('서버 내부 오류입니다. 다시 시도해 주세요.');
 }
