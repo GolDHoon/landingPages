@@ -1,3 +1,19 @@
+const modal = document.querySelector("#myModal");
+
+function modalOpen (event) {
+    modal.style.display = "block";
+}
+
+function modalClose (event) {
+    modal.style.display = "none";
+}
+
+window.onclick = function (event) {
+    if("agreeView" !== event.target.id){
+        modalClose(event);
+    }
+}
+
 // 인풋폼 이동 함수
 function toInputForm (event) {
     document.querySelector('.section-07').scrollIntoView({
