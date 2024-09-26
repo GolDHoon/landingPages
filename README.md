@@ -21,6 +21,12 @@ server {
     server_name {domain} www.{domain};
 
     location / {
+        add_header 'Access-Control-Allow-Origin' '*';
+        add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
+        add_header 'Access-Control-Allow-Headers' 'Origin, Content-Type, Accept, Authorization';
+        if ($request_method = 'OPTIONS') {
+            return 204;
+        }
         return 301 https://$host$request_uri;
     }
 }
@@ -38,6 +44,12 @@ server {
     ssl_prefer_server_ciphers on;
 
     location / {
+        add_header 'Access-Control-Allow-Origin' '*';
+        add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
+        add_header 'Access-Control-Allow-Headers' 'Origin, Content-Type, Accept, Authorization';
+        if ($request_method = 'OPTIONS') {
+            return 204;
+        }
         root /www/{domain};
         index index.html;
     }
