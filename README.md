@@ -9,6 +9,9 @@ server {
     server_name {domain}  www.{domain};
 
     location / {
+        add_header 'Access-Control-Allow-Origin' '*';
+        add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
+        add_header 'Access-Control-Allow-Headers' 'Origin, Content-Type, Accept, Authorization';
         root /www/{domain};
         try_files $uri $uri/ /index.html;
     }
