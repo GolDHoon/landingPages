@@ -121,7 +121,6 @@ input#number_010 {
     padding: 3%;
     width: 100%;
     display: block;
-    margin: 15px 3px;
     font-size: clamp(1.2rem, 3vw, 3rem);
     font-weight: bold;
 }
@@ -181,15 +180,27 @@ footer {
 }
 
 @media (min-width: 768px) {
+    .side_button{
+        width: 100%;
+    }
+
     .mySwiper{
         margin-bottom: 5%;
         width: 50%;
         height: 400px;
         padding: 1%;
     }
+
+    .input_con{
+        margin: 15px 3px;
+    }
 }
 
 @media (max-width: 768px) {
+    .side_button{
+        width: 50%;
+    }
+
     .mySwiper{
         margin-bottom: 5%;
         width: 90%;
