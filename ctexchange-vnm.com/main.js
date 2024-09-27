@@ -17,7 +17,7 @@ async function submit(formData) {
         window.dataLayer.push({
             event: "DB_input"
         });
-        alert('상담신청이 완료되었습니다.');
+        alert('Ứng dụng Tư vấn đã hoàn tất.');
         location.reload(true);
     } else if (getStatus === 403) alert('비정상적인 접근입니다. 다시 시도해 주세요.');
     else if (getStatus === 500) alert('서버 내부 오류입니다. 다시 시도해 주세요.');
@@ -50,7 +50,7 @@ function onCLickDBInput() {
     }
     
     if (!agree.checked) {
-        window.input_disable_message = '개인정보처리방침에 동의해주세요.';
+        window.input_disable_message = 'Vui lòng đồng ý với Chính sách bảo mật';
         agree.focus();
         return validationBreakerResult(true);
     }

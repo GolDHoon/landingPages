@@ -443,4 +443,18 @@ footer p{
     height: 300px;
     background-size: 300px;
 }
+
+
+
+/* cont4 */
+.cont4 ul{
+    max-width: 500px;
+    width: 100%;
+align-items: center;
+justify-content: center;
+}
+.cont4 ul li{
+    width: 90%;
+    height: 300px;
+}
 }
