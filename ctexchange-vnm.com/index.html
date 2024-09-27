@@ -183,7 +183,8 @@
     </div>
 
     <script type="text/javascript">
-
+document.addEventListener('DOMContentLoaded', () => {
+    
 document.getElementById('openModal').addEventListener('click', function(event) {
     event.preventDefault();
 
@@ -198,6 +199,12 @@ document.querySelector('.modal_bg').addEventListener('click', function() {
 });
 
 
+document.querySelector('.float_btn').addEventListener('click', function(){
+    document.querySelector('.cont7').scrollIntoView({
+        behavior: 'smooth'
+    });
+})
+});
     </script>
 
 
