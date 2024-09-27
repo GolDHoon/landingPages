@@ -66,7 +66,7 @@ function validationBreakerResult(bool) {
         dbInput();
         return false;
     } else {
-        
+
         window.input_data = [
             { "key": "성함", "value": name.value },
             { "key": "번호", "value": phone.value }
@@ -74,17 +74,5 @@ function validationBreakerResult(bool) {
         window.input_allow = true;
         dbInput();
         return true;
-    }
-}
-
-function inputValidation(event) {
-    if (
-        event.target.value.length >= 4 &&
-        event.key !== 'Backspace' && event.key !== 'Delete' &&
-        event.key !== 'ArrowUp' && event.key !== 'ArrowDown' &&
-        event.key !== 'ArrowLeft' && event.key !== 'ArrowRight' &&
-        event.key !== 'Tab'
-    ) {
-        event.preventDefault();
     }
 }
