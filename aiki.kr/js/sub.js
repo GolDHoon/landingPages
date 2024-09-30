@@ -1,3 +1,26 @@
+const modal = document.querySelector("#myModal");
+
+function modalOpen (event) {
+    modal.style.display = "block";
+}
+
+function modalClose (event) {
+    modal.style.display = "none";
+}
+
+window.onclick = function (event) {
+    if("agreeView" !== event.target.id){
+        modalClose(event);
+    }
+}
+
+// 인풋폼 이동 함수
+function toInputForm (event) {
+    document.querySelector('.section-07').scrollIntoView({
+        behavior: 'smooth' // 스크롤을 부드럽게 이동하게 설정
+    });
+}
+
 // 전화번호 발리데이션
 function phoneValidation(event){
     if(event.target.value.length > 7){
@@ -8,12 +31,7 @@ function phoneValidation(event){
 }
 
 
-window.addEventListener("DOMContentLoaded", function() {
-    document.getElementById('agree_modal_on').addEventListener('click', function () {
-        const myModal = new bootstrap.Modal(document.getElementById('policyModal'));
-        myModal.show();
-    });
-
+window.addEventListener("load", function() {
     let ul = document.querySelector('.banner_ul');
 
     var currentDate = new Date();
@@ -65,7 +83,6 @@ window.addEventListener("DOMContentLoaded", function() {
         },
     });
 });
-
 //이름생성기
 function nameCreate() {
     var familyNames = ['김', '이', '박', '최', '정', '강', '조', '윤', '장', '임'];
@@ -78,7 +95,9 @@ function nameCreate() {
     return randomFamilyName + '*' + randomGivenName;
 }
 
+
 //전화번호 생성기
 function numberCreate() {
     return "010-" + Math.floor(2000 + Math.random() * 8000).toString() + "-****";
 }
+
