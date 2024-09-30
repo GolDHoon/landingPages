@@ -11,7 +11,7 @@
 }
 
 .footer{
-    padding-bottom: 156px !important;
+    padding-bottom: clamp(10.5vw, 10.5vw, 17vw) !important
 }
 
 .con02_01, #con06_wrapper{
@@ -70,8 +70,9 @@
     }
 
     .footer{
-        padding-bottom: 70px !important;
+        padding-bottom: 17vw !important;
     }
+    
 
     .footer > p{
         font-size: clamp(0.5rem, 1vw, 2rem);
