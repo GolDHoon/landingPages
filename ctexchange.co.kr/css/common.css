@@ -44,12 +44,12 @@ body{
 }
 
 .lading-topper {
-    display: flex;
-    justify-content: center;
-    position: fixed;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*position: fixed;*/
     width: 100%;
-    left: 0; top: 0;
-    z-index: 999;
+    /*left: 0; top: 0;*/
+    /*z-index: 999;*/
 }
 
 .lading-topper img{
@@ -174,9 +174,9 @@ footer{
         display: none;
     }
 
-    .section-01{
-        margin-top: 7%;
-    }
+    /*.section-01{*/
+    /*    margin-top: 7%;*/
+    /*}*/
     .contact-01-01{
         margin-top: 10%;
         width: 55%;
@@ -307,9 +307,9 @@ footer{
         display: none;
     }
 
-    .section-01{
-         margin-top: 12%;
-    }
+    /*.section-01{*/
+    /*     margin-top: 12%;*/
+    /*}*/
 
     .contact-01-01{
         margin-top: 10%;
