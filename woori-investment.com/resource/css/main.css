@@ -35,6 +35,7 @@
     transition: opacity 1s ease-in;
 }
 
+
 @media (max-width: 768px) {
     .pc_con{
         display: none;
@@ -54,3 +55,6 @@
         display: block;
     }
 }
+
+
+

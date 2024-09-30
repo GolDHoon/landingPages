@@ -10,6 +10,10 @@
     color: white;
 }
 
+.footer{
+    padding-bottom: 116px !important;
+}
+
 .con02_01, #con06_wrapper{
     background-size: cover;
     background-repeat: no-repeat;
@@ -63,6 +67,10 @@
     #agree{
         width: clamp(0.5rem, 2vw, 10rem);
         height: clamp(0.5rem, 2vw, 10rem);
+    }
+
+    .footer{
+        padding-bottom: 70px !important;
     }
 
     .footer > p{
