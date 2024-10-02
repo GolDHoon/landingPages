@@ -52,12 +52,6 @@ function consultingButton () {
         return false;
     }
 
-    // if (1020000000 > Number(phone.value) || phone.value.length !== 11) {
-    //     window.input_disable_message = '010을 제외한 휴대폰 번호를 정확히 입력해주세요.';
-    //     phone.focus();
-    //     return validationBreakerResult(true);
-    // }
-
     if(!isAgree){
         alert('개인정보처리방침에 동의해주세요.');
         document.querySelector('.wr_9').focus();
@@ -82,6 +76,7 @@ async function submit(formData) {
         });
         alert('상담신청이 완료되었습니다.');
         location.reload(true);
+        console.log("리로드되었습니다")
     } else if (getStatus === 403) alert('비정상적인 접근입니다. 다시 시도해 주세요.');
     else if (getStatus === 500) alert('서버 내부 오류입니다. 다시 시도해 주세요.');
 }
