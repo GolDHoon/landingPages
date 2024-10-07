@@ -322,11 +322,28 @@ margin: 0 auto;
     height: auto;
     background-color: black;
     padding: 40px 0;
+    gap:10px;
 }
 
 footer p{
-    line-height: 20px;
+    line-height: 18px;
     color:#fff;
+    text-align: center;
+}
+
+footer ul li {
+    color:#fff;
+    text-align: center;
+    line-height: 20px;
+}
+
+footer p.risk{
+    color: #666;
+    font-size: 14px;
+    line-height: 18px;
+    border-top: 1px solid #222;
+    padding-top: 20px;
+    margin-top: 20px;
 }
 
 
@@ -413,8 +430,20 @@ margin: 20px 0;
     aspect-ratio: 800 / 80;
 }
 footer p{
-    font-size: 13px;
+    font-size: 14px;
 }
+
+footer ul li {
+    font-size: 14px;
+    line-height: 18px;
+}
+
+
+footer p.risk{
+    font-size: 13px;
+    line-height: 17px;
+}
+
 }
 
 
