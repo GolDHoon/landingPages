@@ -368,8 +368,8 @@ footer p.risk{
     }
 /* cont1 */
 .cont1{
-    background-size: 768px 520px;
-    padding: calc(10vw + 50px) 10px 0;
+    background-size: 768px 360px;
+    padding: calc(5vw + 80px) 10px 0;
 }
 .cont1 h4{
     width: 90%;
@@ -485,6 +485,13 @@ justify-content: center;
 }
 
 @media screen and (max-width:400px) {
+
+    /* cont1 */
+.cont1{
+    background-size: 768px 280px;
+    padding: calc(5vw + 80px) 10px 0;
+}
+
     .cont2{
         height: 340px;
     }
