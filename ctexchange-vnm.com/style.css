@@ -228,7 +228,7 @@ padding: 16px 30px;
 .cont6 ul li{
     width: 100%;
     background-color: #3681f8;
-    padding: 20px 0;
+    padding: 20px 10px;
     border-radius: 8px;
     color: #fff;
     text-align: center;
@@ -332,7 +332,7 @@ footer{
 margin: 0 auto;
     height: auto;
     background-color: black;
-    padding: 40px 0;
+    padding: 40px 10px;
     gap:10px;
 }
 
@@ -368,14 +368,12 @@ footer p.risk{
     }
 /* cont1 */
 .cont1{
-    background-size: 768px 360px;
+    background-size: 768px calc(52vw + 100px);
     padding: calc(5vw + 80px) 10px 0;
 }
 .cont1 h4{
     width: 90%;
-    height: auto;
-    aspect-ratio: 520 / 120;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 .cont1 div p{
     font-size: 12px;
@@ -486,11 +484,6 @@ justify-content: center;
 
 @media screen and (max-width:400px) {
 
-    /* cont1 */
-.cont1{
-    background-size: 768px 280px;
-    padding: calc(5vw + 80px) 10px 0;
-}
 
     .cont2{
         height: 340px;
