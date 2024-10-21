@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>신뢰할 수 있는 거래소, CCL</title>
+    <meta name="title" property="og:title" content="신뢰할 수 있는 거래소, CCL">
+    <meta name="description" property="og:description" content="컬쳐캐피탈(블루밍)">
+    <meta name="url" property="og:url" content="https://ctexchange-blueming.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="신뢰할 수 있는 거래소, CCL">
+    <meta name="twitter:description" content="컬쳐캐피탈(블루밍)">
+    <meta name="twitter:site" content="https://ctexchange-blueming.com">
+    <meta name="apple-mobile-web-app-title" content="컬쳐캐피탈(블루밍)">
+    <meta name="application-name" content="컬쳐캐피탈(블루밍)">
+    <meta name="robots" content="index,follow">
+
+    <link rel="stylesheet" type="text/css" href="./resource/css/common.css">
+    <link rel="stylesheet" type="text/css" href="./resource/css/ctexchange-blueming.com.css">
+    <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="./resource/js/landing-server-comunication.js" defer></script>
+    <script src="./resource/js/common.js" type="text/javascript" defer></script>
+    <script src="resource/js/ctexchange-blueming.com.js" type="text/javascript" defer></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const swiper = new Swiper('.swiper', {
+          // Optional parameters
+          direction: 'vertical',
+          loop: true,
+          speed: 400,
+          slidesPerView: 5,
+          autoplay: {
+            delay: 1000, // 슬라이드가 자동으로 넘어가는 시간 간격 (ms)
+            disableOnInteraction: true, // 상호작용 후에도 autoplay 유지
+          },
+        });
+      });
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MGPJZ2W2');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FX4RH11XVZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-FX4RH11XVZ');
+    </script>
+  </head>
+  <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGPJZ2W2"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div class="contents-box">
+    <div id="space-top"></div>
+    <div class="topper">
+        <img id="top_img" class="sticky_t" src="./resource/image/top.png" alt="topper" onclick="topperOnClick()">
+    </div>
+    <div id="content01"></div>
+    <div id="m-content01"></div>
+    <div id="content02">
+      <div class="flex flex-direction_column align-items_center">
+        <div>
+          <img id="content02-01" src="./resource/image/content02-01.png" alt="DB 목록">
+        </div>
+        <div class="flex justify-content_center" style="width: 100%">
+          <div class="swiperWrapper">
+            <div class="swiper pc-swiper mo-swiper">
+              <div class="swiper-wrapper">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="content03">
+      <div class="contents03-wrapper flex justify-content_space-evenly">
+        <div class="contents03 m-content-03-b">
+          <iframe id="youtube" class="m_iframe" width="560" height="315"  src="https://www.youtube.com/embed/UidLkGBSoAY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="contents03 m-content-03-a">
+          <img id="content03-01"  class="m-content-03-01-image" src="./resource/image/content03-01.png" alt="정식거래소 인증">
+        </div>
+      </div>
+    </div>
+    <div id="content04">
+      <div class="content04-wrapper flex flex-direction_column align-items_center">
+        <div>
+          <img  id="content04-01" src="./resource/image/content04-01.png" alt="db 수집">
+        </div>
+        <div class="custDBForm flex flex-direction_column align-items_center">
+          <div class="flex justify-content_space-evenly">
+            <div class="flex flex-direction_column align-items_flex-start pc_label">
+              <div class="cust_info_label">이 름</div>
+              <div class="cust_info_label">연락처</div>
+            </div>
+            <div class="flex flex-direction_column align-items_flex-start">
+              <div class="cust_info_label mo_label">이 름</div>
+              <input id="name" class="cust_info_name_input" type="text" placeholder="성함을 입력해주세요">
+
+              <div class="cust_info_label mo_label">연락처</div>
+              <div class="cust_info_phone_inputs flex justify-content_space-between" style="width: 100%">
+                <input id="phone1" class="cust_info_phone_input" type="number" value="010" disabled>
+                <input id="phone2" class="cust_info_phone_input" type="number" placeholder="4자리숫자" min="2000" max="9999" onkeydown="phone2OnChange(event)">
+                <input id="phone3" class="cust_info_phone_input" type="number" placeholder="4자리숫자" min="0" max="9999" onkeydown="phone3OnChange(event)">
+              </div>
+            </div>
+          </div>
+          <div class="checkbox_wrapper flex justify-content_center">
+            <input type="checkbox" class="agreeCheckBox" checked>
+            <span class="agreeText">개인정보 수집 및 이용에 동의합니다.<span id="pop_view" onclick="modalView()">[보기]</span></span>
+          </div>
+          <img id="custDBForm_button" src="./resource/image/button.png" onclick="consultingButton()">
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="footer_contents flex flex-direction_column align-items_center">
+      <div>상호명 : 블루밍 | 대표자 : 남재현 | 사업자번호 : 629-36-01401</div>
+      <div>주소 : 경기도 고양시 덕양구 삼원로83, 1327호</div>
+      <div>Copyright &copy; 블루밍. All Rights Reserved.</div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" onclick="modalClose()">&times;</span>
+      <div class="modal-content-text">
+        <br>
+        <h3>개인정보취급방침</h3>
+        <br>
+        <p>1. 개인정보 수집 및 이용 목적</p>
+        <p>
+          전화,SMS를 통한 상담 및 안내</p>
+        <br>
+        <p>2. 수집하는 개인정보 항목</p>
+        <p>
+          이름, 연락처</p>
+        <br>
+        <p>3. 보유 및 이용기간</p>
+        <p>
+          수집이용 동의일로부터 수집이용 목적을<br>달성할 때까지</p>
+        <br>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
