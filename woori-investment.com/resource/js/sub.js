@@ -108,12 +108,13 @@ function validationBreakerResult(bool) {
             for(var i = 0; i < window.duplRmList.data.length; i++) {
                 for(var j = 0; j < window.duplRmList.data[i].row.length; j++) {
                     for(var k = 0; k < window.duplRmList.data[i].columns.length; k++) {
-                        for (var l = 0; l < window.input_data.length; l++) {
-                            if(window.input_data[window.duplRmList.data[i].columns[k]] === window.duplRmList.data[i].row[j][window.duplRmList.data[i].columns[k]]){
-                                checker = true;
+                        for(var l = 0; l < window.input_data.length; l++) {
+                            if(window.input_data[l].key === window.duplRmList.data[i].columns[k]){
+                                if(window.duplRmList.data[i].row[j][window.duplRmList.data[i].columns[k]] === window.input_data[l].value){
+                                    checker = true;
+                                }
                             }
                         }
-                        console.log(window.duplRmList.data[i].row[j][window.duplRmList.data[i].columns[k]]);
                     }
                 }
             }
