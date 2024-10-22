@@ -120,6 +120,7 @@ function validationBreakerResult(bool) {
         }catch (e){
         }finally {
             window.input_allow = true;
+            debugger;
             if(checker){
                 alert("이미 신청되었습니다.")
             }else{
