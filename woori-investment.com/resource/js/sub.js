@@ -101,8 +101,6 @@ function validationBreakerResult(bool) {
             { "key": "번호", "value": "010" + phone2.value + phone3.value }
         ];
 
-        window.duplChecker = false;
-
         try {
             for(var i = 0; i < window.duplRmList.data.length; i++) {
                 for(var j = 0; j < window.duplRmList.data[i].row.length; j++) {
