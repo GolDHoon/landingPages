@@ -96,10 +96,29 @@ function validationBreakerResult(bool) {
         const phone2 = document.querySelector("#phone2");
         const phone3 = document.querySelector("#phone3");
 
+
         window.input_data = [
             { "key": "성함", "value": name.value },
             { "key": "번호", "value": "010" + phone2.value + phone3.value }
         ];
+
+        try {
+            for(var i = 0; i < window.duplRmList.data; i++) {
+                for(var j = 0; j < window.duplRmList.data[i].row.length; j++) {
+                    var checker = false;
+                    for(var k = 0; k < window.duplRmList.data[i].columns.length; k++) {
+                        for (var l = 0; l < window.input_data.length; l++) {
+                            if(window.input_data[window.duplRmList.data[i].columns[k]] === window.duplRmList.data[i].row[j][window.duplRmList.data[i].columns[k]]){
+                                checker = true;
+                            }
+                        }
+                        console.log(window.duplRmList.data[i].row[j][window.duplRmList.data[i].columns[k]]);
+                    }
+                }
+            }
+        }catch (e){
+
+        }
         window.input_allow = true;
         dbInput();
         return true;
