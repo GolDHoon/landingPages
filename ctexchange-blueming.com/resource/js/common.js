@@ -1,4 +1,6 @@
-window.isAgree = 2
+window.isAgree = 2;
+window.duplChecker = false;
+
 function consultingButton () {
     let name = document.querySelector("#name").value;
     let phone = document.querySelector("#phone1").value + document.querySelector("#phone2").value + document.querySelector("#phone3").value;
@@ -84,8 +86,31 @@ function consultingButton () {
         {"key": "번호", "value": phone}
     ];
 
-    submit(formData).then(r => {});
-
+    try {
+        for(var i = 0; i < window.duplRmList.data.length; i++) {
+            for(var j = 0; j < window.duplRmList.data[i].row.length; j++) {
+                for(var k = 0; k < window.duplRmList.data[i].columns.length; k++) {
+                    for(var l = 0; l < window.input_data.length; l++) {
+                        if(formData[l].key === window.duplRmList.data[i].columns[k]){
+                            if(window.duplRmList.data[i].row[j][window.duplRmList.data[i].columns[k]] === formData[l].value){
+                                window.duplChecker = true;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }catch (e){
+    }finally {
+        window.input_allow = true;
+        if(window.duplChecker){
+            alert("이미 신청되었습니다.");
+            location.reload();
+        }else{
+            submit(formData).then(r => {});
+            window.duplChecker = true;
+        }
+    }
 }
 
 async function submit(formData) {
