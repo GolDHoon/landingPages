@@ -2,6 +2,7 @@
 window.input_data = [];
 window.input_allow = false;
 window.input_disable_message = "";
+window.duplChecker = false;
 
 // 함수 정의
 function closeExampleDescirption() {

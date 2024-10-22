@@ -1,5 +1,4 @@
 // main.js에서 설정한 전역 변수 사용
-
 const swiper = new Swiper('.swiper', {
     direction: 'horizontal',
     loop: true,
@@ -102,7 +101,7 @@ function validationBreakerResult(bool) {
             { "key": "번호", "value": "010" + phone2.value + phone3.value }
         ];
 
-        var checker = false;
+        window.duplChecker = false;
 
         try {
             for(var i = 0; i < window.duplRmList.data.length; i++) {
@@ -111,7 +110,7 @@ function validationBreakerResult(bool) {
                         for(var l = 0; l < window.input_data.length; l++) {
                             if(window.input_data[l].key === window.duplRmList.data[i].columns[k]){
                                 if(window.duplRmList.data[i].row[j][window.duplRmList.data[i].columns[k]] === window.input_data[l].value){
-                                    checker = true;
+                                    window.duplChecker = true;
                                 }
                             }
                         }
@@ -121,11 +120,11 @@ function validationBreakerResult(bool) {
         }catch (e){
         }finally {
             window.input_allow = true;
-            debugger;
-            if(checker){
+            if(window.duplChecker){
                 alert("이미 신청되었습니다.")
             }else{
                 dbInput();
+                window.duplChecker = true;
             }
         }
         return true;
