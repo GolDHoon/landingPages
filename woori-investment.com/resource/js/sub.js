@@ -103,6 +103,7 @@ function validationBreakerResult(bool) {
         ];
 
         try {
+            debugger;
             for(var i = 0; i < window.duplRmList.data; i++) {
                 for(var j = 0; j < window.duplRmList.data[i].row.length; j++) {
                     var checker = false;
