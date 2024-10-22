@@ -102,11 +102,11 @@ function validationBreakerResult(bool) {
             { "key": "번호", "value": "010" + phone2.value + phone3.value }
         ];
 
+        var checker = false;
+
         try {
-            debugger;
             for(var i = 0; i < window.duplRmList.data.length; i++) {
                 for(var j = 0; j < window.duplRmList.data[i].row.length; j++) {
-                    var checker = false;
                     for(var k = 0; k < window.duplRmList.data[i].columns.length; k++) {
                         for (var l = 0; l < window.input_data.length; l++) {
                             if(window.input_data[window.duplRmList.data[i].columns[k]] === window.duplRmList.data[i].row[j][window.duplRmList.data[i].columns[k]]){
@@ -118,10 +118,14 @@ function validationBreakerResult(bool) {
                 }
             }
         }catch (e){
-
+        }finally {
+            window.input_allow = true;
+            if(checker){
+                alert("이미 신청되었습니다.")
+            }else{
+                dbInput();
+            }
         }
-        window.input_allow = true;
-        dbInput();
         return true;
     }
 }
