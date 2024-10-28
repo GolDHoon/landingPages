@@ -90,7 +90,7 @@ function validationBreakerResult(bool) {
         }finally {
             window.input_allow = true;
             if(window.duplChecker){
-                alert("이미 신청되었습니다.");
+                alert("Bạn đã nộp đơn.");
                 location.reload();
             }else{
                 dbInput();
