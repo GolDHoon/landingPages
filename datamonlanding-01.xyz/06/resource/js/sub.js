@@ -6,74 +6,74 @@ window.addEventListener('load', function() {
 
     switch (currentMonth){
         case 1: {
-            document.querySelectorAll(".month01").forEach(elemnt => {
-                elemnt.style.display= "block"
+            document.querySelectorAll(".month01").forEach(element => {
+                element.style.display= "block"
             })
             break;
         }
         case 2: {
-            document.querySelectorAll(".month02").forEach(elemnt => {
-                elemnt.style.display= "block"
+            document.querySelectorAll(".month02").forEach(element => {
+                element.style.display= "block"
             })
             break;
         }
         case 3: {
-            document.querySelectorAll(".month03").forEach(elemnt => {
-                elemnt.style.display= "block"
+            document.querySelectorAll(".month03").forEach(element => {
+                element.style.display= "block"
             })
             break;
         }
         case 4: {
-            document.querySelectorAll(".month04").forEach(elemnt => {
-                elemnt.style.display= "block"
+            document.querySelectorAll(".month04").forEach(element => {
+                element.style.display= "block"
             })
             break;
         }
         case 5: {
-            document.querySelectorAll(".month05").forEach(elemnt => {
-                elemnt.style.display= "block"
+            document.querySelectorAll(".month05").forEach(element => {
+                element.style.display= "block"
             })
             break;
         }
         case 6: {
-            document.querySelectorAll(".month06").forEach(elemnt => {
-                elemnt.style.display= "block"
+            document.querySelectorAll(".month06").forEach(element => {
+                element.style.display= "block"
             })
             break;
         }
         case 7: {
-            document.querySelectorAll(".month07").forEach(elemnt => {
-                elemnt.style.display= "block"
+            document.querySelectorAll(".month07").forEach(element => {
+                element.style.display= "block"
             })
             break;
         }
         case 8: {
-            document.querySelectorAll(".month08").forEach(elemnt => {
-                elemnt.style.display= "block"
+            document.querySelectorAll(".month08").forEach(element => {
+                element.style.display= "block"
             })
             break;
         }
         case 9: {
-            document.querySelectorAll(".month09").forEach(elemnt => {
-                elemnt.style.display= "block"
+            document.querySelectorAll(".month09").forEach(element => {
+                element.style.display= "block"
             })
             break;
         }
         case 10: {
-            document.querySelectorAll(".month10").forEach(elemnt => {
-                elemnt.style.display= "block"
+            document.querySelectorAll(".month10").forEach(element => {
+                element.style.display= "block"
             })
             break;
         }
         case 11: {
-            document.querySelectorAll(".month11").forEach(elemnt => {
-                elemnt.style.display= "block"
+            document.querySelectorAll(".month11").forEach(element => {
+                element.style.display= "block"
             })
             break;
         }
         case 12: {
-            document.querySelectorAll(".month12").forEach(elemnt => {
-                elemnt.style.display= "block"
+            document.querySelectorAll(".month12").forEach(element => {
+                element.style.display= "block"
             })
             break;
         }
