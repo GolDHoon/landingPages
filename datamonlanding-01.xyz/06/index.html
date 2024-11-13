@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+
+  <!--부트스트랩 start-->
+  <link href="./resource/bundle/bootstrap@5.3.3_dist_css_bootstrap.css" rel="stylesheet">
+  <!--부트스트랩 end-->
+
+  <link rel="stylesheet" type="text/css" href="./resource/css/main.css">
+  <link rel="stylesheet" type="text/css" href="./resource/css/sub.css">
+  <script src="./resource/js/main.js" defer></script>
+  <script src="./resource/js/sub.js" defer></script>
+</head>
+<body class="d-flex justify-content-center">
+  <div class="wrapper">
+    <div class="nav-wrapper position-fixed bottom-0 w-100">
+      <nav id="bottom_nav_fixed" class="navbar w-100 p-0 m-0">
+        <ul class="nav nav-underline bottom-basic w-100" data-nav-type="bottom-basic" data-nav-active-type="active-class" data-nav_click_action="scroll">
+          <li class="nav-item cursor_pointer w-100 p-0 m-0" data-nav-point="con05_wrapper">
+            <a class="nav-link w-100 p-0 m-0 border-0" href="#con02_wrapper">
+              <img class="pc w-100 p-0 m-0" src="resource/img/pc/footer.png" alt="배너">
+              <img class="mo w-100 p-0 m-0" src="resource/img/mo/footer.png" alt="배너">
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="contents-wrapper" data-bs-spy="scroll" data-bs-target="#bottom_nav_fixed">
+      <div id="con01_wrapper" class="content-wrapper">
+        <div class="pc bg_img_con w-100 ">
+          <a class="w-100 d-flex justify-content-center" href="#con02_wrapper">
+            <img class="w-75 cursor_pointer con01_btn month01" src="resource/img/common/btn01_01.png" alt="버튼">
+            <img class="w-75 cursor_pointer con01_btn month02" src="resource/img/common/btn01_02.png" alt="버튼">
+            <img class="w-75 cursor_pointer con01_btn month03" src="resource/img/common/btn01_03.png" alt="버튼">
+            <img class="w-75 cursor_pointer con01_btn month04" src="resource/img/common/btn01_04.png" alt="버튼">
+            <img class="w-75 cursor_pointer con01_btn month05" src="resource/img/common/btn01_05.png" alt="버튼">
+            <img class="w-75 cursor_pointer con01_btn month06" src="resource/img/common/btn01_06.png" alt="버튼">
+            <img class="w-75 cursor_pointer con01_btn month07" src="resource/img/common/btn01_07.png" alt="버튼">
+            <img class="w-75 cursor_pointer con01_btn month08" src="resource/img/common/btn01_08.png" alt="버튼">
+            <img class="w-75 cursor_pointer con01_btn month09" src="resource/img/common/btn01_09.png" alt="버튼">
+            <img class="w-75 cursor_pointer con01_btn month10" src="resource/img/common/btn01_10.png" alt="버튼">
+            <img class="w-75 cursor_pointer con01_btn month11" src="resource/img/common/btn01_11.png" alt="버튼">
+            <img class="w-75 cursor_pointer con01_btn month12" src="resource/img/common/btn01_12.png" alt="버튼">
+          </a>
+        </div>
+        <div class="mo bg_img_con w-100 ">
+          <a class="w-100 d-flex justify-content-center" href="#con02_wrapper">
+            <img class="cursor_pointer con01_btn month01" src="resource/img/common/btn01_01.png" alt="버튼">
+            <img class="cursor_pointer con01_btn month02" src="resource/img/common/btn01_02.png" alt="버튼">
+            <img class="cursor_pointer con01_btn month03" src="resource/img/common/btn01_03.png" alt="버튼">
+            <img class="cursor_pointer con01_btn month04" src="resource/img/common/btn01_04.png" alt="버튼">
+            <img class="cursor_pointer con01_btn month05" src="resource/img/common/btn01_05.png" alt="버튼">
+            <img class="cursor_pointer con01_btn month06" src="resource/img/common/btn01_06.png" alt="버튼">
+            <img class="cursor_pointer con01_btn month07" src="resource/img/common/btn01_07.png" alt="버튼">
+            <img class="cursor_pointer con01_btn month08" src="resource/img/common/btn01_08.png" alt="버튼">
+            <img class="cursor_pointer con01_btn month09" src="resource/img/common/btn01_09.png" alt="버튼">
+            <img class="cursor_pointer con01_btn month10" src="resource/img/common/btn01_10.png" alt="버튼">
+            <img class="cursor_pointer con01_btn month11" src="resource/img/common/btn01_11.png" alt="버튼">
+            <img class="cursor_pointer con01_btn month12" src="resource/img/common/btn01_12.png" alt="버튼">
+          </a>
+        </div>
+      </div>
+      <div id="con02_wrapper" class="content-wrapper">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+          <div class="w-75">
+            <label for="name">성함</label>
+            <div class="w-100">
+              <input id="name" class="w-100" type="text" placeholder="성함을 입력해주세요."/>
+            </div>
+          </div>
+          <div class="w-75">
+            <label for="phone1">연락처</label>
+            <label for="phone2"></label>
+            <label for="phone3"></label>
+            <div class="d-flex w-100 justify-content-between phone_input_area">
+              <input id="phone1" type="text" placeholder="010">
+              <input id="phone2" type="text" placeholder="1234">
+              <input id="phone3" type="text" placeholder="5678">
+            </div>
+          </div>
+          <div class="w-75">
+            <label>Q.실비보험 유무</label>
+            <div class="w-100 d-flex justify-content-between">
+              <button class="silby_btn silby_no_active">네</button>
+              <button class="silby_btn silby_no_active">아니오</button>
+            </div>
+          </div>
+          <div class="w-75 d-flex align-items-center justify-content-center">
+            <input id="agree" class="cursor_pointer" type="checkbox"/>
+            <label for="agree"></label>
+            <label class="silby_label"> &nbsp;개인정보 수집 및 이용에 동의합니다.<span class="cursor_pointer">[보기]</span></label>
+          </div>
+          <div class="w-75 d-flex justify-content-center">
+            <img class="w-100 cursor_pointer" src="resource/img/common/btn02.png" alt="버튼">
+          </div>
+        </div>
+      </div>
+      <div id="con03_wrapper" class="content-wrapper">
+        <div class="pc">
+          <img class="w-100" src="./resource/img/pc/03.png" alt="배경이미지">
+        </div>
+        <div class="mo">
+          <img class="w-100" src="./resource/img/mo/03.png" alt="배경이미지">
+        </div>
+      </div>
+      <div id="con04_wrapper" class="content-wrapper">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+          <p>대표자 : 김도리</p>
+          <p>사업자번호 : 344-09-00863</p>
+          <p>주소 : 서울특별시 강남구 봉은사로 107, 2층(논현동)</p>
+        </div>
+      </div>
+      <div id="con05_wrapper" class="content-wrapper">
+        <div class="pc">
+          <img class="w-100" src="./resource/img/pc/footer_area.png" alt="버튼">
+        </div>
+        <div class="mo">
+          <img class="w-100" src="./resource/img/mo/footer_area.png" alt="버튼">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
