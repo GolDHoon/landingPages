@@ -222,12 +222,6 @@ function onCLickDBInput() {
     }
 
     validationBreakerResult(false);
-
-    console.log("name : " + name);
-    console.log("phone2 : " + phone2);
-    console.log("phone3 : " + phone3);
-    console.log("agree : " + agree);
-    console.log("눌러따");
 }
 
 function validationBreakerResult(bool) {
@@ -246,8 +240,6 @@ function validationBreakerResult(bool) {
             { "key": "번호", "value": "010" + phone2.value + phone3.value },
             { "key": "실비여부", "value": window.silby }
         ];
-
-        console.log(window.input_data);
 
         window.input_allow = true;
         dbInput();
