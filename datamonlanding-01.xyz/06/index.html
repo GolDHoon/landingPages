@@ -8,6 +8,7 @@
 
   <!--부트스트랩 start-->
   <link href="./resource/bundle/bootstrap@5.3.3_dist_css_bootstrap.css" rel="stylesheet">
+  <script src="./resource/bundle/bootstrap@5.3.3_dist_js_bootstrap.bundle.js" defer></script>
   <!--부트스트랩 end-->
 
   <link rel="stylesheet" type="text/css" href="./resource/css/main.css">
@@ -77,16 +78,16 @@
             <label for="phone2"></label>
             <label for="phone3"></label>
             <div class="d-flex w-100 justify-content-between phone_input_area">
-              <input id="phone1" type="text" placeholder="010">
-              <input id="phone2" type="text" placeholder="1234">
-              <input id="phone3" type="text" placeholder="5678">
+              <input id="phone1" type="text" placeholder="010" disabled>
+              <input id="phone2" type="number" placeholder="1234" min="2000" max="9999" onkeydown="phone2OnKeyDownValidation(event)">
+              <input id="phone3" type="number" placeholder="5678" min="0" max="9999" onkeydown="phone3OnKeyDownValidation(event)">
             </div>
           </div>
           <div class="w-75">
             <label>Q.실비보험 유무</label>
             <div class="w-100 d-flex justify-content-between">
-              <button class="silby_btn silby_no_active">네</button>
-              <button class="silby_btn silby_no_active">아니오</button>
+              <button class="silby_btn silby_y_btn silby_no_active" onclick="silbyData(event)">네</button>
+              <button class="silby_btn silby_n_btn silby_no_active" onclick="silbyData(event)">아니오</button>
             </div>
           </div>
           <div class="w-75 d-flex align-items-center justify-content-center">
@@ -95,7 +96,7 @@
             <label class="silby_label"> &nbsp;개인정보 수집 및 이용에 동의합니다.<span class="cursor_pointer">[보기]</span></label>
           </div>
           <div class="w-75 d-flex justify-content-center">
-            <img class="w-100 cursor_pointer" src="resource/img/common/btn02.png" alt="버튼">
+            <img class="w-100 cursor_pointer" src="resource/img/common/btn02.png" alt="버튼" onclick="onCLickDBInput()">
           </div>
         </div>
       </div>
@@ -120,6 +121,30 @@
         </div>
         <div class="mo">
           <img class="w-100" src="./resource/img/mo/footer_area.png" alt="버튼">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="policyModal" tabindex="-1" aria-labelledby="policyModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="policyModalLabel">개인정보처리방침</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>
+            1. 개인정보 수집 및 이용 목적<br>
+            전화,SMS를 통한 상담 및 안내<br><br>
+            2. 수집하는 개인정보 항목<br>
+            이름, 연락처<br><br>
+            3. 보유 및 이용기간<br>
+            수집이용 동의일로부터 수집이용 목적을 달성할 때까지
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
         </div>
       </div>
     </div>
