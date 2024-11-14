@@ -1,0 +1,159 @@
+.content-wrapper > img{
+    width: 100%;
+    height: auto;
+}
+
+#bottom_nav_fixed{
+    padding : 1rem;
+}
+
+#con02_wrapper, #con04_wrapper{
+    background-color: #0a121c;
+}
+
+.bg_img_con {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.con01_btn{
+    display: none;
+}
+
+#con02_wrapper label {
+    color: white;
+}
+
+.phone_input_area > input{
+    width: 32%;
+}
+
+input[type=text]::placeholder, input[type=number]::placeholder{
+    text-align: center;
+}
+
+input[type=text], input[type=number]{
+    font-size: clamp(1.4rem, 4.7vw, 10rem);
+    border-radius: 10px;
+}
+
+label{
+    font-size: clamp(1.4rem, 4.7vw, 10rem);
+}
+
+.silby_btn{
+    font-size: clamp(1.4rem, 4.7vw, 10rem);
+}
+
+#con02_wrapper > div{
+    padding: 7% 0;
+}
+
+#con02_wrapper > div > div {
+    margin: 1% 0;
+}
+
+.silby_btn{
+    width: 47%;
+    padding: 2%;
+    border: none;
+    border-radius: 10px;
+}
+
+.silby_active{
+    background-color: #c8232c;
+    color: white;
+}
+
+.silby_no_active{
+    background-color: white;
+    color: #a8a8a8;
+}
+
+label.silby_label > span {
+    font-weight: bold;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+@media (min-width: 768px) {
+    .mo{
+        display: none;
+    }
+
+    .pc{
+        display: block;
+    }
+
+    #con01_wrapper > .bg_img_con{
+        background-image: url("../img/pc/01.png");
+        padding-top : 89%;
+        padding-bottom : 5%
+    }
+
+    label.silby_label{
+        font-size: clamp(1.4rem, 2.7vw, 3rem);
+    }
+
+    #agree{
+        width: clamp(1.4rem, 2.7vw, 3rem);
+        height: clamp(1.4rem, 2.7vw, 3rem);
+    }
+
+    #con04_wrapper > div > p {
+        color: white;
+        font-size: clamp(1.4rem, 2.7vw, 3rem);
+    }
+
+    #con04_wrapper > div {
+        padding: 10% 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .mo{
+        display: block;
+    }
+
+    .pc{
+        display: none;
+    }
+
+    #con01_wrapper > .bg_img_con{
+        background-image: url("../img/mo/01.png");
+        padding-top : 155%;
+        padding-bottom : 12%
+    }
+
+    #con01_wrapper > .mo.bg_img_con img {
+        width: 90%;
+    }
+
+    label.silby_label{
+        font-size: clamp(0.6rem, 1.7vw, 2rem);
+    }
+
+    #agree{
+        width: clamp(0.6rem, 1.7vw, 2rem);
+        height: clamp(0.6rem, 1.7vw, 2rem);
+    }
+
+    #con04_wrapper > div > p {
+        color: white;
+        font-size: clamp(0.6rem, 1.7vw, 2rem);
+    }
+
+    #con04_wrapper > div {
+        padding: 5% 2%;
+    }
+}
