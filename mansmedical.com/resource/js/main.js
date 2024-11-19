@@ -44,6 +44,8 @@ async function submit(formData) {
     var variable = window.consultingResult = await window.inputCustData(formData),
         getStatus = variable.status;
 
+    debugger;
+
     if (getStatus === 200) {
         window.dataLayer.push({
             event: "DB_input"
