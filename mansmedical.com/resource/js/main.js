@@ -46,7 +46,13 @@ async function submit(formData) {
 
     debugger;
 
+
     if (getStatus === 200) {
+        if(variable.data === 'fail - Duplicate data found'){
+            alert('이미 신청 완료된 번호입니다.');
+            location.reload(true);
+            return;
+        }
         window.dataLayer.push({
             event: "DB_input"
         });
