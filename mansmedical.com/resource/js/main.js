@@ -44,9 +44,6 @@ async function submit(formData) {
     var variable = window.consultingResult = await window.inputCustData(formData),
         getStatus = variable.status;
 
-    debugger;
-
-
     if (getStatus === 200) {
         if(variable.data === 'fail - Duplicate data found'){
             alert('이미 신청 완료된 번호입니다.');
