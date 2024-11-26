@@ -28,7 +28,7 @@
     })();
   </script>
   <!--End of Tawk.to Script-->
-    <input type="datetime-local" id="datetime">
+  <label for="datetime"></label><input type="datetime-local" id="datetime">
     <script>
       document.getElementById('datetime').addEventListener('change', function(event) {
         const datetimeInput = event.target.value;
@@ -43,14 +43,18 @@
       });
     </script>
     <p>테스트 24.10.02</p>
-    <div>이 름 | <input type="text" id="name"></div>
-    <div>번 호 | <input type="number" id="phone"></div>
+    <div>이 름 | <label for="name"></label><input type="text" id="name"></div>
+    <div>번 호 | <label for="phone"></label><input type="number" id="phone"></div>
     <div>
-      <label>있다</label><input type="radio" name="silby" value="Y" checked>
-      <label>없다</label><input type="radio" name="silby" value="N">
+      <label>있다</label><label>
+      <input type="radio" name="silby" value="Y" checked>
+    </label>
+      <label>없다</label><label>
+      <input type="radio" name="silby" value="N">
+    </label>
     </div>
     <div>
-      <select name="local" id="local">
+      <label for="local"></label><select name="local" id="local">
         <option value="">거주지를 선택해 주세요</option>
         <option value="" disabled>===================</option>
         <option value="서울특별시">서울특별시</option>
